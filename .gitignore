@@ -1,0 +1,15 @@
+# Hermes local/runtime artifacts
+.hermes/desktop-attachments/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+*.log
+
+# Dependency/build output for future app stack
+node_modules/
+dist/
+build/
+.env
+.env.*
+!.env.example
