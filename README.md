@@ -15,7 +15,7 @@ Local workspace for rebuilding `collectivemanifestation.org`.
 
 ## Current status
 
-WORKING/IDLE: project workspace created; source resources inventoried; GitHub remote configured and initial docs pushed; hosting direction selected as Vercel + Supabase; ManifestWave spreadsheet/card draft pipeline generated; no app server running, no Vercel deploy, and no DNS changes made.
+WORKING/IDLE: project workspace created; source resources inventoried; GitHub remote configured and initial docs pushed; hosting direction selected as Vercel + Supabase; ManifestWave spreadsheet/card draft pipeline generated; Vite + React + TypeScript + Supabase client skeleton built locally; no Vercel deploy and no DNS changes made.
 
 ## Architecture direction
 
@@ -47,6 +47,28 @@ Generated planning/build artifacts:
 - Regeneration scripts: `scripts/generate_manifestwave_timezone_chart.py`, `scripts/prepare_manifestwave_cards.py`
 
 Draft card QA status: flags are complete, but some map outlines are missing and some copied map outlines contain embedded text/labels that must be cleaned before final production use. Original source assets remain untouched.
+
+## App skeleton
+
+The local web app skeleton uses Vite + React + TypeScript with a Supabase browser client placeholder.
+
+Key files:
+
+- `package.json` — app scripts and dependencies
+- `src/App.tsx` — one-page site skeleton
+- `src/lib/manifestwave.ts` — ManifestWave helper/data layer for the first UI pass
+- `src/lib/supabase.ts` — Supabase client initialization from Vite environment variables
+- `.env.example` — expected Supabase env var names without secrets
+
+Current commands:
+
+```bash
+npm test
+npm run build
+npm run dev -- --port 5173
+```
+
+The first UI pass wires in the 24 generated card PNGs and representative country/region data. The production data model should later be replaced with full Supabase-backed `manifestwave_zones` and `manifestwave_countries` records.
 
 ## High-level scope
 
