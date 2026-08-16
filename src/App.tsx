@@ -1,5 +1,6 @@
 import { useMemo } from 'react';
 
+import { ContactWaitlistForm } from './components/ContactWaitlistForm';
 import {
   getCurrentManifestWaveSlot,
   getSlotCardPath,
@@ -206,12 +207,10 @@ function App() {
         <div className="panel" id="contact">
           <strong>Contact / waitlist</strong>
           <p>
-            The launch version will invite questions, suggestions, volunteer interest, and early community
-            signup through Supabase-backed forms.
+            This local form is ready for launch-review feedback, volunteer interest, and early updates.
+            It validates in the browser now; the real Supabase submission stays off until the database is approved.
           </p>
-          <a className="button secondary" href="mailto:hello@collectivemanifestation.org">
-            Email placeholder
-          </a>
+          <ContactWaitlistForm />
         </div>
       </section>
 
