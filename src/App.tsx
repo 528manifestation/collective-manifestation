@@ -6,6 +6,7 @@ import {
   getZoneBySlot,
   manifestwaveZones,
 } from './lib/manifestwave';
+import { getManifestCallAlertState } from './lib/manifestCall';
 import { getTotalMusicSizeBytes, songs } from './lib/music';
 import { isSupabaseConfigured } from './lib/supabase';
 
@@ -14,6 +15,7 @@ const navigation = ['ManifestWave', 'Music', 'About', 'Contact', 'Support'];
 function App() {
   const activeSlot = getCurrentManifestWaveSlot();
   const activeZone = getZoneBySlot(activeSlot);
+  const alertState = getManifestCallAlertState();
   const totalMusicSizeMb = (getTotalMusicSizeBytes() / 1024 / 1024).toFixed(1);
   const featuredZones = useMemo(
     () => [activeZone, getZoneBySlot(-5), getZoneBySlot(1), getZoneBySlot(10)].filter(
@@ -43,8 +45,8 @@ function App() {
             <p className="eyebrow">ManifestWave 528</p>
             <h1>A 24-hour global wave of focused intention.</h1>
             <p className="lede">
-              Collective Manifestation is a public home for the daily 5:28 Manifest Call — a simple,
-              symbolic rhythm where each time zone carries the wave for one local hour.
+              A calm public home for the daily 5:28 Manifest Call: five focused minutes of
+              shared intention, kindness, and hope moving through the world one time zone at a time.
             </p>
             <div className="hero-actions">
               <a className="button primary" href="#manifestwave">
@@ -54,6 +56,14 @@ function App() {
                 Explore the music
               </a>
             </div>
+            <div className="video-placeholder" aria-label="Welcome video placeholder">
+              <span>Welcome video</span>
+              <strong>Feel the shift. Join the wave. Change the world.</strong>
+              <p>
+                The final welcome video will explain the practice, the 528 rhythm, and how visitors can
+                join without needing meditation experience.
+              </p>
+            </div>
           </div>
 
           <aside className="now-card" aria-labelledby="current-wave-title">
@@ -61,6 +71,11 @@ function App() {
             <h2 id="current-wave-title">{activeZone.label}</h2>
             <p>5:00 PM – 5:59 PM local wave window</p>
             <strong>5:28 PM Manifest Call</strong>
+            <div className={alertState.isActive ? 'call-alert is-active' : 'call-alert'}>
+              {alertState.isActive
+                ? 'Please start the Intention for Manifestation video now.'
+                : `Next 5:28 call in about ${alertState.minutesUntilNextCall} minutes.`}
+            </div>
             <img src={getSlotCardPath(activeZone.slot)} alt={`${activeZone.label} ManifestWave card`} />
           </aside>
         </div>
@@ -72,10 +87,27 @@ function App() {
           <h2>Every hour, another region carries the intention.</h2>
         </div>
         <p>
-          The site will use real HTML data for the country lists and the draft PNG cards as visual aids.
-          The first implementation keeps the 24 symbolic hourly zones simple while preserving detail for
-          multi-zone countries like the United States.
+          The ManifestWave follows the hour where local time is 5:00–5:59 PM. At 5:28 PM,
+          visitors can start the guided intention video and carry the same message with their region.
+          If they miss their local call, they can join any hour at 28 minutes past — it is always
+          5:28 somewhere.
         </p>
+      </section>
+
+      <section className="section intention-section" aria-labelledby="intention-title">
+        <div>
+          <p className="eyebrow">Setting of intentions</p>
+          <h2 id="intention-title">A five-minute practice visitors can follow from anywhere.</h2>
+          <p>
+            This section will hold the guided intention video. The site will flash the Manifest Call
+            prompt during minutes 28–37 of every hour, then return to the calmer tracker state.
+          </p>
+        </div>
+        <div className="video-placeholder large" aria-label="Setting of Intentions video placeholder">
+          <span>Guided video placeholder</span>
+          <strong>Start the Intention for Manifestation video at 5:28.</strong>
+          <p>Final video, transcript, and accessibility captions will be added before public launch.</p>
+        </div>
       </section>
 
       <section className="zone-feature-grid" aria-label="Featured ManifestWave zones">
@@ -93,7 +125,7 @@ function App() {
       <section className="section cards-section">
         <div>
           <p className="eyebrow">24 symbolic cards</p>
-          <h2>Draft country-name + flag cards are ready for the web build.</h2>
+          <h2>Country-name + flag cards make the wave easy to scan.</h2>
         </div>
         <div className="card-gallery">
           {manifestwaveZones.map((zone) => (
@@ -123,8 +155,8 @@ function App() {
           <p className="eyebrow">Original music</p>
           <h2>Original music library</h2>
           <p>
-            The first nine MP3 tracks are copied into the web app as local public assets. Supabase will
-            eventually hold editable song metadata, lyrics, artwork paths, and publish status.
+            The first music pass gives visitors a real preview of the project&apos;s original sound.
+            Supabase will later hold editable song metadata, lyrics, artwork paths, and publish status.
           </p>
           <div className="song-list" aria-label="Original music tracks">
             {songs.map((song) => (
@@ -150,21 +182,50 @@ function App() {
       <section className="section split" id="about">
         <div>
           <p className="eyebrow">About</p>
-          <h2>Build a calm, useful home for the movement.</h2>
+          <h2>A simple daily rhythm for kindness, unity, and focused intention.</h2>
           <p>
-            This skeleton is intentionally static-first: fast, reviewable, and safe to preview before any
-            Vercel or DNS changes.
+            Collective Manifestation is built around one practical invitation: pause for a few minutes,
+            set a clear intention for a better world, then return to the day with a lighter heart and an
+            eye out for opportunities to be kind.
           </p>
+          <div className="faq-grid" aria-label="Frequently asked questions">
+            <article>
+              <h3>What if I miss 5:28?</h3>
+              <p>Join at 28 minutes past any hour. The wave is designed to keep moving around the world.</p>
+            </article>
+            <article>
+              <h3>Do I need experience?</h3>
+              <p>No. The guided video will keep the practice simple and accessible for first-time visitors.</p>
+            </article>
+            <article>
+              <h3>Which 5:28?</h3>
+              <p>The primary call is 5:28 PM in your local zone, with flexible hourly participation.</p>
+            </article>
+          </div>
         </div>
         <div className="panel" id="contact">
-          <strong>Contact / waitlist placeholder</strong>
-          <p>Supabase forms will be added after schema approval.</p>
+          <strong>Contact / waitlist</strong>
+          <p>
+            The launch version will invite questions, suggestions, volunteer interest, and early community
+            signup through Supabase-backed forms.
+          </p>
+          <a className="button secondary" href="mailto:hello@collectivemanifestation.org">
+            Email placeholder
+          </a>
         </div>
       </section>
 
       <section className="section support" id="support">
         <p className="eyebrow">Support</p>
-        <h2>Donation/support links will live here after copy and payment paths are confirmed.</h2>
+        <h2>Support links will stay parked until the payment path and public accounting copy are ready.</h2>
+        <div className="support-grid" aria-label="Future support options">
+          {['$10', '$25', '$50', '$100'].map((amount) => (
+            <article className="support-tier" key={amount}>
+              <span>{amount}</span>
+              <p>Future donation tier placeholder</p>
+            </article>
+          ))}
+        </div>
       </section>
     </main>
   );

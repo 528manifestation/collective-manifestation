@@ -15,7 +15,7 @@ Local workspace for rebuilding `collectivemanifestation.org`.
 
 ## Current status
 
-WORKING/IDLE: project workspace created; source resources inventoried; GitHub remote configured and initial docs pushed; hosting direction selected as Vercel + Supabase; ManifestWave spreadsheet/card draft pipeline generated; Vite + React + TypeScript + Supabase client skeleton built locally; full cleaned ManifestWave JSON data and music preview assets are wired locally; first Vercel deployment is live; no custom DNS changes made.
+WORKING/IDLE: project workspace created; source resources inventoried; GitHub remote configured and initial docs pushed; hosting direction selected as Vercel + Supabase; ManifestWave spreadsheet/card draft pipeline generated; Vite + React + TypeScript + Supabase client skeleton built locally; full cleaned ManifestWave JSON data and music preview assets are wired locally; first Vercel deployment is live as a private review link; Vercel Git is connected to the correct GitHub repo; no custom DNS changes made.
 
 ## Architecture direction
 
@@ -33,7 +33,7 @@ The first Vercel deployment is live at:
 - Project: `rckbender-4266s-projects/collective-manifestation`
 - Project ID: `prj_pcq2jH0QZ6UvbKGDmtpMkaaBQLkj`
 
-Important: the first Vercel deployment was automatically assigned as production by Vercel. No Squarespace/custom DNS records were changed. Vercel could not connect the GitHub repository automatically because the Vercel account reported missing admin/write access to `528manifestation/collective-manifestation`; deployment was completed from the local checkout instead.
+Important: the first Vercel deployment was automatically assigned as production by Vercel. No Squarespace/custom DNS records were changed. The initial CLI deploy could not connect the GitHub repository automatically because the Vercel account reported missing admin/write access to `528manifestation/collective-manifestation`; Rick later connected the Vercel project to `528manifestation/collective-manifestation` in Vercel Project Settings → Git.
 
 Current launch stance: keep the Vercel URL live only as a private technical review link. Do not promote it, announce it, connect DNS, or treat it as a public launch. Password protection was attempted but blocked by Vercel because Advanced Deployment Protection is not enabled on the team.
 
