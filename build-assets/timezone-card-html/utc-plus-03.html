@@ -15,10 +15,11 @@ body { padding: 90px 110px; }
 .grid { flex: 1; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); grid-auto-rows: 250px; gap: 20px; align-content: start; }
 .country-card { height: 250px; position: relative; border: 3px solid #e7dfed; border-radius: 22px; background: #fff; padding: 16px 18px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 10px 26px rgba(48, 20, 65, .08); overflow: hidden; }
 .country-card h2 { margin: 0 0 10px; color: #2b2031; font-size: 25px; line-height: 1.08; font-weight: 750; }
-.visuals { display: grid; grid-template-columns: 42% 58%; align-items: center; gap: 10px; min-height: 0; }
-.flag { width: 100%; max-height: 82px; object-fit: contain; border: 2px solid #eee; border-radius: 8px; background: #fff; }
-.map { width: 100%; max-height: 92px; object-fit: contain; mix-blend-mode: multiply; filter: grayscale(1) contrast(1.15); }
+.visuals { display: flex; align-items: center; justify-content: center; min-height: 0; flex: 1; }
+.flag { width: 56%; max-height: 105px; object-fit: contain; border: 2px solid #eee; border-radius: 8px; background: #fff; }
 .missing { border: 3px dashed #cdb8d6; border-radius: 14px; min-height: 86px; display: flex; align-items: center; justify-content: center; color: #80698d; font-size: 24px; font-weight: 700; background: #faf7fc; text-align: center; }
+.detail { margin: 8px 0 0; color: #6d6075; font-size: 15px; line-height: 1.18; font-weight: 600; }
+.detail.muted { color: transparent; }
 .footer-note { margin-top: 22px; color: #75687d; font-size: 28px; display: flex; justify-content: space-between; gap: 40px; }
 </style>
 </head>
@@ -33,74 +34,97 @@ body { padding: 90px 110px; }
     </header>
     <div class="grid">
       <section class="country-card">
-  <h2>Antarctica (parts)</h2>
-  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/antarctica.svg" alt="Antarctica (parts) flag"><img class="map" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/maps/antarctica.jpg" alt="Antarctica (parts) map outline"></div>
+  <h2>Antarctica</h2>
+  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/antarctica.svg" alt="Antarctica flag"></div>
+  <p class="detail">Syowa</p>
 </section><section class="country-card">
   <h2>Bahrain</h2>
-  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/bahrain.svg" alt="Bahrain flag"><img class="map" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/maps/bahrain.jpg" alt="Bahrain map outline"></div>
+  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/bahrain.svg" alt="Bahrain flag"></div>
+  <p class="detail muted">&nbsp;</p>
 </section><section class="country-card">
   <h2>Belarus</h2>
-  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/belarus.svg" alt="Belarus flag"><div class="missing map-missing">Map pending</div></div>
+  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/belarus.svg" alt="Belarus flag"></div>
+  <p class="detail muted">&nbsp;</p>
 </section><section class="country-card">
   <h2>Comoros</h2>
-  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/comoros.svg" alt="Comoros flag"><img class="map" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/maps/comoros.jpg" alt="Comoros map outline"></div>
+  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/comoros.svg" alt="Comoros flag"></div>
+  <p class="detail muted">&nbsp;</p>
 </section><section class="country-card">
   <h2>Djibouti</h2>
-  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/djibouti.svg" alt="Djibouti flag"><img class="map" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/maps/djibouti.jpg" alt="Djibouti map outline"></div>
+  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/djibouti.svg" alt="Djibouti flag"></div>
+  <p class="detail muted">&nbsp;</p>
 </section><section class="country-card">
   <h2>Eritrea</h2>
-  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/eritrea.svg" alt="Eritrea flag"><img class="map" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/maps/eritrea.jpg" alt="Eritrea map outline"></div>
+  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/eritrea.svg" alt="Eritrea flag"></div>
+  <p class="detail muted">&nbsp;</p>
 </section><section class="country-card">
   <h2>Ethiopia</h2>
-  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/ethiopia.svg" alt="Ethiopia flag"><img class="map" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/maps/ethiopia.jpg" alt="Ethiopia map outline"></div>
+  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/ethiopia.svg" alt="Ethiopia flag"></div>
+  <p class="detail muted">&nbsp;</p>
 </section><section class="country-card">
   <h2>Iraq</h2>
-  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/iraq.svg" alt="Iraq flag"><img class="map" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/maps/iraq.jpg" alt="Iraq map outline"></div>
+  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/iraq.svg" alt="Iraq flag"></div>
+  <p class="detail muted">&nbsp;</p>
 </section><section class="country-card">
   <h2>Jordan</h2>
-  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/jordan.svg" alt="Jordan flag"><img class="map" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/maps/jordan.jpg" alt="Jordan map outline"></div>
+  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/jordan.svg" alt="Jordan flag"></div>
+  <p class="detail muted">&nbsp;</p>
 </section><section class="country-card">
   <h2>Kenya</h2>
-  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/kenya.svg" alt="Kenya flag"><img class="map" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/maps/kenya.jpg" alt="Kenya map outline"></div>
+  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/kenya.svg" alt="Kenya flag"></div>
+  <p class="detail muted">&nbsp;</p>
 </section><section class="country-card">
   <h2>Kuwait</h2>
-  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/kuwait.svg" alt="Kuwait flag"><div class="missing map-missing">Map pending</div></div>
+  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/kuwait.svg" alt="Kuwait flag"></div>
+  <p class="detail">Syowa</p>
 </section><section class="country-card">
   <h2>Madagascar</h2>
-  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/madagascar.svg" alt="Madagascar flag"><img class="map" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/maps/madagascar.jpg" alt="Madagascar map outline"></div>
+  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/madagascar.svg" alt="Madagascar flag"></div>
+  <p class="detail muted">&nbsp;</p>
 </section><section class="country-card">
   <h2>Mayotte</h2>
-  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/mayotte.svg" alt="Mayotte flag"><div class="missing map-missing">Map pending</div></div>
+  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/mayotte.svg" alt="Mayotte flag"></div>
+  <p class="detail muted">&nbsp;</p>
 </section><section class="country-card">
   <h2>Qatar</h2>
-  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/qatar.svg" alt="Qatar flag"><img class="map" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/maps/qatar.jpg" alt="Qatar map outline"></div>
+  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/qatar.svg" alt="Qatar flag"></div>
+  <p class="detail muted">&nbsp;</p>
 </section><section class="country-card">
-  <h2>Russia (parts)</h2>
-  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/russia.svg" alt="Russia (parts) flag"><div class="missing map-missing">Map pending</div></div>
+  <h2>Russia</h2>
+  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/russia.svg" alt="Russia flag"></div>
+  <p class="detail">MSK+00 - Kirov; MSK+00 - Moscow area; Crimea; MSK+00 - Volgograd</p>
 </section><section class="country-card">
   <h2>Saudi Arabia</h2>
-  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/saudi-arabia.svg" alt="Saudi Arabia flag"><div class="missing map-missing">Map pending</div></div>
+  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/saudi-arabia.svg" alt="Saudi Arabia flag"></div>
+  <p class="detail">Syowa</p>
 </section><section class="country-card">
   <h2>Somalia</h2>
-  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/somalia.svg" alt="Somalia flag"><img class="map" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/maps/somalia.jpg" alt="Somalia map outline"></div>
+  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/somalia.svg" alt="Somalia flag"></div>
+  <p class="detail muted">&nbsp;</p>
 </section><section class="country-card">
   <h2>Syria</h2>
-  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/syria.svg" alt="Syria flag"><img class="map" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/maps/syria.jpg" alt="Syria map outline"></div>
+  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/syria.svg" alt="Syria flag"></div>
+  <p class="detail muted">&nbsp;</p>
 </section><section class="country-card">
   <h2>Tanzania</h2>
-  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/tanzania.svg" alt="Tanzania flag"><img class="map" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/maps/tanzania.jpg" alt="Tanzania map outline"></div>
+  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/tanzania.svg" alt="Tanzania flag"></div>
+  <p class="detail muted">&nbsp;</p>
 </section><section class="country-card">
   <h2>Turkey</h2>
-  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/turkey.svg" alt="Turkey flag"><div class="missing map-missing">Map pending</div></div>
+  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/turkey.svg" alt="Turkey flag"></div>
+  <p class="detail muted">&nbsp;</p>
 </section><section class="country-card">
   <h2>Uganda</h2>
-  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/uganda.svg" alt="Uganda flag"><img class="map" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/maps/uganda.jpg" alt="Uganda map outline"></div>
+  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/uganda.svg" alt="Uganda flag"></div>
+  <p class="detail muted">&nbsp;</p>
 </section><section class="country-card">
-  <h2>Ukraine (parts)</h2>
-  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/ukraine.svg" alt="Ukraine (parts) flag"><img class="map" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/maps/ukraine.jpg" alt="Ukraine (parts) map outline"></div>
+  <h2>Ukraine</h2>
+  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/ukraine.svg" alt="Ukraine flag"></div>
+  <p class="detail">Crimea</p>
 </section><section class="country-card">
   <h2>Yemen</h2>
-  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/yemen.svg" alt="Yemen flag"><img class="map" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/maps/yemen.jpg" alt="Yemen map outline"></div>
+  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/yemen.svg" alt="Yemen flag"></div>
+  <p class="detail">Syowa</p>
 </section>
     </div>
     <div class="footer-note"><span>Symbolic 24-hour wave grouping. Some countries/regions span multiple zones.</span><span>CollectiveManifestation.org</span></div>

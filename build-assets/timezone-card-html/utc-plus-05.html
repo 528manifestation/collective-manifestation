@@ -15,10 +15,11 @@ body { padding: 90px 110px; }
 .grid { flex: 1; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); grid-auto-rows: 380px; gap: 26px; align-content: start; }
 .country-card { height: 380px; position: relative; border: 3px solid #e7dfed; border-radius: 28px; background: #fff; padding: 22px 24px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 10px 26px rgba(48, 20, 65, .08); overflow: hidden; }
 .country-card h2 { margin: 0 0 18px; color: #2b2031; font-size: 34px; line-height: 1.08; font-weight: 750; }
-.visuals { display: grid; grid-template-columns: 42% 58%; align-items: center; gap: 18px; min-height: 0; }
-.flag { width: 100%; max-height: 150px; object-fit: contain; border: 2px solid #eee; border-radius: 8px; background: #fff; }
-.map { width: 100%; max-height: 180px; object-fit: contain; mix-blend-mode: multiply; filter: grayscale(1) contrast(1.15); }
+.visuals { display: flex; align-items: center; justify-content: center; min-height: 0; flex: 1; }
+.flag { width: 64%; max-height: 210px; object-fit: contain; border: 2px solid #eee; border-radius: 8px; background: #fff; }
 .missing { border: 3px dashed #cdb8d6; border-radius: 14px; min-height: 86px; display: flex; align-items: center; justify-content: center; color: #80698d; font-size: 24px; font-weight: 700; background: #faf7fc; text-align: center; }
+.detail { margin: 16px 0 0; color: #6d6075; font-size: 21px; line-height: 1.18; font-weight: 600; }
+.detail.muted { color: transparent; }
 .footer-note { margin-top: 34px; color: #75687d; font-size: 28px; display: flex; justify-content: space-between; gap: 40px; }
 </style>
 </head>
@@ -34,34 +35,44 @@ body { padding: 90px 110px; }
     <div class="grid">
       <section class="country-card">
   <h2>Afghanistan</h2>
-  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/afghanistan.svg" alt="Afghanistan flag"><img class="map" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/maps/afghanistan.jpg" alt="Afghanistan map outline"></div>
+  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/afghanistan.svg" alt="Afghanistan flag"></div>
+  <p class="detail muted">&nbsp;</p>
 </section><section class="country-card">
-  <h2>Antarctica (parts)</h2>
-  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/antarctica.svg" alt="Antarctica (parts) flag"><img class="map" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/maps/antarctica.jpg" alt="Antarctica (parts) map outline"></div>
+  <h2>Antarctica</h2>
+  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/antarctica.svg" alt="Antarctica flag"></div>
+  <p class="detail">Mawson; Vostok</p>
 </section><section class="country-card">
-  <h2>French Southern Territories (parts)</h2>
-  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/french-southern-territories.svg" alt="French Southern Territories (parts) flag"><div class="missing map-missing">Map pending</div></div>
+  <h2>French Southern Territories</h2>
+  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/french-southern-territories.svg" alt="French Southern Territories flag"></div>
+  <p class="detail">Kerguelen, St Paul I, Amsterdam I</p>
 </section><section class="country-card">
   <h2>Kazakhstan</h2>
-  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/kazakhstan.svg" alt="Kazakhstan flag"><img class="map" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/maps/kazakhstan.jpg" alt="Kazakhstan map outline"></div>
+  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/kazakhstan.svg" alt="Kazakhstan flag"></div>
+  <p class="detail">most of Kazakhstan; Mangghystaū/Mankistau; Aqtöbe/Aktobe; Atyraū/Atirau/Gur’yev; West Kazakhstan; Qostanay/Kostanay/Kustanay; Qyzylorda/Kyzylorda/Kzyl-Orda</p>
 </section><section class="country-card">
   <h2>Maldives</h2>
-  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/maldives.svg" alt="Maldives flag"><img class="map" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/maps/maldives.jpg" alt="Maldives map outline"></div>
+  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/maldives.svg" alt="Maldives flag"></div>
+  <p class="detail">Kerguelen, St Paul I, Amsterdam I</p>
 </section><section class="country-card">
   <h2>Pakistan</h2>
-  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/pakistan.svg" alt="Pakistan flag"><img class="map" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/maps/pakistan.jpg" alt="Pakistan map outline"></div>
+  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/pakistan.svg" alt="Pakistan flag"></div>
+  <p class="detail muted">&nbsp;</p>
 </section><section class="country-card">
-  <h2>Russia (parts)</h2>
-  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/russia.svg" alt="Russia (parts) flag"><div class="missing map-missing">Map pending</div></div>
+  <h2>Russia</h2>
+  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/russia.svg" alt="Russia flag"></div>
+  <p class="detail">MSK+02 - Urals</p>
 </section><section class="country-card">
   <h2>Tajikistan</h2>
-  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/tajikistan.svg" alt="Tajikistan flag"><img class="map" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/maps/tajikistan.jpg" alt="Tajikistan map outline"></div>
+  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/tajikistan.svg" alt="Tajikistan flag"></div>
+  <p class="detail muted">&nbsp;</p>
 </section><section class="country-card">
   <h2>Turkmenistan</h2>
-  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/turkmenistan.svg" alt="Turkmenistan flag"><img class="map" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/maps/turkmenistan.jpg" alt="Turkmenistan map outline"></div>
+  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/turkmenistan.svg" alt="Turkmenistan flag"></div>
+  <p class="detail muted">&nbsp;</p>
 </section><section class="country-card">
   <h2>Uzbekistan</h2>
-  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/uzbekistan.svg" alt="Uzbekistan flag"><img class="map" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/maps/uzbekistan.jpg" alt="Uzbekistan map outline"></div>
+  <div class="visuals"><img class="flag" src="file:///C:/Users/Rick/.openclaw/workspace/Projects/collective-manifestation/public/assets/manifestwave/flags/uzbekistan.svg" alt="Uzbekistan flag"></div>
+  <p class="detail">Uzbekistan (west); Uzbekistan (east)</p>
 </section>
     </div>
     <div class="footer-note"><span>Symbolic 24-hour wave grouping. Some countries/regions span multiple zones.</span><span>CollectiveManifestation.org</span></div>

@@ -53,6 +53,15 @@ DISPLAY_FIXES = {
     "Saint Barthélemy": "Saint Barthelemy",
 }
 
+US_STATE_DETAIL_BY_SLOT = {
+    "-10": "Hawaii; Alaska — western Aleutians",
+    "-9": "Alaska — most areas, Juneau, Nome, Sitka, Yakutat",
+    "-8": "Pacific — California, Nevada, Washington, Oregon, Idaho panhandle",
+    "-7": "Mountain — Arizona, Colorado, Montana, New Mexico, Utah, Wyoming; parts of Idaho, Oregon, North Dakota, Nebraska, Kansas, Texas",
+    "-6": "Central — Alabama, Arkansas, Illinois, Iowa, Louisiana, Minnesota, Mississippi, Missouri, Oklahoma, Wisconsin, most Texas; parts of Florida, Indiana, Kansas, Kentucky, Michigan, Nebraska, North Dakota, South Dakota, Tennessee",
+    "-5": "Eastern — CT, DC, DE, GA, ME, MD, MA, NH, NJ, NY, NC, OH, PA, RI, SC, VT, VA, WV; parts of Florida, Indiana, Kentucky, Michigan, Tennessee",
+}
+
 # Display simplification: for card labels we do not want legal/political suffixes.
 def clean_name(name: str) -> str:
     return DISPLAY_FIXES.get(name, name)
@@ -92,17 +101,42 @@ def copy_asset(source_path: Path, target_path: Path) -> bool:
     return True
 
 
+def clean_detail_note(note: str) -> str:
+    parts = [part.strip() for part in note.split(";")]
+    ignored = {
+        "country/region appears in multiple symbolic slots",
+        "fractional actual UTC offset",
+        "assigned to nearest symbolic hourly slot",
+    }
+    return "; ".join(
+        part for part in parts
+        if part and part not in ignored and not part.startswith("actual rounded offset")
+    )
+
+
 def collapse_to_slot_country(rows: list[dict[str, str]]) -> list[dict[str, str]]:
-    seen: set[tuple[str, str]] = set()
     clean_rows: list[dict[str, str]] = []
-    for row in sorted(rows, key=lambda item: (int(item["slot_number"]), clean_name(item["country_or_region"]), item["iso_alpha2"], item["iana_timezone"])):
-        key = (row["slot_number"], row["iso_alpha2"])
-        if key in seen:
-            continue
-        seen.add(key)
-        cleaned = dict(row)
-        cleaned["display_name_clean"] = clean_name(row["country_or_region"])
+    grouped: defaultdict[tuple[str, str], list[dict[str, str]]] = defaultdict(list)
+    for row in rows:
+        grouped[(row["slot_number"], row["iso_alpha2"])].append(row)
+
+    for _key, group in sorted(
+        grouped.items(),
+        key=lambda item: (int(item[0][0]), clean_name(item[1][0]["country_or_region"]), item[0][1]),
+    ):
+        group = sorted(group, key=lambda item: item["iana_timezone"])
+        cleaned = dict(group[0])
+        cleaned["display_name_clean"] = clean_name(cleaned["country_or_region"])
         cleaned["asset_slug_clean"] = slugify(cleaned["display_name_clean"])
+        details = []
+        for source_row in group:
+            detail = clean_detail_note(source_row.get("notes", ""))
+            if detail and detail not in details:
+                details.append(detail)
+        cleaned["display_detail"] = "; ".join(details)
+        if cleaned["display_name_clean"] == "United States" and cleaned["slot_number"] in US_STATE_DETAIL_BY_SLOT:
+            cleaned["display_detail"] = US_STATE_DETAIL_BY_SLOT[cleaned["slot_number"]]
+        cleaned["timezone_count_in_slot"] = str(len(group))
         clean_rows.append(cleaned)
     return clean_rows
 
@@ -123,6 +157,8 @@ def write_clean_csvs(clean_rows: list[dict[str, str]]) -> tuple[list[dict[str, s
         "flag_source_file",
         "map_outline_source_file",
         "asset_slug_clean",
+        "display_detail",
+        "timezone_count_in_slot",
         "notes",
     ]
     clean_country_csv = DOCS / "manifestwave-timezone-country-chart-clean.csv"
@@ -269,15 +305,16 @@ def make_card_html(slot_summary: dict[str, str], rows: list[dict[str, str]]) -> 
     cards = []
     for row in sorted(rows, key=lambda item: item["display_name_clean"]):
         slug = row["asset_slug_clean"]
-        label = row["display_name_clean"] + (" (parts)" if row["multi_slot_country"] == "yes" else "")
+        label = row["display_name_clean"]
+        detail = row.get("display_detail", "")
         flag_path = FLAGS_OUT / f"{slug}.svg"
-        map_path = MAPS_OUT / f"{slug}.jpg"
         flag_html = f'<img class="flag" src="{asset_uri(flag_path)}" alt="{html.escape(label)} flag">' if flag_path.exists() else '<div class="missing flag-missing">Flag pending</div>'
-        map_html = f'<img class="map" src="{asset_uri(map_path)}" alt="{html.escape(label)} map outline">' if map_path.exists() else '<div class="missing map-missing">Map pending</div>'
+        detail_html = f'<p class="detail">{html.escape(detail)}</p>' if detail else '<p class="detail muted">&nbsp;</p>'
         cards.append(
             f'''<section class="country-card">
   <h2>{html.escape(label)}</h2>
-  <div class="visuals">{flag_html}{map_html}</div>
+  <div class="visuals">{flag_html}</div>
+  {detail_html}
 </section>'''
         )
     return f'''<!doctype html>
@@ -297,10 +334,11 @@ body {{ padding: 90px 110px; }}
 .grid {{ flex: 1; display: grid; grid-template-columns: repeat({cols}, minmax(0, 1fr)); grid-auto-rows: {min_height}px; gap: {'26px' if density not in ('dense','compact') else '20px' if density == 'dense' else '14px'}; align-content: start; }}
 .country-card {{ height: {min_height}px; position: relative; border: 3px solid #e7dfed; border-radius: {'28px' if density not in ('dense','compact') else '22px'}; background: #fff; padding: {'22px 24px' if density not in ('dense','compact') else '16px 18px' if density == 'dense' else '10px 12px'}; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 10px 26px rgba(48, 20, 65, .08); overflow: hidden; }}
 .country-card h2 {{ margin: 0 0 {'18px' if density not in ('dense','compact') else '10px'}; color: #2b2031; font-size: {'42px' if density == 'large' else '34px' if density == 'medium' else '25px' if density == 'dense' else '18px'}; line-height: 1.08; font-weight: 750; }}
-.visuals {{ display: grid; grid-template-columns: 42% 58%; align-items: center; gap: {'18px' if density not in ('dense','compact') else '10px'}; min-height: 0; }}
-.flag {{ width: 100%; max-height: {'240px' if density == 'large' else '150px' if density == 'medium' else '82px' if density == 'dense' else '54px'}; object-fit: contain; border: 2px solid #eee; border-radius: 8px; background: #fff; }}
-.map {{ width: 100%; max-height: {'290px' if density == 'large' else '180px' if density == 'medium' else '92px' if density == 'dense' else '58px'}; object-fit: contain; mix-blend-mode: multiply; filter: grayscale(1) contrast(1.15); }}
+.visuals {{ display: flex; align-items: center; justify-content: center; min-height: 0; flex: 1; }}
+.flag {{ width: {'72%' if density == 'large' else '64%' if density == 'medium' else '56%' if density == 'dense' else '50%'}; max-height: {'330px' if density == 'large' else '210px' if density == 'medium' else '105px' if density == 'dense' else '66px'}; object-fit: contain; border: 2px solid #eee; border-radius: 8px; background: #fff; }}
 .missing {{ border: 3px dashed #cdb8d6; border-radius: 14px; min-height: 86px; display: flex; align-items: center; justify-content: center; color: #80698d; font-size: 24px; font-weight: 700; background: #faf7fc; text-align: center; }}
+.detail {{ margin: {'16px 0 0' if density not in ('dense','compact') else '8px 0 0'}; color: #6d6075; font-size: {'28px' if density == 'large' else '21px' if density == 'medium' else '15px' if density == 'dense' else '11px'}; line-height: 1.18; font-weight: 600; }}
+.detail.muted {{ color: transparent; }}
 .footer-note {{ margin-top: {'34px' if density not in ('dense','compact') else '22px'}; color: #75687d; font-size: {'28px' if density != 'compact' else '22px'}; display: flex; justify-content: space-between; gap: 40px; }}
 </style>
 </head>
@@ -368,7 +406,7 @@ def main() -> None:
 
     notes = f"""# ManifestWave Card Build Report
 
-Generated draft informational cards and supporting data.
+Generated draft informational cards and supporting data. Current card design renders country/region names, flags, and smaller state/region detail text where needed. Map-outline assets are retained as optional reference assets but are not displayed on the draft card PNGs because the cleaner direction is country name + flag only.
 
 ## Outputs
 
@@ -379,7 +417,7 @@ Generated draft informational cards and supporting data.
 - Draft card HTML: `build-assets/timezone-card-html/`
 - Draft card PNGs: `public/assets/manifestwave/timezone-cards/`
 - Copied flags: `public/assets/manifestwave/flags/`
-- Copied map outlines: `public/assets/manifestwave/maps/`
+- Copied map outlines/reference assets: `public/assets/manifestwave/maps/`
 
 ## Counts
 
@@ -395,11 +433,10 @@ Generated draft informational cards and supporting data.
 
 These are **draft** cards. Before final website use:
 
-1. Open `docs/manifestwave-asset-manifest.csv` and review missing maps/flags.
-2. Inspect copied map outlines for embedded text/labels.
-3. Replace or clean copied map files in `public/assets/manifestwave/maps/` as needed.
-4. Regenerate cards after cleanup.
-5. Verify dense cards like `utc-plus-01.png`, `utc-plus-02.png`, and `utc-minus-04.png` for readability.
+1. Review whether the cleaner no-map-outline card style is preferred.
+2. Verify United States entries show the intended smaller state/region detail text.
+3. Verify dense cards like `utc-plus-01.png`, `utc-plus-02.png`, and `utc-minus-04.png` for readability.
+4. If map outlines are reused later, inspect copied map outlines for embedded text/labels first.
 
 Original assets were not modified.
 """

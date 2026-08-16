@@ -15,7 +15,11 @@ Each time-zone card should show:
 - Each country as a compact tile with:
   - country name
   - flag
-  - simple map outline
+  - smaller secondary detail text when needed, especially for countries split across multiple time zones
+
+Updated card direction after review: do **not** render the country map-outline assets directly on the main card PNGs. Rick prefers the cleaner card direction with the country/region name and flag only, plus smaller state/region detail text where needed. Keep map assets optional/reference only for future detail views or alternate layouts.
+
+United States rule: the United States must appear in the applicable UTC cards and should include smaller writing listing the relevant states/regions for that slot.
 
 ## Important Web Recommendation
 
@@ -40,7 +44,7 @@ Example correction from the first test image:
 
 ## Map-Outline Cleanup Rule
 
-Some of Rick's generic map-outline source images include embedded text, labels, or markings. Those should **not** appear in the final website cards.
+Some of Rick's generic map-outline source images include embedded text, labels, or markings. Since the current main card design no longer renders the outlines, this is now a lower-priority cleanup task. If maps are reused later in detail views or alternate card layouts, those embedded labels should **not** appear.
 
 Before a map outline is used in a final time-zone card:
 
@@ -65,9 +69,9 @@ Recommended style:
 - White or very light background for readability
 - Purple/magenta headings to match the sample direction
 - Country tiles in a consistent grid
-- Flag on the left or under the title
-- Map outline on the right or above/beside the flag
-- Thin gray outline maps
+- Flag as the primary country visual
+- Small secondary text for states/regions where useful
+- No country map outlines in the main card PNGs
 - Clear readable sans-serif typography
 - Plenty of spacing
 - No cluttered backgrounds
