@@ -35,6 +35,8 @@ The first Vercel deployment is live at:
 
 Important: the first Vercel deployment was automatically assigned as production by Vercel. No Squarespace/custom DNS records were changed. Vercel could not connect the GitHub repository automatically because the Vercel account reported missing admin/write access to `528manifestation/collective-manifestation`; deployment was completed from the local checkout instead.
 
+Current launch stance: keep the Vercel URL live only as a private technical review link. Do not promote it, announce it, connect DNS, or treat it as a public launch. Password protection was attempted but blocked by Vercel because Advanced Deployment Protection is not enabled on the team.
+
 ## Source resources
 
 Rick confirmed all current resources should remain in the original source folder and be copied/moved into this project only as needed:
