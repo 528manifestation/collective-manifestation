@@ -1,0 +1,2284 @@
+[
+  {
+    "slot": -11,
+    "label": "UTC-11",
+    "cardFilename": "utc-minus-11.png",
+    "countries": [
+      {
+        "name": "American Samoa",
+        "isoAlpha2": "AS",
+        "detail": "Midway",
+        "flagPath": "/assets/manifestwave/flags/american-samoa.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Antarctica",
+        "isoAlpha2": "AQ",
+        "detail": "New Zealand time",
+        "flagPath": "/assets/manifestwave/flags/antarctica.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "Kiribati",
+        "isoAlpha2": "KI",
+        "detail": "Phoenix Islands",
+        "flagPath": "/assets/manifestwave/flags/kiribati.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "New Zealand",
+        "isoAlpha2": "NZ",
+        "detail": "New Zealand time",
+        "flagPath": "/assets/manifestwave/flags/new-zealand.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "Niue",
+        "isoAlpha2": "NU",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/niue.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Samoa",
+        "isoAlpha2": "WS",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/samoa.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Tokelau",
+        "isoAlpha2": "TK",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/tokelau.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Tonga",
+        "isoAlpha2": "TO",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/tonga.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "United States Minor Outlying Islands",
+        "isoAlpha2": "UM",
+        "detail": "Midway",
+        "flagPath": "/assets/manifestwave/flags/united-states-minor-outlying-islands.svg",
+        "isMultiSlot": true
+      }
+    ]
+  },
+  {
+    "slot": -10,
+    "label": "UTC-10",
+    "cardFilename": "utc-minus-10.png",
+    "countries": [
+      {
+        "name": "Cook Islands",
+        "isoAlpha2": "CK",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/cook-islands.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "French Polynesia",
+        "isoAlpha2": "PF",
+        "detail": "Marquesas Islands; Society Islands",
+        "flagPath": "/assets/manifestwave/flags/french-polynesia.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "Kiribati",
+        "isoAlpha2": "KI",
+        "detail": "Line Islands",
+        "flagPath": "/assets/manifestwave/flags/kiribati.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "New Zealand",
+        "isoAlpha2": "NZ",
+        "detail": "Chatham Islands",
+        "flagPath": "/assets/manifestwave/flags/new-zealand.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "United States",
+        "isoAlpha2": "US",
+        "detail": "Hawaii; Alaska — western Aleutians",
+        "flagPath": "/assets/manifestwave/flags/united-states.svg",
+        "isMultiSlot": true
+      }
+    ]
+  },
+  {
+    "slot": -9,
+    "label": "UTC-9",
+    "cardFilename": "utc-minus-09.png",
+    "countries": [
+      {
+        "name": "French Polynesia",
+        "isoAlpha2": "PF",
+        "detail": "Gambier Islands",
+        "flagPath": "/assets/manifestwave/flags/french-polynesia.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "United States",
+        "isoAlpha2": "US",
+        "detail": "Alaska — most areas, Juneau, Nome, Sitka, Yakutat",
+        "flagPath": "/assets/manifestwave/flags/united-states.svg",
+        "isMultiSlot": true
+      }
+    ]
+  },
+  {
+    "slot": -8,
+    "label": "UTC-8",
+    "cardFilename": "utc-minus-08.png",
+    "countries": [
+      {
+        "name": "Canada",
+        "isoAlpha2": "CA",
+        "detail": "MST - BC (most areas)",
+        "flagPath": "/assets/manifestwave/flags/canada.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "Mexico",
+        "isoAlpha2": "MX",
+        "detail": "Baja California",
+        "flagPath": "/assets/manifestwave/flags/mexico.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "Pitcairn",
+        "isoAlpha2": "PN",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/pitcairn.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "United States",
+        "isoAlpha2": "US",
+        "detail": "Pacific — California, Nevada, Washington, Oregon, Idaho panhandle",
+        "flagPath": "/assets/manifestwave/flags/united-states.svg",
+        "isMultiSlot": true
+      }
+    ]
+  },
+  {
+    "slot": -7,
+    "label": "UTC-7",
+    "cardFilename": "utc-minus-07.png",
+    "countries": [
+      {
+        "name": "Canada",
+        "isoAlpha2": "CA",
+        "detail": "Mountain - NU (west); MST - Yukon (west); MST - BC (Dawson Cr, Ft St John); CST - AB, BC(E), NT(E), SK(W); MST - BC (Ft Nelson); Mountain - NT (west); MST - AZ (most areas), Creston BC; MST - Yukon (east)",
+        "flagPath": "/assets/manifestwave/flags/canada.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "Mexico",
+        "isoAlpha2": "MX",
+        "detail": "Chihuahua (US border - west); Sonora; Baja California Sur, Nayarit (most areas), Sinaloa",
+        "flagPath": "/assets/manifestwave/flags/mexico.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "United States",
+        "isoAlpha2": "US",
+        "detail": "Mountain — Arizona, Colorado, Montana, New Mexico, Utah, Wyoming; parts of Idaho, Oregon, North Dakota, Nebraska, Kansas, Texas",
+        "flagPath": "/assets/manifestwave/flags/united-states.svg",
+        "isMultiSlot": true
+      }
+    ]
+  },
+  {
+    "slot": -6,
+    "label": "UTC-6",
+    "cardFilename": "utc-minus-06.png",
+    "countries": [
+      {
+        "name": "Belize",
+        "isoAlpha2": "BZ",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/belize.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Canada",
+        "isoAlpha2": "CA",
+        "detail": "Central - NU (central); CST - SK (most areas); Central - NU (Resolute); CST - SK (midwest); Central - ON (west), Manitoba",
+        "flagPath": "/assets/manifestwave/flags/canada.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "Costa Rica",
+        "isoAlpha2": "CR",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/costa-rica.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Ecuador",
+        "isoAlpha2": "EC",
+        "detail": "Galápagos Islands",
+        "flagPath": "/assets/manifestwave/flags/ecuador.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "El Salvador",
+        "isoAlpha2": "SV",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/el-salvador.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Guatemala",
+        "isoAlpha2": "GT",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/guatemala.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Honduras",
+        "isoAlpha2": "HN",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/honduras.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Mexico",
+        "isoAlpha2": "MX",
+        "detail": "Bahía de Banderas; Chihuahua (most areas); Coahuila, Nuevo León, Tamaulipas (US border); Campeche, Yucatán; Central Mexico; Durango; Coahuila, Nuevo León, Tamaulipas (most areas); Chihuahua (US border - east)",
+        "flagPath": "/assets/manifestwave/flags/mexico.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "Nicaragua",
+        "isoAlpha2": "NI",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/nicaragua.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "United States",
+        "isoAlpha2": "US",
+        "detail": "Central — Alabama, Arkansas, Illinois, Iowa, Louisiana, Minnesota, Mississippi, Missouri, Oklahoma, Wisconsin, most Texas; parts of Florida, Indiana, Kansas, Kentucky, Michigan, Nebraska, North Dakota, South Dakota, Tennessee",
+        "flagPath": "/assets/manifestwave/flags/united-states.svg",
+        "isMultiSlot": true
+      }
+    ]
+  },
+  {
+    "slot": -5,
+    "label": "UTC-5",
+    "cardFilename": "utc-minus-05.png",
+    "countries": [
+      {
+        "name": "Bahamas",
+        "isoAlpha2": "BS",
+        "detail": "Eastern - ON & QC (most areas)",
+        "flagPath": "/assets/manifestwave/flags/bahamas.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Brazil",
+        "isoAlpha2": "BR",
+        "detail": "Amazonas (west); Acre",
+        "flagPath": "/assets/manifestwave/flags/brazil.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "Canada",
+        "isoAlpha2": "CA",
+        "detail": "Eastern - NU (most areas); EST - ON (Atikokan), NU (Coral H); Eastern - ON & QC (most areas)",
+        "flagPath": "/assets/manifestwave/flags/canada.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "Cayman Islands",
+        "isoAlpha2": "KY",
+        "detail": "EST - ON (Atikokan), NU (Coral H)",
+        "flagPath": "/assets/manifestwave/flags/cayman-islands.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Chile",
+        "isoAlpha2": "CL",
+        "detail": "Easter Island",
+        "flagPath": "/assets/manifestwave/flags/chile.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "Colombia",
+        "isoAlpha2": "CO",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/colombia.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Cuba",
+        "isoAlpha2": "CU",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/cuba.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Ecuador",
+        "isoAlpha2": "EC",
+        "detail": "Ecuador (mainland)",
+        "flagPath": "/assets/manifestwave/flags/ecuador.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "Haiti",
+        "isoAlpha2": "HT",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/haiti.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Jamaica",
+        "isoAlpha2": "JM",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/jamaica.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Mexico",
+        "isoAlpha2": "MX",
+        "detail": "Quintana Roo",
+        "flagPath": "/assets/manifestwave/flags/mexico.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "Panama",
+        "isoAlpha2": "PA",
+        "detail": "EST - ON (Atikokan), NU (Coral H)",
+        "flagPath": "/assets/manifestwave/flags/panama.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Peru",
+        "isoAlpha2": "PE",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/peru.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Turks and Caicos Islands",
+        "isoAlpha2": "TC",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/turks-and-caicos-islands.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "United States",
+        "isoAlpha2": "US",
+        "detail": "Eastern — CT, DC, DE, GA, ME, MD, MA, NH, NJ, NY, NC, OH, PA, RI, SC, VT, VA, WV; parts of Florida, Indiana, Kentucky, Michigan, Tennessee",
+        "flagPath": "/assets/manifestwave/flags/united-states.svg",
+        "isMultiSlot": true
+      }
+    ]
+  },
+  {
+    "slot": -4,
+    "label": "UTC-4",
+    "cardFilename": "utc-minus-04.png",
+    "countries": [
+      {
+        "name": "Anguilla",
+        "isoAlpha2": "AI",
+        "detail": "AST - QC (Lower North Shore)",
+        "flagPath": "/assets/manifestwave/flags/anguilla.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Antigua and Barbuda",
+        "isoAlpha2": "AG",
+        "detail": "AST - QC (Lower North Shore)",
+        "flagPath": "/assets/manifestwave/flags/antigua-and-barbuda.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Aruba",
+        "isoAlpha2": "AW",
+        "detail": "AST - QC (Lower North Shore)",
+        "flagPath": "/assets/manifestwave/flags/aruba.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Barbados",
+        "isoAlpha2": "BB",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/barbados.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Bermuda",
+        "isoAlpha2": "BM",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/bermuda.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Bolivia",
+        "isoAlpha2": "BO",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/bolivia.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Bonaire, Sint Eustatius and Saba",
+        "isoAlpha2": "BQ",
+        "detail": "AST - QC (Lower North Shore)",
+        "flagPath": "/assets/manifestwave/flags/bonaire-sint-eustatius-and-saba.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Brazil",
+        "isoAlpha2": "BR",
+        "detail": "Roraima; Mato Grosso do Sul; Mato Grosso; Amazonas (east); Rondônia",
+        "flagPath": "/assets/manifestwave/flags/brazil.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "British Virgin Islands",
+        "isoAlpha2": "VG",
+        "detail": "AST - QC (Lower North Shore)",
+        "flagPath": "/assets/manifestwave/flags/british-virgin-islands.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Canada",
+        "isoAlpha2": "CA",
+        "detail": "Atlantic - NS (Cape Breton); Atlantic - Labrador (most areas); Atlantic - NS (most areas), PE; Atlantic - New Brunswick; AST - QC (Lower North Shore); Newfoundland, Labrador (SE)",
+        "flagPath": "/assets/manifestwave/flags/canada.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "Curacao",
+        "isoAlpha2": "CW",
+        "detail": "AST - QC (Lower North Shore)",
+        "flagPath": "/assets/manifestwave/flags/curacao.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Dominica",
+        "isoAlpha2": "DM",
+        "detail": "AST - QC (Lower North Shore)",
+        "flagPath": "/assets/manifestwave/flags/dominica.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Dominican Republic",
+        "isoAlpha2": "DO",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/dominican-republic.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Greenland",
+        "isoAlpha2": "GL",
+        "detail": "Thule/Pituffik",
+        "flagPath": "/assets/manifestwave/flags/greenland.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "Grenada",
+        "isoAlpha2": "GD",
+        "detail": "AST - QC (Lower North Shore)",
+        "flagPath": "/assets/manifestwave/flags/grenada.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Guadeloupe",
+        "isoAlpha2": "GP",
+        "detail": "AST - QC (Lower North Shore)",
+        "flagPath": "/assets/manifestwave/flags/guadeloupe.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Guyana",
+        "isoAlpha2": "GY",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/guyana.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Martinique",
+        "isoAlpha2": "MQ",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/martinique.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Montserrat",
+        "isoAlpha2": "MS",
+        "detail": "AST - QC (Lower North Shore)",
+        "flagPath": "/assets/manifestwave/flags/montserrat.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Puerto Rico",
+        "isoAlpha2": "PR",
+        "detail": "AST - QC (Lower North Shore)",
+        "flagPath": "/assets/manifestwave/flags/puerto-rico.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Saint Barthelemy",
+        "isoAlpha2": "BL",
+        "detail": "AST - QC (Lower North Shore)",
+        "flagPath": "/assets/manifestwave/flags/saint-barthelemy.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Saint Kitts and Nevis",
+        "isoAlpha2": "KN",
+        "detail": "AST - QC (Lower North Shore)",
+        "flagPath": "/assets/manifestwave/flags/saint-kitts-and-nevis.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Saint Lucia",
+        "isoAlpha2": "LC",
+        "detail": "AST - QC (Lower North Shore)",
+        "flagPath": "/assets/manifestwave/flags/saint-lucia.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Saint Martin",
+        "isoAlpha2": "MF",
+        "detail": "AST - QC (Lower North Shore)",
+        "flagPath": "/assets/manifestwave/flags/saint-martin.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Saint Vincent and the Grenadines",
+        "isoAlpha2": "VC",
+        "detail": "AST - QC (Lower North Shore)",
+        "flagPath": "/assets/manifestwave/flags/saint-vincent-and-the-grenadines.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Sint Maarten (Dutch part)",
+        "isoAlpha2": "SX",
+        "detail": "AST - QC (Lower North Shore)",
+        "flagPath": "/assets/manifestwave/flags/sint-maarten-dutch-part.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Trinidad and Tobago",
+        "isoAlpha2": "TT",
+        "detail": "AST - QC (Lower North Shore)",
+        "flagPath": "/assets/manifestwave/flags/trinidad-and-tobago.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "U.S. Virgin Islands",
+        "isoAlpha2": "VI",
+        "detail": "AST - QC (Lower North Shore)",
+        "flagPath": "/assets/manifestwave/flags/u-s-virgin-islands.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Venezuela",
+        "isoAlpha2": "VE",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/venezuela.svg",
+        "isMultiSlot": false
+      }
+    ]
+  },
+  {
+    "slot": -3,
+    "label": "UTC-3",
+    "cardFilename": "utc-minus-03.png",
+    "countries": [
+      {
+        "name": "Antarctica",
+        "isoAlpha2": "AQ",
+        "detail": "Palmer; Rothera",
+        "flagPath": "/assets/manifestwave/flags/antarctica.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "Argentina",
+        "isoAlpha2": "AR",
+        "detail": "Buenos Aires (BA, CF); Catamarca (CT), Chubut (CH); most areas: CB, CC, CN, ER, FM, MN, SE, SF; Jujuy (JY); La Rioja (LR); Mendoza (MZ); Santa Cruz (SC); Salta (SA, LP, NQ, RN); San Juan (SJ); San Luis (SL); Tucumán (TM); Tierra del Fuego (TF)",
+        "flagPath": "/assets/manifestwave/flags/argentina.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Brazil",
+        "isoAlpha2": "BR",
+        "detail": "Tocantins; Bahia; Pará (east), Amapá; Brazil (northeast: MA, PI, CE, RN, PB); Alagoas, Sergipe; Pernambuco; Pará (west); Brazil (southeast: GO, DF, MG, ES, RJ, SP, PR, SC, RS)",
+        "flagPath": "/assets/manifestwave/flags/brazil.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "Chile",
+        "isoAlpha2": "CL",
+        "detail": "Aysén Region; Magallanes Region; most of Chile",
+        "flagPath": "/assets/manifestwave/flags/chile.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "Falkland Islands",
+        "isoAlpha2": "FK",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/falkland-islands.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "French Guiana",
+        "isoAlpha2": "GF",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/french-guiana.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Paraguay",
+        "isoAlpha2": "PY",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/paraguay.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Saint Pierre and Miquelon",
+        "isoAlpha2": "PM",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/saint-pierre-and-miquelon.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Suriname",
+        "isoAlpha2": "SR",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/suriname.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Uruguay",
+        "isoAlpha2": "UY",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/uruguay.svg",
+        "isMultiSlot": false
+      }
+    ]
+  },
+  {
+    "slot": -2,
+    "label": "UTC-2",
+    "cardFilename": "utc-minus-02.png",
+    "countries": [
+      {
+        "name": "Brazil",
+        "isoAlpha2": "BR",
+        "detail": "Atlantic islands",
+        "flagPath": "/assets/manifestwave/flags/brazil.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "Greenland",
+        "isoAlpha2": "GL",
+        "detail": "most of Greenland; Scoresbysund/Ittoqqortoormiit",
+        "flagPath": "/assets/manifestwave/flags/greenland.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "South Georgia and the South Sandwich Islands",
+        "isoAlpha2": "GS",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/south-georgia-and-the-south-sandwich-islands.svg",
+        "isMultiSlot": false
+      }
+    ]
+  },
+  {
+    "slot": -1,
+    "label": "UTC-1",
+    "cardFilename": "utc-minus-01.png",
+    "countries": [
+      {
+        "name": "Cabo Verde",
+        "isoAlpha2": "CV",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/cabo-verde.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Portugal",
+        "isoAlpha2": "PT",
+        "detail": "Azores",
+        "flagPath": "/assets/manifestwave/flags/portugal.svg",
+        "isMultiSlot": true
+      }
+    ]
+  },
+  {
+    "slot": 0,
+    "label": "UTC+0",
+    "cardFilename": "utc-plus-00.png",
+    "countries": [
+      {
+        "name": "Antarctica",
+        "isoAlpha2": "AQ",
+        "detail": "Troll",
+        "flagPath": "/assets/manifestwave/flags/antarctica.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "Burkina Faso",
+        "isoAlpha2": "BF",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/burkina-faso.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Cote d'Ivoire",
+        "isoAlpha2": "CI",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/cote-d-ivoire.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Faroe Islands",
+        "isoAlpha2": "FO",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/faroe-islands.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Gambia",
+        "isoAlpha2": "GM",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/gambia.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Ghana",
+        "isoAlpha2": "GH",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/ghana.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Greenland",
+        "isoAlpha2": "GL",
+        "detail": "National Park (east coast)",
+        "flagPath": "/assets/manifestwave/flags/greenland.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "Guernsey",
+        "isoAlpha2": "GG",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/guernsey.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Guinea",
+        "isoAlpha2": "GN",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/guinea.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Guinea-Bissau",
+        "isoAlpha2": "GW",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/guinea-bissau.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Iceland",
+        "isoAlpha2": "IS",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/iceland.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Ireland",
+        "isoAlpha2": "IE",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/ireland.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Isle of Man",
+        "isoAlpha2": "IM",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/isle-of-man.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Jersey",
+        "isoAlpha2": "JE",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/jersey.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Liberia",
+        "isoAlpha2": "LR",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/liberia.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Mali",
+        "isoAlpha2": "ML",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/mali.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Mauritania",
+        "isoAlpha2": "MR",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/mauritania.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Portugal",
+        "isoAlpha2": "PT",
+        "detail": "Madeira Islands; Portugal (mainland)",
+        "flagPath": "/assets/manifestwave/flags/portugal.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "Saint Helena, Ascension and Tristan da Cunha",
+        "isoAlpha2": "SH",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/saint-helena-ascension-and-tristan-da-cunha.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Sao Tome and Principe",
+        "isoAlpha2": "ST",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/sao-tome-and-principe.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Senegal",
+        "isoAlpha2": "SN",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/senegal.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Sierra Leone",
+        "isoAlpha2": "SL",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/sierra-leone.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Spain",
+        "isoAlpha2": "ES",
+        "detail": "Canary Islands",
+        "flagPath": "/assets/manifestwave/flags/spain.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "Togo",
+        "isoAlpha2": "TG",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/togo.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "United Kingdom",
+        "isoAlpha2": "GB",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/united-kingdom.svg",
+        "isMultiSlot": false
+      }
+    ]
+  },
+  {
+    "slot": 1,
+    "label": "UTC+1",
+    "cardFilename": "utc-plus-01.png",
+    "countries": [
+      {
+        "name": "Albania",
+        "isoAlpha2": "AL",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/albania.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Algeria",
+        "isoAlpha2": "DZ",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/algeria.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Andorra",
+        "isoAlpha2": "AD",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/andorra.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Angola",
+        "isoAlpha2": "AO",
+        "detail": "West Africa Time",
+        "flagPath": "/assets/manifestwave/flags/angola.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Austria",
+        "isoAlpha2": "AT",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/austria.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Belgium",
+        "isoAlpha2": "BE",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/belgium.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Benin",
+        "isoAlpha2": "BJ",
+        "detail": "West Africa Time",
+        "flagPath": "/assets/manifestwave/flags/benin.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Bosnia and Herzegovina",
+        "isoAlpha2": "BA",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/bosnia-and-herzegovina.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Cameroon",
+        "isoAlpha2": "CM",
+        "detail": "West Africa Time",
+        "flagPath": "/assets/manifestwave/flags/cameroon.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Central African Republic",
+        "isoAlpha2": "CF",
+        "detail": "West Africa Time",
+        "flagPath": "/assets/manifestwave/flags/central-african-republic.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Chad",
+        "isoAlpha2": "TD",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/chad.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Croatia",
+        "isoAlpha2": "HR",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/croatia.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Czech Republic",
+        "isoAlpha2": "CZ",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/czech-republic.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Democratic Republic of the Congo",
+        "isoAlpha2": "CD",
+        "detail": "West Africa Time",
+        "flagPath": "/assets/manifestwave/flags/democratic-republic-of-the-congo.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "Denmark",
+        "isoAlpha2": "DK",
+        "detail": "most of Germany",
+        "flagPath": "/assets/manifestwave/flags/denmark.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Equatorial Guinea",
+        "isoAlpha2": "GQ",
+        "detail": "West Africa Time",
+        "flagPath": "/assets/manifestwave/flags/equatorial-guinea.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "France",
+        "isoAlpha2": "FR",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/france.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Gabon",
+        "isoAlpha2": "GA",
+        "detail": "West Africa Time",
+        "flagPath": "/assets/manifestwave/flags/gabon.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Germany",
+        "isoAlpha2": "DE",
+        "detail": "most of Germany; Büsingen",
+        "flagPath": "/assets/manifestwave/flags/germany.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Gibraltar",
+        "isoAlpha2": "GI",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/gibraltar.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Holy See",
+        "isoAlpha2": "VA",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/holy-see.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Hungary",
+        "isoAlpha2": "HU",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/hungary.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Italy",
+        "isoAlpha2": "IT",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/italy.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Liechtenstein",
+        "isoAlpha2": "LI",
+        "detail": "Büsingen",
+        "flagPath": "/assets/manifestwave/flags/liechtenstein.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Luxembourg",
+        "isoAlpha2": "LU",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/luxembourg.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Malta",
+        "isoAlpha2": "MT",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/malta.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Monaco",
+        "isoAlpha2": "MC",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/monaco.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Montenegro",
+        "isoAlpha2": "ME",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/montenegro.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Morocco",
+        "isoAlpha2": "MA",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/morocco.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Netherlands",
+        "isoAlpha2": "NL",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/netherlands.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Niger",
+        "isoAlpha2": "NE",
+        "detail": "West Africa Time",
+        "flagPath": "/assets/manifestwave/flags/niger.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Nigeria",
+        "isoAlpha2": "NG",
+        "detail": "West Africa Time",
+        "flagPath": "/assets/manifestwave/flags/nigeria.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "North Macedonia",
+        "isoAlpha2": "MK",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/north-macedonia.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Norway",
+        "isoAlpha2": "NO",
+        "detail": "most of Germany",
+        "flagPath": "/assets/manifestwave/flags/norway.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Poland",
+        "isoAlpha2": "PL",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/poland.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Republic of the Congo",
+        "isoAlpha2": "CG",
+        "detail": "West Africa Time",
+        "flagPath": "/assets/manifestwave/flags/republic-of-the-congo.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "San Marino",
+        "isoAlpha2": "SM",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/san-marino.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Serbia",
+        "isoAlpha2": "RS",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/serbia.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Slovakia",
+        "isoAlpha2": "SK",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/slovakia.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Slovenia",
+        "isoAlpha2": "SI",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/slovenia.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Spain",
+        "isoAlpha2": "ES",
+        "detail": "Ceuta, Melilla; Spain (mainland)",
+        "flagPath": "/assets/manifestwave/flags/spain.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "Svalbard and Jan Mayen",
+        "isoAlpha2": "SJ",
+        "detail": "most of Germany",
+        "flagPath": "/assets/manifestwave/flags/svalbard-and-jan-mayen.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Sweden",
+        "isoAlpha2": "SE",
+        "detail": "most of Germany",
+        "flagPath": "/assets/manifestwave/flags/sweden.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Switzerland",
+        "isoAlpha2": "CH",
+        "detail": "Büsingen",
+        "flagPath": "/assets/manifestwave/flags/switzerland.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Tunisia",
+        "isoAlpha2": "TN",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/tunisia.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Western Sahara",
+        "isoAlpha2": "EH",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/western-sahara.svg",
+        "isMultiSlot": false
+      }
+    ]
+  },
+  {
+    "slot": 2,
+    "label": "UTC+2",
+    "cardFilename": "utc-plus-02.png",
+    "countries": [
+      {
+        "name": "Botswana",
+        "isoAlpha2": "BW",
+        "detail": "Central Africa Time",
+        "flagPath": "/assets/manifestwave/flags/botswana.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Bulgaria",
+        "isoAlpha2": "BG",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/bulgaria.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Burundi",
+        "isoAlpha2": "BI",
+        "detail": "Central Africa Time",
+        "flagPath": "/assets/manifestwave/flags/burundi.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Cyprus",
+        "isoAlpha2": "CY",
+        "detail": "Northern Cyprus; most of Cyprus",
+        "flagPath": "/assets/manifestwave/flags/cyprus.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Democratic Republic of the Congo",
+        "isoAlpha2": "CD",
+        "detail": "Central Africa Time",
+        "flagPath": "/assets/manifestwave/flags/democratic-republic-of-the-congo.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "Egypt",
+        "isoAlpha2": "EG",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/egypt.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Estonia",
+        "isoAlpha2": "EE",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/estonia.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Eswatini",
+        "isoAlpha2": "SZ",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/eswatini.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Finland",
+        "isoAlpha2": "FI",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/finland.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Greece",
+        "isoAlpha2": "GR",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/greece.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Israel",
+        "isoAlpha2": "IL",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/israel.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Latvia",
+        "isoAlpha2": "LV",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/latvia.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Lebanon",
+        "isoAlpha2": "LB",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/lebanon.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Lesotho",
+        "isoAlpha2": "LS",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/lesotho.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Libya",
+        "isoAlpha2": "LY",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/libya.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Lithuania",
+        "isoAlpha2": "LT",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/lithuania.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Malawi",
+        "isoAlpha2": "MW",
+        "detail": "Central Africa Time",
+        "flagPath": "/assets/manifestwave/flags/malawi.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Moldova",
+        "isoAlpha2": "MD",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/moldova.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Mozambique",
+        "isoAlpha2": "MZ",
+        "detail": "Central Africa Time",
+        "flagPath": "/assets/manifestwave/flags/mozambique.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Namibia",
+        "isoAlpha2": "NA",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/namibia.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Palestine",
+        "isoAlpha2": "PS",
+        "detail": "Gaza Strip; West Bank",
+        "flagPath": "/assets/manifestwave/flags/palestine.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Romania",
+        "isoAlpha2": "RO",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/romania.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Russia",
+        "isoAlpha2": "RU",
+        "detail": "MSK-01 - Kaliningrad",
+        "flagPath": "/assets/manifestwave/flags/russia.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "Rwanda",
+        "isoAlpha2": "RW",
+        "detail": "Central Africa Time",
+        "flagPath": "/assets/manifestwave/flags/rwanda.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "South Africa",
+        "isoAlpha2": "ZA",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/south-africa.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "South Sudan",
+        "isoAlpha2": "SS",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/south-sudan.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Sudan",
+        "isoAlpha2": "SD",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/sudan.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Ukraine",
+        "isoAlpha2": "UA",
+        "detail": "most of Ukraine",
+        "flagPath": "/assets/manifestwave/flags/ukraine.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "Zambia",
+        "isoAlpha2": "ZM",
+        "detail": "Central Africa Time",
+        "flagPath": "/assets/manifestwave/flags/zambia.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Zimbabwe",
+        "isoAlpha2": "ZW",
+        "detail": "Central Africa Time",
+        "flagPath": "/assets/manifestwave/flags/zimbabwe.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Åland Islands",
+        "isoAlpha2": "AX",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/aland-islands.svg",
+        "isMultiSlot": false
+      }
+    ]
+  },
+  {
+    "slot": 3,
+    "label": "UTC+3",
+    "cardFilename": "utc-plus-03.png",
+    "countries": [
+      {
+        "name": "Antarctica",
+        "isoAlpha2": "AQ",
+        "detail": "Syowa",
+        "flagPath": "/assets/manifestwave/flags/antarctica.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "Bahrain",
+        "isoAlpha2": "BH",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/bahrain.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Belarus",
+        "isoAlpha2": "BY",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/belarus.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Comoros",
+        "isoAlpha2": "KM",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/comoros.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Djibouti",
+        "isoAlpha2": "DJ",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/djibouti.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Eritrea",
+        "isoAlpha2": "ER",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/eritrea.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Ethiopia",
+        "isoAlpha2": "ET",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/ethiopia.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Iraq",
+        "isoAlpha2": "IQ",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/iraq.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Jordan",
+        "isoAlpha2": "JO",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/jordan.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Kenya",
+        "isoAlpha2": "KE",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/kenya.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Kuwait",
+        "isoAlpha2": "KW",
+        "detail": "Syowa",
+        "flagPath": "/assets/manifestwave/flags/kuwait.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Madagascar",
+        "isoAlpha2": "MG",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/madagascar.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Mayotte",
+        "isoAlpha2": "YT",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/mayotte.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Qatar",
+        "isoAlpha2": "QA",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/qatar.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Russia",
+        "isoAlpha2": "RU",
+        "detail": "MSK+00 - Kirov; MSK+00 - Moscow area; Crimea; MSK+00 - Volgograd",
+        "flagPath": "/assets/manifestwave/flags/russia.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "Saudi Arabia",
+        "isoAlpha2": "SA",
+        "detail": "Syowa",
+        "flagPath": "/assets/manifestwave/flags/saudi-arabia.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Somalia",
+        "isoAlpha2": "SO",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/somalia.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Syria",
+        "isoAlpha2": "SY",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/syria.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Tanzania",
+        "isoAlpha2": "TZ",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/tanzania.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Turkey",
+        "isoAlpha2": "TR",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/turkey.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Uganda",
+        "isoAlpha2": "UG",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/uganda.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Ukraine",
+        "isoAlpha2": "UA",
+        "detail": "Crimea",
+        "flagPath": "/assets/manifestwave/flags/ukraine.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "Yemen",
+        "isoAlpha2": "YE",
+        "detail": "Syowa",
+        "flagPath": "/assets/manifestwave/flags/yemen.svg",
+        "isMultiSlot": false
+      }
+    ]
+  },
+  {
+    "slot": 4,
+    "label": "UTC+4",
+    "cardFilename": "utc-plus-04.png",
+    "countries": [
+      {
+        "name": "Armenia",
+        "isoAlpha2": "AM",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/armenia.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Azerbaijan",
+        "isoAlpha2": "AZ",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/azerbaijan.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "French Southern Territories",
+        "isoAlpha2": "TF",
+        "detail": "Crozet",
+        "flagPath": "/assets/manifestwave/flags/french-southern-territories.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "Georgia",
+        "isoAlpha2": "GE",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/georgia.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Iran",
+        "isoAlpha2": "IR",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/iran.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Mauritius",
+        "isoAlpha2": "MU",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/mauritius.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Oman",
+        "isoAlpha2": "OM",
+        "detail": "Crozet",
+        "flagPath": "/assets/manifestwave/flags/oman.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Reunion",
+        "isoAlpha2": "RE",
+        "detail": "Crozet",
+        "flagPath": "/assets/manifestwave/flags/reunion.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Russia",
+        "isoAlpha2": "RU",
+        "detail": "MSK+01 - Astrakhan; MSK+01 - Samara, Udmurtia; MSK+01 - Saratov; MSK+01 - Ulyanovsk",
+        "flagPath": "/assets/manifestwave/flags/russia.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "Seychelles",
+        "isoAlpha2": "SC",
+        "detail": "Crozet",
+        "flagPath": "/assets/manifestwave/flags/seychelles.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "United Arab Emirates",
+        "isoAlpha2": "AE",
+        "detail": "Crozet",
+        "flagPath": "/assets/manifestwave/flags/united-arab-emirates.svg",
+        "isMultiSlot": false
+      }
+    ]
+  },
+  {
+    "slot": 5,
+    "label": "UTC+5",
+    "cardFilename": "utc-plus-05.png",
+    "countries": [
+      {
+        "name": "Afghanistan",
+        "isoAlpha2": "AF",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/afghanistan.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Antarctica",
+        "isoAlpha2": "AQ",
+        "detail": "Mawson; Vostok",
+        "flagPath": "/assets/manifestwave/flags/antarctica.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "French Southern Territories",
+        "isoAlpha2": "TF",
+        "detail": "Kerguelen, St Paul I, Amsterdam I",
+        "flagPath": "/assets/manifestwave/flags/french-southern-territories.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "Kazakhstan",
+        "isoAlpha2": "KZ",
+        "detail": "most of Kazakhstan; Mangghystaū/Mankistau; Aqtöbe/Aktobe; Atyraū/Atirau/Gur’yev; West Kazakhstan; Qostanay/Kostanay/Kustanay; Qyzylorda/Kyzylorda/Kzyl-Orda",
+        "flagPath": "/assets/manifestwave/flags/kazakhstan.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Maldives",
+        "isoAlpha2": "MV",
+        "detail": "Kerguelen, St Paul I, Amsterdam I",
+        "flagPath": "/assets/manifestwave/flags/maldives.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Pakistan",
+        "isoAlpha2": "PK",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/pakistan.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Russia",
+        "isoAlpha2": "RU",
+        "detail": "MSK+02 - Urals",
+        "flagPath": "/assets/manifestwave/flags/russia.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "Tajikistan",
+        "isoAlpha2": "TJ",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/tajikistan.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Turkmenistan",
+        "isoAlpha2": "TM",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/turkmenistan.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Uzbekistan",
+        "isoAlpha2": "UZ",
+        "detail": "Uzbekistan (west); Uzbekistan (east)",
+        "flagPath": "/assets/manifestwave/flags/uzbekistan.svg",
+        "isMultiSlot": false
+      }
+    ]
+  },
+  {
+    "slot": 6,
+    "label": "UTC+6",
+    "cardFilename": "utc-plus-06.png",
+    "countries": [
+      {
+        "name": "Bangladesh",
+        "isoAlpha2": "BD",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/bangladesh.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Bhutan",
+        "isoAlpha2": "BT",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/bhutan.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "British Indian Ocean Territory",
+        "isoAlpha2": "IO",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/british-indian-ocean-territory.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "China",
+        "isoAlpha2": "CN",
+        "detail": "Xinjiang Time",
+        "flagPath": "/assets/manifestwave/flags/china.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "India",
+        "isoAlpha2": "IN",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/india.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Kyrgyzstan",
+        "isoAlpha2": "KG",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/kyrgyzstan.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Nepal",
+        "isoAlpha2": "NP",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/nepal.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Russia",
+        "isoAlpha2": "RU",
+        "detail": "MSK+03 - Omsk",
+        "flagPath": "/assets/manifestwave/flags/russia.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "Sri Lanka",
+        "isoAlpha2": "LK",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/sri-lanka.svg",
+        "isMultiSlot": false
+      }
+    ]
+  },
+  {
+    "slot": 7,
+    "label": "UTC+7",
+    "cardFilename": "utc-plus-07.png",
+    "countries": [
+      {
+        "name": "Antarctica",
+        "isoAlpha2": "AQ",
+        "detail": "Davis",
+        "flagPath": "/assets/manifestwave/flags/antarctica.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "Cambodia",
+        "isoAlpha2": "KH",
+        "detail": "north Vietnam",
+        "flagPath": "/assets/manifestwave/flags/cambodia.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Christmas Island",
+        "isoAlpha2": "CX",
+        "detail": "north Vietnam",
+        "flagPath": "/assets/manifestwave/flags/christmas-island.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Cocos (Keeling) Islands",
+        "isoAlpha2": "CC",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/cocos-keeling-islands.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Indonesia",
+        "isoAlpha2": "ID",
+        "detail": "Java, Sumatra; Borneo (west, central)",
+        "flagPath": "/assets/manifestwave/flags/indonesia.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "Laos",
+        "isoAlpha2": "LA",
+        "detail": "north Vietnam",
+        "flagPath": "/assets/manifestwave/flags/laos.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Mongolia",
+        "isoAlpha2": "MN",
+        "detail": "Bayan-Ölgii, Hovd, Uvs",
+        "flagPath": "/assets/manifestwave/flags/mongolia.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "Myanmar",
+        "isoAlpha2": "MM",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/myanmar.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Russia",
+        "isoAlpha2": "RU",
+        "detail": "MSK+04 - Altai; MSK+04 - Krasnoyarsk area; MSK+04 - Kemerovo; MSK+04 - Novosibirsk; MSK+04 - Tomsk",
+        "flagPath": "/assets/manifestwave/flags/russia.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "Thailand",
+        "isoAlpha2": "TH",
+        "detail": "north Vietnam",
+        "flagPath": "/assets/manifestwave/flags/thailand.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Vietnam",
+        "isoAlpha2": "VN",
+        "detail": "north Vietnam; south Vietnam",
+        "flagPath": "/assets/manifestwave/flags/vietnam.svg",
+        "isMultiSlot": false
+      }
+    ]
+  },
+  {
+    "slot": 8,
+    "label": "UTC+8",
+    "cardFilename": "utc-plus-08.png",
+    "countries": [
+      {
+        "name": "Antarctica",
+        "isoAlpha2": "AQ",
+        "detail": "Casey; peninsular Malaysia, Concordia",
+        "flagPath": "/assets/manifestwave/flags/antarctica.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "Australia",
+        "isoAlpha2": "AU",
+        "detail": "Western Australia (most areas)",
+        "flagPath": "/assets/manifestwave/flags/australia.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "Brunei",
+        "isoAlpha2": "BN",
+        "detail": "Sabah, Sarawak",
+        "flagPath": "/assets/manifestwave/flags/brunei.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "China",
+        "isoAlpha2": "CN",
+        "detail": "Beijing Time",
+        "flagPath": "/assets/manifestwave/flags/china.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "Hong Kong",
+        "isoAlpha2": "HK",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/hong-kong.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Indonesia",
+        "isoAlpha2": "ID",
+        "detail": "Borneo (east, south), Sulawesi/Celebes, Bali, Nusa Tengarra, Timor (west)",
+        "flagPath": "/assets/manifestwave/flags/indonesia.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "Macao",
+        "isoAlpha2": "MO",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/macao.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Malaysia",
+        "isoAlpha2": "MY",
+        "detail": "Sabah, Sarawak; peninsular Malaysia, Concordia",
+        "flagPath": "/assets/manifestwave/flags/malaysia.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Mongolia",
+        "isoAlpha2": "MN",
+        "detail": "most of Mongolia",
+        "flagPath": "/assets/manifestwave/flags/mongolia.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "Philippines",
+        "isoAlpha2": "PH",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/philippines.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Russia",
+        "isoAlpha2": "RU",
+        "detail": "MSK+05 - Irkutsk, Buryatia",
+        "flagPath": "/assets/manifestwave/flags/russia.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "Singapore",
+        "isoAlpha2": "SG",
+        "detail": "peninsular Malaysia, Concordia",
+        "flagPath": "/assets/manifestwave/flags/singapore.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Taiwan",
+        "isoAlpha2": "TW",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/taiwan.svg",
+        "isMultiSlot": false
+      }
+    ]
+  },
+  {
+    "slot": 9,
+    "label": "UTC+9",
+    "cardFilename": "utc-plus-09.png",
+    "countries": [
+      {
+        "name": "Australia",
+        "isoAlpha2": "AU",
+        "detail": "Eyre Bird Observatory; Western Australia (Eucla)",
+        "flagPath": "/assets/manifestwave/flags/australia.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "Indonesia",
+        "isoAlpha2": "ID",
+        "detail": "New Guinea (West Papua / Irian Jaya), Malukus/Moluccas",
+        "flagPath": "/assets/manifestwave/flags/indonesia.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "Japan",
+        "isoAlpha2": "JP",
+        "detail": "Eyre Bird Observatory",
+        "flagPath": "/assets/manifestwave/flags/japan.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "North Korea",
+        "isoAlpha2": "KP",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/north-korea.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Palau",
+        "isoAlpha2": "PW",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/palau.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Russia",
+        "isoAlpha2": "RU",
+        "detail": "MSK+06 - Zabaykalsky; MSK+06 - Tomponsky, Ust-Maysky; MSK+06 - Lena River",
+        "flagPath": "/assets/manifestwave/flags/russia.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "South Korea",
+        "isoAlpha2": "KR",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/south-korea.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Timor-Leste",
+        "isoAlpha2": "TL",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/timor-leste.svg",
+        "isMultiSlot": false
+      }
+    ]
+  },
+  {
+    "slot": 10,
+    "label": "UTC+10",
+    "cardFilename": "utc-plus-10.png",
+    "countries": [
+      {
+        "name": "Antarctica",
+        "isoAlpha2": "AQ",
+        "detail": "Papua New Guinea (most areas), Chuuk, Yap, Dumont d’Urville",
+        "flagPath": "/assets/manifestwave/flags/antarctica.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "Australia",
+        "isoAlpha2": "AU",
+        "detail": "Queensland (most areas); Northern Territory; Queensland (Whitsunday Islands)",
+        "flagPath": "/assets/manifestwave/flags/australia.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "Guam",
+        "isoAlpha2": "GU",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/guam.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Micronesia",
+        "isoAlpha2": "FM",
+        "detail": "Papua New Guinea (most areas), Chuuk, Yap, Dumont d’Urville",
+        "flagPath": "/assets/manifestwave/flags/micronesia.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "Northern Mariana Islands",
+        "isoAlpha2": "MP",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/northern-mariana-islands.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Papua New Guinea",
+        "isoAlpha2": "PG",
+        "detail": "Papua New Guinea (most areas), Chuuk, Yap, Dumont d’Urville",
+        "flagPath": "/assets/manifestwave/flags/papua-new-guinea.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "Russia",
+        "isoAlpha2": "RU",
+        "detail": "MSK+07 - Oymyakonsky; MSK+07 - Amur River",
+        "flagPath": "/assets/manifestwave/flags/russia.svg",
+        "isMultiSlot": true
+      }
+    ]
+  },
+  {
+    "slot": 11,
+    "label": "UTC+11",
+    "cardFilename": "utc-plus-11.png",
+    "countries": [
+      {
+        "name": "Australia",
+        "isoAlpha2": "AU",
+        "detail": "Macquarie Island; South Australia; New South Wales (Yancowinna); Tasmania; Lord Howe Island; Victoria; New South Wales (most areas)",
+        "flagPath": "/assets/manifestwave/flags/australia.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "Micronesia",
+        "isoAlpha2": "FM",
+        "detail": "Pohnpei; Kosrae",
+        "flagPath": "/assets/manifestwave/flags/micronesia.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "New Caledonia",
+        "isoAlpha2": "NC",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/new-caledonia.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Papua New Guinea",
+        "isoAlpha2": "PG",
+        "detail": "Bougainville",
+        "flagPath": "/assets/manifestwave/flags/papua-new-guinea.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "Russia",
+        "isoAlpha2": "RU",
+        "detail": "MSK+08 - Magadan; MSK+08 - Sakhalin Island; MSK+08 - Sakha (E), N Kuril Is",
+        "flagPath": "/assets/manifestwave/flags/russia.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "Solomon Islands",
+        "isoAlpha2": "SB",
+        "detail": "Pohnpei",
+        "flagPath": "/assets/manifestwave/flags/solomon-islands.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Vanuatu",
+        "isoAlpha2": "VU",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/vanuatu.svg",
+        "isMultiSlot": false
+      }
+    ]
+  },
+  {
+    "slot": 12,
+    "label": "UTC+12",
+    "cardFilename": "utc-plus-12.png",
+    "countries": [
+      {
+        "name": "Fiji",
+        "isoAlpha2": "FJ",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/fiji.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Kiribati",
+        "isoAlpha2": "KI",
+        "detail": "Gilberts, Marshalls, Wake",
+        "flagPath": "/assets/manifestwave/flags/kiribati.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "Marshall Islands",
+        "isoAlpha2": "MH",
+        "detail": "Kwajalein; Gilberts, Marshalls, Wake",
+        "flagPath": "/assets/manifestwave/flags/marshall-islands.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Nauru",
+        "isoAlpha2": "NR",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/nauru.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Norfolk Island",
+        "isoAlpha2": "NF",
+        "detail": "",
+        "flagPath": "/assets/manifestwave/flags/norfolk-island.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "Russia",
+        "isoAlpha2": "RU",
+        "detail": "MSK+09 - Bering Sea; MSK+09 - Kamchatka",
+        "flagPath": "/assets/manifestwave/flags/russia.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "Tuvalu",
+        "isoAlpha2": "TV",
+        "detail": "Gilberts, Marshalls, Wake",
+        "flagPath": "/assets/manifestwave/flags/tuvalu.svg",
+        "isMultiSlot": false
+      },
+      {
+        "name": "United States Minor Outlying Islands",
+        "isoAlpha2": "UM",
+        "detail": "Gilberts, Marshalls, Wake",
+        "flagPath": "/assets/manifestwave/flags/united-states-minor-outlying-islands.svg",
+        "isMultiSlot": true
+      },
+      {
+        "name": "Wallis and Futuna",
+        "isoAlpha2": "WF",
+        "detail": "Gilberts, Marshalls, Wake",
+        "flagPath": "/assets/manifestwave/flags/wallis-and-futuna.svg",
+        "isMultiSlot": false
+      }
+    ]
+  }
+]

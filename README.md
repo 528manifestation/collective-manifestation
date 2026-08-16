@@ -15,7 +15,7 @@ Local workspace for rebuilding `collectivemanifestation.org`.
 
 ## Current status
 
-WORKING/IDLE: project workspace created; source resources inventoried; GitHub remote configured and initial docs pushed; hosting direction selected as Vercel + Supabase; ManifestWave spreadsheet/card draft pipeline generated; Vite + React + TypeScript + Supabase client skeleton built locally; no Vercel deploy and no DNS changes made.
+WORKING/IDLE: project workspace created; source resources inventoried; GitHub remote configured and initial docs pushed; hosting direction selected as Vercel + Supabase; ManifestWave spreadsheet/card draft pipeline generated; Vite + React + TypeScript + Supabase client skeleton built locally; full cleaned ManifestWave JSON data and music preview assets are wired locally; no Vercel deploy and no DNS changes made.
 
 ## Architecture direction
 
@@ -57,7 +57,11 @@ Key files:
 - `package.json` — app scripts and dependencies
 - `src/App.tsx` — one-page site skeleton
 - `src/lib/manifestwave.ts` — ManifestWave helper/data layer for the first UI pass
+- `src/data/manifestwave-zones.json` — full cleaned 24-zone country/region dataset generated from the spreadsheet
+- `src/data/songs.json` — local music track metadata
+- `src/lib/music.ts` — music data helper layer
 - `src/lib/supabase.ts` — Supabase client initialization from Vite environment variables
+- `supabase/migrations/0001_initial_schema.sql` — draft schema for songs, contact, waitlist, zones, and countries
 - `.env.example` — expected Supabase env var names without secrets
 
 Current commands:
@@ -68,14 +72,14 @@ npm run build
 npm run dev -- --port 5173
 ```
 
-The first UI pass wires in the 24 generated card PNGs and representative country/region data. The production data model should later be replaced with full Supabase-backed `manifestwave_zones` and `manifestwave_countries` records.
+The current UI pass wires in the 24 generated card PNGs, the full cleaned ManifestWave JSON dataset, and 9 local MP3 preview tracks. The production data model should later be replaced with Supabase-backed `manifestwave_zones`, `manifestwave_countries`, and `songs` records.
 
 ## High-level scope
 
 - Public landing page for Collective Manifestation / ManifestWave.
 - Welcome video placeholder.
 - Live time-zone wave tracker for the 5:28 call.
-- Informational time-zone cards showing each zone's countries/regions with names, flags, and map outlines.
+- Informational time-zone cards showing each zone's countries/regions with country/region names and flags.
 - Setting-of-Intentions video placeholder.
 - Original music library with lyrics/artwork/downloads.
 - Community, blog/about/FAQ, contact, and donation/support sections.

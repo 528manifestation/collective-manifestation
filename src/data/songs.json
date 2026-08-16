@@ -1,0 +1,74 @@
+[
+  {
+    "id": "flow",
+    "title": "Flow",
+    "trackNumber": 1,
+    "audioPath": "/assets/music/flow.mp3",
+    "sourceFilename": "Flow.mp3",
+    "sizeBytes": 3472239
+  },
+  {
+    "id": "global-song",
+    "title": "Global Song",
+    "trackNumber": 2,
+    "audioPath": "/assets/music/global-song.mp3",
+    "sourceFilename": "Global Song.mp3",
+    "sizeBytes": 3626884
+  },
+  {
+    "id": "the-awakening",
+    "title": "The Awakening",
+    "trackNumber": 3,
+    "audioPath": "/assets/music/the-awakening.mp3",
+    "sourceFilename": "The Awakening.mp3",
+    "sizeBytes": 3412889
+  },
+  {
+    "id": "the-rising-tide",
+    "title": "The Rising Tide",
+    "trackNumber": 4,
+    "audioPath": "/assets/music/the-rising-tide.mp3",
+    "sourceFilename": "The Rising Tide.mp3",
+    "sizeBytes": 3496063
+  },
+  {
+    "id": "the-unity",
+    "title": "The Unity",
+    "trackNumber": 5,
+    "audioPath": "/assets/music/the-unity.mp3",
+    "sourceFilename": "The Unity.mp3",
+    "sizeBytes": 3210597
+  },
+  {
+    "id": "unity",
+    "title": "Unity",
+    "trackNumber": 6,
+    "audioPath": "/assets/music/unity.mp3",
+    "sourceFilename": "Unity.mp3",
+    "sizeBytes": 3615182
+  },
+  {
+    "id": "vibe",
+    "title": "Vibe",
+    "trackNumber": 7,
+    "audioPath": "/assets/music/vibe.mp3",
+    "sourceFilename": "Vibe.mp3",
+    "sizeBytes": 3436713
+  },
+  {
+    "id": "vivid-rise",
+    "title": "Vivid Rise",
+    "trackNumber": 8,
+    "audioPath": "/assets/music/vivid-rise.mp3",
+    "sourceFilename": "Vivid Rise.mp3",
+    "sizeBytes": 3626884
+  },
+  {
+    "id": "wave",
+    "title": "Wave",
+    "trackNumber": 9,
+    "audioPath": "/assets/music/wave.mp3",
+    "sourceFilename": "Wave.mp3",
+    "sizeBytes": 3519887
+  }
+]

@@ -6,6 +6,7 @@ import {
   getZoneBySlot,
   manifestwaveZones,
 } from './lib/manifestwave';
+import { getTotalMusicSizeBytes, songs } from './lib/music';
 import { isSupabaseConfigured } from './lib/supabase';
 
 const navigation = ['ManifestWave', 'Music', 'About', 'Contact', 'Support'];
@@ -13,6 +14,7 @@ const navigation = ['ManifestWave', 'Music', 'About', 'Contact', 'Support'];
 function App() {
   const activeSlot = getCurrentManifestWaveSlot();
   const activeZone = getZoneBySlot(activeSlot);
+  const totalMusicSizeMb = (getTotalMusicSizeBytes() / 1024 / 1024).toFixed(1);
   const featuredZones = useMemo(
     () => [activeZone, getZoneBySlot(-5), getZoneBySlot(1), getZoneBySlot(10)].filter(
       (zone, index, zones) => zones.findIndex((item) => item.slot === zone.slot) === index,
@@ -82,7 +84,7 @@ function App() {
             <img src={getSlotCardPath(zone.slot)} alt={`${zone.label} card preview`} />
             <div>
               <h3>{zone.label}</h3>
-              <p>{zone.countries.length} representative countries/regions wired into the skeleton.</p>
+              <p>{zone.countries.length} countries/regions in the cleaned ManifestWave dataset.</p>
             </div>
           </article>
         ))}
@@ -119,15 +121,29 @@ function App() {
       <section className="section split" id="music">
         <div>
           <p className="eyebrow">Original music</p>
-          <h2>Music library placeholder</h2>
+          <h2>Original music library</h2>
           <p>
-            Next pass will move selected MP3 tracks, lyrics, artwork, and Supabase-backed song metadata
-            into this section.
+            The first nine MP3 tracks are copied into the web app as local public assets. Supabase will
+            eventually hold editable song metadata, lyrics, artwork paths, and publish status.
           </p>
+          <div className="song-list" aria-label="Original music tracks">
+            {songs.map((song) => (
+              <article className="song-card" key={song.id}>
+                <div>
+                  <span>Track {song.trackNumber}</span>
+                  <strong>{song.title}</strong>
+                </div>
+                <audio controls preload="none" src={song.audioPath}>
+                  <a href={song.audioPath}>Download {song.title}</a>
+                </audio>
+              </article>
+            ))}
+          </div>
         </div>
         <div className="panel">
           <strong>Supabase status</strong>
           <p>{isSupabaseConfigured ? 'Configured via Vite environment variables.' : 'Ready for env vars; not connected yet.'}</p>
+          <p>{songs.length} local MP3 tracks copied for preview ({totalMusicSizeMb} MB total).</p>
         </div>
       </section>
 
