@@ -7,13 +7,23 @@ Local workspace for rebuilding `collectivemanifestation.org`.
 - Project brief: `docs/cmprompt-source.md`
 - Source asset inventory: `docs/source-assets-inventory.md`
 - Time-zone image outsourcing prompts: `docs/timezone-image-prompts.md`
+- Informational time-zone card prompts: `docs/timezone-informational-card-prompts.md`
+- Hosting/Supabase architecture: `docs/hosting-and-supabase-architecture.md`
 - Bootstrap plan: `.hermes/plans/2026-08-15_145044-collective-manifestation-bootstrap.md`
 - Original note location: `C:\Users\Rick\.hermes\CollectiveManifestation\cmprompt.md`
 - GitHub repository: `https://github.com/528manifestation/collective-manifestation`
 
 ## Current status
 
-WORKING/IDLE: project workspace created; source resources inventoried; GitHub remote configured locally; no app stack selected yet; no server running; no commit, push, deploy, or DNS changes made.
+WORKING/IDLE: project workspace created; source resources inventoried; GitHub remote configured and initial docs pushed; hosting direction selected as Vercel + Supabase; ManifestWave spreadsheet/card draft pipeline generated; no app server running, no Vercel deploy, and no DNS changes made.
+
+## Architecture direction
+
+- Host/deploy on **Vercel**.
+- Use **Supabase** for database/backend needs.
+- Rick has a paid/premium Supabase plan, so Supabase is acceptable for the production path.
+- Replit is historical only and should not be used for the rebuild.
+- Default app recommendation: Vite + React + TypeScript with Supabase client integration.
 
 ## Source resources
 
@@ -23,14 +33,31 @@ Rick confirmed all current resources should remain in the original source folder
 
 Verified current resources include music MP3s, old-site HTML/CSS reference files, flag SVGs, country map-outline JPGs, and old site/logo imagery.
 
+## ManifestWave card pipeline
+
+Generated planning/build artifacts:
+
+- Spreadsheet workbook: `docs/manifestwave-timezone-chart.xlsx`
+- Clean card lists: `docs/manifestwave-timezone-card-lists.md`
+- Asset manifest: `docs/manifestwave-asset-manifest.csv`
+- Card prompt pack: `docs/timezone-card-prompts/`
+- Draft card PNGs: `public/assets/manifestwave/timezone-cards/`
+- Copied flag assets: `public/assets/manifestwave/flags/`
+- Copied map-outline assets: `public/assets/manifestwave/maps/`
+- Regeneration scripts: `scripts/generate_manifestwave_timezone_chart.py`, `scripts/prepare_manifestwave_cards.py`
+
+Draft card QA status: flags are complete, but some map outlines are missing and some copied map outlines contain embedded text/labels that must be cleaned before final production use. Original source assets remain untouched.
+
 ## High-level scope
 
 - Public landing page for Collective Manifestation / ManifestWave.
 - Welcome video placeholder.
 - Live time-zone wave tracker for the 5:28 call.
+- Informational time-zone cards showing each zone's countries/regions with names, flags, and map outlines.
 - Setting-of-Intentions video placeholder.
 - Original music library with lyrics/artwork/downloads.
 - Community, blog/about/FAQ, contact, and donation/support sections.
+- Supabase-backed music metadata, contact messages, and optional member/waitlist records.
 
 ## Guardrails
 
@@ -38,4 +65,4 @@ Verified current resources include music MP3s, old-site HTML/CSS reference files
 - Do not change Squarespace DNS without Rick's explicit approval.
 - Do not deploy publicly without Rick's explicit approval.
 - Do not post/publish promotional content without Rick's explicit approval.
-- Prefer a simple static-first rebuild until a real database/backend need is confirmed.
+- Prefer a simple Vercel + Supabase architecture; do not add a custom server unless a real need appears.

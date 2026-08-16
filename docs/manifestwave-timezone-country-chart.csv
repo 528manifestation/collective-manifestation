@@ -1,0 +1,424 @@
+﻿manifest_slot,slot_number,target_card_filename,country_or_region,iso_alpha2,iana_timezone,actual_offset_reference,assigned_symbolic_offset,fractional_offset,multi_slot_country,needs_manual_review,flag_source_file,map_outline_source_file,suggested_asset_slug,notes
+UTC-11,-11,utc-minus-11.png,American Samoa,AS,Pacific/Pago_Pago,UTC-11:00,UTC-11,no,no,no,as.svg,Americansamoa.jpg,american-samoa,Midway
+UTC-11,-11,utc-minus-11.png,Antarctica,AQ,Pacific/Auckland,UTC+13:00,UTC-11,no,yes,yes,aq.svg,Antarctica.jpg,antarctica,actual rounded offset UTC+13 wraps to UTC-11 in 24-slot cycle; New Zealand time; country/region appears in multiple symbolic slots
+UTC-11,-11,utc-minus-11.png,Kiribati,KI,Pacific/Kanton,UTC+13:00,UTC-11,no,yes,yes,ki.svg,Kiribati.jpg,kiribati,actual rounded offset UTC+13 wraps to UTC-11 in 24-slot cycle; Phoenix Islands; country/region appears in multiple symbolic slots
+UTC-11,-11,utc-minus-11.png,New Zealand,NZ,Pacific/Auckland,UTC+13:00,UTC-11,no,yes,yes,nz.svg,Newzealand.jpg,new-zealand,actual rounded offset UTC+13 wraps to UTC-11 in 24-slot cycle; New Zealand time; country/region appears in multiple symbolic slots
+UTC-11,-11,utc-minus-11.png,Niue,NU,Pacific/Niue,UTC-11:00,UTC-11,no,no,yes,nu.svg,,niue,
+UTC-11,-11,utc-minus-11.png,Samoa,WS,Pacific/Apia,UTC+13:00,UTC-11,no,no,yes,ws.svg,,samoa,actual rounded offset UTC+13 wraps to UTC-11 in 24-slot cycle
+UTC-11,-11,utc-minus-11.png,Tokelau,TK,Pacific/Fakaofo,UTC+13:00,UTC-11,no,no,yes,tk.svg,Tokelau.jpg,tokelau,actual rounded offset UTC+13 wraps to UTC-11 in 24-slot cycle
+UTC-11,-11,utc-minus-11.png,Tonga,TO,Pacific/Tongatapu,UTC+13:00,UTC-11,no,no,yes,to.svg,Tonga.jpg,tonga,actual rounded offset UTC+13 wraps to UTC-11 in 24-slot cycle
+UTC-11,-11,utc-minus-11.png,United States Minor Outlying Islands,UM,Pacific/Pago_Pago,UTC-11:00,UTC-11,no,yes,yes,um.svg,,united-states-minor-outlying-islands,Midway; country/region appears in multiple symbolic slots
+UTC-10,-10,utc-minus-10.png,Cook Islands,CK,Pacific/Rarotonga,UTC-10:00,UTC-10,no,no,no,ck.svg,CookIslands.jpg,cook-islands,
+UTC-10,-10,utc-minus-10.png,French Polynesia,PF,Pacific/Marquesas,UTC-09:30,UTC-10,yes,yes,yes,pf.svg,FrenchPolynesia.jpg,french-polynesia,fractional actual UTC offset; assigned to nearest symbolic hourly slot; Marquesas Islands; country/region appears in multiple symbolic slots
+UTC-10,-10,utc-minus-10.png,French Polynesia,PF,Pacific/Tahiti,UTC-10:00,UTC-10,no,yes,yes,pf.svg,FrenchPolynesia.jpg,french-polynesia,Society Islands; country/region appears in multiple symbolic slots
+UTC-10,-10,utc-minus-10.png,Kiribati,KI,Pacific/Kiritimati,UTC+14:00,UTC-10,no,yes,yes,ki.svg,Kiribati.jpg,kiribati,actual rounded offset UTC+14 wraps to UTC-10 in 24-slot cycle; Line Islands; country/region appears in multiple symbolic slots
+UTC-10,-10,utc-minus-10.png,New Zealand,NZ,Pacific/Chatham,UTC+13:45,UTC-10,yes,yes,yes,nz.svg,Newzealand.jpg,new-zealand,fractional actual UTC offset; assigned to nearest symbolic hourly slot; actual rounded offset UTC+14 wraps to UTC-10 in 24-slot cycle; Chatham Islands; country/region appears in multiple symbolic slots
+UTC-10,-10,utc-minus-10.png,United States,US,America/Adak,UTC-10:00,UTC-10,no,yes,yes,us.svg,UnitedStates.jpg,united-states,Alaska - western Aleutians; country/region appears in multiple symbolic slots
+UTC-10,-10,utc-minus-10.png,United States,US,Pacific/Honolulu,UTC-10:00,UTC-10,no,yes,yes,us.svg,UnitedStates.jpg,united-states,Hawaii; country/region appears in multiple symbolic slots
+UTC-9,-9,utc-minus-09.png,French Polynesia,PF,Pacific/Gambier,UTC-09:00,UTC-9,no,yes,yes,pf.svg,FrenchPolynesia.jpg,french-polynesia,Gambier Islands; country/region appears in multiple symbolic slots
+UTC-9,-9,utc-minus-09.png,United States,US,America/Anchorage,UTC-09:00,UTC-9,no,yes,yes,us.svg,UnitedStates.jpg,united-states,Alaska (most areas); country/region appears in multiple symbolic slots
+UTC-9,-9,utc-minus-09.png,United States,US,America/Juneau,UTC-09:00,UTC-9,no,yes,yes,us.svg,UnitedStates.jpg,united-states,Alaska - Juneau area; country/region appears in multiple symbolic slots
+UTC-9,-9,utc-minus-09.png,United States,US,America/Metlakatla,UTC-09:00,UTC-9,no,yes,yes,us.svg,UnitedStates.jpg,united-states,Alaska - Annette Island; country/region appears in multiple symbolic slots
+UTC-9,-9,utc-minus-09.png,United States,US,America/Nome,UTC-09:00,UTC-9,no,yes,yes,us.svg,UnitedStates.jpg,united-states,Alaska (west); country/region appears in multiple symbolic slots
+UTC-9,-9,utc-minus-09.png,United States,US,America/Sitka,UTC-09:00,UTC-9,no,yes,yes,us.svg,UnitedStates.jpg,united-states,Alaska - Sitka area; country/region appears in multiple symbolic slots
+UTC-9,-9,utc-minus-09.png,United States,US,America/Yakutat,UTC-09:00,UTC-9,no,yes,yes,us.svg,UnitedStates.jpg,united-states,Alaska - Yakutat; country/region appears in multiple symbolic slots
+UTC-8,-8,utc-minus-08.png,Canada,CA,America/Vancouver,UTC-08:00,UTC-8,no,yes,yes,ca.svg,Canada.jpg,canada,MST - BC (most areas); country/region appears in multiple symbolic slots
+UTC-8,-8,utc-minus-08.png,Mexico,MX,America/Tijuana,UTC-08:00,UTC-8,no,yes,yes,mx.svg,Mexico.jpg,mexico,Baja California; country/region appears in multiple symbolic slots
+UTC-8,-8,utc-minus-08.png,Pitcairn,PN,Pacific/Pitcairn,UTC-08:00,UTC-8,no,no,yes,pn.svg,,pitcairn,
+UTC-8,-8,utc-minus-08.png,United States,US,America/Los_Angeles,UTC-08:00,UTC-8,no,yes,yes,us.svg,UnitedStates.jpg,united-states,Pacific; country/region appears in multiple symbolic slots
+UTC-7,-7,utc-minus-07.png,Canada,CA,America/Cambridge_Bay,UTC-07:00,UTC-7,no,yes,yes,ca.svg,Canada.jpg,canada,Mountain - NU (west); country/region appears in multiple symbolic slots
+UTC-7,-7,utc-minus-07.png,Canada,CA,America/Dawson,UTC-07:00,UTC-7,no,yes,yes,ca.svg,Canada.jpg,canada,MST - Yukon (west); country/region appears in multiple symbolic slots
+UTC-7,-7,utc-minus-07.png,Canada,CA,America/Dawson_Creek,UTC-07:00,UTC-7,no,yes,yes,ca.svg,Canada.jpg,canada,"MST - BC (Dawson Cr, Ft St John); country/region appears in multiple symbolic slots"
+UTC-7,-7,utc-minus-07.png,Canada,CA,America/Edmonton,UTC-07:00,UTC-7,no,yes,yes,ca.svg,Canada.jpg,canada,"CST - AB, BC(E), NT(E), SK(W); country/region appears in multiple symbolic slots"
+UTC-7,-7,utc-minus-07.png,Canada,CA,America/Fort_Nelson,UTC-07:00,UTC-7,no,yes,yes,ca.svg,Canada.jpg,canada,MST - BC (Ft Nelson); country/region appears in multiple symbolic slots
+UTC-7,-7,utc-minus-07.png,Canada,CA,America/Inuvik,UTC-07:00,UTC-7,no,yes,yes,ca.svg,Canada.jpg,canada,Mountain - NT (west); country/region appears in multiple symbolic slots
+UTC-7,-7,utc-minus-07.png,Canada,CA,America/Phoenix,UTC-07:00,UTC-7,no,yes,yes,ca.svg,Canada.jpg,canada,"MST - AZ (most areas), Creston BC; country/region appears in multiple symbolic slots"
+UTC-7,-7,utc-minus-07.png,Canada,CA,America/Whitehorse,UTC-07:00,UTC-7,no,yes,yes,ca.svg,Canada.jpg,canada,MST - Yukon (east); country/region appears in multiple symbolic slots
+UTC-7,-7,utc-minus-07.png,Mexico,MX,America/Ciudad_Juarez,UTC-07:00,UTC-7,no,yes,yes,mx.svg,Mexico.jpg,mexico,Chihuahua (US border - west); country/region appears in multiple symbolic slots
+UTC-7,-7,utc-minus-07.png,Mexico,MX,America/Hermosillo,UTC-07:00,UTC-7,no,yes,yes,mx.svg,Mexico.jpg,mexico,Sonora; country/region appears in multiple symbolic slots
+UTC-7,-7,utc-minus-07.png,Mexico,MX,America/Mazatlan,UTC-07:00,UTC-7,no,yes,yes,mx.svg,Mexico.jpg,mexico,"Baja California Sur, Nayarit (most areas), Sinaloa; country/region appears in multiple symbolic slots"
+UTC-7,-7,utc-minus-07.png,United States,US,America/Boise,UTC-07:00,UTC-7,no,yes,yes,us.svg,UnitedStates.jpg,united-states,"Mountain - ID (south), OR (east); country/region appears in multiple symbolic slots"
+UTC-7,-7,utc-minus-07.png,United States,US,America/Denver,UTC-07:00,UTC-7,no,yes,yes,us.svg,UnitedStates.jpg,united-states,Mountain (most areas); country/region appears in multiple symbolic slots
+UTC-7,-7,utc-minus-07.png,United States,US,America/Phoenix,UTC-07:00,UTC-7,no,yes,yes,us.svg,UnitedStates.jpg,united-states,"MST - AZ (most areas), Creston BC; country/region appears in multiple symbolic slots"
+UTC-6,-6,utc-minus-06.png,Belize,BZ,America/Belize,UTC-06:00,UTC-6,no,no,yes,bz.svg,,belize,
+UTC-6,-6,utc-minus-06.png,Canada,CA,America/Rankin_Inlet,UTC-06:00,UTC-6,no,yes,yes,ca.svg,Canada.jpg,canada,Central - NU (central); country/region appears in multiple symbolic slots
+UTC-6,-6,utc-minus-06.png,Canada,CA,America/Regina,UTC-06:00,UTC-6,no,yes,yes,ca.svg,Canada.jpg,canada,CST - SK (most areas); country/region appears in multiple symbolic slots
+UTC-6,-6,utc-minus-06.png,Canada,CA,America/Resolute,UTC-06:00,UTC-6,no,yes,yes,ca.svg,Canada.jpg,canada,Central - NU (Resolute); country/region appears in multiple symbolic slots
+UTC-6,-6,utc-minus-06.png,Canada,CA,America/Swift_Current,UTC-06:00,UTC-6,no,yes,yes,ca.svg,Canada.jpg,canada,CST - SK (midwest); country/region appears in multiple symbolic slots
+UTC-6,-6,utc-minus-06.png,Canada,CA,America/Winnipeg,UTC-06:00,UTC-6,no,yes,yes,ca.svg,Canada.jpg,canada,"Central - ON (west), Manitoba; country/region appears in multiple symbolic slots"
+UTC-6,-6,utc-minus-06.png,Costa Rica,CR,America/Costa_Rica,UTC-06:00,UTC-6,no,no,no,cr.svg,CostaRica.jpg,costa-rica,
+UTC-6,-6,utc-minus-06.png,Ecuador,EC,Pacific/Galapagos,UTC-06:00,UTC-6,no,yes,yes,ec.svg,Ecuador.jpg,ecuador,Galápagos Islands; country/region appears in multiple symbolic slots
+UTC-6,-6,utc-minus-06.png,El Salvador,SV,America/El_Salvador,UTC-06:00,UTC-6,no,no,no,sv.svg,ElSalvador.jpg,el-salvador,
+UTC-6,-6,utc-minus-06.png,Guatemala,GT,America/Guatemala,UTC-06:00,UTC-6,no,no,no,gt.svg,Guatemala.jpg,guatemala,
+UTC-6,-6,utc-minus-06.png,Honduras,HN,America/Tegucigalpa,UTC-06:00,UTC-6,no,no,no,hn.svg,Honduras.jpg,honduras,
+UTC-6,-6,utc-minus-06.png,Mexico,MX,America/Bahia_Banderas,UTC-06:00,UTC-6,no,yes,yes,mx.svg,Mexico.jpg,mexico,Bahía de Banderas; country/region appears in multiple symbolic slots
+UTC-6,-6,utc-minus-06.png,Mexico,MX,America/Chihuahua,UTC-06:00,UTC-6,no,yes,yes,mx.svg,Mexico.jpg,mexico,Chihuahua (most areas); country/region appears in multiple symbolic slots
+UTC-6,-6,utc-minus-06.png,Mexico,MX,America/Matamoros,UTC-06:00,UTC-6,no,yes,yes,mx.svg,Mexico.jpg,mexico,"Coahuila, Nuevo León, Tamaulipas (US border); country/region appears in multiple symbolic slots"
+UTC-6,-6,utc-minus-06.png,Mexico,MX,America/Merida,UTC-06:00,UTC-6,no,yes,yes,mx.svg,Mexico.jpg,mexico,"Campeche, Yucatán; country/region appears in multiple symbolic slots"
+UTC-6,-6,utc-minus-06.png,Mexico,MX,America/Mexico_City,UTC-06:00,UTC-6,no,yes,yes,mx.svg,Mexico.jpg,mexico,Central Mexico; country/region appears in multiple symbolic slots
+UTC-6,-6,utc-minus-06.png,Mexico,MX,America/Monterrey,UTC-06:00,UTC-6,no,yes,yes,mx.svg,Mexico.jpg,mexico,"Durango; Coahuila, Nuevo León, Tamaulipas (most areas); country/region appears in multiple symbolic slots"
+UTC-6,-6,utc-minus-06.png,Mexico,MX,America/Ojinaga,UTC-06:00,UTC-6,no,yes,yes,mx.svg,Mexico.jpg,mexico,Chihuahua (US border - east); country/region appears in multiple symbolic slots
+UTC-6,-6,utc-minus-06.png,Nicaragua,NI,America/Managua,UTC-06:00,UTC-6,no,no,no,ni.svg,Nicaragua.jpg,nicaragua,
+UTC-6,-6,utc-minus-06.png,United States,US,America/Chicago,UTC-06:00,UTC-6,no,yes,yes,us.svg,UnitedStates.jpg,united-states,Central (most areas); country/region appears in multiple symbolic slots
+UTC-6,-6,utc-minus-06.png,United States,US,America/Indiana/Knox,UTC-06:00,UTC-6,no,yes,yes,us.svg,UnitedStates.jpg,united-states,Central - IN (Starke); country/region appears in multiple symbolic slots
+UTC-6,-6,utc-minus-06.png,United States,US,America/Indiana/Tell_City,UTC-06:00,UTC-6,no,yes,yes,us.svg,UnitedStates.jpg,united-states,Central - IN (Perry); country/region appears in multiple symbolic slots
+UTC-6,-6,utc-minus-06.png,United States,US,America/Menominee,UTC-06:00,UTC-6,no,yes,yes,us.svg,UnitedStates.jpg,united-states,Central - MI (Wisconsin border); country/region appears in multiple symbolic slots
+UTC-6,-6,utc-minus-06.png,United States,US,America/North_Dakota/Beulah,UTC-06:00,UTC-6,no,yes,yes,us.svg,UnitedStates.jpg,united-states,Central - ND (Mercer); country/region appears in multiple symbolic slots
+UTC-6,-6,utc-minus-06.png,United States,US,America/North_Dakota/Center,UTC-06:00,UTC-6,no,yes,yes,us.svg,UnitedStates.jpg,united-states,Central - ND (Oliver); country/region appears in multiple symbolic slots
+UTC-6,-6,utc-minus-06.png,United States,US,America/North_Dakota/New_Salem,UTC-06:00,UTC-6,no,yes,yes,us.svg,UnitedStates.jpg,united-states,Central - ND (Morton rural); country/region appears in multiple symbolic slots
+UTC-5,-5,utc-minus-05.png,Bahamas,BS,America/Toronto,UTC-05:00,UTC-5,no,no,yes,bs.svg,,bahamas,Eastern - ON & QC (most areas)
+UTC-5,-5,utc-minus-05.png,Brazil,BR,America/Eirunepe,UTC-05:00,UTC-5,no,yes,yes,br.svg,Brazil.jpg,brazil,Amazonas (west); country/region appears in multiple symbolic slots
+UTC-5,-5,utc-minus-05.png,Brazil,BR,America/Rio_Branco,UTC-05:00,UTC-5,no,yes,yes,br.svg,Brazil.jpg,brazil,Acre; country/region appears in multiple symbolic slots
+UTC-5,-5,utc-minus-05.png,Canada,CA,America/Iqaluit,UTC-05:00,UTC-5,no,yes,yes,ca.svg,Canada.jpg,canada,Eastern - NU (most areas); country/region appears in multiple symbolic slots
+UTC-5,-5,utc-minus-05.png,Canada,CA,America/Panama,UTC-05:00,UTC-5,no,yes,yes,ca.svg,Canada.jpg,canada,"EST - ON (Atikokan), NU (Coral H); country/region appears in multiple symbolic slots"
+UTC-5,-5,utc-minus-05.png,Canada,CA,America/Toronto,UTC-05:00,UTC-5,no,yes,yes,ca.svg,Canada.jpg,canada,Eastern - ON & QC (most areas); country/region appears in multiple symbolic slots
+UTC-5,-5,utc-minus-05.png,Cayman Islands,KY,America/Panama,UTC-05:00,UTC-5,no,no,no,ky.svg,CaymanIslands.jpg,cayman-islands,"EST - ON (Atikokan), NU (Coral H)"
+UTC-5,-5,utc-minus-05.png,Chile,CL,Pacific/Easter,UTC-05:00,UTC-5,no,yes,yes,cl.svg,Chile.jpg,chile,Easter Island; country/region appears in multiple symbolic slots
+UTC-5,-5,utc-minus-05.png,Colombia,CO,America/Bogota,UTC-05:00,UTC-5,no,no,no,co.svg,Colombia.jpg,colombia,
+UTC-5,-5,utc-minus-05.png,Cuba,CU,America/Havana,UTC-05:00,UTC-5,no,no,no,cu.svg,Cuba.jpg,cuba,
+UTC-5,-5,utc-minus-05.png,Ecuador,EC,America/Guayaquil,UTC-05:00,UTC-5,no,yes,yes,ec.svg,Ecuador.jpg,ecuador,Ecuador (mainland); country/region appears in multiple symbolic slots
+UTC-5,-5,utc-minus-05.png,Haiti,HT,America/Port-au-Prince,UTC-05:00,UTC-5,no,no,no,ht.svg,Haiti.jpg,haiti,
+UTC-5,-5,utc-minus-05.png,Jamaica,JM,America/Jamaica,UTC-05:00,UTC-5,no,no,no,jm.svg,Jamaica.jpg,jamaica,
+UTC-5,-5,utc-minus-05.png,Mexico,MX,America/Cancun,UTC-05:00,UTC-5,no,yes,yes,mx.svg,Mexico.jpg,mexico,Quintana Roo; country/region appears in multiple symbolic slots
+UTC-5,-5,utc-minus-05.png,Panama,PA,America/Panama,UTC-05:00,UTC-5,no,no,no,pa.svg,Panama.jpg,panama,"EST - ON (Atikokan), NU (Coral H)"
+UTC-5,-5,utc-minus-05.png,Peru,PE,America/Lima,UTC-05:00,UTC-5,no,no,no,pe.svg,Peru.jpg,peru,
+UTC-5,-5,utc-minus-05.png,Turks and Caicos Islands,TC,America/Grand_Turk,UTC-05:00,UTC-5,no,no,no,tc.svg,TurksandCaicosIslands.jpg,turks-and-caicos-islands,
+UTC-5,-5,utc-minus-05.png,United States,US,America/Detroit,UTC-05:00,UTC-5,no,yes,yes,us.svg,UnitedStates.jpg,united-states,Eastern - MI (most areas); country/region appears in multiple symbolic slots
+UTC-5,-5,utc-minus-05.png,United States,US,America/Indiana/Indianapolis,UTC-05:00,UTC-5,no,yes,yes,us.svg,UnitedStates.jpg,united-states,Eastern - IN (most areas); country/region appears in multiple symbolic slots
+UTC-5,-5,utc-minus-05.png,United States,US,America/Indiana/Marengo,UTC-05:00,UTC-5,no,yes,yes,us.svg,UnitedStates.jpg,united-states,Eastern - IN (Crawford); country/region appears in multiple symbolic slots
+UTC-5,-5,utc-minus-05.png,United States,US,America/Indiana/Petersburg,UTC-05:00,UTC-5,no,yes,yes,us.svg,UnitedStates.jpg,united-states,Eastern - IN (Pike); country/region appears in multiple symbolic slots
+UTC-5,-5,utc-minus-05.png,United States,US,America/Indiana/Vevay,UTC-05:00,UTC-5,no,yes,yes,us.svg,UnitedStates.jpg,united-states,Eastern - IN (Switzerland); country/region appears in multiple symbolic slots
+UTC-5,-5,utc-minus-05.png,United States,US,America/Indiana/Vincennes,UTC-05:00,UTC-5,no,yes,yes,us.svg,UnitedStates.jpg,united-states,"Eastern - IN (Da, Du, K, Mn); country/region appears in multiple symbolic slots"
+UTC-5,-5,utc-minus-05.png,United States,US,America/Indiana/Winamac,UTC-05:00,UTC-5,no,yes,yes,us.svg,UnitedStates.jpg,united-states,Eastern - IN (Pulaski); country/region appears in multiple symbolic slots
+UTC-5,-5,utc-minus-05.png,United States,US,America/Kentucky/Louisville,UTC-05:00,UTC-5,no,yes,yes,us.svg,UnitedStates.jpg,united-states,Eastern - KY (Louisville area); country/region appears in multiple symbolic slots
+UTC-5,-5,utc-minus-05.png,United States,US,America/Kentucky/Monticello,UTC-05:00,UTC-5,no,yes,yes,us.svg,UnitedStates.jpg,united-states,Eastern - KY (Wayne); country/region appears in multiple symbolic slots
+UTC-5,-5,utc-minus-05.png,United States,US,America/New_York,UTC-05:00,UTC-5,no,yes,yes,us.svg,UnitedStates.jpg,united-states,Eastern (most areas); country/region appears in multiple symbolic slots
+UTC-4,-4,utc-minus-04.png,Anguilla,AI,America/Puerto_Rico,UTC-04:00,UTC-4,no,no,no,ai.svg,Anguilla.jpg,anguilla,AST - QC (Lower North Shore)
+UTC-4,-4,utc-minus-04.png,Antigua and Barbuda,AG,America/Puerto_Rico,UTC-04:00,UTC-4,no,no,no,ag.svg,AntiguaandBarbuda.jpg,antigua-and-barbuda,AST - QC (Lower North Shore)
+UTC-4,-4,utc-minus-04.png,Aruba,AW,America/Puerto_Rico,UTC-04:00,UTC-4,no,no,no,aw.svg,Aruba.jpg,aruba,AST - QC (Lower North Shore)
+UTC-4,-4,utc-minus-04.png,Barbados,BB,America/Barbados,UTC-04:00,UTC-4,no,no,no,bb.svg,Barbados.jpg,barbados,
+UTC-4,-4,utc-minus-04.png,Bermuda,BM,Atlantic/Bermuda,UTC-04:00,UTC-4,no,no,no,bm.svg,Bermuda.jpg,bermuda,
+UTC-4,-4,utc-minus-04.png,"Bolivia, Plurinational State of",BO,America/La_Paz,UTC-04:00,UTC-4,no,no,yes,bo.svg,,bolivia-plurinational-state-of,
+UTC-4,-4,utc-minus-04.png,"Bonaire, Sint Eustatius and Saba",BQ,America/Puerto_Rico,UTC-04:00,UTC-4,no,no,yes,bq.svg,,bonaire-sint-eustatius-and-saba,AST - QC (Lower North Shore)
+UTC-4,-4,utc-minus-04.png,Brazil,BR,America/Boa_Vista,UTC-04:00,UTC-4,no,yes,yes,br.svg,Brazil.jpg,brazil,Roraima; country/region appears in multiple symbolic slots
+UTC-4,-4,utc-minus-04.png,Brazil,BR,America/Campo_Grande,UTC-04:00,UTC-4,no,yes,yes,br.svg,Brazil.jpg,brazil,Mato Grosso do Sul; country/region appears in multiple symbolic slots
+UTC-4,-4,utc-minus-04.png,Brazil,BR,America/Cuiaba,UTC-04:00,UTC-4,no,yes,yes,br.svg,Brazil.jpg,brazil,Mato Grosso; country/region appears in multiple symbolic slots
+UTC-4,-4,utc-minus-04.png,Brazil,BR,America/Manaus,UTC-04:00,UTC-4,no,yes,yes,br.svg,Brazil.jpg,brazil,Amazonas (east); country/region appears in multiple symbolic slots
+UTC-4,-4,utc-minus-04.png,Brazil,BR,America/Porto_Velho,UTC-04:00,UTC-4,no,yes,yes,br.svg,Brazil.jpg,brazil,Rondônia; country/region appears in multiple symbolic slots
+UTC-4,-4,utc-minus-04.png,British Virgin Islands,VG,America/Puerto_Rico,UTC-04:00,UTC-4,no,no,no,vg.svg,BritishVirginIslands.jpg,british-virgin-islands,AST - QC (Lower North Shore)
+UTC-4,-4,utc-minus-04.png,Canada,CA,America/Glace_Bay,UTC-04:00,UTC-4,no,yes,yes,ca.svg,Canada.jpg,canada,Atlantic - NS (Cape Breton); country/region appears in multiple symbolic slots
+UTC-4,-4,utc-minus-04.png,Canada,CA,America/Goose_Bay,UTC-04:00,UTC-4,no,yes,yes,ca.svg,Canada.jpg,canada,Atlantic - Labrador (most areas); country/region appears in multiple symbolic slots
+UTC-4,-4,utc-minus-04.png,Canada,CA,America/Halifax,UTC-04:00,UTC-4,no,yes,yes,ca.svg,Canada.jpg,canada,"Atlantic - NS (most areas), PE; country/region appears in multiple symbolic slots"
+UTC-4,-4,utc-minus-04.png,Canada,CA,America/Moncton,UTC-04:00,UTC-4,no,yes,yes,ca.svg,Canada.jpg,canada,Atlantic - New Brunswick; country/region appears in multiple symbolic slots
+UTC-4,-4,utc-minus-04.png,Canada,CA,America/Puerto_Rico,UTC-04:00,UTC-4,no,yes,yes,ca.svg,Canada.jpg,canada,AST - QC (Lower North Shore); country/region appears in multiple symbolic slots
+UTC-4,-4,utc-minus-04.png,Canada,CA,America/St_Johns,UTC-03:30,UTC-4,yes,yes,yes,ca.svg,Canada.jpg,canada,"fractional actual UTC offset; assigned to nearest symbolic hourly slot; Newfoundland, Labrador (SE); country/region appears in multiple symbolic slots"
+UTC-4,-4,utc-minus-04.png,Curacao,CW,America/Puerto_Rico,UTC-04:00,UTC-4,no,no,yes,cw.svg,,curacao,AST - QC (Lower North Shore)
+UTC-4,-4,utc-minus-04.png,Dominica,DM,America/Puerto_Rico,UTC-04:00,UTC-4,no,no,no,dm.svg,Dominica.jpg,dominica,AST - QC (Lower North Shore)
+UTC-4,-4,utc-minus-04.png,Dominican Republic,DO,America/Santo_Domingo,UTC-04:00,UTC-4,no,no,no,do.svg,DominicanRepublic.jpg,dominican-republic,
+UTC-4,-4,utc-minus-04.png,Greenland,GL,America/Thule,UTC-04:00,UTC-4,no,yes,yes,gl.svg,Greenland.jpg,greenland,Thule/Pituffik; country/region appears in multiple symbolic slots
+UTC-4,-4,utc-minus-04.png,Grenada,GD,America/Puerto_Rico,UTC-04:00,UTC-4,no,no,no,gd.svg,Grenada.jpg,grenada,AST - QC (Lower North Shore)
+UTC-4,-4,utc-minus-04.png,Guadeloupe,GP,America/Puerto_Rico,UTC-04:00,UTC-4,no,no,no,gp.svg,Guadeloupe.jpg,guadeloupe,AST - QC (Lower North Shore)
+UTC-4,-4,utc-minus-04.png,Guyana,GY,America/Guyana,UTC-04:00,UTC-4,no,no,no,gy.svg,Guyana.jpg,guyana,
+UTC-4,-4,utc-minus-04.png,Martinique,MQ,America/Martinique,UTC-04:00,UTC-4,no,no,yes,mq.svg,,martinique,
+UTC-4,-4,utc-minus-04.png,Montserrat,MS,America/Puerto_Rico,UTC-04:00,UTC-4,no,no,yes,ms.svg,,montserrat,AST - QC (Lower North Shore)
+UTC-4,-4,utc-minus-04.png,Puerto Rico,PR,America/Puerto_Rico,UTC-04:00,UTC-4,no,no,yes,pr.svg,,puerto-rico,AST - QC (Lower North Shore)
+UTC-4,-4,utc-minus-04.png,Saint Barthelemy,BL,America/Puerto_Rico,UTC-04:00,UTC-4,no,no,yes,bl.svg,,saint-barthelemy,AST - QC (Lower North Shore)
+UTC-4,-4,utc-minus-04.png,Saint Kitts and Nevis,KN,America/Puerto_Rico,UTC-04:00,UTC-4,no,no,yes,kn.svg,,saint-kitts-and-nevis,AST - QC (Lower North Shore)
+UTC-4,-4,utc-minus-04.png,Saint Lucia,LC,America/Puerto_Rico,UTC-04:00,UTC-4,no,no,yes,lc.svg,,saint-lucia,AST - QC (Lower North Shore)
+UTC-4,-4,utc-minus-04.png,Saint Martin,MF,America/Puerto_Rico,UTC-04:00,UTC-4,no,no,yes,mf.svg,,saint-martin,AST - QC (Lower North Shore)
+UTC-4,-4,utc-minus-04.png,Saint Vincent and the Grenadines,VC,America/Puerto_Rico,UTC-04:00,UTC-4,no,no,yes,vc.svg,,saint-vincent-and-the-grenadines,AST - QC (Lower North Shore)
+UTC-4,-4,utc-minus-04.png,Sint Maarten (Dutch part),SX,America/Puerto_Rico,UTC-04:00,UTC-4,no,no,yes,sx.svg,,sint-maarten-dutch-part,AST - QC (Lower North Shore)
+UTC-4,-4,utc-minus-04.png,Trinidad and Tobago,TT,America/Puerto_Rico,UTC-04:00,UTC-4,no,no,no,tt.svg,TrinidadandTobago.jpg,trinidad-and-tobago,AST - QC (Lower North Shore)
+UTC-4,-4,utc-minus-04.png,U.S. Virgin Islands,VI,America/Puerto_Rico,UTC-04:00,UTC-4,no,no,no,vi.svg,VirginIslands.jpg,u-s-virgin-islands,AST - QC (Lower North Shore)
+UTC-4,-4,utc-minus-04.png,"Venezuela, Bolivarian Republic of",VE,America/Caracas,UTC-04:00,UTC-4,no,no,yes,ve.svg,,venezuela-bolivarian-republic-of,
+UTC-3,-3,utc-minus-03.png,Antarctica,AQ,Antarctica/Palmer,UTC-03:00,UTC-3,no,yes,yes,aq.svg,Antarctica.jpg,antarctica,Palmer; country/region appears in multiple symbolic slots
+UTC-3,-3,utc-minus-03.png,Antarctica,AQ,Antarctica/Rothera,UTC-03:00,UTC-3,no,yes,yes,aq.svg,Antarctica.jpg,antarctica,Rothera; country/region appears in multiple symbolic slots
+UTC-3,-3,utc-minus-03.png,Argentina,AR,America/Argentina/Buenos_Aires,UTC-03:00,UTC-3,no,no,no,ar.svg,Argentina.jpg,argentina,"Buenos Aires (BA, CF)"
+UTC-3,-3,utc-minus-03.png,Argentina,AR,America/Argentina/Catamarca,UTC-03:00,UTC-3,no,no,no,ar.svg,Argentina.jpg,argentina,"Catamarca (CT), Chubut (CH)"
+UTC-3,-3,utc-minus-03.png,Argentina,AR,America/Argentina/Cordoba,UTC-03:00,UTC-3,no,no,no,ar.svg,Argentina.jpg,argentina,"most areas: CB, CC, CN, ER, FM, MN, SE, SF"
+UTC-3,-3,utc-minus-03.png,Argentina,AR,America/Argentina/Jujuy,UTC-03:00,UTC-3,no,no,no,ar.svg,Argentina.jpg,argentina,Jujuy (JY)
+UTC-3,-3,utc-minus-03.png,Argentina,AR,America/Argentina/La_Rioja,UTC-03:00,UTC-3,no,no,no,ar.svg,Argentina.jpg,argentina,La Rioja (LR)
+UTC-3,-3,utc-minus-03.png,Argentina,AR,America/Argentina/Mendoza,UTC-03:00,UTC-3,no,no,no,ar.svg,Argentina.jpg,argentina,Mendoza (MZ)
+UTC-3,-3,utc-minus-03.png,Argentina,AR,America/Argentina/Rio_Gallegos,UTC-03:00,UTC-3,no,no,no,ar.svg,Argentina.jpg,argentina,Santa Cruz (SC)
+UTC-3,-3,utc-minus-03.png,Argentina,AR,America/Argentina/Salta,UTC-03:00,UTC-3,no,no,no,ar.svg,Argentina.jpg,argentina,"Salta (SA, LP, NQ, RN)"
+UTC-3,-3,utc-minus-03.png,Argentina,AR,America/Argentina/San_Juan,UTC-03:00,UTC-3,no,no,no,ar.svg,Argentina.jpg,argentina,San Juan (SJ)
+UTC-3,-3,utc-minus-03.png,Argentina,AR,America/Argentina/San_Luis,UTC-03:00,UTC-3,no,no,no,ar.svg,Argentina.jpg,argentina,San Luis (SL)
+UTC-3,-3,utc-minus-03.png,Argentina,AR,America/Argentina/Tucuman,UTC-03:00,UTC-3,no,no,no,ar.svg,Argentina.jpg,argentina,Tucumán (TM)
+UTC-3,-3,utc-minus-03.png,Argentina,AR,America/Argentina/Ushuaia,UTC-03:00,UTC-3,no,no,no,ar.svg,Argentina.jpg,argentina,Tierra del Fuego (TF)
+UTC-3,-3,utc-minus-03.png,Brazil,BR,America/Araguaina,UTC-03:00,UTC-3,no,yes,yes,br.svg,Brazil.jpg,brazil,Tocantins; country/region appears in multiple symbolic slots
+UTC-3,-3,utc-minus-03.png,Brazil,BR,America/Bahia,UTC-03:00,UTC-3,no,yes,yes,br.svg,Brazil.jpg,brazil,Bahia; country/region appears in multiple symbolic slots
+UTC-3,-3,utc-minus-03.png,Brazil,BR,America/Belem,UTC-03:00,UTC-3,no,yes,yes,br.svg,Brazil.jpg,brazil,"Pará (east), Amapá; country/region appears in multiple symbolic slots"
+UTC-3,-3,utc-minus-03.png,Brazil,BR,America/Fortaleza,UTC-03:00,UTC-3,no,yes,yes,br.svg,Brazil.jpg,brazil,"Brazil (northeast: MA, PI, CE, RN, PB); country/region appears in multiple symbolic slots"
+UTC-3,-3,utc-minus-03.png,Brazil,BR,America/Maceio,UTC-03:00,UTC-3,no,yes,yes,br.svg,Brazil.jpg,brazil,"Alagoas, Sergipe; country/region appears in multiple symbolic slots"
+UTC-3,-3,utc-minus-03.png,Brazil,BR,America/Recife,UTC-03:00,UTC-3,no,yes,yes,br.svg,Brazil.jpg,brazil,Pernambuco; country/region appears in multiple symbolic slots
+UTC-3,-3,utc-minus-03.png,Brazil,BR,America/Santarem,UTC-03:00,UTC-3,no,yes,yes,br.svg,Brazil.jpg,brazil,Pará (west); country/region appears in multiple symbolic slots
+UTC-3,-3,utc-minus-03.png,Brazil,BR,America/Sao_Paulo,UTC-03:00,UTC-3,no,yes,yes,br.svg,Brazil.jpg,brazil,"Brazil (southeast: GO, DF, MG, ES, RJ, SP, PR, SC, RS); country/region appears in multiple symbolic slots"
+UTC-3,-3,utc-minus-03.png,Chile,CL,America/Coyhaique,UTC-03:00,UTC-3,no,yes,yes,cl.svg,Chile.jpg,chile,Aysén Region; country/region appears in multiple symbolic slots
+UTC-3,-3,utc-minus-03.png,Chile,CL,America/Punta_Arenas,UTC-03:00,UTC-3,no,yes,yes,cl.svg,Chile.jpg,chile,Magallanes Region; country/region appears in multiple symbolic slots
+UTC-3,-3,utc-minus-03.png,Chile,CL,America/Santiago,UTC-03:00,UTC-3,no,yes,yes,cl.svg,Chile.jpg,chile,most of Chile; country/region appears in multiple symbolic slots
+UTC-3,-3,utc-minus-03.png,Falkland Islands (Malvinas),FK,Atlantic/Stanley,UTC-03:00,UTC-3,no,no,yes,fk.svg,,falkland-islands-malvinas,
+UTC-3,-3,utc-minus-03.png,French Guiana,GF,America/Cayenne,UTC-03:00,UTC-3,no,no,no,gf.svg,FrenchGuiana.jpg,french-guiana,
+UTC-3,-3,utc-minus-03.png,Paraguay,PY,America/Asuncion,UTC-03:00,UTC-3,no,no,no,py.svg,Paraguay.jpg,paraguay,
+UTC-3,-3,utc-minus-03.png,Saint Pierre and Miquelon,PM,America/Miquelon,UTC-03:00,UTC-3,no,no,yes,pm.svg,,saint-pierre-and-miquelon,
+UTC-3,-3,utc-minus-03.png,Suriname,SR,America/Paramaribo,UTC-03:00,UTC-3,no,no,no,sr.svg,Suriname.jpg,suriname,
+UTC-3,-3,utc-minus-03.png,Uruguay,UY,America/Montevideo,UTC-03:00,UTC-3,no,no,no,uy.svg,Uruguay.jpg,uruguay,
+UTC-2,-2,utc-minus-02.png,Brazil,BR,America/Noronha,UTC-02:00,UTC-2,no,yes,yes,br.svg,Brazil.jpg,brazil,Atlantic islands; country/region appears in multiple symbolic slots
+UTC-2,-2,utc-minus-02.png,Greenland,GL,America/Nuuk,UTC-02:00,UTC-2,no,yes,yes,gl.svg,Greenland.jpg,greenland,most of Greenland; country/region appears in multiple symbolic slots
+UTC-2,-2,utc-minus-02.png,Greenland,GL,America/Scoresbysund,UTC-02:00,UTC-2,no,yes,yes,gl.svg,Greenland.jpg,greenland,Scoresbysund/Ittoqqortoormiit; country/region appears in multiple symbolic slots
+UTC-2,-2,utc-minus-02.png,South Georgia and the South Sandwich Islands,GS,Atlantic/South_Georgia,UTC-02:00,UTC-2,no,no,yes,gs.svg,,south-georgia-and-the-south-sandwich-islands,
+UTC-1,-1,utc-minus-01.png,Cabo Verde,CV,Atlantic/Cape_Verde,UTC-01:00,UTC-1,no,no,yes,cv.svg,,cabo-verde,
+UTC-1,-1,utc-minus-01.png,Portugal,PT,Atlantic/Azores,UTC-01:00,UTC-1,no,yes,yes,pt.svg,Portugal.jpg,portugal,Azores; country/region appears in multiple symbolic slots
+UTC+0,0,utc-plus-00.png,Antarctica,AQ,Antarctica/Troll,UTC+00:00,UTC+0,no,yes,yes,aq.svg,Antarctica.jpg,antarctica,Troll; country/region appears in multiple symbolic slots
+UTC+0,0,utc-plus-00.png,Burkina Faso,BF,Africa/Abidjan,UTC+00:00,UTC+0,no,no,no,bf.svg,BurkinaFaso.jpg,burkina-faso,
+UTC+0,0,utc-plus-00.png,Cote d'Ivoire,CI,Africa/Abidjan,UTC+00:00,UTC+0,no,no,no,ci.svg,Coted'Ivoire.jpg,cote-d-ivoire,
+UTC+0,0,utc-plus-00.png,Faroe Islands,FO,Atlantic/Faroe,UTC+00:00,UTC+0,no,no,no,fo.svg,FaroeIslands.jpg,faroe-islands,
+UTC+0,0,utc-plus-00.png,Gambia,GM,Africa/Abidjan,UTC+00:00,UTC+0,no,no,no,gm.svg,Gambia.jpg,gambia,
+UTC+0,0,utc-plus-00.png,Ghana,GH,Africa/Abidjan,UTC+00:00,UTC+0,no,no,no,gh.svg,Ghana.jpg,ghana,
+UTC+0,0,utc-plus-00.png,Greenland,GL,America/Danmarkshavn,UTC+00:00,UTC+0,no,yes,yes,gl.svg,Greenland.jpg,greenland,National Park (east coast); country/region appears in multiple symbolic slots
+UTC+0,0,utc-plus-00.png,Guernsey,GG,Europe/London,UTC+00:00,UTC+0,no,no,no,gg.svg,Guernsey.jpg,guernsey,
+UTC+0,0,utc-plus-00.png,Guinea,GN,Africa/Abidjan,UTC+00:00,UTC+0,no,no,no,gn.svg,Guinea.jpg,guinea,
+UTC+0,0,utc-plus-00.png,Guinea-Bissau,GW,Africa/Bissau,UTC+00:00,UTC+0,no,no,no,gw.svg,Guinea-Bissau.jpg,guinea-bissau,
+UTC+0,0,utc-plus-00.png,Iceland,IS,Africa/Abidjan,UTC+00:00,UTC+0,no,no,no,is.svg,Iceland.jpg,iceland,
+UTC+0,0,utc-plus-00.png,Ireland,IE,Europe/Dublin,UTC+00:00,UTC+0,no,no,no,ie.svg,Ireland.jpg,ireland,
+UTC+0,0,utc-plus-00.png,Isle of Man,IM,Europe/London,UTC+00:00,UTC+0,no,no,yes,im.svg,,isle-of-man,
+UTC+0,0,utc-plus-00.png,Jersey,JE,Europe/London,UTC+00:00,UTC+0,no,no,no,je.svg,Jersey.jpg,jersey,
+UTC+0,0,utc-plus-00.png,Liberia,LR,Africa/Monrovia,UTC+00:00,UTC+0,no,no,no,lr.svg,Liberia.jpg,liberia,
+UTC+0,0,utc-plus-00.png,Mali,ML,Africa/Abidjan,UTC+00:00,UTC+0,no,no,no,ml.svg,Mali.jpg,mali,
+UTC+0,0,utc-plus-00.png,Mauritania,MR,Africa/Abidjan,UTC+00:00,UTC+0,no,no,no,mr.svg,Mauritania.jpg,mauritania,
+UTC+0,0,utc-plus-00.png,Portugal,PT,Atlantic/Madeira,UTC+00:00,UTC+0,no,yes,yes,pt.svg,Portugal.jpg,portugal,Madeira Islands; country/region appears in multiple symbolic slots
+UTC+0,0,utc-plus-00.png,Portugal,PT,Europe/Lisbon,UTC+00:00,UTC+0,no,yes,yes,pt.svg,Portugal.jpg,portugal,Portugal (mainland); country/region appears in multiple symbolic slots
+UTC+0,0,utc-plus-00.png,"Saint Helena, Ascension and Tristan da Cunha",SH,Africa/Abidjan,UTC+00:00,UTC+0,no,no,yes,sh.svg,,saint-helena-ascension-and-tristan-da-cunha,
+UTC+0,0,utc-plus-00.png,Sao Tome and Principe,ST,Africa/Sao_Tome,UTC+00:00,UTC+0,no,no,yes,st.svg,,sao-tome-and-principe,
+UTC+0,0,utc-plus-00.png,Senegal,SN,Africa/Abidjan,UTC+00:00,UTC+0,no,no,yes,sn.svg,,senegal,
+UTC+0,0,utc-plus-00.png,Sierra Leone,SL,Africa/Abidjan,UTC+00:00,UTC+0,no,no,no,sl.svg,SierraLeone.jpg,sierra-leone,
+UTC+0,0,utc-plus-00.png,Spain,ES,Atlantic/Canary,UTC+00:00,UTC+0,no,yes,yes,es.svg,Spain.jpg,spain,Canary Islands; country/region appears in multiple symbolic slots
+UTC+0,0,utc-plus-00.png,Togo,TG,Africa/Abidjan,UTC+00:00,UTC+0,no,no,no,tg.svg,Togo.jpg,togo,
+UTC+0,0,utc-plus-00.png,United Kingdom,GB,Europe/London,UTC+00:00,UTC+0,no,no,no,gb.svg,UnitedKingdom.jpg,united-kingdom,
+UTC+1,1,utc-plus-01.png,Albania,AL,Europe/Tirane,UTC+01:00,UTC+1,no,no,no,al.svg,Albania.jpg,albania,
+UTC+1,1,utc-plus-01.png,Algeria,DZ,Africa/Algiers,UTC+01:00,UTC+1,no,no,no,dz.svg,algeria.jpg,algeria,
+UTC+1,1,utc-plus-01.png,Andorra,AD,Europe/Andorra,UTC+01:00,UTC+1,no,no,no,ad.svg,Andorra.jpg,andorra,
+UTC+1,1,utc-plus-01.png,Angola,AO,Africa/Lagos,UTC+01:00,UTC+1,no,no,no,ao.svg,Angola.jpg,angola,West Africa Time
+UTC+1,1,utc-plus-01.png,Austria,AT,Europe/Vienna,UTC+01:00,UTC+1,no,no,no,at.svg,Austria.jpg,austria,
+UTC+1,1,utc-plus-01.png,Belgium,BE,Europe/Brussels,UTC+01:00,UTC+1,no,no,no,be.svg,Belgium.jpg,belgium,
+UTC+1,1,utc-plus-01.png,Benin,BJ,Africa/Lagos,UTC+01:00,UTC+1,no,no,no,bj.svg,Benin.jpg,benin,West Africa Time
+UTC+1,1,utc-plus-01.png,Bosnia and Herzegovina,BA,Europe/Belgrade,UTC+01:00,UTC+1,no,no,no,ba.svg,BosniaandHerzegovina.jpg,bosnia-and-herzegovina,
+UTC+1,1,utc-plus-01.png,Cameroon,CM,Africa/Lagos,UTC+01:00,UTC+1,no,no,no,cm.svg,Cameroon.jpg,cameroon,West Africa Time
+UTC+1,1,utc-plus-01.png,Central African Republic,CF,Africa/Lagos,UTC+01:00,UTC+1,no,no,no,cf.svg,CentralAfricanRepublic.jpg,central-african-republic,West Africa Time
+UTC+1,1,utc-plus-01.png,Chad,TD,Africa/Ndjamena,UTC+01:00,UTC+1,no,no,no,td.svg,Chad.jpg,chad,
+UTC+1,1,utc-plus-01.png,"Congo, Democratic Republic of the",CD,Africa/Lagos,UTC+01:00,UTC+1,no,yes,yes,cd.svg,,congo-democratic-republic-of-the,West Africa Time; country/region appears in multiple symbolic slots
+UTC+1,1,utc-plus-01.png,Croatia,HR,Europe/Belgrade,UTC+01:00,UTC+1,no,no,no,hr.svg,Croatia.jpg,croatia,
+UTC+1,1,utc-plus-01.png,Czechia,CZ,Europe/Prague,UTC+01:00,UTC+1,no,no,yes,cz.svg,,czechia,
+UTC+1,1,utc-plus-01.png,Denmark,DK,Europe/Berlin,UTC+01:00,UTC+1,no,no,no,dk.svg,Denmark.jpg,denmark,most of Germany
+UTC+1,1,utc-plus-01.png,Equatorial Guinea,GQ,Africa/Lagos,UTC+01:00,UTC+1,no,no,no,gq.svg,EquatorialGuinea.jpg,equatorial-guinea,West Africa Time
+UTC+1,1,utc-plus-01.png,France,FR,Europe/Paris,UTC+01:00,UTC+1,no,no,no,fr.svg,France.jpg,france,
+UTC+1,1,utc-plus-01.png,Gabon,GA,Africa/Lagos,UTC+01:00,UTC+1,no,no,no,ga.svg,Gabon.jpg,gabon,West Africa Time
+UTC+1,1,utc-plus-01.png,Germany,DE,Europe/Berlin,UTC+01:00,UTC+1,no,no,no,de.svg,Germany.jpg,germany,most of Germany
+UTC+1,1,utc-plus-01.png,Germany,DE,Europe/Zurich,UTC+01:00,UTC+1,no,no,no,de.svg,Germany.jpg,germany,Büsingen
+UTC+1,1,utc-plus-01.png,Gibraltar,GI,Europe/Gibraltar,UTC+01:00,UTC+1,no,no,no,gi.svg,Gibraltar.jpg,gibraltar,
+UTC+1,1,utc-plus-01.png,Holy See,VA,Europe/Rome,UTC+01:00,UTC+1,no,no,yes,va.svg,,holy-see,
+UTC+1,1,utc-plus-01.png,Hungary,HU,Europe/Budapest,UTC+01:00,UTC+1,no,no,no,hu.svg,Hungary.jpg,hungary,
+UTC+1,1,utc-plus-01.png,Italy,IT,Europe/Rome,UTC+01:00,UTC+1,no,no,no,it.svg,Italy.jpg,italy,
+UTC+1,1,utc-plus-01.png,Liechtenstein,LI,Europe/Zurich,UTC+01:00,UTC+1,no,no,no,li.svg,Liechtenstein.jpg,liechtenstein,Büsingen
+UTC+1,1,utc-plus-01.png,Luxembourg,LU,Europe/Brussels,UTC+01:00,UTC+1,no,no,no,lu.svg,Luxembourg.jpg,luxembourg,
+UTC+1,1,utc-plus-01.png,Malta,MT,Europe/Malta,UTC+01:00,UTC+1,no,no,no,mt.svg,Malta.jpg,malta,
+UTC+1,1,utc-plus-01.png,Monaco,MC,Europe/Paris,UTC+01:00,UTC+1,no,no,no,mc.svg,Monaco.jpg,monaco,
+UTC+1,1,utc-plus-01.png,Montenegro,ME,Europe/Belgrade,UTC+01:00,UTC+1,no,no,no,me.svg,Montenegro.jpg,montenegro,
+UTC+1,1,utc-plus-01.png,Morocco,MA,Africa/Casablanca,UTC+01:00,UTC+1,no,no,no,ma.svg,Morocco.jpg,morocco,
+UTC+1,1,utc-plus-01.png,"Netherlands, Kingdom of the",NL,Europe/Brussels,UTC+01:00,UTC+1,no,no,yes,nl.svg,,netherlands-kingdom-of-the,
+UTC+1,1,utc-plus-01.png,Niger,NE,Africa/Lagos,UTC+01:00,UTC+1,no,no,no,ne.svg,Niger.jpg,niger,West Africa Time
+UTC+1,1,utc-plus-01.png,Nigeria,NG,Africa/Lagos,UTC+01:00,UTC+1,no,no,no,ng.svg,Nigeria.jpg,nigeria,West Africa Time
+UTC+1,1,utc-plus-01.png,North Macedonia,MK,Europe/Belgrade,UTC+01:00,UTC+1,no,no,yes,mk.svg,,north-macedonia,
+UTC+1,1,utc-plus-01.png,Norway,NO,Europe/Berlin,UTC+01:00,UTC+1,no,no,no,no.svg,Norway.jpg,norway,most of Germany
+UTC+1,1,utc-plus-01.png,Poland,PL,Europe/Warsaw,UTC+01:00,UTC+1,no,no,no,pl.svg,Poland.jpg,poland,
+UTC+1,1,utc-plus-01.png,Republic of the Congo,CG,Africa/Lagos,UTC+01:00,UTC+1,no,no,no,cg.svg,RepublicoftheCongo.jpg,republic-of-the-congo,West Africa Time
+UTC+1,1,utc-plus-01.png,San Marino,SM,Europe/Rome,UTC+01:00,UTC+1,no,no,yes,sm.svg,,san-marino,
+UTC+1,1,utc-plus-01.png,Serbia,RS,Europe/Belgrade,UTC+01:00,UTC+1,no,no,yes,rs.svg,,serbia,
+UTC+1,1,utc-plus-01.png,Slovakia,SK,Europe/Prague,UTC+01:00,UTC+1,no,no,no,sk.svg,Slovakia.jpg,slovakia,
+UTC+1,1,utc-plus-01.png,Slovenia,SI,Europe/Belgrade,UTC+01:00,UTC+1,no,no,no,si.svg,Slovenia.jpg,slovenia,
+UTC+1,1,utc-plus-01.png,Spain,ES,Africa/Ceuta,UTC+01:00,UTC+1,no,yes,yes,es.svg,Spain.jpg,spain,"Ceuta, Melilla; country/region appears in multiple symbolic slots"
+UTC+1,1,utc-plus-01.png,Spain,ES,Europe/Madrid,UTC+01:00,UTC+1,no,yes,yes,es.svg,Spain.jpg,spain,Spain (mainland); country/region appears in multiple symbolic slots
+UTC+1,1,utc-plus-01.png,Svalbard and Jan Mayen,SJ,Europe/Berlin,UTC+01:00,UTC+1,no,no,yes,sj.svg,,svalbard-and-jan-mayen,most of Germany
+UTC+1,1,utc-plus-01.png,Sweden,SE,Europe/Berlin,UTC+01:00,UTC+1,no,no,no,se.svg,Sweden.jpg,sweden,most of Germany
+UTC+1,1,utc-plus-01.png,Switzerland,CH,Europe/Zurich,UTC+01:00,UTC+1,no,no,no,ch.svg,Switzerland.jpg,switzerland,Büsingen
+UTC+1,1,utc-plus-01.png,Tunisia,TN,Africa/Tunis,UTC+01:00,UTC+1,no,no,no,tn.svg,Tunisia.jpg,tunisia,
+UTC+1,1,utc-plus-01.png,Western Sahara,EH,Africa/El_Aaiun,UTC+01:00,UTC+1,no,no,no,eh.svg,WesternSahara.jpg,western-sahara,
+UTC+2,2,utc-plus-02.png,Botswana,BW,Africa/Maputo,UTC+02:00,UTC+2,no,no,no,bw.svg,Botswana.jpg,botswana,Central Africa Time
+UTC+2,2,utc-plus-02.png,Bulgaria,BG,Europe/Sofia,UTC+02:00,UTC+2,no,no,no,bg.svg,Bulgaria.jpg,bulgaria,
+UTC+2,2,utc-plus-02.png,Burundi,BI,Africa/Maputo,UTC+02:00,UTC+2,no,no,no,bi.svg,Burundi.jpg,burundi,Central Africa Time
+UTC+2,2,utc-plus-02.png,"Congo, Democratic Republic of the",CD,Africa/Maputo,UTC+02:00,UTC+2,no,yes,yes,cd.svg,,congo-democratic-republic-of-the,Central Africa Time; country/region appears in multiple symbolic slots
+UTC+2,2,utc-plus-02.png,Cyprus,CY,Asia/Famagusta,UTC+02:00,UTC+2,no,no,yes,cy.svg,,cyprus,Northern Cyprus
+UTC+2,2,utc-plus-02.png,Cyprus,CY,Asia/Nicosia,UTC+02:00,UTC+2,no,no,yes,cy.svg,,cyprus,most of Cyprus
+UTC+2,2,utc-plus-02.png,Egypt,EG,Africa/Cairo,UTC+02:00,UTC+2,no,no,no,eg.svg,Egypt.jpg,egypt,
+UTC+2,2,utc-plus-02.png,Estonia,EE,Europe/Tallinn,UTC+02:00,UTC+2,no,no,no,ee.svg,Estonia.jpg,estonia,
+UTC+2,2,utc-plus-02.png,Eswatini,SZ,Africa/Johannesburg,UTC+02:00,UTC+2,no,no,yes,sz.svg,,eswatini,
+UTC+2,2,utc-plus-02.png,Finland,FI,Europe/Helsinki,UTC+02:00,UTC+2,no,no,no,fi.svg,Finland.jpg,finland,
+UTC+2,2,utc-plus-02.png,Greece,GR,Europe/Athens,UTC+02:00,UTC+2,no,no,no,gr.svg,Greece.jpg,greece,
+UTC+2,2,utc-plus-02.png,Israel,IL,Asia/Jerusalem,UTC+02:00,UTC+2,no,no,no,il.svg,Israel.jpg,israel,
+UTC+2,2,utc-plus-02.png,Latvia,LV,Europe/Riga,UTC+02:00,UTC+2,no,no,no,lv.svg,Latvia.jpg,latvia,
+UTC+2,2,utc-plus-02.png,Lebanon,LB,Asia/Beirut,UTC+02:00,UTC+2,no,no,no,lb.svg,Lebanon.jpg,lebanon,
+UTC+2,2,utc-plus-02.png,Lesotho,LS,Africa/Johannesburg,UTC+02:00,UTC+2,no,no,no,ls.svg,Lesotho.jpg,lesotho,
+UTC+2,2,utc-plus-02.png,Libya,LY,Africa/Tripoli,UTC+02:00,UTC+2,no,no,no,ly.svg,Libya.jpg,libya,
+UTC+2,2,utc-plus-02.png,Lithuania,LT,Europe/Vilnius,UTC+02:00,UTC+2,no,no,no,lt.svg,Lithuania.jpg,lithuania,
+UTC+2,2,utc-plus-02.png,Malawi,MW,Africa/Maputo,UTC+02:00,UTC+2,no,no,no,mw.svg,Malawi.jpg,malawi,Central Africa Time
+UTC+2,2,utc-plus-02.png,"Moldova, Republic of",MD,Europe/Chisinau,UTC+02:00,UTC+2,no,no,yes,md.svg,,moldova-republic-of,
+UTC+2,2,utc-plus-02.png,Mozambique,MZ,Africa/Maputo,UTC+02:00,UTC+2,no,no,no,mz.svg,Mozambique.jpg,mozambique,Central Africa Time
+UTC+2,2,utc-plus-02.png,Namibia,NA,Africa/Windhoek,UTC+02:00,UTC+2,no,no,no,na.svg,Namibia.jpg,namibia,
+UTC+2,2,utc-plus-02.png,"Palestine, State of",PS,Asia/Gaza,UTC+02:00,UTC+2,no,no,yes,ps.svg,,palestine-state-of,Gaza Strip
+UTC+2,2,utc-plus-02.png,"Palestine, State of",PS,Asia/Hebron,UTC+02:00,UTC+2,no,no,yes,ps.svg,,palestine-state-of,West Bank
+UTC+2,2,utc-plus-02.png,Romania,RO,Europe/Bucharest,UTC+02:00,UTC+2,no,no,yes,ro.svg,,romania,
+UTC+2,2,utc-plus-02.png,Russia,RU,Europe/Kaliningrad,UTC+02:00,UTC+2,no,yes,yes,ru.svg,,russia,MSK-01 - Kaliningrad; country/region appears in multiple symbolic slots
+UTC+2,2,utc-plus-02.png,Rwanda,RW,Africa/Maputo,UTC+02:00,UTC+2,no,no,yes,rw.svg,,rwanda,Central Africa Time
+UTC+2,2,utc-plus-02.png,South Africa,ZA,Africa/Johannesburg,UTC+02:00,UTC+2,no,no,no,za.svg,SouthAfrica.jpg,south-africa,
+UTC+2,2,utc-plus-02.png,South Sudan,SS,Africa/Juba,UTC+02:00,UTC+2,no,no,no,ss.svg,Southsudan.jpg,south-sudan,
+UTC+2,2,utc-plus-02.png,Sudan,SD,Africa/Khartoum,UTC+02:00,UTC+2,no,no,no,sd.svg,Sudan(1).jpg,sudan,
+UTC+2,2,utc-plus-02.png,Ukraine,UA,Europe/Kyiv,UTC+02:00,UTC+2,no,yes,yes,ua.svg,Ukraine.jpg,ukraine,most of Ukraine; country/region appears in multiple symbolic slots
+UTC+2,2,utc-plus-02.png,Zambia,ZM,Africa/Maputo,UTC+02:00,UTC+2,no,no,no,zm.svg,Zambia.jpg,zambia,Central Africa Time
+UTC+2,2,utc-plus-02.png,Zimbabwe,ZW,Africa/Maputo,UTC+02:00,UTC+2,no,no,no,zw.svg,Zimbabwe.jpg,zimbabwe,Central Africa Time
+UTC+2,2,utc-plus-02.png,Åland Islands,AX,Europe/Helsinki,UTC+02:00,UTC+2,no,no,yes,ax.svg,,land-islands,
+UTC+3,3,utc-plus-03.png,Antarctica,AQ,Asia/Riyadh,UTC+03:00,UTC+3,no,yes,yes,aq.svg,Antarctica.jpg,antarctica,Syowa; country/region appears in multiple symbolic slots
+UTC+3,3,utc-plus-03.png,Bahrain,BH,Asia/Qatar,UTC+03:00,UTC+3,no,no,no,bh.svg,Bahrain.jpg,bahrain,
+UTC+3,3,utc-plus-03.png,Belarus,BY,Europe/Minsk,UTC+03:00,UTC+3,no,no,yes,by.svg,,belarus,
+UTC+3,3,utc-plus-03.png,Comoros,KM,Africa/Nairobi,UTC+03:00,UTC+3,no,no,no,km.svg,Comoros.jpg,comoros,
+UTC+3,3,utc-plus-03.png,Djibouti,DJ,Africa/Nairobi,UTC+03:00,UTC+3,no,no,no,dj.svg,Djibouti.jpg,djibouti,
+UTC+3,3,utc-plus-03.png,Eritrea,ER,Africa/Nairobi,UTC+03:00,UTC+3,no,no,no,er.svg,Eritrea.jpg,eritrea,
+UTC+3,3,utc-plus-03.png,Ethiopia,ET,Africa/Nairobi,UTC+03:00,UTC+3,no,no,no,et.svg,Ethiopia.jpg,ethiopia,
+UTC+3,3,utc-plus-03.png,Iraq,IQ,Asia/Baghdad,UTC+03:00,UTC+3,no,no,no,iq.svg,Iraq.jpg,iraq,
+UTC+3,3,utc-plus-03.png,Jordan,JO,Asia/Amman,UTC+03:00,UTC+3,no,no,no,jo.svg,Jordan.jpg,jordan,
+UTC+3,3,utc-plus-03.png,Kenya,KE,Africa/Nairobi,UTC+03:00,UTC+3,no,no,no,ke.svg,Kenya.jpg,kenya,
+UTC+3,3,utc-plus-03.png,Kuwait,KW,Asia/Riyadh,UTC+03:00,UTC+3,no,no,yes,kw.svg,,kuwait,Syowa
+UTC+3,3,utc-plus-03.png,Madagascar,MG,Africa/Nairobi,UTC+03:00,UTC+3,no,no,no,mg.svg,Madagascar.jpg,madagascar,
+UTC+3,3,utc-plus-03.png,Mayotte,YT,Africa/Nairobi,UTC+03:00,UTC+3,no,no,yes,yt.svg,,mayotte,
+UTC+3,3,utc-plus-03.png,Qatar,QA,Asia/Qatar,UTC+03:00,UTC+3,no,no,no,qa.svg,Qatar.jpg,qatar,
+UTC+3,3,utc-plus-03.png,Russia,RU,Europe/Kirov,UTC+03:00,UTC+3,no,yes,yes,ru.svg,,russia,MSK+00 - Kirov; country/region appears in multiple symbolic slots
+UTC+3,3,utc-plus-03.png,Russia,RU,Europe/Moscow,UTC+03:00,UTC+3,no,yes,yes,ru.svg,,russia,MSK+00 - Moscow area; country/region appears in multiple symbolic slots
+UTC+3,3,utc-plus-03.png,Russia,RU,Europe/Simferopol,UTC+03:00,UTC+3,no,yes,yes,ru.svg,,russia,Crimea; country/region appears in multiple symbolic slots
+UTC+3,3,utc-plus-03.png,Russia,RU,Europe/Volgograd,UTC+03:00,UTC+3,no,yes,yes,ru.svg,,russia,MSK+00 - Volgograd; country/region appears in multiple symbolic slots
+UTC+3,3,utc-plus-03.png,Saudi Arabia,SA,Asia/Riyadh,UTC+03:00,UTC+3,no,no,yes,sa.svg,,saudi-arabia,Syowa
+UTC+3,3,utc-plus-03.png,Somalia,SO,Africa/Nairobi,UTC+03:00,UTC+3,no,no,no,so.svg,Somalia.jpg,somalia,
+UTC+3,3,utc-plus-03.png,Syria,SY,Asia/Damascus,UTC+03:00,UTC+3,no,no,no,sy.svg,Syria.jpg,syria,
+UTC+3,3,utc-plus-03.png,Tanzania,TZ,Africa/Nairobi,UTC+03:00,UTC+3,no,no,no,tz.svg,Tanzania.jpg,tanzania,
+UTC+3,3,utc-plus-03.png,Türkiye,TR,Europe/Istanbul,UTC+03:00,UTC+3,no,no,yes,tr.svg,,t-rkiye,
+UTC+3,3,utc-plus-03.png,Uganda,UG,Africa/Nairobi,UTC+03:00,UTC+3,no,no,no,ug.svg,Uganda.jpg,uganda,
+UTC+3,3,utc-plus-03.png,Ukraine,UA,Europe/Simferopol,UTC+03:00,UTC+3,no,yes,yes,ua.svg,Ukraine.jpg,ukraine,Crimea; country/region appears in multiple symbolic slots
+UTC+3,3,utc-plus-03.png,Yemen,YE,Asia/Riyadh,UTC+03:00,UTC+3,no,no,no,ye.svg,Yemen.jpg,yemen,Syowa
+UTC+4,4,utc-plus-04.png,Armenia,AM,Asia/Yerevan,UTC+04:00,UTC+4,no,no,no,am.svg,Armenia.jpg,armenia,
+UTC+4,4,utc-plus-04.png,Azerbaijan,AZ,Asia/Baku,UTC+04:00,UTC+4,no,no,no,az.svg,Azerbaijan.jpg,azerbaijan,
+UTC+4,4,utc-plus-04.png,French Southern Territories,TF,Asia/Dubai,UTC+04:00,UTC+4,no,yes,yes,tf.svg,,french-southern-territories,Crozet; country/region appears in multiple symbolic slots
+UTC+4,4,utc-plus-04.png,Georgia,GE,Asia/Tbilisi,UTC+04:00,UTC+4,no,no,no,ge.svg,Georgia.jpg,georgia,
+UTC+4,4,utc-plus-04.png,"Iran, Islamic Republic of",IR,Asia/Tehran,UTC+03:30,UTC+4,yes,no,yes,ir.svg,,iran-islamic-republic-of,fractional actual UTC offset; assigned to nearest symbolic hourly slot
+UTC+4,4,utc-plus-04.png,Mauritius,MU,Indian/Mauritius,UTC+04:00,UTC+4,no,no,yes,mu.svg,,mauritius,
+UTC+4,4,utc-plus-04.png,Oman,OM,Asia/Dubai,UTC+04:00,UTC+4,no,no,no,om.svg,Oman.jpg,oman,Crozet
+UTC+4,4,utc-plus-04.png,Reunion,RE,Asia/Dubai,UTC+04:00,UTC+4,no,no,yes,re.svg,,reunion,Crozet
+UTC+4,4,utc-plus-04.png,Russia,RU,Europe/Astrakhan,UTC+04:00,UTC+4,no,yes,yes,ru.svg,,russia,MSK+01 - Astrakhan; country/region appears in multiple symbolic slots
+UTC+4,4,utc-plus-04.png,Russia,RU,Europe/Samara,UTC+04:00,UTC+4,no,yes,yes,ru.svg,,russia,"MSK+01 - Samara, Udmurtia; country/region appears in multiple symbolic slots"
+UTC+4,4,utc-plus-04.png,Russia,RU,Europe/Saratov,UTC+04:00,UTC+4,no,yes,yes,ru.svg,,russia,MSK+01 - Saratov; country/region appears in multiple symbolic slots
+UTC+4,4,utc-plus-04.png,Russia,RU,Europe/Ulyanovsk,UTC+04:00,UTC+4,no,yes,yes,ru.svg,,russia,MSK+01 - Ulyanovsk; country/region appears in multiple symbolic slots
+UTC+4,4,utc-plus-04.png,Seychelles,SC,Asia/Dubai,UTC+04:00,UTC+4,no,no,yes,sc.svg,,seychelles,Crozet
+UTC+4,4,utc-plus-04.png,United Arab Emirates,AE,Asia/Dubai,UTC+04:00,UTC+4,no,no,no,ae.svg,UnitedArabEmirates.jpg,united-arab-emirates,Crozet
+UTC+5,5,utc-plus-05.png,Afghanistan,AF,Asia/Kabul,UTC+04:30,UTC+5,yes,no,yes,af.svg,afghanistan.jpg,afghanistan,fractional actual UTC offset; assigned to nearest symbolic hourly slot
+UTC+5,5,utc-plus-05.png,Antarctica,AQ,Antarctica/Mawson,UTC+05:00,UTC+5,no,yes,yes,aq.svg,Antarctica.jpg,antarctica,Mawson; country/region appears in multiple symbolic slots
+UTC+5,5,utc-plus-05.png,Antarctica,AQ,Antarctica/Vostok,UTC+05:00,UTC+5,no,yes,yes,aq.svg,Antarctica.jpg,antarctica,Vostok; country/region appears in multiple symbolic slots
+UTC+5,5,utc-plus-05.png,French Southern Territories,TF,Indian/Maldives,UTC+05:00,UTC+5,no,yes,yes,tf.svg,,french-southern-territories,"Kerguelen, St Paul I, Amsterdam I; country/region appears in multiple symbolic slots"
+UTC+5,5,utc-plus-05.png,Kazakhstan,KZ,Asia/Almaty,UTC+05:00,UTC+5,no,no,no,kz.svg,Kazakhstan.jpg,kazakhstan,most of Kazakhstan
+UTC+5,5,utc-plus-05.png,Kazakhstan,KZ,Asia/Aqtau,UTC+05:00,UTC+5,no,no,no,kz.svg,Kazakhstan.jpg,kazakhstan,Mangghystaū/Mankistau
+UTC+5,5,utc-plus-05.png,Kazakhstan,KZ,Asia/Aqtobe,UTC+05:00,UTC+5,no,no,no,kz.svg,Kazakhstan.jpg,kazakhstan,Aqtöbe/Aktobe
+UTC+5,5,utc-plus-05.png,Kazakhstan,KZ,Asia/Atyrau,UTC+05:00,UTC+5,no,no,no,kz.svg,Kazakhstan.jpg,kazakhstan,Atyraū/Atirau/Gur’yev
+UTC+5,5,utc-plus-05.png,Kazakhstan,KZ,Asia/Oral,UTC+05:00,UTC+5,no,no,no,kz.svg,Kazakhstan.jpg,kazakhstan,West Kazakhstan
+UTC+5,5,utc-plus-05.png,Kazakhstan,KZ,Asia/Qostanay,UTC+05:00,UTC+5,no,no,no,kz.svg,Kazakhstan.jpg,kazakhstan,Qostanay/Kostanay/Kustanay
+UTC+5,5,utc-plus-05.png,Kazakhstan,KZ,Asia/Qyzylorda,UTC+05:00,UTC+5,no,no,no,kz.svg,Kazakhstan.jpg,kazakhstan,Qyzylorda/Kyzylorda/Kzyl-Orda
+UTC+5,5,utc-plus-05.png,Maldives,MV,Indian/Maldives,UTC+05:00,UTC+5,no,no,no,mv.svg,Maldives.jpg,maldives,"Kerguelen, St Paul I, Amsterdam I"
+UTC+5,5,utc-plus-05.png,Pakistan,PK,Asia/Karachi,UTC+05:00,UTC+5,no,no,no,pk.svg,Pakistan.jpg,pakistan,
+UTC+5,5,utc-plus-05.png,Russia,RU,Asia/Yekaterinburg,UTC+05:00,UTC+5,no,yes,yes,ru.svg,,russia,MSK+02 - Urals; country/region appears in multiple symbolic slots
+UTC+5,5,utc-plus-05.png,Tajikistan,TJ,Asia/Dushanbe,UTC+05:00,UTC+5,no,no,no,tj.svg,Tajikistan.jpg,tajikistan,
+UTC+5,5,utc-plus-05.png,Turkmenistan,TM,Asia/Ashgabat,UTC+05:00,UTC+5,no,no,no,tm.svg,Turkmenistan.jpg,turkmenistan,
+UTC+5,5,utc-plus-05.png,Uzbekistan,UZ,Asia/Samarkand,UTC+05:00,UTC+5,no,no,no,uz.svg,Uzbekistan.jpg,uzbekistan,Uzbekistan (west)
+UTC+5,5,utc-plus-05.png,Uzbekistan,UZ,Asia/Tashkent,UTC+05:00,UTC+5,no,no,no,uz.svg,Uzbekistan.jpg,uzbekistan,Uzbekistan (east)
+UTC+6,6,utc-plus-06.png,Bangladesh,BD,Asia/Dhaka,UTC+06:00,UTC+6,no,no,no,bd.svg,Bangladesh.jpg,bangladesh,
+UTC+6,6,utc-plus-06.png,Bhutan,BT,Asia/Thimphu,UTC+06:00,UTC+6,no,no,no,bt.svg,Bhutan.jpg,bhutan,
+UTC+6,6,utc-plus-06.png,British Indian Ocean Territory,IO,Indian/Chagos,UTC+06:00,UTC+6,no,no,yes,io.svg,,british-indian-ocean-territory,
+UTC+6,6,utc-plus-06.png,China,CN,Asia/Urumqi,UTC+06:00,UTC+6,no,yes,yes,cn.svg,China.jpg,china,Xinjiang Time; country/region appears in multiple symbolic slots
+UTC+6,6,utc-plus-06.png,India,IN,Asia/Kolkata,UTC+05:30,UTC+6,yes,no,yes,in.svg,India.jpg,india,fractional actual UTC offset; assigned to nearest symbolic hourly slot
+UTC+6,6,utc-plus-06.png,Kyrgyzstan,KG,Asia/Bishkek,UTC+06:00,UTC+6,no,no,yes,kg.svg,,kyrgyzstan,
+UTC+6,6,utc-plus-06.png,Nepal,NP,Asia/Kathmandu,UTC+05:45,UTC+6,yes,no,yes,np.svg,Nepal.jpg,nepal,fractional actual UTC offset; assigned to nearest symbolic hourly slot
+UTC+6,6,utc-plus-06.png,Russia,RU,Asia/Omsk,UTC+06:00,UTC+6,no,yes,yes,ru.svg,,russia,MSK+03 - Omsk; country/region appears in multiple symbolic slots
+UTC+6,6,utc-plus-06.png,Sri Lanka,LK,Asia/Colombo,UTC+05:30,UTC+6,yes,no,yes,lk.svg,SriLanka.jpg,sri-lanka,fractional actual UTC offset; assigned to nearest symbolic hourly slot
+UTC+7,7,utc-plus-07.png,Antarctica,AQ,Antarctica/Davis,UTC+07:00,UTC+7,no,yes,yes,aq.svg,Antarctica.jpg,antarctica,Davis; country/region appears in multiple symbolic slots
+UTC+7,7,utc-plus-07.png,Cambodia,KH,Asia/Bangkok,UTC+07:00,UTC+7,no,no,no,kh.svg,Cambodia.jpg,cambodia,north Vietnam
+UTC+7,7,utc-plus-07.png,Christmas Island,CX,Asia/Bangkok,UTC+07:00,UTC+7,no,no,no,cx.svg,ChristmasIsland.jpg,christmas-island,north Vietnam
+UTC+7,7,utc-plus-07.png,Cocos (Keeling) Islands,CC,Asia/Yangon,UTC+06:30,UTC+7,yes,no,yes,cc.svg,Cocos(Keeling)Islands.jpg,cocos-keeling-islands,fractional actual UTC offset; assigned to nearest symbolic hourly slot
+UTC+7,7,utc-plus-07.png,Indonesia,ID,Asia/Jakarta,UTC+07:00,UTC+7,no,yes,yes,id.svg,Indonesia.jpg,indonesia,"Java, Sumatra; country/region appears in multiple symbolic slots"
+UTC+7,7,utc-plus-07.png,Indonesia,ID,Asia/Pontianak,UTC+07:00,UTC+7,no,yes,yes,id.svg,Indonesia.jpg,indonesia,"Borneo (west, central); country/region appears in multiple symbolic slots"
+UTC+7,7,utc-plus-07.png,Laos,LA,Asia/Bangkok,UTC+07:00,UTC+7,no,no,no,la.svg,Laos.jpg,laos,north Vietnam
+UTC+7,7,utc-plus-07.png,Mongolia,MN,Asia/Hovd,UTC+07:00,UTC+7,no,yes,yes,mn.svg,Mongolia.jpg,mongolia,"Bayan-Ölgii, Hovd, Uvs; country/region appears in multiple symbolic slots"
+UTC+7,7,utc-plus-07.png,Myanmar,MM,Asia/Yangon,UTC+06:30,UTC+7,yes,no,yes,mm.svg,Myanmar.jpg,myanmar,fractional actual UTC offset; assigned to nearest symbolic hourly slot
+UTC+7,7,utc-plus-07.png,Russia,RU,Asia/Barnaul,UTC+07:00,UTC+7,no,yes,yes,ru.svg,,russia,MSK+04 - Altai; country/region appears in multiple symbolic slots
+UTC+7,7,utc-plus-07.png,Russia,RU,Asia/Krasnoyarsk,UTC+07:00,UTC+7,no,yes,yes,ru.svg,,russia,MSK+04 - Krasnoyarsk area; country/region appears in multiple symbolic slots
+UTC+7,7,utc-plus-07.png,Russia,RU,Asia/Novokuznetsk,UTC+07:00,UTC+7,no,yes,yes,ru.svg,,russia,MSK+04 - Kemerovo; country/region appears in multiple symbolic slots
+UTC+7,7,utc-plus-07.png,Russia,RU,Asia/Novosibirsk,UTC+07:00,UTC+7,no,yes,yes,ru.svg,,russia,MSK+04 - Novosibirsk; country/region appears in multiple symbolic slots
+UTC+7,7,utc-plus-07.png,Russia,RU,Asia/Tomsk,UTC+07:00,UTC+7,no,yes,yes,ru.svg,,russia,MSK+04 - Tomsk; country/region appears in multiple symbolic slots
+UTC+7,7,utc-plus-07.png,Thailand,TH,Asia/Bangkok,UTC+07:00,UTC+7,no,no,no,th.svg,Thailand.jpg,thailand,north Vietnam
+UTC+7,7,utc-plus-07.png,Vietnam,VN,Asia/Bangkok,UTC+07:00,UTC+7,no,no,no,vn.svg,Vietnam.jpg,vietnam,north Vietnam
+UTC+7,7,utc-plus-07.png,Vietnam,VN,Asia/Ho_Chi_Minh,UTC+07:00,UTC+7,no,no,no,vn.svg,Vietnam.jpg,vietnam,south Vietnam
+UTC+8,8,utc-plus-08.png,Antarctica,AQ,Antarctica/Casey,UTC+08:00,UTC+8,no,yes,yes,aq.svg,Antarctica.jpg,antarctica,Casey; country/region appears in multiple symbolic slots
+UTC+8,8,utc-plus-08.png,Antarctica,AQ,Asia/Singapore,UTC+08:00,UTC+8,no,yes,yes,aq.svg,Antarctica.jpg,antarctica,"peninsular Malaysia, Concordia; country/region appears in multiple symbolic slots"
+UTC+8,8,utc-plus-08.png,Australia,AU,Australia/Perth,UTC+08:00,UTC+8,no,yes,yes,au.svg,Australia.jpg,australia,Western Australia (most areas); country/region appears in multiple symbolic slots
+UTC+8,8,utc-plus-08.png,Brunei,BN,Asia/Kuching,UTC+08:00,UTC+8,no,no,no,bn.svg,Brunei.jpg,brunei,"Sabah, Sarawak"
+UTC+8,8,utc-plus-08.png,China,CN,Asia/Shanghai,UTC+08:00,UTC+8,no,yes,yes,cn.svg,China.jpg,china,Beijing Time; country/region appears in multiple symbolic slots
+UTC+8,8,utc-plus-08.png,Hong Kong,HK,Asia/Hong_Kong,UTC+08:00,UTC+8,no,no,no,hk.svg,HongKong.jpg,hong-kong,
+UTC+8,8,utc-plus-08.png,Indonesia,ID,Asia/Makassar,UTC+08:00,UTC+8,no,yes,yes,id.svg,Indonesia.jpg,indonesia,"Borneo (east, south), Sulawesi/Celebes, Bali, Nusa Tengarra, Timor (west); country/region appears in multiple symbolic slots"
+UTC+8,8,utc-plus-08.png,Macao,MO,Asia/Macau,UTC+08:00,UTC+8,no,no,yes,mo.svg,,macao,
+UTC+8,8,utc-plus-08.png,Malaysia,MY,Asia/Kuching,UTC+08:00,UTC+8,no,no,no,my.svg,Malaysia.jpg,malaysia,"Sabah, Sarawak"
+UTC+8,8,utc-plus-08.png,Malaysia,MY,Asia/Singapore,UTC+08:00,UTC+8,no,no,no,my.svg,Malaysia.jpg,malaysia,"peninsular Malaysia, Concordia"
+UTC+8,8,utc-plus-08.png,Mongolia,MN,Asia/Ulaanbaatar,UTC+08:00,UTC+8,no,yes,yes,mn.svg,Mongolia.jpg,mongolia,most of Mongolia; country/region appears in multiple symbolic slots
+UTC+8,8,utc-plus-08.png,Philippines,PH,Asia/Manila,UTC+08:00,UTC+8,no,no,no,ph.svg,Philippines.jpg,philippines,
+UTC+8,8,utc-plus-08.png,Russia,RU,Asia/Irkutsk,UTC+08:00,UTC+8,no,yes,yes,ru.svg,,russia,"MSK+05 - Irkutsk, Buryatia; country/region appears in multiple symbolic slots"
+UTC+8,8,utc-plus-08.png,Singapore,SG,Asia/Singapore,UTC+08:00,UTC+8,no,no,no,sg.svg,Singapore.jpg,singapore,"peninsular Malaysia, Concordia"
+UTC+8,8,utc-plus-08.png,"Taiwan, Province of China",TW,Asia/Taipei,UTC+08:00,UTC+8,no,no,yes,tw.svg,,taiwan-province-of-china,
+UTC+9,9,utc-plus-09.png,Australia,AU,Asia/Tokyo,UTC+09:00,UTC+9,no,yes,yes,au.svg,Australia.jpg,australia,Eyre Bird Observatory; country/region appears in multiple symbolic slots
+UTC+9,9,utc-plus-09.png,Australia,AU,Australia/Eucla,UTC+08:45,UTC+9,yes,yes,yes,au.svg,Australia.jpg,australia,fractional actual UTC offset; assigned to nearest symbolic hourly slot; Western Australia (Eucla); country/region appears in multiple symbolic slots
+UTC+9,9,utc-plus-09.png,Indonesia,ID,Asia/Jayapura,UTC+09:00,UTC+9,no,yes,yes,id.svg,Indonesia.jpg,indonesia,"New Guinea (West Papua / Irian Jaya), Malukus/Moluccas; country/region appears in multiple symbolic slots"
+UTC+9,9,utc-plus-09.png,Japan,JP,Asia/Tokyo,UTC+09:00,UTC+9,no,no,no,jp.svg,Japan.jpg,japan,Eyre Bird Observatory
+UTC+9,9,utc-plus-09.png,"Korea, Democratic People's Republic of",KP,Asia/Pyongyang,UTC+09:00,UTC+9,no,no,yes,kp.svg,,korea-democratic-people-s-republic-of,
+UTC+9,9,utc-plus-09.png,"Korea, Republic of",KR,Asia/Seoul,UTC+09:00,UTC+9,no,no,yes,kr.svg,,korea-republic-of,
+UTC+9,9,utc-plus-09.png,Palau,PW,Pacific/Palau,UTC+09:00,UTC+9,no,no,no,pw.svg,Palau.jpg,palau,
+UTC+9,9,utc-plus-09.png,Russia,RU,Asia/Chita,UTC+09:00,UTC+9,no,yes,yes,ru.svg,,russia,MSK+06 - Zabaykalsky; country/region appears in multiple symbolic slots
+UTC+9,9,utc-plus-09.png,Russia,RU,Asia/Khandyga,UTC+09:00,UTC+9,no,yes,yes,ru.svg,,russia,"MSK+06 - Tomponsky, Ust-Maysky; country/region appears in multiple symbolic slots"
+UTC+9,9,utc-plus-09.png,Russia,RU,Asia/Yakutsk,UTC+09:00,UTC+9,no,yes,yes,ru.svg,,russia,MSK+06 - Lena River; country/region appears in multiple symbolic slots
+UTC+9,9,utc-plus-09.png,Timor-Leste,TL,Asia/Dili,UTC+09:00,UTC+9,no,no,yes,tl.svg,,timor-leste,
+UTC+10,10,utc-plus-10.png,Antarctica,AQ,Pacific/Port_Moresby,UTC+10:00,UTC+10,no,yes,yes,aq.svg,Antarctica.jpg,antarctica,"Papua New Guinea (most areas), Chuuk, Yap, Dumont d’Urville; country/region appears in multiple symbolic slots"
+UTC+10,10,utc-plus-10.png,Australia,AU,Australia/Brisbane,UTC+10:00,UTC+10,no,yes,yes,au.svg,Australia.jpg,australia,Queensland (most areas); country/region appears in multiple symbolic slots
+UTC+10,10,utc-plus-10.png,Australia,AU,Australia/Darwin,UTC+09:30,UTC+10,yes,yes,yes,au.svg,Australia.jpg,australia,fractional actual UTC offset; assigned to nearest symbolic hourly slot; Northern Territory; country/region appears in multiple symbolic slots
+UTC+10,10,utc-plus-10.png,Australia,AU,Australia/Lindeman,UTC+10:00,UTC+10,no,yes,yes,au.svg,Australia.jpg,australia,Queensland (Whitsunday Islands); country/region appears in multiple symbolic slots
+UTC+10,10,utc-plus-10.png,Guam,GU,Pacific/Guam,UTC+10:00,UTC+10,no,no,no,gu.svg,Guam.jpg,guam,
+UTC+10,10,utc-plus-10.png,"Micronesia, Federated States of",FM,Pacific/Port_Moresby,UTC+10:00,UTC+10,no,yes,yes,fm.svg,,micronesia-federated-states-of,"Papua New Guinea (most areas), Chuuk, Yap, Dumont d’Urville; country/region appears in multiple symbolic slots"
+UTC+10,10,utc-plus-10.png,Northern Mariana Islands,MP,Pacific/Guam,UTC+10:00,UTC+10,no,no,yes,mp.svg,,northern-mariana-islands,
+UTC+10,10,utc-plus-10.png,Papua New Guinea,PG,Pacific/Port_Moresby,UTC+10:00,UTC+10,no,yes,yes,pg.svg,Papuanewguinea.jpg,papua-new-guinea,"Papua New Guinea (most areas), Chuuk, Yap, Dumont d’Urville; country/region appears in multiple symbolic slots"
+UTC+10,10,utc-plus-10.png,Russia,RU,Asia/Ust-Nera,UTC+10:00,UTC+10,no,yes,yes,ru.svg,,russia,MSK+07 - Oymyakonsky; country/region appears in multiple symbolic slots
+UTC+10,10,utc-plus-10.png,Russia,RU,Asia/Vladivostok,UTC+10:00,UTC+10,no,yes,yes,ru.svg,,russia,MSK+07 - Amur River; country/region appears in multiple symbolic slots
+UTC+11,11,utc-plus-11.png,Australia,AU,Antarctica/Macquarie,UTC+11:00,UTC+11,no,yes,yes,au.svg,Australia.jpg,australia,Macquarie Island; country/region appears in multiple symbolic slots
+UTC+11,11,utc-plus-11.png,Australia,AU,Australia/Adelaide,UTC+10:30,UTC+11,yes,yes,yes,au.svg,Australia.jpg,australia,fractional actual UTC offset; assigned to nearest symbolic hourly slot; South Australia; country/region appears in multiple symbolic slots
+UTC+11,11,utc-plus-11.png,Australia,AU,Australia/Broken_Hill,UTC+10:30,UTC+11,yes,yes,yes,au.svg,Australia.jpg,australia,fractional actual UTC offset; assigned to nearest symbolic hourly slot; New South Wales (Yancowinna); country/region appears in multiple symbolic slots
+UTC+11,11,utc-plus-11.png,Australia,AU,Australia/Hobart,UTC+11:00,UTC+11,no,yes,yes,au.svg,Australia.jpg,australia,Tasmania; country/region appears in multiple symbolic slots
+UTC+11,11,utc-plus-11.png,Australia,AU,Australia/Lord_Howe,UTC+11:00,UTC+11,no,yes,yes,au.svg,Australia.jpg,australia,Lord Howe Island; country/region appears in multiple symbolic slots
+UTC+11,11,utc-plus-11.png,Australia,AU,Australia/Melbourne,UTC+11:00,UTC+11,no,yes,yes,au.svg,Australia.jpg,australia,Victoria; country/region appears in multiple symbolic slots
+UTC+11,11,utc-plus-11.png,Australia,AU,Australia/Sydney,UTC+11:00,UTC+11,no,yes,yes,au.svg,Australia.jpg,australia,New South Wales (most areas); country/region appears in multiple symbolic slots
+UTC+11,11,utc-plus-11.png,"Micronesia, Federated States of",FM,Pacific/Guadalcanal,UTC+11:00,UTC+11,no,yes,yes,fm.svg,,micronesia-federated-states-of,Pohnpei; country/region appears in multiple symbolic slots
+UTC+11,11,utc-plus-11.png,"Micronesia, Federated States of",FM,Pacific/Kosrae,UTC+11:00,UTC+11,no,yes,yes,fm.svg,,micronesia-federated-states-of,Kosrae; country/region appears in multiple symbolic slots
+UTC+11,11,utc-plus-11.png,New Caledonia,NC,Pacific/Noumea,UTC+11:00,UTC+11,no,no,yes,nc.svg,,new-caledonia,
+UTC+11,11,utc-plus-11.png,Papua New Guinea,PG,Pacific/Bougainville,UTC+11:00,UTC+11,no,yes,yes,pg.svg,Papuanewguinea.jpg,papua-new-guinea,Bougainville; country/region appears in multiple symbolic slots
+UTC+11,11,utc-plus-11.png,Russia,RU,Asia/Magadan,UTC+11:00,UTC+11,no,yes,yes,ru.svg,,russia,MSK+08 - Magadan; country/region appears in multiple symbolic slots
+UTC+11,11,utc-plus-11.png,Russia,RU,Asia/Sakhalin,UTC+11:00,UTC+11,no,yes,yes,ru.svg,,russia,MSK+08 - Sakhalin Island; country/region appears in multiple symbolic slots
+UTC+11,11,utc-plus-11.png,Russia,RU,Asia/Srednekolymsk,UTC+11:00,UTC+11,no,yes,yes,ru.svg,,russia,"MSK+08 - Sakha (E), N Kuril Is; country/region appears in multiple symbolic slots"
+UTC+11,11,utc-plus-11.png,Solomon Islands,SB,Pacific/Guadalcanal,UTC+11:00,UTC+11,no,no,no,sb.svg,SolomonIslands.jpg,solomon-islands,Pohnpei
+UTC+11,11,utc-plus-11.png,Vanuatu,VU,Pacific/Efate,UTC+11:00,UTC+11,no,no,no,vu.svg,Vanuatu.jpg,vanuatu,
+UTC+12,12,utc-plus-12.png,Fiji,FJ,Pacific/Fiji,UTC+12:00,UTC+12,no,no,no,fj.svg,Fiji.jpg,fiji,
+UTC+12,12,utc-plus-12.png,Kiribati,KI,Pacific/Tarawa,UTC+12:00,UTC+12,no,yes,yes,ki.svg,Kiribati.jpg,kiribati,"Gilberts, Marshalls, Wake; country/region appears in multiple symbolic slots"
+UTC+12,12,utc-plus-12.png,Marshall Islands,MH,Pacific/Kwajalein,UTC+12:00,UTC+12,no,no,no,mh.svg,Marshallislands.jpg,marshall-islands,Kwajalein
+UTC+12,12,utc-plus-12.png,Marshall Islands,MH,Pacific/Tarawa,UTC+12:00,UTC+12,no,no,no,mh.svg,Marshallislands.jpg,marshall-islands,"Gilberts, Marshalls, Wake"
+UTC+12,12,utc-plus-12.png,Nauru,NR,Pacific/Nauru,UTC+12:00,UTC+12,no,no,no,nr.svg,Nauru.jpg,nauru,
+UTC+12,12,utc-plus-12.png,Norfolk Island,NF,Pacific/Norfolk,UTC+12:00,UTC+12,no,no,yes,nf.svg,,norfolk-island,
+UTC+12,12,utc-plus-12.png,Russia,RU,Asia/Anadyr,UTC+12:00,UTC+12,no,yes,yes,ru.svg,,russia,MSK+09 - Bering Sea; country/region appears in multiple symbolic slots
+UTC+12,12,utc-plus-12.png,Russia,RU,Asia/Kamchatka,UTC+12:00,UTC+12,no,yes,yes,ru.svg,,russia,MSK+09 - Kamchatka; country/region appears in multiple symbolic slots
+UTC+12,12,utc-plus-12.png,Tuvalu,TV,Pacific/Tarawa,UTC+12:00,UTC+12,no,no,no,tv.svg,Tuvalu.jpg,tuvalu,"Gilberts, Marshalls, Wake"
+UTC+12,12,utc-plus-12.png,United States Minor Outlying Islands,UM,Pacific/Tarawa,UTC+12:00,UTC+12,no,yes,yes,um.svg,,united-states-minor-outlying-islands,"Gilberts, Marshalls, Wake; country/region appears in multiple symbolic slots"
+UTC+12,12,utc-plus-12.png,Wallis and Futuna,WF,Pacific/Tarawa,UTC+12:00,UTC+12,no,no,no,wf.svg,WallisandFutunaIslands.jpg,wallis-and-futuna,"Gilberts, Marshalls, Wake"

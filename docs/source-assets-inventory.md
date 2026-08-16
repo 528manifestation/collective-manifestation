@@ -57,9 +57,10 @@ Tool-verified on 2026-08-15.
 
 ## Map/flag assets
 
-- Flags are available as SVG files under `flag-icons-main\flags\1x1` and `flag-icons-main\flags\4x3`.
+- Flags are available as SVG files under `flag-icons-main\\flags\\1x1` and `flag-icons-main\\flags\\4x3`.
 - Country map outlines are available as JPG files under `MapOutlines`.
 - Because time-zone-country membership has edge cases, do not blindly copy every map. Copy assets into the app only when the wave-zone data model references them.
+- Some generic map-outline JPGs may contain embedded text/labels. Do not use those directly in final website cards; create cleaned copies with the text erased and preserve the original source files untouched.
 
 ## Asset movement policy
 
@@ -71,6 +72,7 @@ Recommended structure when moving assets later:
 - `public/assets/artwork/` — cover art/logo imagery
 - `public/assets/flags/` — selected flag SVGs
 - `public/assets/maps/` — selected country or time-zone map images
+- `public/assets/maps-cleaned/` — cleaned map-outline copies with embedded text/labels removed, if needed
 - `docs/source-assets-inventory.md` — keep this inventory updated
 
 ## GitHub linking note

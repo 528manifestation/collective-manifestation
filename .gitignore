@@ -5,6 +5,7 @@
 .DS_Store
 Thumbs.db
 *.log
+~$*.xlsx
 
 # Dependency/build output for future app stack
 node_modules/
