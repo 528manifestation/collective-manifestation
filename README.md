@@ -15,7 +15,7 @@ Local workspace for rebuilding `collectivemanifestation.org`.
 
 ## Current status
 
-WORKING/IDLE: project workspace created; source resources inventoried; GitHub remote configured and initial docs pushed; hosting direction selected as Vercel + Supabase; ManifestWave spreadsheet/card draft pipeline generated; Vite + React + TypeScript + Supabase client skeleton built locally; full cleaned ManifestWave JSON data and music preview assets are wired locally; no Vercel deploy and no DNS changes made.
+WORKING/IDLE: project workspace created; source resources inventoried; GitHub remote configured and initial docs pushed; hosting direction selected as Vercel + Supabase; ManifestWave spreadsheet/card draft pipeline generated; Vite + React + TypeScript + Supabase client skeleton built locally; full cleaned ManifestWave JSON data and music preview assets are wired locally; first Vercel deployment is live; no custom DNS changes made.
 
 ## Architecture direction
 
@@ -24,6 +24,16 @@ WORKING/IDLE: project workspace created; source resources inventoried; GitHub re
 - Rick has a paid/premium Supabase plan, so Supabase is acceptable for the production path.
 - Replit is historical only and should not be used for the rebuild.
 - Default app recommendation: Vite + React + TypeScript with Supabase client integration.
+
+## Vercel deployment
+
+The first Vercel deployment is live at:
+
+- `https://collective-manifestation.vercel.app/`
+- Project: `rckbender-4266s-projects/collective-manifestation`
+- Project ID: `prj_pcq2jH0QZ6UvbKGDmtpMkaaBQLkj`
+
+Important: the first Vercel deployment was automatically assigned as production by Vercel. No Squarespace/custom DNS records were changed. Vercel could not connect the GitHub repository automatically because the Vercel account reported missing admin/write access to `528manifestation/collective-manifestation`; deployment was completed from the local checkout instead.
 
 ## Source resources
 
@@ -89,6 +99,6 @@ The current UI pass wires in the 24 generated card PNGs, the full cleaned Manife
 
 - GitHub remote is linked locally; do not commit or push until Rick explicitly approves.
 - Do not change Squarespace DNS without Rick's explicit approval.
-- Do not deploy publicly without Rick's explicit approval.
+- Do not make further production deploys without Rick's explicit approval.
 - Do not post/publish promotional content without Rick's explicit approval.
 - Prefer a simple Vercel + Supabase architecture; do not add a custom server unless a real need appears.
