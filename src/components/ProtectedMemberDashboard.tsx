@@ -1,9 +1,28 @@
 import { LocalMemberSession } from '../lib/memberAuth';
+import { SupabaseMemberSession } from '../lib/supabaseAuth';
+
+type MemberDashboardSession = LocalMemberSession | SupabaseMemberSession;
 
 type ProtectedMemberDashboardProps = {
-  session: LocalMemberSession;
+  session: MemberDashboardSession;
   onSignOut: () => void;
 };
+
+function getSessionLabel(session: MemberDashboardSession): string {
+  if (session.source === 'supabase-auth') {
+    return 'Supabase Auth session';
+  }
+
+  return session.source === 'signup-preview' ? 'Signup preview session' : 'Login preview session';
+}
+
+function getProtectionNote(session: MemberDashboardSession): string {
+  if (session.source === 'supabase-auth') {
+    return 'This panel is backed by a Supabase Auth session. Profile and member data remain protected by row-level security.';
+  }
+
+  return 'This panel is protected by local preview state only. Real protection will come from Supabase Auth sessions and row-level security before launch.';
+}
 
 const dashboardItems = [
   {
@@ -36,7 +55,7 @@ export function ProtectedMemberDashboard({ session, onSignOut }: ProtectedMember
 
       <div className="dashboard-meta" aria-label="Local session details">
         <span>Role: {session.role}</span>
-        <span>{session.source === 'signup-preview' ? 'Signup preview session' : 'Login preview session'}</span>
+        <span>{getSessionLabel(session)}</span>
       </div>
 
       <div className="dashboard-grid">
@@ -49,8 +68,7 @@ export function ProtectedMemberDashboard({ session, onSignOut }: ProtectedMember
       </div>
 
       <p className="dashboard-note">
-        This panel is protected by local preview state only. Real protection will come from Supabase Auth
-        sessions and row-level security before launch.
+        {getProtectionNote(session)}
       </p>
     </section>
   );

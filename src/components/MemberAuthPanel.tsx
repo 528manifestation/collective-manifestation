@@ -1,4 +1,4 @@
-import { FormEvent, useState } from 'react';
+import { FormEvent, useEffect, useMemo, useState } from 'react';
 
 import {
   LocalMemberSession,
@@ -14,18 +14,56 @@ import {
   validateLoginForm,
   validateSignupForm,
 } from '../lib/memberAuth';
+import { isSupabaseConfigured, supabase } from '../lib/supabase';
+import {
+  SupabaseMemberSession,
+  getMemberAuthRuntimeCopy,
+  getSupabaseMemberSession,
+  signInMemberWithSupabase,
+  signOutMemberWithSupabase,
+  signUpMemberWithSupabase,
+} from '../lib/supabaseAuth';
 import { ProtectedMemberDashboard } from './ProtectedMemberDashboard';
 
 type AuthMode = 'signup' | 'login';
 
 export function MemberAuthPanel() {
+  const runtimeCopy = useMemo(() => getMemberAuthRuntimeCopy(isSupabaseConfigured), []);
   const [mode, setMode] = useState<AuthMode>('signup');
   const [signupForm, setSignupForm] = useState<SignupForm>(initialSignupForm);
   const [loginForm, setLoginForm] = useState<LoginForm>(initialLoginForm);
   const [signupErrors, setSignupErrors] = useState<SignupErrors>({});
   const [loginErrors, setLoginErrors] = useState<LoginErrors>({});
   const [statusMessage, setStatusMessage] = useState('');
-  const [localSession, setLocalSession] = useState<LocalMemberSession | null>(null);
+  const [memberSession, setMemberSession] = useState<LocalMemberSession | SupabaseMemberSession | null>(null);
+
+  useEffect(() => {
+    let isMounted = true;
+
+    async function loadExistingSession() {
+      if (!isSupabaseConfigured) {
+        return;
+      }
+
+      const result = await getSupabaseMemberSession(supabase);
+      if (!isMounted) {
+        return;
+      }
+
+      if (result.ok && result.session) {
+        setMemberSession(result.session);
+        setStatusMessage('Existing Supabase Auth session restored.');
+      } else if (!result.ok) {
+        setStatusMessage(result.error);
+      }
+    }
+
+    void loadExistingSession();
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
 
   function updateSignup<Field extends keyof SignupForm>(field: Field, value: SignupForm[Field]) {
     setSignupForm((current) => ({ ...current, [field]: value }));
@@ -39,7 +77,7 @@ export function MemberAuthPanel() {
     setStatusMessage('');
   }
 
-  function handleSignup(event: FormEvent<HTMLFormElement>) {
+  async function handleSignup(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const validation = validateSignupForm(signupForm);
     setSignupErrors(validation.errors);
@@ -49,15 +87,24 @@ export function MemberAuthPanel() {
       return;
     }
 
+    if (isSupabaseConfigured) {
+      const result = await signUpMemberWithSupabase(supabase, signupForm);
+      if (result.ok) {
+        setMemberSession(result.session);
+        setStatusMessage('Supabase Auth signup succeeded and opened the protected dashboard.');
+      } else {
+        setStatusMessage(result.error);
+      }
+      return;
+    }
+
     const payload = createLocalSignupPayload(signupForm);
     console.info('Local-only member signup preview payload:', payload);
-    setLocalSession(createLocalMemberSession(payload));
-    setStatusMessage(
-      'Signup preview opened the protected dashboard locally. Supabase Auth is still disabled until auth settings and schema are approved.',
-    );
+    setMemberSession(createLocalMemberSession(payload));
+    setStatusMessage('Signup preview opened the protected dashboard locally.');
   }
 
-  function handleLogin(event: FormEvent<HTMLFormElement>) {
+  async function handleLogin(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const validation = validateLoginForm(loginForm);
     setLoginErrors(validation.errors);
@@ -67,22 +114,42 @@ export function MemberAuthPanel() {
       return;
     }
 
+    if (isSupabaseConfigured) {
+      const result = await signInMemberWithSupabase(supabase, loginForm);
+      if (result.ok) {
+        setMemberSession(result.session);
+        setStatusMessage('Supabase Auth login succeeded and opened the protected dashboard.');
+      } else {
+        setStatusMessage(result.error);
+      }
+      return;
+    }
+
     const payload = createLocalLoginPayload(loginForm);
     console.info('Local-only member login preview payload:', payload);
-    setLocalSession(createLocalMemberSession(payload));
-    setStatusMessage(
-      'Login preview opened the protected dashboard locally. No password is stored here; Supabase Auth will handle real login later.',
-    );
+    setMemberSession(createLocalMemberSession(payload));
+    setStatusMessage('Login preview opened the protected dashboard locally.');
   }
 
-  function handleSignOutPreview() {
-    setLocalSession(null);
-    setStatusMessage('Signed out of the local dashboard preview.');
+  async function handleSignOutPreview() {
+    if (memberSession?.source === 'supabase-auth') {
+      const result = await signOutMemberWithSupabase(supabase);
+      if (!result.ok) {
+        setStatusMessage(result.error);
+        return;
+      }
+    }
+
+    setMemberSession(null);
+    setStatusMessage(
+      isSupabaseConfigured ? 'Signed out of the Supabase Auth session.' : 'Signed out of the local dashboard preview.',
+    );
   }
 
   return (
     <div className="member-auth-card">
       <div className="auth-tabs" aria-label="Member auth mode">
+        <span className="auth-mode-pill">{runtimeCopy.modeLabel}</span>
         <button
           className={mode === 'signup' ? 'is-active' : ''}
           onClick={() => {
@@ -105,8 +172,8 @@ export function MemberAuthPanel() {
         </button>
       </div>
 
-      {localSession ? (
-        <ProtectedMemberDashboard session={localSession} onSignOut={handleSignOutPreview} />
+      {memberSession ? (
+        <ProtectedMemberDashboard session={memberSession} onSignOut={handleSignOutPreview} />
       ) : mode === 'signup' ? (
         <form className="auth-form" onSubmit={handleSignup} noValidate>
           <label>
@@ -165,7 +232,7 @@ export function MemberAuthPanel() {
           </div>
 
           <button className="button primary" type="submit">
-            Preview member signup
+            {runtimeCopy.signupButton}
           </button>
         </form>
       ) : (
@@ -197,13 +264,13 @@ export function MemberAuthPanel() {
           </label>
 
           <button className="button primary" type="submit">
-            Preview member login
+            {runtimeCopy.loginButton}
           </button>
         </form>
       )}
 
       <p className="auth-status">
-        {statusMessage || 'Local preview only — passwords are not saved and Supabase Auth is not called yet.'}
+        {statusMessage || runtimeCopy.idleStatus}
       </p>
     </div>
   );
