@@ -1,6 +1,7 @@
 import { useMemo } from 'react';
 
 import { ContactWaitlistForm } from './components/ContactWaitlistForm';
+import { MemberAuthPanel } from './components/MemberAuthPanel';
 import {
   getCurrentManifestWaveSlot,
   getSlotCardPath,
@@ -11,7 +12,7 @@ import { getManifestCallAlertState } from './lib/manifestCall';
 import { getTotalMusicSizeBytes, songs } from './lib/music';
 import { isSupabaseConfigured } from './lib/supabase';
 
-const navigation = ['ManifestWave', 'Music', 'About', 'Contact', 'Support'];
+const navigation = ['ManifestWave', 'Music', 'Members', 'About', 'Contact', 'Support'];
 
 function App() {
   const activeSlot = getCurrentManifestWaveSlot();
@@ -177,6 +178,35 @@ function App() {
           <strong>Supabase status</strong>
           <p>{isSupabaseConfigured ? 'Configured via Vite environment variables.' : 'Ready for env vars; not connected yet.'}</p>
           <p>{songs.length} local MP3 tracks copied for preview ({totalMusicSizeMb} MB total).</p>
+        </div>
+      </section>
+
+      <section className="section split" id="members">
+        <div>
+          <p className="eyebrow">Members</p>
+          <h2>Member signup will be protected by Supabase Auth.</h2>
+          <p>
+            The launch version will let members create a username, sign in with email and password, and
+            access member-only areas such as music downloads, profile settings, and community features.
+          </p>
+          <div className="member-feature-grid" aria-label="Planned member features">
+            <article>
+              <h3>Username profile</h3>
+              <p>Public-facing member identity without exposing private email addresses.</p>
+            </article>
+            <article>
+              <h3>Protected content</h3>
+              <p>Member-only dashboard space for downloads, check-ins, and future community tools.</p>
+            </article>
+          </div>
+        </div>
+        <div className="panel">
+          <strong>Signup / login preview</strong>
+          <p>
+            This local shell validates the fields and previews the safe payload shape. Real signup remains
+            off until Supabase Auth, profiles, and Vercel env vars are approved.
+          </p>
+          <MemberAuthPanel />
         </div>
       </section>
 

@@ -37,6 +37,17 @@ create table if not exists public.waitlist_members (
   created_at timestamptz not null default now()
 );
 
+create table if not exists public.profiles (
+  id uuid primary key references auth.users(id) on delete cascade,
+  username text not null unique check (username ~ '^[a-z0-9_]{3,24}$'),
+  display_name text,
+  timezone text,
+  country text,
+  role text not null default 'member' check (role in ('member', 'moderator', 'admin')),
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+
 create table if not exists public.manifestwave_zones (
   id uuid primary key default gen_random_uuid(),
   slot integer not null unique check (slot between -11 and 12),
@@ -84,9 +95,14 @@ create trigger manifestwave_countries_set_updated_at
 before update on public.manifestwave_countries
 for each row execute function public.set_updated_at();
 
+create trigger profiles_set_updated_at
+before update on public.profiles
+for each row execute function public.set_updated_at();
+
 alter table public.songs enable row level security;
 alter table public.contact_messages enable row level security;
 alter table public.waitlist_members enable row level security;
+alter table public.profiles enable row level security;
 alter table public.manifestwave_zones enable row level security;
 alter table public.manifestwave_countries enable row level security;
 
@@ -109,3 +125,16 @@ with check (true);
 create policy "Anyone can join waitlist"
 on public.waitlist_members for insert
 with check (true);
+
+create policy "Members can read their own profile"
+on public.profiles for select
+using (auth.uid() = id);
+
+create policy "Members can create their own profile"
+on public.profiles for insert
+with check (auth.uid() = id and role = 'member');
+
+create policy "Members can update their own safe profile fields"
+on public.profiles for update
+using (auth.uid() = id)
+with check (auth.uid() = id and role = 'member');

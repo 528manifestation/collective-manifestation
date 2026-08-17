@@ -373,7 +373,8 @@ h3 {
   font-size: 1.15rem;
 }
 
-.contact-form {
+.contact-form,
+.auth-form {
   display: grid;
   gap: 16px;
   margin-top: 22px;
@@ -385,7 +386,8 @@ h3 {
   gap: 14px;
 }
 
-.contact-form label {
+.contact-form label,
+.auth-form label {
   display: grid;
   gap: 8px;
   color: #3d3245;
@@ -394,7 +396,8 @@ h3 {
 
 .contact-form input,
 .contact-form select,
-.contact-form textarea {
+.contact-form textarea,
+.auth-form input {
   width: 100%;
   border: 1px solid rgba(156, 27, 179, 0.18);
   border-radius: 16px;
@@ -413,9 +416,136 @@ h3 {
 
 .contact-form input:focus,
 .contact-form select:focus,
-.contact-form textarea:focus {
+.contact-form textarea:focus,
+.auth-form input:focus {
   border-color: rgba(156, 27, 179, 0.6);
   box-shadow: 0 0 0 4px rgba(156, 27, 179, 0.1);
+}
+
+.member-auth-card {
+  display: grid;
+  gap: 16px;
+  margin-top: 22px;
+}
+
+.auth-tabs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  padding: 6px;
+  border: 1px solid rgba(156, 27, 179, 0.14);
+  border-radius: 999px;
+  background: rgba(245, 231, 249, 0.72);
+}
+
+.auth-tabs button {
+  border: 0;
+  border-radius: 999px;
+  padding: 10px 14px;
+  color: #6d1d75;
+  background: transparent;
+  cursor: pointer;
+  font-weight: 850;
+}
+
+.auth-tabs button.is-active {
+  color: #fff;
+  background: linear-gradient(135deg, #9c1bb3, #c735cc);
+}
+
+.auth-status {
+  margin: 0;
+  color: #6d6075;
+  font-size: 0.92rem;
+}
+
+.protected-dashboard {
+  display: grid;
+  gap: 16px;
+  margin-top: 22px;
+}
+
+.dashboard-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 14px;
+  align-items: start;
+  padding: 18px;
+  border: 1px solid rgba(156, 27, 179, 0.16);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.dashboard-header span,
+.dashboard-meta span {
+  color: #b07b09;
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.dashboard-header h3 {
+  margin: 6px 0;
+  color: #2a2030;
+}
+
+.dashboard-header p,
+.dashboard-note {
+  margin: 0;
+  color: #6d6075;
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.dashboard-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.dashboard-meta span {
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: rgba(255, 248, 223, 0.86);
+}
+
+.dashboard-grid {
+  display: grid;
+  gap: 10px;
+}
+
+.dashboard-grid article {
+  padding: 14px;
+  border: 1px solid rgba(156, 27, 179, 0.14);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.66);
+}
+
+.dashboard-grid h4 {
+  margin: 0 0 6px;
+  color: #2a2030;
+}
+
+.dashboard-grid p {
+  margin: 0;
+  color: #6d6075;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.member-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 26px;
+}
+
+.member-feature-grid article {
+  padding: 18px;
+  border: 1px solid rgba(156, 27, 179, 0.14);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.66);
 }
 
 .field-error {
@@ -532,8 +662,13 @@ h3 {
   .card-gallery,
   .song-card,
   .form-grid,
+  .member-feature-grid,
   .faq-grid,
   .support-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-header {
     grid-template-columns: 1fr;
   }
 
