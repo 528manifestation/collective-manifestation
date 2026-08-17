@@ -140,19 +140,6 @@ export async function signUpMemberWithSupabase(
     return { ok: false, error: 'Signup did not return a Supabase user.' };
   }
 
-  const profileInsert = await client.from('profiles').insert([
-    {
-      id: signup.data.user.id,
-      username,
-      display_name: username,
-      role: 'member',
-    },
-  ]);
-
-  if (profileInsert.error) {
-    return { ok: false, error: getErrorMessage(profileInsert.error, 'Profile creation failed.') };
-  }
-
   return {
     ok: true,
     session: mapUserToMemberSession({ ...signup.data.user, email, user_metadata: { username } }),

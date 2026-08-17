@@ -113,7 +113,7 @@ describe('Supabase member auth service', () => {
     expect(result).toEqual({ ok: false, error: 'Supabase is not configured yet.' });
   });
 
-  it('signs up with Supabase Auth and creates a profile row without storing the password', async () => {
+  it('signs up with Supabase Auth and leaves profile creation to the database trigger', async () => {
     const { client, calls } = createFakeClient();
 
     const result = await signUpMemberWithSupabase(client, {
@@ -139,17 +139,7 @@ describe('Supabase member auth service', () => {
       password: 'ManifestWave528',
       options: { data: { username: 'manifest_member' } },
     });
-    expect(calls.profileInsert[0]).toEqual({
-      table: 'profiles',
-      rows: [
-        {
-          id: 'user-123',
-          username: 'manifest_member',
-          display_name: 'manifest_member',
-          role: 'member',
-        },
-      ],
-    });
+    expect(calls.profileInsert).toHaveLength(0);
   });
 
   it('logs in with Supabase Auth and maps the returned session to a member session', async () => {
