@@ -1,7 +1,8 @@
 import { LocalMemberSession } from '../lib/memberAuth';
 import { SupabaseMemberSession } from '../lib/supabaseAuth';
+import { ProfileSettingsEditor } from './ProfileSettingsEditor';
 
-type MemberDashboardSession = LocalMemberSession | SupabaseMemberSession;
+export type MemberDashboardSession = LocalMemberSession | SupabaseMemberSession;
 
 type ProtectedMemberDashboardProps = {
   session: MemberDashboardSession;
@@ -25,10 +26,6 @@ function getProtectionNote(session: MemberDashboardSession): string {
 }
 
 const dashboardItems = [
-  {
-    title: 'Profile settings',
-    description: 'Username, display name, timezone, and country fields will live in the profiles table.',
-  },
   {
     title: 'Music downloads',
     description: 'Future member-only download controls can be gated here after Supabase Auth is live.',
@@ -57,6 +54,8 @@ export function ProtectedMemberDashboard({ session, onSignOut }: ProtectedMember
         <span>Role: {session.role}</span>
         <span>{getSessionLabel(session)}</span>
       </div>
+
+      <ProfileSettingsEditor session={session} />
 
       <div className="dashboard-grid">
         {dashboardItems.map((item) => (

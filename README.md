@@ -96,6 +96,8 @@ The current UI pass wires in the 24 generated card PNGs, the full cleaned Manife
 - Original music library with lyrics/artwork/downloads.
 - Community, blog/about/FAQ, contact, and donation/support sections.
 - Supabase-backed music metadata, contact messages, and optional member/waitlist records.
+- Member profile settings editor for display name, timezone, and country.
+- Blog section is planned as a separate content/data pass.
 
 ## Guardrails
 

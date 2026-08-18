@@ -397,7 +397,8 @@ h3 {
 .contact-form input,
 .contact-form select,
 .contact-form textarea,
-.auth-form input {
+.auth-form input,
+.profile-settings-form input {
   width: 100%;
   border: 1px solid rgba(156, 27, 179, 0.18);
   border-radius: 16px;
@@ -417,7 +418,8 @@ h3 {
 .contact-form input:focus,
 .contact-form select:focus,
 .contact-form textarea:focus,
-.auth-form input:focus {
+.auth-form input:focus,
+.profile-settings-form input:focus {
   border-color: rgba(156, 27, 179, 0.6);
   box-shadow: 0 0 0 4px rgba(156, 27, 179, 0.1);
 }
@@ -543,6 +545,43 @@ h3 {
   color: #6d6075;
   font-size: 0.9rem;
   line-height: 1.45;
+}
+
+.profile-settings-form {
+  display: grid;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid rgba(156, 27, 179, 0.14);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.profile-settings-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.profile-settings-header span,
+.profile-settings-lock {
+  color: #b07b09;
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.profile-settings-header h4 {
+  margin: 4px 0 0;
+  color: #2a2030;
+}
+
+.profile-settings-lock {
+  padding: 6px 9px;
+  border-radius: 999px;
+  background: rgba(255, 248, 223, 0.86);
 }
 
 .member-feature-grid {
