@@ -57,7 +57,7 @@ const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const usernamePattern = /^[a-z0-9_]{3,24}$/;
 
 export function isStrongPassword(password: string): boolean {
-  return password.length >= 12 && /[a-z]/.test(password) && /[A-Z]/.test(password) && /\d/.test(password);
+  return password.length >= 8 && /^[a-z0-9]+$/i.test(password) && /[a-z]/i.test(password) && /\d/.test(password);
 }
 
 export function normalizeUsername(username: string): string {
@@ -84,7 +84,7 @@ export function validateSignupForm(form: SignupForm): FormValidation<SignupError
   }
 
   if (!isStrongPassword(form.password)) {
-    errors.password = 'Use at least 12 characters with uppercase, lowercase, and a number.';
+    errors.password = 'Use at least 8 letters/numbers with at least one letter and one number.';
   }
 
   if (!form.confirmPassword) {

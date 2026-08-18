@@ -209,7 +209,7 @@ export function MemberAuthPanel() {
                 autoComplete="new-password"
                 name="signup-password"
                 onChange={(event) => updateSignup('password', event.target.value)}
-                placeholder="12+ characters"
+                placeholder="8+ letters/numbers"
                 type="password"
                 value={signupForm.password}
               />

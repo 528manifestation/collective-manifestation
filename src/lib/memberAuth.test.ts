@@ -18,7 +18,7 @@ describe('member auth form helpers', () => {
     expect(result.errors).toEqual({
       username: 'Choose a username.',
       email: 'Enter a valid email address.',
-      password: 'Use at least 12 characters with uppercase, lowercase, and a number.',
+      password: 'Use at least 8 letters/numbers with at least one letter and one number.',
       confirmPassword: 'Confirm your password.',
     });
   });
@@ -36,6 +36,39 @@ describe('member auth form helpers', () => {
       username: 'Use 3–24 lowercase letters, numbers, or underscores.',
       confirmPassword: 'Passwords do not match.',
     });
+  });
+
+  it('accepts an 8-character alphanumeric signup password with letters and numbers', () => {
+    const result = validateSignupForm({
+      username: 'manifest_member',
+      email: 'member@example.com',
+      password: 'abc12345',
+      confirmPassword: 'abc12345',
+    });
+
+    expect(result).toEqual({ isValid: true, errors: {} });
+  });
+
+  it('rejects signup passwords without both letters and numbers', () => {
+    const lettersOnly = validateSignupForm({
+      username: 'manifest_member',
+      email: 'member@example.com',
+      password: 'abcdefgh',
+      confirmPassword: 'abcdefgh',
+    });
+    const numbersOnly = validateSignupForm({
+      username: 'manifest_member',
+      email: 'member@example.com',
+      password: '12345678',
+      confirmPassword: '12345678',
+    });
+
+    expect(lettersOnly.errors.password).toBe(
+      'Use at least 8 letters/numbers with at least one letter and one number.',
+    );
+    expect(numbersOnly.errors.password).toBe(
+      'Use at least 8 letters/numbers with at least one letter and one number.',
+    );
   });
 
   it('accepts and sanitizes a valid signup preview payload without storing the password', () => {
