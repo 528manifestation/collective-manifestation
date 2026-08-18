@@ -11,17 +11,93 @@ export type BlogPost = {
   readTimeMinutes: number;
 };
 
+export type BlogPostRow = {
+  id: string;
+  slug: string;
+  title: string;
+  excerpt: string;
+  body: string;
+  status: BlogPostStatus;
+  published_at: string | null;
+};
+
+type BlogQueryResult = {
+  data: BlogPostRow[] | null;
+  error: { message?: string } | null;
+};
+
+export type BlogClientLike = {
+  from: (table: string) => {
+    select: (columns: string) => {
+      eq: (column: string, value: string) => {
+        order: (column: string, options: { ascending: boolean }) => Promise<BlogQueryResult>;
+      };
+    };
+  };
+};
+
+export type BlogFetchResult = {
+  ok: boolean;
+  source: 'supabase' | 'local';
+  posts: BlogPost[];
+  error?: string;
+};
+
 const wordsPerMinute = 220;
+
+const blogPostColumns = 'id, slug, title, excerpt, body, status, published_at';
 
 export function calculateReadTimeMinutes(body: string): number {
   const wordCount = body.trim().split(/\s+/).filter(Boolean).length;
   return Math.max(1, Math.ceil(wordCount / wordsPerMinute));
 }
 
+export function mapBlogPostRow(row: BlogPostRow): BlogPost {
+  return {
+    id: row.id,
+    slug: row.slug,
+    title: row.title,
+    excerpt: row.excerpt,
+    body: row.body,
+    status: row.status,
+    publishedAt: row.published_at,
+    readTimeMinutes: calculateReadTimeMinutes(row.body),
+  };
+}
+
 export function getPublishedBlogPosts(posts: BlogPost[]): BlogPost[] {
   return posts
     .filter((post) => post.status === 'published' && Boolean(post.publishedAt))
     .sort((a, b) => new Date(b.publishedAt || 0).getTime() - new Date(a.publishedAt || 0).getTime());
+}
+
+export async function fetchPublishedBlogPosts(client: BlogClientLike | null): Promise<BlogFetchResult> {
+  const fallbackPosts = getPublishedBlogPosts(blogPosts);
+
+  if (!client) {
+    return { ok: true, source: 'local', posts: fallbackPosts };
+  }
+
+  const result = await client
+    .from('blog_posts')
+    .select(blogPostColumns)
+    .eq('status', 'published')
+    .order('published_at', { ascending: false });
+
+  if (result.error) {
+    return {
+      ok: false,
+      source: 'local',
+      posts: fallbackPosts,
+      error: result.error.message || 'Could not load blog posts.',
+    };
+  }
+
+  return {
+    ok: true,
+    source: 'supabase',
+    posts: getPublishedBlogPosts((result.data || []).map(mapBlogPostRow)),
+  };
 }
 
 const draftPosts: Omit<BlogPost, 'readTimeMinutes'>[] = [

@@ -1,6 +1,13 @@
 import { describe, expect, it } from 'vitest';
 
-import { BlogPost, calculateReadTimeMinutes, getPublishedBlogPosts } from './blog';
+import {
+  BlogPost,
+  BlogPostRow,
+  calculateReadTimeMinutes,
+  fetchPublishedBlogPosts,
+  getPublishedBlogPosts,
+  mapBlogPostRow,
+} from './blog';
 
 const posts: BlogPost[] = [
   {
@@ -35,6 +42,43 @@ const posts: BlogPost[] = [
   },
 ];
 
+function createFakeBlogClient(options: { rows?: BlogPostRow[]; error?: string } = {}) {
+  const calls: Record<string, unknown[]> = {
+    from: [],
+    select: [],
+    eq: [],
+    order: [],
+  };
+
+  return {
+    calls,
+    client: {
+      from: (table: string) => {
+        calls.from.push(table);
+        return {
+          select: (columns: string) => {
+            calls.select.push(columns);
+            return {
+              eq: (column: string, value: string) => {
+                calls.eq.push({ column, value });
+                return {
+                  order: async (column: string, optionsArg: { ascending: boolean }) => {
+                    calls.order.push({ column, options: optionsArg });
+                    return {
+                      data: options.rows ?? [],
+                      error: options.error ? { message: options.error } : null,
+                    };
+                  },
+                };
+              },
+            };
+          },
+        };
+      },
+    },
+  };
+}
+
 describe('blog helpers', () => {
   it('shows only published blog posts sorted newest first', () => {
     expect(getPublishedBlogPosts(posts).map((post) => post.slug)).toEqual(['newer-post', 'older-post']);
@@ -47,5 +91,75 @@ describe('blog helpers', () => {
   it('rounds longer reading time based on 220 words per minute', () => {
     const body = Array.from({ length: 441 }, (_, index) => `word${index}`).join(' ');
     expect(calculateReadTimeMinutes(body)).toBe(3);
+  });
+
+  it('maps Supabase blog rows into public blog posts with calculated read time', () => {
+    const body = Array.from({ length: 221 }, () => 'word').join(' ');
+
+    expect(
+      mapBlogPostRow({
+        id: 'post-1',
+        slug: 'hello-wave',
+        title: 'Hello Wave',
+        excerpt: 'A short excerpt for the public blog.',
+        body,
+        status: 'published',
+        published_at: '2026-08-18T12:00:00.000Z',
+      }),
+    ).toEqual({
+      id: 'post-1',
+      slug: 'hello-wave',
+      title: 'Hello Wave',
+      excerpt: 'A short excerpt for the public blog.',
+      body,
+      status: 'published',
+      publishedAt: '2026-08-18T12:00:00.000Z',
+      readTimeMinutes: 2,
+    });
+  });
+
+  it('fetches published blog posts from Supabase ordered newest first', async () => {
+    const { client, calls } = createFakeBlogClient({
+      rows: [
+        {
+          id: 'post-1',
+          slug: 'hello-wave',
+          title: 'Hello Wave',
+          excerpt: 'A short excerpt for the public blog.',
+          body: 'Published post body',
+          status: 'published',
+          published_at: '2026-08-18T12:00:00.000Z',
+        },
+      ],
+    });
+
+    await expect(fetchPublishedBlogPosts(client)).resolves.toMatchObject({
+      ok: true,
+      source: 'supabase',
+      posts: [
+        {
+          slug: 'hello-wave',
+          publishedAt: '2026-08-18T12:00:00.000Z',
+          readTimeMinutes: 1,
+        },
+      ],
+    });
+    expect(calls.from).toEqual(['blog_posts']);
+    expect(calls.eq).toEqual([{ column: 'status', value: 'published' }]);
+    expect(calls.order).toEqual([{ column: 'published_at', options: { ascending: false } }]);
+  });
+
+  it('falls back to local published posts when Supabase fetch fails', async () => {
+    const { client } = createFakeBlogClient({ error: 'network unavailable' });
+
+    await expect(fetchPublishedBlogPosts(client)).resolves.toMatchObject({
+      ok: false,
+      source: 'local',
+      error: 'network unavailable',
+      posts: [
+        { slug: 'manifestwave-start-here' },
+        { slug: 'why-the-wave-moves' },
+      ],
+    });
   });
 });

@@ -619,7 +619,13 @@ h3 {
 .blog-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
+  gap: 18px;
+}
+
+.blog-source-note {
+  margin: -8px 0 18px;
+  color: #7c6a88;
+  font-size: 0.9rem;
 }
 
 .blog-card {
