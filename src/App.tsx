@@ -1,5 +1,6 @@
 import { useMemo } from 'react';
 
+import { BlogSection } from './components/BlogSection';
 import { ContactWaitlistForm } from './components/ContactWaitlistForm';
 import { MemberAuthPanel } from './components/MemberAuthPanel';
 import {
@@ -12,7 +13,7 @@ import { getManifestCallAlertState } from './lib/manifestCall';
 import { getTotalMusicSizeBytes, songs } from './lib/music';
 import { isSupabaseConfigured } from './lib/supabase';
 
-const navigation = ['ManifestWave', 'Music', 'Members', 'About', 'Contact', 'Support'];
+const navigation = ['ManifestWave', 'Music', 'Members', 'Blog', 'About', 'Contact', 'Support'];
 
 function App() {
   const activeSlot = getCurrentManifestWaveSlot();
@@ -209,6 +210,8 @@ function App() {
           <MemberAuthPanel />
         </div>
       </section>
+
+      <BlogSection />
 
       <section className="section split" id="about">
         <div>

@@ -14,6 +14,7 @@ supabase/migrations/0001_initial_schema.sql
 - `contact_messages` — website contact form submissions.
 - `waitlist_members` — signup/waitlist records.
 - `profiles` — member usernames/profile metadata tied to `auth.users`; passwords stay in Supabase Auth, never in app tables.
+- `blog_posts` — public blog posts with draft/published/archive status and optional profile author.
 - `manifestwave_zones` — the 24 symbolic UTC slots.
 - `manifestwave_countries` — countries/regions assigned to each symbolic slot.
 
@@ -26,6 +27,7 @@ Public reads:
 - published songs only
 - ManifestWave zones
 - ManifestWave countries
+- published blog posts
 
 Public inserts:
 
@@ -39,6 +41,8 @@ Authenticated member access:
 - passwords are handled only by Supabase Auth (`auth.users`) and are not stored in public tables
 
 No public update/delete policies are included.
+
+Blog publishing/editing is intentionally not exposed in the public app yet; drafts should be managed through Supabase dashboard or a future admin-only tool.
 
 ## Before applying
 

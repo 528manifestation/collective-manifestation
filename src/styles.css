@@ -598,6 +598,71 @@ h3 {
   background: rgba(255, 255, 255, 0.66);
 }
 
+.blog-section {
+  display: grid;
+  gap: 26px;
+}
+
+.blog-header {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1fr);
+  gap: 26px;
+  align-items: start;
+}
+
+.blog-header p {
+  color: #5d5365;
+  font-size: clamp(1.05rem, 1.9vw, 1.35rem);
+  line-height: 1.6;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.blog-card {
+  display: grid;
+  gap: 14px;
+  padding: 22px;
+  border: 1px solid rgba(156, 27, 179, 0.14);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.blog-card > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.blog-card span {
+  padding: 6px 9px;
+  border-radius: 999px;
+  color: #9a6b09;
+  background: rgba(255, 248, 223, 0.86);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.blog-card h3,
+.blog-card p {
+  margin: 0;
+}
+
+.blog-card p {
+  color: #6d6075;
+  line-height: 1.55;
+}
+
+.blog-card a {
+  color: #9c1bb3;
+  font-weight: 900;
+}
+
 .field-error {
   color: #a5142f;
   font-size: 0.82rem;
@@ -713,6 +778,8 @@ h3 {
   .song-card,
   .form-grid,
   .member-feature-grid,
+  .blog-header,
+  .blog-grid,
   .faq-grid,
   .support-grid {
     grid-template-columns: 1fr;
