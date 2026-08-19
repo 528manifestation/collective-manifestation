@@ -1,6 +1,7 @@
 export type SignupForm = {
   username: string;
   email: string;
+  country: string;
   password: string;
   confirmPassword: string;
 };
@@ -21,6 +22,7 @@ export type FormValidation<Errors> = {
 export type LocalSignupPayload = {
   username: string;
   email: string;
+  country: string;
   submissionMode: 'local-preview';
   authProvider: 'supabase-auth';
   createdAt: string;
@@ -36,6 +38,7 @@ export type LocalLoginPayload = {
 export type LocalMemberSession = {
   username: string;
   email: string;
+  country: string;
   role: 'member';
   source: 'signup-preview' | 'login-preview';
   startedAt: string;
@@ -44,6 +47,7 @@ export type LocalMemberSession = {
 export const initialSignupForm: SignupForm = {
   username: '',
   email: '',
+  country: '',
   password: '',
   confirmPassword: '',
 };
@@ -68,10 +72,15 @@ export function normalizeEmail(email: string): string {
   return email.trim().toLowerCase();
 }
 
+export function normalizeCountry(country: string): string {
+  return country.trim().replace(/\s+/g, ' ');
+}
+
 export function validateSignupForm(form: SignupForm): FormValidation<SignupErrors> {
   const errors: SignupErrors = {};
   const username = normalizeUsername(form.username);
   const email = normalizeEmail(form.email);
+  const country = normalizeCountry(form.country);
 
   if (!username) {
     errors.username = 'Choose a username.';
@@ -81,6 +90,12 @@ export function validateSignupForm(form: SignupForm): FormValidation<SignupError
 
   if (!emailPattern.test(email)) {
     errors.email = 'Enter a valid email address.';
+  }
+
+  if (!country) {
+    errors.country = 'Enter your country.';
+  } else if (country.length > 80) {
+    errors.country = 'Country must be 80 characters or fewer.';
   }
 
   if (!isStrongPassword(form.password)) {
@@ -127,6 +142,7 @@ export function createLocalSignupPayload(form: SignupForm): LocalSignupPayload {
   return {
     username: normalizeUsername(form.username),
     email: normalizeEmail(form.email),
+    country: normalizeCountry(form.country),
     submissionMode: 'local-preview',
     authProvider: 'supabase-auth',
     createdAt: new Date().toISOString(),
@@ -156,6 +172,7 @@ export function createLocalMemberSession(
   return {
     username,
     email: payload.email,
+    country: hasUsername ? payload.country : '',
     role: 'member',
     source: hasUsername ? 'signup-preview' : 'login-preview',
     startedAt: new Date().toISOString(),

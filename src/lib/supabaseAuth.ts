@@ -1,6 +1,7 @@
 import {
   LoginForm,
   SignupForm,
+  normalizeCountry,
   normalizeEmail,
   normalizeUsername,
   validateLoginForm,
@@ -26,7 +27,7 @@ type SupabaseAuthClientLike = {
     signUp(payload: {
       email: string;
       password: string;
-      options: { data: { username: string } };
+      options: { data: { username: string; country: string } };
     }): PromiseLike<{ data: { user: SupabaseUserLike | null }; error: SupabaseError | null }>;
     signInWithPassword(payload: {
       email: string;
@@ -51,6 +52,7 @@ export type SupabaseMemberSession = {
   id: string;
   username: string;
   email: string;
+  country: string;
   role: 'member';
   source: 'supabase-auth';
   startedAt: string;
@@ -100,11 +102,17 @@ function getUsernameFromUser(user: SupabaseUserLike): string {
   return normalizeUsername((user.email || 'member').split('@')[0]);
 }
 
+function getCountryFromUser(user: SupabaseUserLike): string {
+  const metadataCountry = user.user_metadata?.country;
+  return typeof metadataCountry === 'string' ? normalizeCountry(metadataCountry) : '';
+}
+
 function mapUserToMemberSession(user: SupabaseUserLike): SupabaseMemberSession {
   return {
     id: user.id,
     username: getUsernameFromUser(user),
     email: normalizeEmail(user.email || ''),
+    country: getCountryFromUser(user),
     role: 'member',
     source: 'supabase-auth',
     startedAt: new Date().toISOString(),
@@ -126,10 +134,11 @@ export async function signUpMemberWithSupabase(
 
   const email = normalizeEmail(form.email);
   const username = normalizeUsername(form.username);
+  const country = normalizeCountry(form.country);
   const signup = await client.auth.signUp({
     email,
     password: form.password,
-    options: { data: { username } },
+    options: { data: { username, country } },
   });
 
   if (signup.error) {
@@ -142,7 +151,7 @@ export async function signUpMemberWithSupabase(
 
   return {
     ok: true,
-    session: mapUserToMemberSession({ ...signup.data.user, email, user_metadata: { username } }),
+    session: mapUserToMemberSession({ ...signup.data.user, email, user_metadata: { username, country } }),
   };
 }
 

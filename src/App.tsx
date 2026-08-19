@@ -298,7 +298,7 @@ function App() {
           <strong>Members sign in / new members sign up</strong>
           <p>
             Existing members can sign in here. New members can create a Supabase Auth account with
-            a username, email, and password.
+            a username, email, country, and password.
           </p>
           <MemberAuthPanel />
         </div>

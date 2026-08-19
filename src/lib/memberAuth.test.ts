@@ -18,6 +18,7 @@ describe('member auth form helpers', () => {
     expect(result.errors).toEqual({
       username: 'Choose a username.',
       email: 'Enter a valid email address.',
+      country: 'Enter your country.',
       password: 'Use at least 8 letters/numbers with at least one letter and one number.',
       confirmPassword: 'Confirm your password.',
     });
@@ -27,6 +28,7 @@ describe('member auth form helpers', () => {
     const result = validateSignupForm({
       username: 'Bad Name!',
       email: 'member@example.com',
+      country: 'United States',
       password: 'ManifestWave528',
       confirmPassword: 'ManifestWave529',
     });
@@ -42,6 +44,7 @@ describe('member auth form helpers', () => {
     const result = validateSignupForm({
       username: 'manifest_member',
       email: 'member@example.com',
+      country: 'United States',
       password: 'abc12345',
       confirmPassword: 'abc12345',
     });
@@ -53,12 +56,14 @@ describe('member auth form helpers', () => {
     const lettersOnly = validateSignupForm({
       username: 'manifest_member',
       email: 'member@example.com',
+      country: 'United States',
       password: 'abcdefgh',
       confirmPassword: 'abcdefgh',
     });
     const numbersOnly = validateSignupForm({
       username: 'manifest_member',
       email: 'member@example.com',
+      country: 'United States',
       password: '12345678',
       confirmPassword: '12345678',
     });
@@ -75,6 +80,7 @@ describe('member auth form helpers', () => {
     const payload = createLocalSignupPayload({
       username: ' manifest_member ',
       email: 'MEMBER@EXAMPLE.COM ',
+      country: ' United States ',
       password: 'ManifestWave528',
       confirmPassword: 'ManifestWave528',
     });
@@ -82,6 +88,7 @@ describe('member auth form helpers', () => {
     expect(payload).toMatchObject({
       username: 'manifest_member',
       email: 'member@example.com',
+      country: 'United States',
       submissionMode: 'local-preview',
       authProvider: 'supabase-auth',
     });
@@ -122,6 +129,7 @@ describe('member auth form helpers', () => {
     const signupPayload = createLocalSignupPayload({
       username: 'manifest_member',
       email: 'member@example.com',
+      country: 'United States',
       password: 'ManifestWave528',
       confirmPassword: 'ManifestWave528',
     });
@@ -131,6 +139,7 @@ describe('member auth form helpers', () => {
     expect(session).toMatchObject({
       username: 'manifest_member',
       email: 'member@example.com',
+      country: 'United States',
       source: 'signup-preview',
       role: 'member',
     });

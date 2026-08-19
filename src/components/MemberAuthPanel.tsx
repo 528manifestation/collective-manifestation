@@ -202,6 +202,19 @@ export function MemberAuthPanel() {
             {signupErrors.email ? <small className="field-error">{signupErrors.email}</small> : null}
           </label>
 
+          <label>
+            <span>Country</span>
+            <input
+              autoComplete="country-name"
+              name="signup-country"
+              onChange={(event) => updateSignup('country', event.target.value)}
+              placeholder="United States"
+              type="text"
+              value={signupForm.country}
+            />
+            {signupErrors.country ? <small className="field-error">{signupErrors.country}</small> : null}
+          </label>
+
           <div className="form-grid">
             <label>
               <span>Password</span>

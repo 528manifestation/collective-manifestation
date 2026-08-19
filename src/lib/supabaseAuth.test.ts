@@ -106,6 +106,7 @@ describe('Supabase member auth service', () => {
     const result = await signUpMemberWithSupabase(null, {
       username: 'manifest_member',
       email: 'member@example.com',
+      country: 'United States',
       password: 'ManifestWave528',
       confirmPassword: 'ManifestWave528',
     });
@@ -119,6 +120,7 @@ describe('Supabase member auth service', () => {
     const result = await signUpMemberWithSupabase(client, {
       username: ' Manifest_Member ',
       email: 'MEMBER@EXAMPLE.COM ',
+      country: ' United States ',
       password: 'ManifestWave528',
       confirmPassword: 'ManifestWave528',
     });
@@ -137,7 +139,7 @@ describe('Supabase member auth service', () => {
     expect(calls.signUp[0]).toEqual({
       email: 'member@example.com',
       password: 'ManifestWave528',
-      options: { data: { username: 'manifest_member' } },
+      options: { data: { username: 'manifest_member', country: 'United States' } },
     });
     expect(calls.profileInsert).toHaveLength(0);
   });
