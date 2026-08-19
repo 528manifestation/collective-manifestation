@@ -32,7 +32,12 @@ function App() {
       <section className="hero">
         <nav className="nav" aria-label="Primary navigation">
           <a className="brand" href="#top" aria-label="Collective Manifestation home">
-            Collective Manifestation
+            <img
+              src="/assets/brand/collective-manifestation-logo.png"
+              alt=""
+              aria-hidden="true"
+            />
+            <span>Collective Manifestation</span>
           </a>
           <div className="nav-links">
             {navigation.map((item) => (
@@ -163,9 +168,11 @@ function App() {
           </p>
           <div className="song-list" aria-label="Original music tracks">
             {songs.map((song) => (
-              <article className="song-card" key={song.id}>
-                <div>
-                  <span>Track {song.trackNumber}</span>
+              <article className={song.isThemeSong ? 'song-card theme-song-card' : 'song-card'} key={song.id}>
+                <img className="song-artwork" src={song.artworkPath} alt={`${song.title} artwork`} loading="lazy" />
+                <div className="song-details">
+                  <span>{song.isThemeSong ? 'Theme Song' : `Track ${song.trackNumber}`}</span>
+                  {song.isThemeSong ? <em>Official Theme Song</em> : null}
                   <strong>{song.title}</strong>
                 </div>
                 <audio controls preload="none" src={song.audioPath}>

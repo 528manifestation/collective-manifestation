@@ -5,8 +5,10 @@ export type Song = {
   title: string;
   trackNumber: number;
   audioPath: string;
+  artworkPath: string;
   sourceFilename: string;
   sizeBytes: number;
+  isThemeSong?: boolean;
 };
 
 export const songs = songsData as Song[];

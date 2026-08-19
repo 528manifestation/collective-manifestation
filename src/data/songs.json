@@ -1,18 +1,21 @@
 [
   {
-    "id": "flow",
-    "title": "Flow",
+    "id": "collective-manifestation-theme-song",
+    "title": "Collective Manifestation Theme Song",
     "trackNumber": 1,
-    "audioPath": "/assets/music/flow.mp3",
-    "sourceFilename": "Flow.mp3",
-    "sizeBytes": 3472239
+    "audioPath": "/assets/music/Collective%20Manifestation%20Theme%20Song.mp3",
+    "artworkPath": "/assets/artworkformusiv/CollectiveManifestation.png",
+    "sourceFilename": "Collective Manifestation Theme Song.mp3",
+    "sizeBytes": 3341418,
+    "isThemeSong": true
   },
   {
-    "id": "global-song",
-    "title": "Global Song",
+    "id": "vivid-rise",
+    "title": "Vivid Rise",
     "trackNumber": 2,
-    "audioPath": "/assets/music/global-song.mp3",
-    "sourceFilename": "Global Song.mp3",
+    "audioPath": "/assets/music/vivid-rise.mp3",
+    "artworkPath": "/assets/artworkformusiv/Vivid%20Rise.jpg",
+    "sourceFilename": "vivid-rise.mp3",
     "sizeBytes": 3626884
   },
   {
@@ -20,55 +23,71 @@
     "title": "The Awakening",
     "trackNumber": 3,
     "audioPath": "/assets/music/the-awakening.mp3",
-    "sourceFilename": "The Awakening.mp3",
+    "artworkPath": "/assets/artworkformusiv/The%20Awakening.jpg",
+    "sourceFilename": "the-awakening.mp3",
     "sizeBytes": 3412889
   },
   {
-    "id": "the-rising-tide",
-    "title": "The Rising Tide",
+    "id": "flow",
+    "title": "Flow",
     "trackNumber": 4,
-    "audioPath": "/assets/music/the-rising-tide.mp3",
-    "sourceFilename": "The Rising Tide.mp3",
-    "sizeBytes": 3496063
+    "audioPath": "/assets/music/flow.mp3",
+    "artworkPath": "/assets/artworkformusiv/Flow.jpg",
+    "sourceFilename": "flow.mp3",
+    "sizeBytes": 3472239
   },
   {
-    "id": "the-unity",
-    "title": "The Unity",
+    "id": "global-song",
+    "title": "Global Song",
     "trackNumber": 5,
-    "audioPath": "/assets/music/the-unity.mp3",
-    "sourceFilename": "The Unity.mp3",
-    "sizeBytes": 3210597
+    "audioPath": "/assets/music/global-song.mp3",
+    "artworkPath": "/assets/artworkformusiv/Global%20Song.png",
+    "sourceFilename": "global-song.mp3",
+    "sizeBytes": 3626884
   },
   {
     "id": "unity",
     "title": "Unity",
     "trackNumber": 6,
     "audioPath": "/assets/music/unity.mp3",
-    "sourceFilename": "Unity.mp3",
+    "artworkPath": "/assets/artworkformusiv/Unity.jpg",
+    "sourceFilename": "unity.mp3",
     "sizeBytes": 3615182
-  },
-  {
-    "id": "vibe",
-    "title": "Vibe",
-    "trackNumber": 7,
-    "audioPath": "/assets/music/vibe.mp3",
-    "sourceFilename": "Vibe.mp3",
-    "sizeBytes": 3436713
-  },
-  {
-    "id": "vivid-rise",
-    "title": "Vivid Rise",
-    "trackNumber": 8,
-    "audioPath": "/assets/music/vivid-rise.mp3",
-    "sourceFilename": "Vivid Rise.mp3",
-    "sizeBytes": 3626884
   },
   {
     "id": "wave",
     "title": "Wave",
-    "trackNumber": 9,
+    "trackNumber": 7,
     "audioPath": "/assets/music/wave.mp3",
-    "sourceFilename": "Wave.mp3",
+    "artworkPath": "/assets/artworkformusiv/Wave.jpg",
+    "sourceFilename": "wave.mp3",
     "sizeBytes": 3519887
+  },
+  {
+    "id": "the-unity",
+    "title": "The Unity",
+    "trackNumber": 8,
+    "audioPath": "/assets/music/the-unity.mp3",
+    "artworkPath": "/assets/artworkformusiv/The%20Unity.jpg",
+    "sourceFilename": "the-unity.mp3",
+    "sizeBytes": 3210597
+  },
+  {
+    "id": "the-rising-tide",
+    "title": "The Rising Tide",
+    "trackNumber": 9,
+    "audioPath": "/assets/music/the-rising-tide.mp3",
+    "artworkPath": "/assets/artworkformusiv/The%20Rising%20Tide.jpg",
+    "sourceFilename": "the-rising-tide.mp3",
+    "sizeBytes": 3496063
+  },
+  {
+    "id": "vibe",
+    "title": "Vibe",
+    "trackNumber": 10,
+    "audioPath": "/assets/music/vibe.mp3",
+    "artworkPath": "/assets/artworkformusiv/vibe.jpg",
+    "sourceFilename": "vibe.mp3",
+    "sizeBytes": 3436713
   }
 ]
