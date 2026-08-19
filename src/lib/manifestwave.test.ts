@@ -38,9 +38,9 @@ describe('ManifestWave data helpers', () => {
     expect(unitedStates?.detail).toContain('Florida');
   });
 
-  it('maps the current UTC hour into the symbolic 24-card cycle', () => {
-    expect(getCurrentManifestWaveSlot(new Date('2026-08-16T05:28:00Z'))).toBe(5);
-    expect(getCurrentManifestWaveSlot(new Date('2026-08-16T13:28:00Z'))).toBe(-11);
-    expect(getCurrentManifestWaveSlot(new Date('2026-08-16T23:28:00Z'))).toBe(-1);
+  it('maps the current time to the zone where local time is in the 5 PM wave hour', () => {
+    expect(getCurrentManifestWaveSlot(new Date('2026-08-16T05:28:00Z'))).toBe(12);
+    expect(getCurrentManifestWaveSlot(new Date('2026-08-16T13:28:00Z'))).toBe(4);
+    expect(getCurrentManifestWaveSlot(new Date('2026-08-16T23:28:00Z'))).toBe(-6);
   });
 });

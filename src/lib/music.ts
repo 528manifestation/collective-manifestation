@@ -45,10 +45,28 @@ export type SongsFetchResult = {
 
 const songColumns = 'id, slug, title, track_number, audio_path, artwork_path, is_theme_song';
 
+export const MASTER_LYRICS_PATH = '/assets/music/Lyrics.txt';
 export const songs = songsData as Song[];
 
 export function getTotalMusicSizeBytes(songList: Song[] = songs): number {
   return songList.reduce((total, song) => total + song.sizeBytes, 0);
+}
+
+export function extractLyricsForTrack(masterLyrics: string, trackNumber: number, displayTitle: string): string {
+  const sectionPattern = /^\s*(\d+)\.\s+(.+?)\s*$/gm;
+  const sections = [...masterLyrics.matchAll(sectionPattern)];
+  const sectionIndex = sections.findIndex((section) => Number(section[1]) === trackNumber);
+
+  if (sectionIndex === -1) {
+    return `${displayTitle}\n\nLyrics are not available yet.`;
+  }
+
+  const currentSection = sections[sectionIndex];
+  const start = (currentSection.index || 0) + currentSection[0].length;
+  const end = sectionIndex + 1 < sections.length ? sections[sectionIndex + 1].index || masterLyrics.length : masterLyrics.length;
+  const body = masterLyrics.slice(start, end).trim();
+
+  return `${displayTitle}\n\n${body || 'Lyrics are not available yet.'}`;
 }
 
 export function mapSongRow(row: SongRow): Song {

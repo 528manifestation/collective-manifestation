@@ -10,23 +10,41 @@ import {
   manifestwaveZones,
 } from './lib/manifestwave';
 import { getManifestCallAlertState } from './lib/manifestCall';
-import { fetchPublishedSongs, getTotalMusicSizeBytes, SongsClientLike, songs } from './lib/music';
+import {
+  extractLyricsForTrack,
+  fetchPublishedSongs,
+  getTotalMusicSizeBytes,
+  MASTER_LYRICS_PATH,
+  Song,
+  SongsClientLike,
+  songs,
+} from './lib/music';
 import { navigationItems } from './lib/navigation';
 import { isSupabaseConfigured, supabase } from './lib/supabase';
 
 function App() {
-  const activeSlot = getCurrentManifestWaveSlot();
+  const [currentTime, setCurrentTime] = useState(() => new Date());
+  const activeSlot = getCurrentManifestWaveSlot(currentTime);
   const activeZone = getZoneBySlot(activeSlot);
-  const alertState = getManifestCallAlertState();
+  const alertState = getManifestCallAlertState(currentTime);
   const [musicLibrary, setMusicLibrary] = useState(songs);
   const [musicSource, setMusicSource] = useState<'local' | 'supabase'>('local');
+  const [selectedSongId, setSelectedSongId] = useState(songs[0]?.id || '');
+  const [selectedLyrics, setSelectedLyrics] = useState('Select a song to view lyrics.');
   const totalMusicSizeMb = (getTotalMusicSizeBytes(musicLibrary) / 1024 / 1024).toFixed(1);
+  const selectedSong = musicLibrary.find((song) => song.id === selectedSongId) || musicLibrary[0];
   const featuredZones = useMemo(
     () => [activeZone, getZoneBySlot(-5), getZoneBySlot(1), getZoneBySlot(10)].filter(
       (zone, index, zones) => zones.findIndex((item) => item.slot === zone.slot) === index,
     ),
     [activeZone],
   );
+
+  useEffect(() => {
+    const intervalId = window.setInterval(() => setCurrentTime(new Date()), 1000);
+
+    return () => window.clearInterval(intervalId);
+  }, []);
 
   useEffect(() => {
     let isMounted = true;
@@ -39,6 +57,9 @@ function App() {
 
       setMusicLibrary(result.songs);
       setMusicSource(result.source);
+      if (result.songs.length) {
+        setSelectedSongId((currentId) => (result.songs.some((song) => song.id === currentId) ? currentId : result.songs[0].id));
+      }
     }
 
     void loadSongs();
@@ -47,6 +68,38 @@ function App() {
       isMounted = false;
     };
   }, []);
+
+  useEffect(() => {
+    let isMounted = true;
+
+    async function loadLyrics(song: Song) {
+      setSelectedLyrics(`Loading lyrics for ${song.title}…`);
+
+      try {
+        const response = await fetch(MASTER_LYRICS_PATH);
+        if (!response.ok) {
+          throw new Error(`Lyrics request failed with ${response.status}`);
+        }
+
+        const masterLyrics = await response.text();
+        if (isMounted) {
+          setSelectedLyrics(extractLyricsForTrack(masterLyrics, song.trackNumber, song.title));
+        }
+      } catch {
+        if (isMounted) {
+          setSelectedLyrics(`${song.title}\n\nLyrics are not available yet.`);
+        }
+      }
+    }
+
+    if (selectedSong) {
+      void loadLyrics(selectedSong);
+    }
+
+    return () => {
+      isMounted = false;
+    };
+  }, [selectedSong]);
 
   return (
     <main>
@@ -96,7 +149,7 @@ function App() {
           </div>
 
           <aside className="now-card" aria-labelledby="current-wave-title">
-            <p className="eyebrow">Current UTC slot</p>
+            <p className="eyebrow">Current 5 PM wave zone</p>
             <h2 id="current-wave-title">{activeZone.label}</h2>
             <p>5:00 PM – 5:59 PM local wave window</p>
             <strong>5:28 PM Manifest Call</strong>
@@ -189,14 +242,18 @@ function App() {
           </p>
           <div className="song-list" aria-label="Original music tracks">
             {musicLibrary.map((song) => (
-              <article className={song.isThemeSong ? 'song-card theme-song-card' : 'song-card'} key={song.id}>
+              <article
+                className={song.id === selectedSong?.id ? 'song-card selected-song-card' : song.isThemeSong ? 'song-card theme-song-card' : 'song-card'}
+                key={song.id}
+                onClick={() => setSelectedSongId(song.id)}
+              >
                 <img className="song-artwork" src={song.artworkPath} alt={`${song.title} artwork`} loading="lazy" />
                 <div className="song-details">
                   <span>{song.isThemeSong ? 'Theme Song' : `Track ${song.trackNumber}`}</span>
                   {song.isThemeSong ? <em>Official Theme Song</em> : null}
                   <strong>{song.title}</strong>
                 </div>
-                <audio controls preload="none" src={song.audioPath}>
+                <audio controls preload="none" src={song.audioPath} onPlay={() => setSelectedSongId(song.id)}>
                   <a href={song.audioPath}>Download {song.title}</a>
                 </audio>
               </article>
@@ -210,6 +267,11 @@ function App() {
             {musicLibrary.length} {musicSource === 'supabase' ? 'published Supabase' : 'local'} tracks available
             {musicSource === 'local' ? ` (${totalMusicSizeMb} MB total).` : '.'}
           </p>
+          <div className="lyrics-sidebar" aria-live="polite">
+            <span>Lyrics</span>
+            <h3>{selectedSong?.title || 'Select a song'}</h3>
+            <pre>{selectedLyrics}</pre>
+          </div>
         </div>
       </section>
 

@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 
 import {
+  extractLyricsForTrack,
   fetchPublishedSongs,
   getTotalMusicSizeBytes,
   mapSongRow,
@@ -72,6 +73,12 @@ describe('music data', () => {
       sizeBytes: 0,
       isThemeSong: false,
     });
+  });
+
+  it('extracts lyrics from the master lyrics file by track number', () => {
+    const masterLyrics = `Intro line\n\n1. Collective Manifestation (theme song)\n[Verse]\nTheme words\n\n2. Vivid Rise\n[Verse]\nRise words\n`;
+
+    expect(extractLyricsForTrack(masterLyrics, 2, 'Vivid Rise')).toBe('Vivid Rise\n\n[Verse]\nRise words');
   });
 
   it('keeps the theme song first even when Supabase order is wrong', () => {

@@ -871,9 +871,22 @@ h3 {
   border: 1px solid rgba(156, 27, 179, 0.14);
   border-radius: 22px;
   background: rgba(255, 255, 255, 0.72);
+  cursor: pointer;
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease,
+    transform 160ms ease;
 }
 
-.song-card.theme-song-card {
+.song-card:hover,
+.song-card.selected-song-card {
+  border-color: rgba(156, 27, 179, 0.42);
+  box-shadow: 0 18px 48px rgba(145, 22, 170, 0.16);
+  transform: translateY(-1px);
+}
+
+.song-card.theme-song-card,
+.song-card.selected-song-card:first-child {
   border-color: rgba(215, 169, 44, 0.55);
   background:
     linear-gradient(135deg, rgba(145, 22, 170, 0.12), rgba(215, 169, 44, 0.16)),
@@ -924,6 +937,38 @@ h3 {
 
 .song-card audio {
   width: 100%;
+}
+
+.lyrics-sidebar {
+  display: grid;
+  gap: 10px;
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(156, 27, 179, 0.14);
+}
+
+.lyrics-sidebar span {
+  color: #b07b09;
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.lyrics-sidebar h3 {
+  margin: 0;
+  color: #2a2030;
+}
+
+.lyrics-sidebar pre {
+  max-height: 560px;
+  margin: 0;
+  overflow: auto;
+  white-space: pre-wrap;
+  color: #4e4356;
+  font-family: inherit;
+  font-size: 0.94rem;
+  line-height: 1.55;
 }
 
 .support {

@@ -39,7 +39,17 @@ export function getZoneBySlot(slot: number): ManifestWaveZone {
 
 export function getCurrentManifestWaveSlot(date = new Date()): number {
   const utcHour = date.getUTCHours();
-  return utcHour > 12 ? utcHour - 24 : utcHour;
+  const slotWhereLocalTimeIsFivePm = 17 - utcHour;
+
+  if (slotWhereLocalTimeIsFivePm > 12) {
+    return slotWhereLocalTimeIsFivePm - 24;
+  }
+
+  if (slotWhereLocalTimeIsFivePm < -11) {
+    return slotWhereLocalTimeIsFivePm + 24;
+  }
+
+  return slotWhereLocalTimeIsFivePm;
 }
 
 export function getManifestWaveCountryCount(): number {
