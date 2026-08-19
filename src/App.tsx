@@ -11,9 +11,8 @@ import {
 } from './lib/manifestwave';
 import { getManifestCallAlertState } from './lib/manifestCall';
 import { fetchPublishedSongs, getTotalMusicSizeBytes, SongsClientLike, songs } from './lib/music';
+import { navigationItems } from './lib/navigation';
 import { isSupabaseConfigured, supabase } from './lib/supabase';
-
-const navigation = ['ManifestWave', 'Music', 'Members', 'Blog', 'About', 'Contact', 'Support'];
 
 function App() {
   const activeSlot = getCurrentManifestWaveSlot();
@@ -62,9 +61,9 @@ function App() {
             <span>Collective Manifestation</span>
           </a>
           <div className="nav-links">
-            {navigation.map((item) => (
-              <a key={item} href={`#${item.toLowerCase()}`}>
-                {item}
+            {navigationItems.map((item) => (
+              <a className={item.href === '#member-auth' ? 'nav-account-link' : undefined} key={item.href} href={item.href}>
+                {item.label}
               </a>
             ))}
           </div>
@@ -233,11 +232,11 @@ function App() {
             </article>
           </div>
         </div>
-        <div className="panel">
-          <strong>Signup / login preview</strong>
+        <div className="panel" id="member-auth">
+          <strong>Members sign in / new members sign up</strong>
           <p>
-            This local shell validates the fields and previews the safe payload shape. Real signup remains
-            off until Supabase Auth, profiles, and Vercel env vars are approved.
+            Existing members can sign in here. New members can create a Supabase Auth account with
+            a username, email, and password.
           </p>
           <MemberAuthPanel />
         </div>

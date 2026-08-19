@@ -101,6 +101,14 @@ main {
   font-weight: 700;
 }
 
+.nav-account-link {
+  padding: 8px 13px;
+  border-radius: 999px;
+  color: #fff;
+  background: linear-gradient(135deg, #9c1bb3, #c735cc);
+  box-shadow: 0 10px 24px rgba(145, 22, 170, 0.18);
+}
+
 .hero-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
