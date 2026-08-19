@@ -1,4 +1,9 @@
+import { useEffect, useState } from 'react';
+
+import { AdminDashboard } from './AdminDashboard';
 import { LocalMemberSession } from '../lib/memberAuth';
+import { AdminProfileClientLike, checkAdminAccess } from '../lib/adminAuth';
+import { isSupabaseConfigured, supabase } from '../lib/supabase';
 import { SupabaseMemberSession } from '../lib/supabaseAuth';
 import { ProfileSettingsEditor } from './ProfileSettingsEditor';
 
@@ -37,6 +42,46 @@ const dashboardItems = [
 ];
 
 export function ProtectedMemberDashboard({ session, onSignOut }: ProtectedMemberDashboardProps) {
+  const [adminStatus, setAdminStatus] = useState<
+    | { state: 'checking' }
+    | { state: 'ready'; isAdmin: boolean; username: string | null }
+    | { state: 'error'; message: string }
+  >({ state: 'checking' });
+
+  useEffect(() => {
+    let isMounted = true;
+
+    async function loadAdminStatus() {
+      if (!isSupabaseConfigured || session.source !== 'supabase-auth') {
+        setAdminStatus({ state: 'ready', isAdmin: false, username: null });
+        return;
+      }
+
+      const result = await checkAdminAccess(supabase as AdminProfileClientLike | null, session.id);
+      if (!isMounted) {
+        return;
+      }
+
+      if (result.ok) {
+        setAdminStatus({
+          state: 'ready',
+          isAdmin: result.isAdmin,
+          username: result.profile?.username || null,
+        });
+      } else {
+        setAdminStatus({ state: 'error', message: result.error });
+      }
+    }
+
+    void loadAdminStatus();
+
+    return () => {
+      isMounted = false;
+    };
+  }, [session]);
+
+  const effectiveRole = adminStatus.state === 'ready' && adminStatus.isAdmin ? 'admin' : session.role;
+
   return (
     <section className="protected-dashboard" aria-label="Protected member dashboard preview">
       <div className="dashboard-header">
@@ -51,11 +96,20 @@ export function ProtectedMemberDashboard({ session, onSignOut }: ProtectedMember
       </div>
 
       <div className="dashboard-meta" aria-label="Local session details">
-        <span>Role: {session.role}</span>
+        <span>Role: {effectiveRole}</span>
         <span>{getSessionLabel(session)}</span>
+        <span>
+          Admin: {adminStatus.state === 'checking' ? 'checking' : adminStatus.state === 'ready' && adminStatus.isAdmin ? 'enabled' : 'off'}
+        </span>
       </div>
 
       <ProfileSettingsEditor session={session} />
+
+      {adminStatus.state === 'ready' && adminStatus.isAdmin ? (
+        <AdminDashboard username={adminStatus.username || session.username} />
+      ) : null}
+
+      {adminStatus.state === 'error' ? <p className="dashboard-note">Admin check failed: {adminStatus.message}</p> : null}
 
       <div className="dashboard-grid">
         {dashboardItems.map((item) => (

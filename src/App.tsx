@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 
 import { BlogSection } from './components/BlogSection';
 import { ContactWaitlistForm } from './components/ContactWaitlistForm';
@@ -10,8 +10,8 @@ import {
   manifestwaveZones,
 } from './lib/manifestwave';
 import { getManifestCallAlertState } from './lib/manifestCall';
-import { getTotalMusicSizeBytes, songs } from './lib/music';
-import { isSupabaseConfigured } from './lib/supabase';
+import { fetchPublishedSongs, getTotalMusicSizeBytes, SongsClientLike, songs } from './lib/music';
+import { isSupabaseConfigured, supabase } from './lib/supabase';
 
 const navigation = ['ManifestWave', 'Music', 'Members', 'Blog', 'About', 'Contact', 'Support'];
 
@@ -19,13 +19,35 @@ function App() {
   const activeSlot = getCurrentManifestWaveSlot();
   const activeZone = getZoneBySlot(activeSlot);
   const alertState = getManifestCallAlertState();
-  const totalMusicSizeMb = (getTotalMusicSizeBytes() / 1024 / 1024).toFixed(1);
+  const [musicLibrary, setMusicLibrary] = useState(songs);
+  const [musicSource, setMusicSource] = useState<'local' | 'supabase'>('local');
+  const totalMusicSizeMb = (getTotalMusicSizeBytes(musicLibrary) / 1024 / 1024).toFixed(1);
   const featuredZones = useMemo(
     () => [activeZone, getZoneBySlot(-5), getZoneBySlot(1), getZoneBySlot(10)].filter(
       (zone, index, zones) => zones.findIndex((item) => item.slot === zone.slot) === index,
     ),
     [activeZone],
   );
+
+  useEffect(() => {
+    let isMounted = true;
+
+    async function loadSongs() {
+      const result = await fetchPublishedSongs(supabase as SongsClientLike | null);
+      if (!isMounted) {
+        return;
+      }
+
+      setMusicLibrary(result.songs);
+      setMusicSource(result.source);
+    }
+
+    void loadSongs();
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
 
   return (
     <main>
@@ -164,10 +186,10 @@ function App() {
           <h2>Original music library</h2>
           <p>
             The first music pass gives visitors a real preview of the project&apos;s original sound.
-            Supabase will later hold editable song metadata, lyrics, artwork paths, and publish status.
+            Supabase can hold editable song metadata, lyrics, artwork paths, and publish status with local assets as a safe fallback.
           </p>
           <div className="song-list" aria-label="Original music tracks">
-            {songs.map((song) => (
+            {musicLibrary.map((song) => (
               <article className={song.isThemeSong ? 'song-card theme-song-card' : 'song-card'} key={song.id}>
                 <img className="song-artwork" src={song.artworkPath} alt={`${song.title} artwork`} loading="lazy" />
                 <div className="song-details">
@@ -185,7 +207,10 @@ function App() {
         <div className="panel">
           <strong>Supabase status</strong>
           <p>{isSupabaseConfigured ? 'Configured via Vite environment variables.' : 'Ready for env vars; not connected yet.'}</p>
-          <p>{songs.length} local MP3 tracks copied for preview ({totalMusicSizeMb} MB total).</p>
+          <p>
+            {musicLibrary.length} {musicSource === 'supabase' ? 'published Supabase' : 'local'} tracks available
+            {musicSource === 'local' ? ` (${totalMusicSizeMb} MB total).` : '.'}
+          </p>
         </div>
       </section>
 
