@@ -318,6 +318,50 @@ h3 {
   align-items: stretch;
 }
 
+.wave-participation-panel {
+  display: grid;
+  grid-column: 1 / -1;
+  gap: 14px;
+  padding: 24px;
+  border: 1px solid rgba(156, 27, 179, 0.14);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.wave-participation-panel span {
+  color: #b07b09;
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.wave-participation-panel strong {
+  color: #9c1bb3;
+  font-size: 1.2rem;
+}
+
+.wave-participation-panel p {
+  margin: 0;
+}
+
+.participation-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.participation-status {
+  color: #5d5266;
+  font-weight: 750;
+}
+
+.inline-auth-link {
+  color: #9c1bb3;
+  font-weight: 900;
+  text-decoration: none;
+}
+
 .zone-feature-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

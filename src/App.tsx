@@ -3,6 +3,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { BlogSection } from './components/BlogSection';
 import { ContactWaitlistForm } from './components/ContactWaitlistForm';
 import { MemberAuthPanel } from './components/MemberAuthPanel';
+import { WaveParticipationPanel } from './components/WaveParticipationPanel';
 import {
   getCurrentManifestWaveSlot,
   getSlotCardPath,
@@ -190,6 +191,7 @@ function App() {
           <strong>Start the Intention for Manifestation video at 5:28.</strong>
           <p>Final video, transcript, and accessibility captions will be added before public launch.</p>
         </div>
+        <WaveParticipationPanel />
       </section>
 
       <section className="zone-feature-grid" aria-label="Featured ManifestWave zones">
