@@ -19,12 +19,17 @@ import {
   saveAdminSong,
 } from '../lib/adminContent';
 import { BlogPostRow, BlogPostStatus } from '../lib/blog';
+import {
+  WaveParticipationClientLike,
+  WaveParticipationStats,
+  getWaveParticipationStats,
+} from '../lib/waveParticipation';
 
 type AdminDashboardProps = {
   username: string;
 };
 
-type AdminTab = 'blog' | 'songs' | 'text';
+type AdminTab = 'blog' | 'songs' | 'text' | 'wave';
 
 type AdminBlogRow = BlogPostRow & { hero_image_path?: string | null };
 
@@ -60,6 +65,10 @@ const initialTextForm: AdminSiteContentForm = {
 
 function getAdminClient(): AdminContentClientLike | null {
   return supabase as AdminContentClientLike | null;
+}
+
+function getWaveStatsClient(): WaveParticipationClientLike | null {
+  return supabase as WaveParticipationClientLike | null;
 }
 
 function formatStatusLabel(status: BlogPostStatus | boolean): string {
@@ -115,6 +124,7 @@ export function AdminDashboard({ username }: AdminDashboardProps) {
       { id: 'blog' as const, label: 'Blog posts' },
       { id: 'songs' as const, label: 'Songs' },
       { id: 'text' as const, label: 'Site text' },
+      { id: 'wave' as const, label: 'Wave stats' },
     ],
     [],
   );
@@ -145,6 +155,7 @@ export function AdminDashboard({ username }: AdminDashboardProps) {
       {activeTab === 'blog' ? <AdminBlogPanel /> : null}
       {activeTab === 'songs' ? <AdminSongsPanel /> : null}
       {activeTab === 'text' ? <AdminSiteTextPanel /> : null}
+      {activeTab === 'wave' ? <AdminWaveStatsPanel /> : null}
     </section>
   );
 }
@@ -496,6 +507,125 @@ function AdminSiteTextPanel() {
           onDelete: () => void handleDelete(row),
         }))}
       />
+      <p className="auth-status">{status}</p>
+    </div>
+  );
+}
+
+function formatEventTime(value: string): string {
+  const date = new Date(value);
+  return Number.isNaN(date.getTime()) ? value : date.toLocaleString();
+}
+
+function StatBucketList({ emptyLabel, rows }: { emptyLabel: string; rows: { label: string; count: number }[] }) {
+  if (!rows.length) {
+    return <p className="admin-empty">{emptyLabel}</p>;
+  }
+
+  return (
+    <div className="admin-stat-list">
+      {rows.map((row) => (
+        <div key={row.label}>
+          <span>{row.label}</span>
+          <strong>{row.count}</strong>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function AdminWaveStatsPanel() {
+  const [stats, setStats] = useState<WaveParticipationStats | null>(null);
+  const [status, setStatus] = useState('Loading wave participation stats…');
+
+  async function loadStats() {
+    if (!isSupabaseConfigured) {
+      setStatus('Supabase is not configured, so wave stats are disabled.');
+      return;
+    }
+
+    const result = await getWaveParticipationStats(getWaveStatsClient());
+    if (result.ok) {
+      setStats(result.stats);
+      setStatus(result.stats.totalEvents ? 'Wave participation stats loaded.' : 'No wave participation events recorded yet.');
+    } else {
+      setStatus(result.error);
+    }
+  }
+
+  useEffect(() => {
+    void loadStats();
+  }, []);
+
+  return (
+    <div className="admin-panel admin-wave-panel">
+      <div className="admin-wave-header">
+        <div>
+          <h5>ManifestWave participation stats</h5>
+          <p>
+            Counts are created when a signed-in member clicks the public watch-video bar. Stats are admin-only through RLS.
+          </p>
+        </div>
+        <button className="button secondary" type="button" onClick={() => void loadStats()}>
+          Refresh stats
+        </button>
+      </div>
+
+      {stats ? (
+        <>
+          <div className="admin-stat-cards" aria-label="Wave participation totals">
+            <article>
+              <span>Total events</span>
+              <strong>{stats.totalEvents}</strong>
+            </article>
+            <article>
+              <span>Video starts</span>
+              <strong>{stats.startedCount}</strong>
+            </article>
+            <article>
+              <span>Completed</span>
+              <strong>{stats.completedCount}</strong>
+            </article>
+          </div>
+
+          <div className="admin-stat-grid">
+            <section>
+              <h6>By country</h6>
+              <StatBucketList emptyLabel="No country data yet." rows={stats.byCountry} />
+            </section>
+            <section>
+              <h6>By browser timezone</h6>
+              <StatBucketList emptyLabel="No timezone data yet." rows={stats.byTimezone} />
+            </section>
+            <section>
+              <h6>By active wave zone</h6>
+              <StatBucketList emptyLabel="No wave zone data yet." rows={stats.bySlot} />
+            </section>
+          </div>
+
+          <section className="admin-recent-events">
+            <h6>Recent events</h6>
+            {stats.recentEvents.length ? (
+              <div className="admin-row-list">
+                {stats.recentEvents.map((event) => (
+                  <article key={event.id}>
+                    <div>
+                      <strong>
+                        {event.country || 'Unknown country'} · UTC{event.active_manifestwave_slot >= 0 ? '+' : ''}{event.active_manifestwave_slot}
+                      </strong>
+                      <span>
+                        {event.browser_timezone || 'Unknown timezone'} · {event.ritual_action_type.replace('_', ' ')} · {formatEventTime(event.created_at)}
+                      </span>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            ) : (
+              <p className="admin-empty">No recent wave participation events.</p>
+            )}
+          </section>
+        </>
+      ) : null}
       <p className="auth-status">{status}</p>
     </div>
   );

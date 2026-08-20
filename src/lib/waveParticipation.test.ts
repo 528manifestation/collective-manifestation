@@ -3,15 +3,19 @@ import { describe, expect, it } from 'vitest';
 import {
   WaveParticipationClientLike,
   buildWaveParticipationPayload,
+  getWaveParticipationStats,
   recordWaveParticipation,
+  summarizeWaveParticipationEvents,
 } from './waveParticipation';
 
 function createFakeClient(options: {
   sessionUserId?: string | null;
   country?: string | null;
+  events?: unknown[];
   sessionError?: string;
   profileError?: string;
   insertError?: string;
+  selectError?: string;
 } = {}) {
   const calls: Record<string, unknown[]> = {
     getSession: [],
@@ -20,6 +24,7 @@ function createFakeClient(options: {
     eq: [],
     single: [],
     insert: [],
+    order: [],
   };
 
   const client = {
@@ -67,6 +72,18 @@ function createFakeClient(options: {
       }
 
       return {
+        select: (columns: string) => {
+          calls.select.push({ table, columns });
+          return {
+            order: async (column: string, orderOptions: { ascending: boolean }) => {
+              calls.order.push({ table, column, options: orderOptions });
+              return {
+                data: options.events || [],
+                error: options.selectError ? { message: options.selectError } : null,
+              };
+            },
+          };
+        },
         insert: async (rows: unknown[]) => {
           calls.insert.push({ table, rows });
           return { error: options.insertError ? { message: options.insertError } : null };
@@ -155,6 +172,87 @@ describe('wave participation analytics', () => {
           country: 'Metadata Country',
         }),
       ],
+    });
+  });
+
+  it('summarizes participation events for admin dashboard stats', () => {
+    const stats = summarizeWaveParticipationEvents([
+      {
+        id: 'event-1',
+        country: 'United States',
+        browser_timezone: 'America/New_York',
+        active_manifestwave_slot: -5,
+        ritual_action_type: 'started_ritual',
+        client_reported_at: '2026-08-19T22:28:00.000Z',
+        created_at: '2026-08-19T22:28:01.000Z',
+      },
+      {
+        id: 'event-2',
+        country: 'United States',
+        browser_timezone: 'America/New_York',
+        active_manifestwave_slot: -5,
+        ritual_action_type: 'started_ritual',
+        client_reported_at: '2026-08-19T22:30:00.000Z',
+        created_at: '2026-08-19T22:30:01.000Z',
+      },
+      {
+        id: 'event-3',
+        country: 'Canada',
+        browser_timezone: 'America/Toronto',
+        active_manifestwave_slot: -5,
+        ritual_action_type: 'completed_ritual',
+        client_reported_at: '2026-08-19T22:36:00.000Z',
+        created_at: '2026-08-19T22:36:01.000Z',
+      },
+    ]);
+
+    expect(stats).toEqual({
+      totalEvents: 3,
+      startedCount: 2,
+      completedCount: 1,
+      byCountry: [
+        { label: 'United States', count: 2 },
+        { label: 'Canada', count: 1 },
+      ],
+      byTimezone: [
+        { label: 'America/New_York', count: 2 },
+        { label: 'America/Toronto', count: 1 },
+      ],
+      bySlot: [{ label: 'UTC-5', count: 3 }],
+      recentEvents: [
+        expect.objectContaining({ id: 'event-3' }),
+        expect.objectContaining({ id: 'event-2' }),
+        expect.objectContaining({ id: 'event-1' }),
+      ],
+    });
+  });
+
+  it('loads admin dashboard stats from wave participation events', async () => {
+    const { client, calls } = createFakeClient({
+      events: [
+        {
+          id: 'event-1',
+          country: 'United States',
+          browser_timezone: 'America/New_York',
+          active_manifestwave_slot: -5,
+          ritual_action_type: 'started_ritual',
+          client_reported_at: '2026-08-19T22:28:00.000Z',
+          created_at: '2026-08-19T22:28:01.000Z',
+        },
+      ],
+    });
+
+    const result = await getWaveParticipationStats(client);
+
+    expect(result).toMatchObject({ ok: true, stats: { totalEvents: 1, startedCount: 1 } });
+    expect(calls.select).toContainEqual({
+      table: 'wave_participation_events',
+      columns: 'id, country, browser_timezone, active_manifestwave_slot, ritual_action_type, client_reported_at, created_at',
+    });
+    expect(calls.order).toContainEqual({
+      table: 'wave_participation_events',
+      column: 'created_at',
+      options: { ascending: false },
     });
   });
 });

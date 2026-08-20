@@ -318,48 +318,28 @@ h3 {
   align-items: stretch;
 }
 
-.wave-participation-panel {
-  display: grid;
-  grid-column: 1 / -1;
-  gap: 14px;
-  padding: 24px;
-  border: 1px solid rgba(156, 27, 179, 0.14);
-  border-radius: 28px;
-  background: rgba(255, 255, 255, 0.72);
+.watch-video-bar {
+  width: 100%;
+  border: 0;
+  cursor: pointer;
+  text-align: left;
 }
 
-.wave-participation-panel span {
-  color: #b07b09;
-  font-size: 0.78rem;
-  font-weight: 900;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
+.watch-video-bar:hover,
+.watch-video-bar:focus-visible {
+  outline: 3px solid rgba(156, 27, 179, 0.22);
+  transform: translateY(-1px);
 }
 
-.wave-participation-panel strong {
-  color: #9c1bb3;
-  font-size: 1.2rem;
+.watch-video-bar:disabled {
+  cursor: wait;
+  opacity: 0.82;
 }
 
-.wave-participation-panel p {
-  margin: 0;
-}
-
-.participation-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.participation-status {
+.watch-video-status {
+  margin: 12px 0 0;
   color: #5d5266;
   font-weight: 750;
-}
-
-.inline-auth-link {
-  color: #9c1bb3;
-  font-weight: 900;
-  text-decoration: none;
 }
 
 .zone-feature-grid {
@@ -721,6 +701,64 @@ h3 {
 .admin-row-list span {
   color: #6d6075;
   font-size: 0.88rem;
+}
+
+.admin-wave-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.admin-wave-header h5,
+.admin-stat-grid h6,
+.admin-recent-events h6 {
+  margin: 0 0 8px;
+  color: #2a2030;
+}
+
+.admin-wave-header p {
+  margin: 0;
+  color: #6d6075;
+}
+
+.admin-stat-cards,
+.admin-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.admin-stat-cards article,
+.admin-stat-grid section {
+  padding: 14px;
+  border: 1px solid rgba(156, 27, 179, 0.14);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.admin-stat-cards span,
+.admin-stat-list span {
+  display: block;
+  color: #6d6075;
+  font-size: 0.85rem;
+}
+
+.admin-stat-cards strong {
+  color: #9c1bb3;
+  font-size: 1.8rem;
+}
+
+.admin-stat-list {
+  display: grid;
+  gap: 8px;
+}
+
+.admin-stat-list div {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
 }
 
 .profile-settings-form {

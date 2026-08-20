@@ -3,7 +3,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { BlogSection } from './components/BlogSection';
 import { ContactWaitlistForm } from './components/ContactWaitlistForm';
 import { MemberAuthPanel } from './components/MemberAuthPanel';
-import { WaveParticipationPanel } from './components/WaveParticipationPanel';
+import { WatchVideoBar } from './components/WatchVideoBar';
 import {
   getCurrentManifestWaveSlot,
   getSlotCardPath,
@@ -186,12 +186,7 @@ function App() {
             prompt during minutes 28–37 of every hour, then return to the calmer tracker state.
           </p>
         </div>
-        <div className="video-placeholder large" aria-label="Setting of Intentions video placeholder">
-          <span>Guided video placeholder</span>
-          <strong>Start the Intention for Manifestation video at 5:28.</strong>
-          <p>Final video, transcript, and accessibility captions will be added before public launch.</p>
-        </div>
-        <WaveParticipationPanel />
+        <WatchVideoBar />
       </section>
 
       <section className="zone-feature-grid" aria-label="Featured ManifestWave zones">
