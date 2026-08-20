@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { AdminDashboard } from './AdminDashboard';
 import { LocalMemberSession } from '../lib/memberAuth';
 import { AdminProfileClientLike, checkAdminAccess } from '../lib/adminAuth';
+import { memberDashboardCopy } from '../lib/memberDashboardCopy';
 import { isSupabaseConfigured, supabase } from '../lib/supabase';
 import { SupabaseMemberSession } from '../lib/supabaseAuth';
 import { ProfileSettingsEditor } from './ProfileSettingsEditor';
@@ -91,7 +92,7 @@ export function ProtectedMemberDashboard({ session, onSignOut }: ProtectedMember
           <p>{session.email}</p>
         </div>
         <button className="button secondary" onClick={onSignOut} type="button">
-          Sign out preview
+          {memberDashboardCopy.signOutButton}
         </button>
       </div>
 
