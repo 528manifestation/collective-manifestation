@@ -48,7 +48,7 @@ export function ProfileSettingsEditor({ session }: ProfileSettingsEditorProps) {
         const fallback = fallbackProfileFromSession(session);
         setProfile(fallback);
         setForm(profileToSettingsForm(fallback));
-        setStatus('Profile editor preview only — sign in with Supabase Auth to save real profile settings.');
+        setStatus('Sign in to save profile settings.');
         return;
       }
 
@@ -60,7 +60,7 @@ export function ProfileSettingsEditor({ session }: ProfileSettingsEditorProps) {
       if (result.ok) {
         setProfile(result.profile);
         setForm(profileToSettingsForm(result.profile));
-        setStatus('Profile settings loaded from Supabase.');
+        setStatus('Profile settings loaded.');
       } else {
         setStatus(result.error);
       }
@@ -90,7 +90,7 @@ export function ProfileSettingsEditor({ session }: ProfileSettingsEditorProps) {
     }
 
     if (!isEditable) {
-      setStatus('Profile settings were previewed locally. Supabase Auth is required before saving.');
+      setStatus('Sign in to save profile settings.');
       return;
     }
 
@@ -111,7 +111,7 @@ export function ProfileSettingsEditor({ session }: ProfileSettingsEditorProps) {
           <span>Profile settings</span>
           <h4>{profile.username}</h4>
         </div>
-        <span className="profile-settings-lock">{isEditable ? 'RLS protected' : 'Preview only'}</span>
+        <span className="profile-settings-lock">{isEditable ? 'Protected' : 'View only'}</span>
       </div>
 
       <label>
@@ -154,7 +154,7 @@ export function ProfileSettingsEditor({ session }: ProfileSettingsEditorProps) {
       </label>
 
       <button className="button primary" type="submit">
-        {isEditable ? 'Save profile settings' : 'Preview profile settings'}
+        {isEditable ? 'Save profile settings' : 'Review profile settings'}
       </button>
 
       <p className="auth-status">{status}</p>

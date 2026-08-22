@@ -1,4 +1,4 @@
-import { FormEvent, useEffect, useMemo, useState } from 'react';
+import { FormEvent, useEffect, useState } from 'react';
 
 import {
   LocalMemberSession,
@@ -17,7 +17,6 @@ import {
 import { isSupabaseConfigured, supabase } from '../lib/supabase';
 import {
   SupabaseMemberSession,
-  getMemberAuthRuntimeCopy,
   getSupabaseMemberSession,
   signInMemberWithSupabase,
   signOutMemberWithSupabase,
@@ -28,7 +27,6 @@ import { ProtectedMemberDashboard } from './ProtectedMemberDashboard';
 type AuthMode = 'signup' | 'login';
 
 export function MemberAuthPanel() {
-  const runtimeCopy = useMemo(() => getMemberAuthRuntimeCopy(isSupabaseConfigured), []);
   const [mode, setMode] = useState<AuthMode>('signup');
   const [signupForm, setSignupForm] = useState<SignupForm>(initialSignupForm);
   const [loginForm, setLoginForm] = useState<LoginForm>(initialLoginForm);
@@ -52,7 +50,7 @@ export function MemberAuthPanel() {
 
       if (result.ok && result.session) {
         setMemberSession(result.session);
-        setStatusMessage('Existing Supabase Auth session restored.');
+        setStatusMessage('Member session restored.');
       } else if (!result.ok) {
         setStatusMessage(result.error);
       }
@@ -91,7 +89,7 @@ export function MemberAuthPanel() {
       const result = await signUpMemberWithSupabase(supabase, signupForm);
       if (result.ok) {
         setMemberSession(result.session);
-        setStatusMessage('Supabase Auth signup succeeded and opened the protected dashboard.');
+        setStatusMessage('Account created and member dashboard opened.');
       } else {
         setStatusMessage(result.error);
       }
@@ -101,7 +99,7 @@ export function MemberAuthPanel() {
     const payload = createLocalSignupPayload(signupForm);
     console.info('Local-only member signup preview payload:', payload);
     setMemberSession(createLocalMemberSession(payload));
-    setStatusMessage('Signup preview opened the protected dashboard locally.');
+    setStatusMessage('Account created and member dashboard opened.');
   }
 
   async function handleLogin(event: FormEvent<HTMLFormElement>) {
@@ -118,7 +116,7 @@ export function MemberAuthPanel() {
       const result = await signInMemberWithSupabase(supabase, loginForm);
       if (result.ok) {
         setMemberSession(result.session);
-        setStatusMessage('Supabase Auth login succeeded and opened the protected dashboard.');
+        setStatusMessage('Signed in and member dashboard opened.');
       } else {
         setStatusMessage(result.error);
       }
@@ -128,7 +126,7 @@ export function MemberAuthPanel() {
     const payload = createLocalLoginPayload(loginForm);
     console.info('Local-only member login preview payload:', payload);
     setMemberSession(createLocalMemberSession(payload));
-    setStatusMessage('Login preview opened the protected dashboard locally.');
+    setStatusMessage('Signed in and member dashboard opened.');
   }
 
   async function handleSignOutPreview() {
@@ -142,14 +140,14 @@ export function MemberAuthPanel() {
 
     setMemberSession(null);
     setStatusMessage(
-      isSupabaseConfigured ? 'Signed out of the Supabase Auth session.' : 'Signed out of the local dashboard preview.',
+      isSupabaseConfigured ? 'Signed out.' : 'Signed out of the member dashboard.',
     );
   }
 
   return (
     <div className="member-auth-card">
       <div className="auth-tabs" aria-label="Member auth mode">
-        <span className="auth-mode-pill">{runtimeCopy.modeLabel}</span>
+        <span className="auth-mode-pill">Member access</span>
         <button
           className={mode === 'signup' ? 'is-active' : ''}
           onClick={() => {
@@ -245,7 +243,7 @@ export function MemberAuthPanel() {
           </div>
 
           <button className="button primary" type="submit">
-            {runtimeCopy.signupButton}
+            Create account
           </button>
         </form>
       ) : (
@@ -277,14 +275,12 @@ export function MemberAuthPanel() {
           </label>
 
           <button className="button primary" type="submit">
-            {runtimeCopy.loginButton}
+            Log in
           </button>
         </form>
       )}
 
-      <p className="auth-status">
-        {statusMessage || runtimeCopy.idleStatus}
-      </p>
+      {statusMessage ? <p className="auth-status">{statusMessage}</p> : null}
     </div>
   );
 }

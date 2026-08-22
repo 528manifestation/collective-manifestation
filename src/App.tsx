@@ -14,14 +14,13 @@ import { getManifestCallAlertState } from './lib/manifestCall';
 import {
   extractLyricsForTrack,
   fetchPublishedSongs,
-  getTotalMusicSizeBytes,
   MASTER_LYRICS_PATH,
   Song,
   SongsClientLike,
   songs,
 } from './lib/music';
 import { navigationItems } from './lib/navigation';
-import { isSupabaseConfigured, supabase } from './lib/supabase';
+import { supabase } from './lib/supabase';
 
 function App() {
   const [currentTime, setCurrentTime] = useState(() => new Date());
@@ -29,14 +28,12 @@ function App() {
   const activeZone = getZoneBySlot(activeSlot);
   const alertState = getManifestCallAlertState(currentTime);
   const [musicLibrary, setMusicLibrary] = useState(songs);
-  const [musicSource, setMusicSource] = useState<'local' | 'supabase'>('local');
   const [selectedSongId, setSelectedSongId] = useState(songs[0]?.id || '');
   const [selectedLyrics, setSelectedLyrics] = useState('Select a song to view lyrics.');
   const [isNavMenuOpen, setIsNavMenuOpen] = useState(false);
   const navToggleRef = useRef<HTMLButtonElement | null>(null);
   const navMenuRef = useRef<HTMLDivElement | null>(null);
   const navMenuWasOpenRef = useRef(false);
-  const totalMusicSizeMb = (getTotalMusicSizeBytes(musicLibrary) / 1024 / 1024).toFixed(1);
   const selectedSong = musicLibrary.find((song) => song.id === selectedSongId) || musicLibrary[0];
   const accountNavItem = navigationItems.find((item) => item.href === '#member-auth');
   const menuNavigationItems = navigationItems.filter((item) => item.href !== '#member-auth');
@@ -76,7 +73,6 @@ function App() {
       }
 
       setMusicLibrary(result.songs);
-      setMusicSource(result.source);
       if (result.songs.length) {
         setSelectedSongId((currentId) => (result.songs.some((song) => song.id === currentId) ? currentId : result.songs[0].id));
       }
@@ -194,14 +190,6 @@ function App() {
                 Explore the music
               </a>
             </div>
-            <div className="video-placeholder" aria-label="Welcome video placeholder">
-              <span>Welcome video</span>
-              <strong>Feel the shift. Join the wave. Change the world.</strong>
-              <p>
-                The final welcome video will explain the practice, the 528 rhythm, and how visitors can
-                join without needing meditation experience.
-              </p>
-            </div>
           </div>
 
           <aside className="now-card" aria-labelledby="current-wave-title">
@@ -237,8 +225,8 @@ function App() {
           <p className="eyebrow">Setting of intentions</p>
           <h2 id="intention-title">A five-minute practice visitors can follow from anywhere.</h2>
           <p>
-            This section will hold the guided intention video. The site will flash the Manifest Call
-            prompt during minutes 28–37 of every hour, then return to the calmer tracker state.
+            Five minutes, once a day, spoken at the same moment by everyone in your time zone.
+            You don&apos;t need experience, and you don&apos;t need to believe anything.
           </p>
         </div>
         <WatchVideoBar />
@@ -289,8 +277,7 @@ function App() {
           <p className="eyebrow">Original music</p>
           <h2>Original music library</h2>
           <p>
-            The first music pass gives visitors a real preview of the project&apos;s original sound.
-            Supabase can hold editable song metadata, lyrics, artwork paths, and publish status with local assets as a safe fallback.
+            Original music written for the project. Free to listen to, and free for members to download.
           </p>
           <div className="song-list" aria-label="Original music tracks">
             {musicLibrary.map((song) => (
@@ -311,14 +298,6 @@ function App() {
               </article>
             ))}
           </div>
-        </div>
-        <div className="panel">
-          <strong>Supabase status</strong>
-          <p>{isSupabaseConfigured ? 'Configured via Vite environment variables.' : 'Ready for env vars; not connected yet.'}</p>
-          <p>
-            {musicLibrary.length} {musicSource === 'supabase' ? 'published Supabase' : 'local'} tracks available
-            {musicSource === 'local' ? ` (${totalMusicSizeMb} MB total).` : '.'}
-          </p>
           <div className="lyrics-sidebar" aria-live="polite">
             <span>Lyrics</span>
             <h3>{selectedSong?.title || 'Select a song'}</h3>
@@ -330,10 +309,9 @@ function App() {
       <section className="section split" id="members">
         <div>
           <p className="eyebrow">Members</p>
-          <h2>Member signup will be protected by Supabase Auth.</h2>
+          <h2>Become a member.</h2>
           <p>
-            The launch version will let members create a username, sign in with email and password, and
-            access member-only areas such as music downloads, profile settings, and community features.
+            Create a username, keep your check-ins, download the music, and join the message board.
           </p>
           <div className="member-feature-grid" aria-label="Planned member features">
             <article>
@@ -342,16 +320,13 @@ function App() {
             </article>
             <article>
               <h3>Protected content</h3>
-              <p>Member-only dashboard space for downloads, check-ins, and future community tools.</p>
+              <p>Member-only dashboard space for downloads, check-ins, and the message board.</p>
             </article>
           </div>
         </div>
         <div className="panel" id="member-auth">
           <strong>Members sign in / new members sign up</strong>
-          <p>
-            Existing members can sign in here. New members can create a Supabase Auth account with
-            a username, email, country, and password.
-          </p>
+          <p>Members sign in. New members start here.</p>
           <MemberAuthPanel />
         </div>
       </section>
@@ -384,25 +359,21 @@ function App() {
         </div>
         <div className="panel" id="contact">
           <strong>Contact / waitlist</strong>
-          <p>
-            This local form is ready for launch-review feedback, volunteer interest, and early updates.
-            It validates in the browser now; the real Supabase submission stays off until the database is approved.
-          </p>
+          <p>Questions, ideas, or an offer to help — this reaches us.</p>
           <ContactWaitlistForm />
         </div>
       </section>
 
       <section className="section support" id="support">
         <p className="eyebrow">Support</p>
-        <h2>Support links will stay parked until the payment path and public accounting copy are ready.</h2>
-        <div className="support-grid" aria-label="Future support options">
-          {['$10', '$25', '$50', '$100'].map((amount) => (
-            <article className="support-tier" key={amount}>
-              <span>{amount}</span>
-              <p>Future donation tier placeholder</p>
-            </article>
-          ))}
-        </div>
+        <h2>Support this work</h2>
+        <p>
+          Collective Manifestation is funded entirely by the people who use it. Every month we publish
+          exactly what came in and what went out.
+        </p>
+        <button className="button secondary" type="button" disabled>
+          Donations open soon
+        </button>
       </section>
     </main>
   );

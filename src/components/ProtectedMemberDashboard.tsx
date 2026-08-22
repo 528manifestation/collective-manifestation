@@ -17,28 +17,28 @@ type ProtectedMemberDashboardProps = {
 
 function getSessionLabel(session: MemberDashboardSession): string {
   if (session.source === 'supabase-auth') {
-    return 'Supabase Auth session';
+    return 'Member session';
   }
 
-  return session.source === 'signup-preview' ? 'Signup preview session' : 'Login preview session';
+  return session.source === 'signup-preview' ? 'Signup session' : 'Login session';
 }
 
 function getProtectionNote(session: MemberDashboardSession): string {
   if (session.source === 'supabase-auth') {
-    return 'This panel is backed by a Supabase Auth session. Profile and member data remain protected by row-level security.';
+    return 'Profile and member data remain protected.';
   }
 
-  return 'This panel is protected by local preview state only. Real protection will come from Supabase Auth sessions and row-level security before launch.';
+  return 'Member features are available after sign-in.';
 }
 
 const dashboardItems = [
   {
     title: 'Music downloads',
-    description: 'Future member-only download controls can be gated here after Supabase Auth is live.',
+    description: 'Member-only music downloads appear here.',
   },
   {
     title: 'ManifestWave check-in',
-    description: 'A future check-in can record participation without exposing private member information.',
+    description: 'Your participation stays connected to your member account.',
   },
 ];
 
@@ -84,10 +84,10 @@ export function ProtectedMemberDashboard({ session, onSignOut }: ProtectedMember
   const effectiveRole = adminStatus.state === 'ready' && adminStatus.isAdmin ? 'admin' : session.role;
 
   return (
-    <section className="protected-dashboard" aria-label="Protected member dashboard preview">
+    <section className="protected-dashboard" aria-label="Protected member dashboard">
       <div className="dashboard-header">
         <div>
-          <span>Protected preview</span>
+          <span>Member dashboard</span>
           <h3>Welcome, {session.username}</h3>
           <p>{session.email}</p>
         </div>

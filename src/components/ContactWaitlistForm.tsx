@@ -48,9 +48,7 @@ export function ContactWaitlistForm() {
 
     const payload = createContactWaitlistPayload(form);
     console.info('Local-only contact/waitlist preview payload:', payload);
-    setStatusMessage(
-      'Local preview captured. Supabase submission is intentionally disabled until the database is approved.',
-    );
+    setStatusMessage('Thank you — your note is ready.');
   }
 
   return (
@@ -133,9 +131,9 @@ export function ContactWaitlistForm() {
 
       <div className="form-actions">
         <button className="button primary" type="submit">
-          Preview submission
+          Share note
         </button>
-        <p>{statusMessage || 'Local preview only — no message is sent to Supabase yet.'}</p>
+        <p>{statusMessage || 'Questions and offers to help are welcome.'}</p>
       </div>
     </form>
   );

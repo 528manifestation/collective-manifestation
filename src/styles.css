@@ -217,10 +217,12 @@ h3 {
   margin-top: 32px;
 }
 
-.video-placeholder {
+.watch-video-card {
   display: grid;
   gap: 10px;
-  margin-top: 32px;
+  min-height: 260px;
+  place-content: center;
+  margin-top: 0;
   padding: 22px;
   border: 1px dashed rgba(156, 27, 179, 0.34);
   border-radius: 24px;
@@ -229,13 +231,7 @@ h3 {
     rgba(255, 255, 255, 0.6);
 }
 
-.video-placeholder.large {
-  min-height: 260px;
-  place-content: center;
-  margin-top: 0;
-}
-
-.video-placeholder span,
+.watch-video-card span,
 .support-tier span {
   color: #b07b09;
   font-size: 0.78rem;
@@ -244,7 +240,7 @@ h3 {
   text-transform: uppercase;
 }
 
-.video-placeholder strong {
+.watch-video-card strong {
   color: #2a2030;
   font-size: 1.2rem;
 }
