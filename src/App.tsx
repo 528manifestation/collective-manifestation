@@ -386,9 +386,9 @@ function App() {
           Collective Manifestation is funded entirely by the people who use it. Every month we publish
           exactly what came in and what went out.
         </p>
-        <button className="button secondary" type="button" disabled>
+        <span className="support-status">
           Donations open soon
-        </button>
+        </span>
       </section>
     </main>
   );

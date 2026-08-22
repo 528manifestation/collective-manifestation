@@ -520,6 +520,10 @@ strong {
   background: rgba(245, 184, 65, 0.07);
 }
 
+.watch-video-card .eyebrow {
+  display: block;
+}
+
 .watch-video-status {
   font-family: var(--data);
   font-size: 0.78rem;
@@ -674,6 +678,7 @@ details li small {
   grid-column: 1 / -1;
   width: 100%;
   height: 34px;
+  filter: invert(0.92) hue-rotate(180deg);
 }
 
 .lyrics-sidebar {
@@ -932,6 +937,18 @@ input[type='checkbox'] {
   font-family: var(--data);
   font-size: 1.3rem;
   color: var(--gold);
+}
+
+.support-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 26px;
+  border: 1px solid rgba(245, 184, 65, 0.55);
+  border-radius: 999px;
+  color: var(--gold);
+  font-size: 0.92rem;
+  font-weight: 500;
 }
 
 /* ---- dashboards ---------------------------------------------------- */

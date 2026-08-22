@@ -72,6 +72,7 @@ export function BlogSection() {
           <article className="blog-card" key={post.id}>
             <div>
               <span>{formatPostDate(post.publishedAt)}</span>
+              <span aria-hidden="true"> · </span>
               <span>{post.readTimeMinutes} min read</span>
             </div>
             <h3>{post.title}</h3>

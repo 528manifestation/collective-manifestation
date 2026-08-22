@@ -36,7 +36,7 @@ export function WatchVideoBar() {
         onClick={() => void handleWatchClick()}
         type="button"
       >
-        <span>Watch video</span>
+        <span className="eyebrow">Watch video</span>
         <strong>{isRecording ? 'Recording participation…' : 'Start the Intention for Manifestation video at 5:28.'}</strong>
         <p>Click this bar to watch. Signed-in member clicks are counted for wave-strength analytics.</p>
       </button>

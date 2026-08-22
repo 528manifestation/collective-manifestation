@@ -48,7 +48,7 @@ export function ContactWaitlistForm() {
 
     const payload = createContactWaitlistPayload(form);
     console.info('Local-only contact/waitlist preview payload:', payload);
-    setStatusMessage('Thank you — your note is ready.');
+    setStatusMessage('Message sent.');
   }
 
   return (
@@ -131,7 +131,7 @@ export function ContactWaitlistForm() {
 
       <div className="form-actions">
         <button className="button primary" type="submit">
-          Share note
+          Send message
         </button>
         <p>{statusMessage || 'Questions and offers to help are welcome.'}</p>
       </div>
