@@ -228,6 +228,7 @@ strong {
 }
 
 .brand span {
+  min-width: 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -815,6 +816,7 @@ input[type='checkbox'] {
   margin-bottom: 18px;
 }
 
+.auth-mode-pill,
 .auth-tabs button,
 .admin-tabs button {
   padding: 9px 20px;
@@ -826,20 +828,11 @@ input[type='checkbox'] {
   cursor: pointer;
 }
 
+.auth-mode-pill:hover,
 .auth-tabs button:hover,
 .admin-tabs button:hover {
   border-color: var(--gold);
   color: var(--paper);
-}
-
-.auth-mode-pill {
-  padding: 9px 20px;
-  border: 1px solid var(--line-strong);
-  border-radius: 999px;
-  background: none;
-  color: var(--mist);
-  font-size: 0.88rem;
-  cursor: pointer;
 }
 
 .auth-mode-pill[aria-pressed='true'],
