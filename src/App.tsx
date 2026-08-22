@@ -67,6 +67,18 @@ function App() {
   }, []);
 
   useEffect(() => {
+    if (alertState.isActive) {
+      document.body.dataset.call = 'active';
+    } else {
+      delete document.body.dataset.call;
+    }
+
+    return () => {
+      delete document.body.dataset.call;
+    };
+  }, [alertState.isActive]);
+
+  useEffect(() => {
     let isMounted = true;
 
     async function loadSongs() {
