@@ -5,10 +5,10 @@ import {
   getCurrentManifestWaveSlot,
   getCountriesForManifestWaveSlot,
   getCountriesInFivePmWave,
+  getLiveWaveCountryPreview,
   getManifestWaveHourKey,
   getManifestWaveZones,
   getManifestWaveCountryCount,
-  getSlotCardPath,
   getZoneBySlot,
   manifestwaveCountries,
   manifestwaveZones,
@@ -84,10 +84,12 @@ describe('ManifestWave data helpers', () => {
     );
   });
 
-  it('returns stable card paths for generated timezone PNG assets', () => {
-    expect(getSlotCardPath(-5)).toBe('/assets/manifestwave/timezone-cards/utc-minus-05.png');
-    expect(getSlotCardPath(0)).toBe('/assets/manifestwave/timezone-cards/utc-plus-00.png');
-    expect(getSlotCardPath(10)).toBe('/assets/manifestwave/timezone-cards/utc-plus-10.png');
+  it('caps live wave country previews and reports hidden country count', () => {
+    const zone = getZoneBySlot(1, new Date('2026-01-15T12:00:00Z'));
+    const preview = getLiveWaveCountryPreview(zone.countries);
+
+    expect(preview.visibleCountries).toHaveLength(12);
+    expect(preview.hiddenCountryCount).toBe(zone.countries.length - 12);
   });
 
   it('finds the UTC-5 card and includes United States state/regional detail', () => {

@@ -6,10 +6,11 @@ import { MemberAuthPanel } from './components/MemberAuthPanel';
 import { WatchVideoBar } from './components/WatchVideoBar';
 import {
   getCurrentManifestWaveSlot,
+  getLiveWaveCountryPreview,
   getManifestWaveHourKey,
-  getManifestWaveZones,
-  getSlotCardPath,
   getZoneBySlot,
+  type ManifestWaveCountry,
+  type ManifestWaveZone,
 } from './lib/manifestwave';
 import { getManifestCallAlertState } from './lib/manifestCall';
 import {
@@ -23,11 +24,47 @@ import {
 import { navigationItems } from './lib/navigation';
 import { supabase } from './lib/supabase';
 
+function LiveWaveCountryRows({ countries }: { countries: ManifestWaveCountry[] }) {
+  return (
+    <ul className="live-wave-country-list">
+      {countries.map((country) => (
+        <li className="live-wave-country-row" key={country.id}>
+          <img src={country.flagPath} alt="" aria-hidden="true" />
+          <span>
+            <strong>{country.name}</strong>
+            {country.detail ? <small>{country.detail}</small> : null}
+          </span>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+function LiveWaveZonePanel({ zone }: { zone: ManifestWaveZone }) {
+  const countryPreview = getLiveWaveCountryPreview(zone.countries);
+
+  return (
+    <section className="live-wave-panel" aria-label={`${zone.label} live wave countries`}>
+      <div className="live-wave-panel-header">
+        <span>Live wave zone</span>
+        <h3>{zone.label}</h3>
+        <p>5:00 PM – 5:59 PM local wave window</p>
+      </div>
+      <LiveWaveCountryRows countries={countryPreview.visibleCountries} />
+      {countryPreview.hiddenCountryCount > 0 ? (
+        <details className="live-wave-disclosure">
+          <summary>Show all {zone.countries.length} countries/regions</summary>
+          <LiveWaveCountryRows countries={countryPreview.hiddenCountries} />
+        </details>
+      ) : null}
+    </section>
+  );
+}
+
 function App() {
   const [currentTime, setCurrentTime] = useState(() => new Date());
   const activeSlot = getCurrentManifestWaveSlot(currentTime);
   const manifestWaveHourKey = getManifestWaveHourKey(currentTime);
-  const manifestwaveZones = useMemo(() => getManifestWaveZones(currentTime), [manifestWaveHourKey]);
   const activeZone = useMemo(() => getZoneBySlot(activeSlot, currentTime), [activeSlot, manifestWaveHourKey]);
   const alertState = getManifestCallAlertState(currentTime);
   const [musicLibrary, setMusicLibrary] = useState(songs);
@@ -40,12 +77,6 @@ function App() {
   const selectedSong = musicLibrary.find((song) => song.id === selectedSongId) || musicLibrary[0];
   const accountNavItem = navigationItems.find((item) => item.href === '#member-auth');
   const menuNavigationItems = navigationItems.filter((item) => item.href !== '#member-auth');
-  const featuredZones = useMemo(
-    () => [activeZone, getZoneBySlot(-5, currentTime), getZoneBySlot(1, currentTime), getZoneBySlot(10, currentTime)].filter(
-      (zone, index, zones) => zones.findIndex((item) => item.slot === zone.slot) === index,
-    ),
-    [activeZone, manifestWaveHourKey],
-  );
 
   useEffect(() => {
     if (isNavMenuOpen) {
@@ -217,7 +248,7 @@ function App() {
                 ? 'Please start the Intention for Manifestation video now.'
                 : `Next 5:28 call in about ${alertState.minutesUntilNextCall} minutes.`}
             </div>
-            <img src={getSlotCardPath(activeZone.slot)} alt={`${activeZone.label} ManifestWave card`} />
+            <LiveWaveZonePanel zone={activeZone} />
           </aside>
         </div>
       </section>
@@ -245,46 +276,6 @@ function App() {
           </p>
         </div>
         <WatchVideoBar />
-      </section>
-
-      <section className="zone-feature-grid" aria-label="Featured ManifestWave zones">
-        {featuredZones.map((zone) => (
-          <article className="zone-feature" key={zone.slot}>
-            <img src={getSlotCardPath(zone.slot)} alt={`${zone.label} card preview`} />
-            <div>
-              <h3>{zone.label}</h3>
-              <p>{zone.countries.length} countries/regions in the cleaned ManifestWave dataset.</p>
-            </div>
-          </article>
-        ))}
-      </section>
-
-      <section className="section cards-section">
-        <div>
-          <p className="eyebrow">24 symbolic cards</p>
-          <h2>Country-name + flag cards make the wave easy to scan.</h2>
-        </div>
-        <div className="card-gallery">
-          {manifestwaveZones.map((zone) => (
-            <article className="mini-card" key={zone.slot}>
-              <img src={getSlotCardPath(zone.slot)} alt={`${zone.label} ManifestWave card`} />
-              <div>
-                <h3>{zone.label}</h3>
-                <details>
-                  <summary>Country text</summary>
-                  <ul>
-                    {zone.countries.map((country) => (
-                      <li key={country.id}>
-                        <span>{country.name}</span>
-                        {country.detail ? <small>{country.detail}</small> : null}
-                      </li>
-                    ))}
-                  </ul>
-                </details>
-              </div>
-            </article>
-          ))}
-        </div>
       </section>
 
       <section className="section split" id="music">

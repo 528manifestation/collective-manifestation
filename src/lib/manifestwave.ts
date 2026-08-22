@@ -23,12 +23,19 @@ export type ManifestWaveZone = {
   countries: ManifestWaveCountry[];
 };
 
+export type LiveWaveCountryPreview = {
+  visibleCountries: ManifestWaveCountry[];
+  hiddenCountries: ManifestWaveCountry[];
+  hiddenCountryCount: number;
+};
+
 type ManifestWaveDataset = {
   zones: ManifestWaveZoneDefinition[];
   countries: ManifestWaveCountry[];
 };
 
 const manifestwaveDataset = manifestwaveZoneData as ManifestWaveDataset;
+const LIVE_WAVE_COUNTRY_PREVIEW_LIMIT = 12;
 
 export const manifestwaveCountries = manifestwaveDataset.countries;
 
@@ -144,6 +151,17 @@ export function getCountriesInFivePmWave(date = new Date()): ManifestWaveCountry
   return manifestwaveCountries.filter((country) => getLocalHour(country.ianaZone, date) === 17);
 }
 
+export function getLiveWaveCountryPreview(countries: ManifestWaveCountry[]): LiveWaveCountryPreview {
+  const visibleCountries = countries.slice(0, LIVE_WAVE_COUNTRY_PREVIEW_LIMIT);
+  const hiddenCountries = countries.slice(LIVE_WAVE_COUNTRY_PREVIEW_LIMIT);
+
+  return {
+    visibleCountries,
+    hiddenCountries,
+    hiddenCountryCount: hiddenCountries.length,
+  };
+}
+
 export function getManifestWaveHourKey(date = new Date()): string {
   return date.toISOString().slice(0, 13);
 }
@@ -182,16 +200,6 @@ export function getManifestWaveZones(date = new Date(), onResolve?: (hourKey: st
 }
 
 export const manifestwaveZones = getManifestWaveZones();
-
-function getSlotCardFilename(slot: number): string {
-  return slot < 0
-    ? `utc-minus-${String(Math.abs(slot)).padStart(2, '0')}.png`
-    : `utc-plus-${String(slot).padStart(2, '0')}.png`;
-}
-
-export function getSlotCardPath(slot: number): string {
-  return `/assets/manifestwave/timezone-cards/${getSlotCardFilename(slot)}`;
-}
 
 export function getZoneBySlot(slot: number, date = new Date()): ManifestWaveZone {
   const zoneDefinition = manifestwaveDataset.zones.find((item) => item.slot === slot);
