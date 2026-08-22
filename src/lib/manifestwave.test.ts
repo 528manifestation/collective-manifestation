@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 
+import manifestwaveCountryIdsSnapshot from '../data/manifestwave-country-ids.snapshot.json';
 import {
   getCurrentManifestWaveSlot,
   getCountriesForManifestWaveSlot,
@@ -42,6 +43,19 @@ describe('ManifestWave data helpers', () => {
 
   it('does not store per-country slot assignments', () => {
     expect(manifestwaveCountries.some((country) => 'slot' in country)).toBe(false);
+  });
+
+  it('keeps stored country entry ids unique so rendering keys cannot collide', () => {
+    const ids = manifestwaveCountries.map((country) => country.id);
+
+    expect(ids.every(Boolean)).toBe(true);
+    expect(new Set(ids).size).toBe(ids.length);
+  });
+
+  it('keeps the full country id list stable and reviewable', () => {
+    const sortedIds = manifestwaveCountries.map((country) => country.id).sort();
+
+    expect(sortedIds).toEqual(manifestwaveCountryIdsSnapshot);
   });
 
   it('resolves zone membership once per UTC hour key across per-second ticks', () => {

@@ -1,6 +1,7 @@
 import manifestwaveZoneData from '../data/manifestwave-zones.json';
 
 export type ManifestWaveCountry = {
+  id: string;
   name: string;
   isoAlpha2: string;
   detail?: string;

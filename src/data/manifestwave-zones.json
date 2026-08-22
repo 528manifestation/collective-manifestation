@@ -123,6 +123,7 @@
   ],
   "countries": [
     {
+      "id": "AF-Asia-Kabul",
       "name": "Afghanistan",
       "isoAlpha2": "AF",
       "detail": "",
@@ -131,6 +132,7 @@
       "ianaZone": "Asia/Kabul"
     },
     {
+      "id": "AX-Europe-Helsinki",
       "name": "Åland Islands",
       "isoAlpha2": "AX",
       "detail": "",
@@ -139,6 +141,7 @@
       "ianaZone": "Europe/Helsinki"
     },
     {
+      "id": "AL-Europe-Tirane",
       "name": "Albania",
       "isoAlpha2": "AL",
       "detail": "",
@@ -147,6 +150,7 @@
       "ianaZone": "Europe/Tirane"
     },
     {
+      "id": "DZ-Africa-Algiers",
       "name": "Algeria",
       "isoAlpha2": "DZ",
       "detail": "",
@@ -155,6 +159,7 @@
       "ianaZone": "Africa/Algiers"
     },
     {
+      "id": "AS-Pacific-Pago-Pago",
       "name": "American Samoa",
       "isoAlpha2": "AS",
       "detail": "Midway",
@@ -163,6 +168,7 @@
       "ianaZone": "Pacific/Pago_Pago"
     },
     {
+      "id": "AD-Europe-Andorra",
       "name": "Andorra",
       "isoAlpha2": "AD",
       "detail": "",
@@ -171,6 +177,7 @@
       "ianaZone": "Europe/Andorra"
     },
     {
+      "id": "AO-Africa-Lagos",
       "name": "Angola",
       "isoAlpha2": "AO",
       "detail": "West Africa Time",
@@ -179,6 +186,7 @@
       "ianaZone": "Africa/Lagos"
     },
     {
+      "id": "AI-America-Puerto-Rico",
       "name": "Anguilla",
       "isoAlpha2": "AI",
       "detail": "AST - QC (Lower North Shore)",
@@ -187,6 +195,7 @@
       "ianaZone": "America/Puerto_Rico"
     },
     {
+      "id": "AQ-Antarctica-Casey",
       "name": "Antarctica (Casey)",
       "isoAlpha2": "AQ",
       "detail": "Casey Station",
@@ -195,6 +204,7 @@
       "ianaZone": "Antarctica/Casey"
     },
     {
+      "id": "AQ-Antarctica-Davis",
       "name": "Antarctica (Davis)",
       "isoAlpha2": "AQ",
       "detail": "Davis Station",
@@ -203,6 +213,7 @@
       "ianaZone": "Antarctica/Davis"
     },
     {
+      "id": "AQ-Antarctica-DumontDUrville",
       "name": "Antarctica (Dumont d'Urville)",
       "isoAlpha2": "AQ",
       "detail": "Dumont d'Urville Station",
@@ -211,6 +222,7 @@
       "ianaZone": "Antarctica/DumontDUrville"
     },
     {
+      "id": "AQ-Antarctica-Mawson",
       "name": "Antarctica (Mawson)",
       "isoAlpha2": "AQ",
       "detail": "Mawson Station",
@@ -219,6 +231,7 @@
       "ianaZone": "Antarctica/Mawson"
     },
     {
+      "id": "AQ-Antarctica-McMurdo",
       "name": "Antarctica (McMurdo)",
       "isoAlpha2": "AQ",
       "detail": "McMurdo and Scott Base",
@@ -227,6 +240,7 @@
       "ianaZone": "Antarctica/McMurdo"
     },
     {
+      "id": "AQ-Antarctica-Palmer",
       "name": "Antarctica (Palmer)",
       "isoAlpha2": "AQ",
       "detail": "Palmer Station",
@@ -235,6 +249,7 @@
       "ianaZone": "Antarctica/Palmer"
     },
     {
+      "id": "AQ-Antarctica-Rothera",
       "name": "Antarctica (Rothera)",
       "isoAlpha2": "AQ",
       "detail": "Rothera Station",
@@ -243,6 +258,7 @@
       "ianaZone": "Antarctica/Rothera"
     },
     {
+      "id": "AQ-Antarctica-Syowa",
       "name": "Antarctica (Syowa)",
       "isoAlpha2": "AQ",
       "detail": "Syowa Station",
@@ -251,6 +267,7 @@
       "ianaZone": "Antarctica/Syowa"
     },
     {
+      "id": "AQ-Antarctica-Troll",
       "name": "Antarctica (Troll)",
       "isoAlpha2": "AQ",
       "detail": "Troll Station",
@@ -259,6 +276,7 @@
       "ianaZone": "Antarctica/Troll"
     },
     {
+      "id": "AQ-Antarctica-Vostok",
       "name": "Antarctica (Vostok)",
       "isoAlpha2": "AQ",
       "detail": "Vostok Station",
@@ -267,6 +285,7 @@
       "ianaZone": "Antarctica/Vostok"
     },
     {
+      "id": "AG-America-Puerto-Rico",
       "name": "Antigua and Barbuda",
       "isoAlpha2": "AG",
       "detail": "AST - QC (Lower North Shore)",
@@ -275,6 +294,7 @@
       "ianaZone": "America/Puerto_Rico"
     },
     {
+      "id": "AR-America-Argentina-Buenos-Aires",
       "name": "Argentina",
       "isoAlpha2": "AR",
       "detail": "Buenos Aires (BA, CF); Catamarca (CT), Chubut (CH); most areas: CB, CC, CN, ER, FM, MN, SE, SF; Jujuy (JY); La Rioja (LR); Mendoza (MZ); Santa Cruz (SC); Salta (SA, LP, NQ, RN); San Juan (SJ); San Luis (SL); Tucumán (TM); Tierra del Fuego (TF)",
@@ -283,6 +303,7 @@
       "ianaZone": "America/Argentina/Buenos_Aires"
     },
     {
+      "id": "AM-Asia-Yerevan",
       "name": "Armenia",
       "isoAlpha2": "AM",
       "detail": "",
@@ -291,6 +312,7 @@
       "ianaZone": "Asia/Yerevan"
     },
     {
+      "id": "AW-America-Puerto-Rico",
       "name": "Aruba",
       "isoAlpha2": "AW",
       "detail": "AST - QC (Lower North Shore)",
@@ -299,6 +321,7 @@
       "ianaZone": "America/Puerto_Rico"
     },
     {
+      "id": "AU-Australia-Eucla",
       "name": "Australia",
       "isoAlpha2": "AU",
       "detail": "Eyre Bird Observatory; Western Australia (Eucla)",
@@ -307,6 +330,7 @@
       "ianaZone": "Australia/Eucla"
     },
     {
+      "id": "AU-Antarctica-Macquarie",
       "name": "Australia",
       "isoAlpha2": "AU",
       "detail": "Macquarie Island; South Australia; New South Wales (Yancowinna); Tasmania; Lord Howe Island; Victoria; New South Wales (most areas)",
@@ -315,6 +339,7 @@
       "ianaZone": "Antarctica/Macquarie"
     },
     {
+      "id": "AU-Australia-Brisbane",
       "name": "Australia",
       "isoAlpha2": "AU",
       "detail": "Queensland (most areas); Northern Territory; Queensland (Whitsunday Islands)",
@@ -323,6 +348,7 @@
       "ianaZone": "Australia/Brisbane"
     },
     {
+      "id": "AU-Australia-Perth",
       "name": "Australia",
       "isoAlpha2": "AU",
       "detail": "Western Australia (most areas)",
@@ -331,6 +357,7 @@
       "ianaZone": "Australia/Perth"
     },
     {
+      "id": "AT-Europe-Vienna",
       "name": "Austria",
       "isoAlpha2": "AT",
       "detail": "",
@@ -339,6 +366,7 @@
       "ianaZone": "Europe/Vienna"
     },
     {
+      "id": "AZ-Asia-Baku",
       "name": "Azerbaijan",
       "isoAlpha2": "AZ",
       "detail": "",
@@ -347,6 +375,7 @@
       "ianaZone": "Asia/Baku"
     },
     {
+      "id": "BS-America-Toronto",
       "name": "Bahamas",
       "isoAlpha2": "BS",
       "detail": "Eastern - ON & QC (most areas)",
@@ -355,6 +384,7 @@
       "ianaZone": "America/Toronto"
     },
     {
+      "id": "BH-Asia-Qatar",
       "name": "Bahrain",
       "isoAlpha2": "BH",
       "detail": "",
@@ -363,6 +393,7 @@
       "ianaZone": "Asia/Qatar"
     },
     {
+      "id": "BD-Asia-Dhaka",
       "name": "Bangladesh",
       "isoAlpha2": "BD",
       "detail": "",
@@ -371,6 +402,7 @@
       "ianaZone": "Asia/Dhaka"
     },
     {
+      "id": "BB-America-Barbados",
       "name": "Barbados",
       "isoAlpha2": "BB",
       "detail": "",
@@ -379,6 +411,7 @@
       "ianaZone": "America/Barbados"
     },
     {
+      "id": "BY-Europe-Minsk",
       "name": "Belarus",
       "isoAlpha2": "BY",
       "detail": "",
@@ -387,6 +420,7 @@
       "ianaZone": "Europe/Minsk"
     },
     {
+      "id": "BE-Europe-Brussels",
       "name": "Belgium",
       "isoAlpha2": "BE",
       "detail": "",
@@ -395,6 +429,7 @@
       "ianaZone": "Europe/Brussels"
     },
     {
+      "id": "BZ-America-Belize",
       "name": "Belize",
       "isoAlpha2": "BZ",
       "detail": "",
@@ -403,6 +438,7 @@
       "ianaZone": "America/Belize"
     },
     {
+      "id": "BJ-Africa-Lagos",
       "name": "Benin",
       "isoAlpha2": "BJ",
       "detail": "West Africa Time",
@@ -411,6 +447,7 @@
       "ianaZone": "Africa/Lagos"
     },
     {
+      "id": "BM-Atlantic-Bermuda",
       "name": "Bermuda",
       "isoAlpha2": "BM",
       "detail": "",
@@ -419,6 +456,7 @@
       "ianaZone": "Atlantic/Bermuda"
     },
     {
+      "id": "BT-Asia-Thimphu",
       "name": "Bhutan",
       "isoAlpha2": "BT",
       "detail": "",
@@ -427,6 +465,7 @@
       "ianaZone": "Asia/Thimphu"
     },
     {
+      "id": "BO-America-La-Paz",
       "name": "Bolivia",
       "isoAlpha2": "BO",
       "detail": "",
@@ -435,6 +474,7 @@
       "ianaZone": "America/La_Paz"
     },
     {
+      "id": "BQ-America-Puerto-Rico",
       "name": "Bonaire, Sint Eustatius and Saba",
       "isoAlpha2": "BQ",
       "detail": "AST - QC (Lower North Shore)",
@@ -443,6 +483,7 @@
       "ianaZone": "America/Puerto_Rico"
     },
     {
+      "id": "BA-Europe-Belgrade",
       "name": "Bosnia and Herzegovina",
       "isoAlpha2": "BA",
       "detail": "",
@@ -451,6 +492,7 @@
       "ianaZone": "Europe/Belgrade"
     },
     {
+      "id": "BW-Africa-Maputo",
       "name": "Botswana",
       "isoAlpha2": "BW",
       "detail": "Central Africa Time",
@@ -459,6 +501,7 @@
       "ianaZone": "Africa/Maputo"
     },
     {
+      "id": "BR-America-Rio-Branco",
       "name": "Brazil",
       "isoAlpha2": "BR",
       "detail": "Amazonas (west); Acre",
@@ -467,6 +510,7 @@
       "ianaZone": "America/Rio_Branco"
     },
     {
+      "id": "BR-America-Noronha",
       "name": "Brazil",
       "isoAlpha2": "BR",
       "detail": "Atlantic islands",
@@ -475,6 +519,7 @@
       "ianaZone": "America/Noronha"
     },
     {
+      "id": "BR-America-Boa-Vista",
       "name": "Brazil",
       "isoAlpha2": "BR",
       "detail": "Roraima; Mato Grosso do Sul; Mato Grosso; Amazonas (east); Rondônia",
@@ -483,6 +528,7 @@
       "ianaZone": "America/Boa_Vista"
     },
     {
+      "id": "BR-America-Sao-Paulo",
       "name": "Brazil",
       "isoAlpha2": "BR",
       "detail": "Tocantins; Bahia; Pará (east), Amapá; Brazil (northeast: MA, PI, CE, RN, PB); Alagoas, Sergipe; Pernambuco; Pará (west); Brazil (southeast: GO, DF, MG, ES, RJ, SP, PR, SC, RS)",
@@ -491,6 +537,7 @@
       "ianaZone": "America/Sao_Paulo"
     },
     {
+      "id": "IO-Indian-Chagos",
       "name": "British Indian Ocean Territory",
       "isoAlpha2": "IO",
       "detail": "",
@@ -499,6 +546,7 @@
       "ianaZone": "Indian/Chagos"
     },
     {
+      "id": "VG-America-Puerto-Rico",
       "name": "British Virgin Islands",
       "isoAlpha2": "VG",
       "detail": "AST - QC (Lower North Shore)",
@@ -507,6 +555,7 @@
       "ianaZone": "America/Puerto_Rico"
     },
     {
+      "id": "BN-Asia-Kuching",
       "name": "Brunei",
       "isoAlpha2": "BN",
       "detail": "Sabah, Sarawak",
@@ -515,6 +564,7 @@
       "ianaZone": "Asia/Kuching"
     },
     {
+      "id": "BG-Europe-Sofia",
       "name": "Bulgaria",
       "isoAlpha2": "BG",
       "detail": "",
@@ -523,6 +573,7 @@
       "ianaZone": "Europe/Sofia"
     },
     {
+      "id": "BF-Africa-Abidjan",
       "name": "Burkina Faso",
       "isoAlpha2": "BF",
       "detail": "",
@@ -531,6 +582,7 @@
       "ianaZone": "Africa/Abidjan"
     },
     {
+      "id": "BI-Africa-Maputo",
       "name": "Burundi",
       "isoAlpha2": "BI",
       "detail": "Central Africa Time",
@@ -539,6 +591,7 @@
       "ianaZone": "Africa/Maputo"
     },
     {
+      "id": "CV-Atlantic-Cape-Verde",
       "name": "Cabo Verde",
       "isoAlpha2": "CV",
       "detail": "",
@@ -547,6 +600,7 @@
       "ianaZone": "Atlantic/Cape_Verde"
     },
     {
+      "id": "KH-Asia-Bangkok",
       "name": "Cambodia",
       "isoAlpha2": "KH",
       "detail": "north Vietnam",
@@ -555,6 +609,7 @@
       "ianaZone": "Asia/Bangkok"
     },
     {
+      "id": "CM-Africa-Lagos",
       "name": "Cameroon",
       "isoAlpha2": "CM",
       "detail": "West Africa Time",
@@ -563,6 +618,7 @@
       "ianaZone": "Africa/Lagos"
     },
     {
+      "id": "CA-America-Halifax",
       "name": "Canada",
       "isoAlpha2": "CA",
       "detail": "Atlantic - NS (Cape Breton); Atlantic - Labrador (most areas); Atlantic - NS (most areas), PE; Atlantic - New Brunswick; AST - QC (Lower North Shore); Newfoundland, Labrador (SE)",
@@ -571,6 +627,7 @@
       "ianaZone": "America/Halifax"
     },
     {
+      "id": "CA-America-Winnipeg",
       "name": "Canada",
       "isoAlpha2": "CA",
       "detail": "Central - NU (central); CST - SK (most areas); Central - NU (Resolute); CST - SK (midwest); Central - ON (west), Manitoba",
@@ -579,6 +636,7 @@
       "ianaZone": "America/Winnipeg"
     },
     {
+      "id": "CA-America-Toronto",
       "name": "Canada",
       "isoAlpha2": "CA",
       "detail": "Eastern - NU (most areas); EST - ON (Atikokan), NU (Coral H); Eastern - ON & QC (most areas)",
@@ -587,6 +645,7 @@
       "ianaZone": "America/Toronto"
     },
     {
+      "id": "CA-America-Vancouver",
       "name": "Canada",
       "isoAlpha2": "CA",
       "detail": "Mountain - NU (west); MST - Yukon (west); MST - BC (Dawson Cr, Ft St John); CST - AB, BC(E), NT(E), SK(W); MST - BC (Ft Nelson); Mountain - NT (west); MST - AZ (most areas), Creston BC; MST - Yukon (east)",
@@ -595,6 +654,7 @@
       "ianaZone": "America/Vancouver"
     },
     {
+      "id": "CA-America-Dawson-Creek",
       "name": "Canada",
       "isoAlpha2": "CA",
       "detail": "MST - BC (most areas)",
@@ -603,6 +663,7 @@
       "ianaZone": "America/Dawson_Creek"
     },
     {
+      "id": "KY-America-Panama",
       "name": "Cayman Islands",
       "isoAlpha2": "KY",
       "detail": "EST - ON (Atikokan), NU (Coral H)",
@@ -611,6 +672,7 @@
       "ianaZone": "America/Panama"
     },
     {
+      "id": "CF-Africa-Lagos",
       "name": "Central African Republic",
       "isoAlpha2": "CF",
       "detail": "West Africa Time",
@@ -619,6 +681,7 @@
       "ianaZone": "Africa/Lagos"
     },
     {
+      "id": "TD-Africa-Ndjamena",
       "name": "Chad",
       "isoAlpha2": "TD",
       "detail": "",
@@ -627,6 +690,7 @@
       "ianaZone": "Africa/Ndjamena"
     },
     {
+      "id": "CL-America-Punta-Arenas",
       "name": "Chile",
       "isoAlpha2": "CL",
       "detail": "Aysén Region; Magallanes Region; most of Chile",
@@ -635,6 +699,7 @@
       "ianaZone": "America/Punta_Arenas"
     },
     {
+      "id": "CL-Pacific-Easter",
       "name": "Chile",
       "isoAlpha2": "CL",
       "detail": "Easter Island",
@@ -643,6 +708,7 @@
       "ianaZone": "Pacific/Easter"
     },
     {
+      "id": "CN-Asia-Shanghai",
       "name": "China",
       "isoAlpha2": "CN",
       "detail": "Beijing Time",
@@ -651,6 +717,7 @@
       "ianaZone": "Asia/Shanghai"
     },
     {
+      "id": "CN-Asia-Urumqi",
       "name": "China",
       "isoAlpha2": "CN",
       "detail": "Xinjiang Time",
@@ -659,6 +726,7 @@
       "ianaZone": "Asia/Urumqi"
     },
     {
+      "id": "CX-Asia-Bangkok",
       "name": "Christmas Island",
       "isoAlpha2": "CX",
       "detail": "north Vietnam",
@@ -667,6 +735,7 @@
       "ianaZone": "Asia/Bangkok"
     },
     {
+      "id": "CC-Asia-Yangon",
       "name": "Cocos (Keeling) Islands",
       "isoAlpha2": "CC",
       "detail": "",
@@ -675,6 +744,7 @@
       "ianaZone": "Asia/Yangon"
     },
     {
+      "id": "CO-America-Bogota",
       "name": "Colombia",
       "isoAlpha2": "CO",
       "detail": "",
@@ -683,6 +753,7 @@
       "ianaZone": "America/Bogota"
     },
     {
+      "id": "KM-Africa-Nairobi",
       "name": "Comoros",
       "isoAlpha2": "KM",
       "detail": "",
@@ -691,6 +762,7 @@
       "ianaZone": "Africa/Nairobi"
     },
     {
+      "id": "CK-Pacific-Rarotonga",
       "name": "Cook Islands",
       "isoAlpha2": "CK",
       "detail": "",
@@ -699,6 +771,7 @@
       "ianaZone": "Pacific/Rarotonga"
     },
     {
+      "id": "CR-America-Costa-Rica",
       "name": "Costa Rica",
       "isoAlpha2": "CR",
       "detail": "",
@@ -707,6 +780,7 @@
       "ianaZone": "America/Costa_Rica"
     },
     {
+      "id": "CI-Africa-Abidjan",
       "name": "Cote d'Ivoire",
       "isoAlpha2": "CI",
       "detail": "",
@@ -715,6 +789,7 @@
       "ianaZone": "Africa/Abidjan"
     },
     {
+      "id": "HR-Europe-Belgrade",
       "name": "Croatia",
       "isoAlpha2": "HR",
       "detail": "",
@@ -723,6 +798,7 @@
       "ianaZone": "Europe/Belgrade"
     },
     {
+      "id": "CU-America-Havana",
       "name": "Cuba",
       "isoAlpha2": "CU",
       "detail": "",
@@ -731,6 +807,7 @@
       "ianaZone": "America/Havana"
     },
     {
+      "id": "CW-America-Puerto-Rico",
       "name": "Curacao",
       "isoAlpha2": "CW",
       "detail": "AST - QC (Lower North Shore)",
@@ -739,6 +816,7 @@
       "ianaZone": "America/Puerto_Rico"
     },
     {
+      "id": "CY-Asia-Famagusta",
       "name": "Cyprus",
       "isoAlpha2": "CY",
       "detail": "Northern Cyprus; most of Cyprus",
@@ -747,6 +825,7 @@
       "ianaZone": "Asia/Famagusta"
     },
     {
+      "id": "CZ-Europe-Prague",
       "name": "Czech Republic",
       "isoAlpha2": "CZ",
       "detail": "",
@@ -755,6 +834,7 @@
       "ianaZone": "Europe/Prague"
     },
     {
+      "id": "CD-Africa-Lubumbashi",
       "name": "Democratic Republic of the Congo",
       "isoAlpha2": "CD",
       "detail": "Central Africa Time",
@@ -763,6 +843,7 @@
       "ianaZone": "Africa/Lubumbashi"
     },
     {
+      "id": "CD-Africa-Kinshasa",
       "name": "Democratic Republic of the Congo",
       "isoAlpha2": "CD",
       "detail": "West Africa Time",
@@ -771,6 +852,7 @@
       "ianaZone": "Africa/Kinshasa"
     },
     {
+      "id": "DK-Europe-Berlin",
       "name": "Denmark",
       "isoAlpha2": "DK",
       "detail": "most of Germany",
@@ -779,6 +861,7 @@
       "ianaZone": "Europe/Berlin"
     },
     {
+      "id": "DJ-Africa-Nairobi",
       "name": "Djibouti",
       "isoAlpha2": "DJ",
       "detail": "",
@@ -787,6 +870,7 @@
       "ianaZone": "Africa/Nairobi"
     },
     {
+      "id": "DM-America-Puerto-Rico",
       "name": "Dominica",
       "isoAlpha2": "DM",
       "detail": "AST - QC (Lower North Shore)",
@@ -795,6 +879,7 @@
       "ianaZone": "America/Puerto_Rico"
     },
     {
+      "id": "DO-America-Santo-Domingo",
       "name": "Dominican Republic",
       "isoAlpha2": "DO",
       "detail": "",
@@ -803,6 +888,7 @@
       "ianaZone": "America/Santo_Domingo"
     },
     {
+      "id": "EC-America-Guayaquil",
       "name": "Ecuador",
       "isoAlpha2": "EC",
       "detail": "Ecuador (mainland)",
@@ -811,6 +897,7 @@
       "ianaZone": "America/Guayaquil"
     },
     {
+      "id": "EC-Pacific-Galapagos",
       "name": "Ecuador",
       "isoAlpha2": "EC",
       "detail": "Galápagos Islands",
@@ -819,6 +906,7 @@
       "ianaZone": "Pacific/Galapagos"
     },
     {
+      "id": "EG-Africa-Cairo",
       "name": "Egypt",
       "isoAlpha2": "EG",
       "detail": "",
@@ -827,6 +915,7 @@
       "ianaZone": "Africa/Cairo"
     },
     {
+      "id": "SV-America-El-Salvador",
       "name": "El Salvador",
       "isoAlpha2": "SV",
       "detail": "",
@@ -835,6 +924,7 @@
       "ianaZone": "America/El_Salvador"
     },
     {
+      "id": "GQ-Africa-Lagos",
       "name": "Equatorial Guinea",
       "isoAlpha2": "GQ",
       "detail": "West Africa Time",
@@ -843,6 +933,7 @@
       "ianaZone": "Africa/Lagos"
     },
     {
+      "id": "ER-Africa-Nairobi",
       "name": "Eritrea",
       "isoAlpha2": "ER",
       "detail": "",
@@ -851,6 +942,7 @@
       "ianaZone": "Africa/Nairobi"
     },
     {
+      "id": "EE-Europe-Tallinn",
       "name": "Estonia",
       "isoAlpha2": "EE",
       "detail": "",
@@ -859,6 +951,7 @@
       "ianaZone": "Europe/Tallinn"
     },
     {
+      "id": "SZ-Africa-Johannesburg",
       "name": "Eswatini",
       "isoAlpha2": "SZ",
       "detail": "",
@@ -867,6 +960,7 @@
       "ianaZone": "Africa/Johannesburg"
     },
     {
+      "id": "ET-Africa-Nairobi",
       "name": "Ethiopia",
       "isoAlpha2": "ET",
       "detail": "",
@@ -875,6 +969,7 @@
       "ianaZone": "Africa/Nairobi"
     },
     {
+      "id": "FK-Atlantic-Stanley",
       "name": "Falkland Islands",
       "isoAlpha2": "FK",
       "detail": "",
@@ -883,6 +978,7 @@
       "ianaZone": "Atlantic/Stanley"
     },
     {
+      "id": "FO-Atlantic-Faroe",
       "name": "Faroe Islands",
       "isoAlpha2": "FO",
       "detail": "",
@@ -891,6 +987,7 @@
       "ianaZone": "Atlantic/Faroe"
     },
     {
+      "id": "FJ-Pacific-Fiji",
       "name": "Fiji",
       "isoAlpha2": "FJ",
       "detail": "",
@@ -899,6 +996,7 @@
       "ianaZone": "Pacific/Fiji"
     },
     {
+      "id": "FI-Europe-Helsinki",
       "name": "Finland",
       "isoAlpha2": "FI",
       "detail": "",
@@ -907,6 +1005,7 @@
       "ianaZone": "Europe/Helsinki"
     },
     {
+      "id": "FR-Europe-Paris",
       "name": "France",
       "isoAlpha2": "FR",
       "detail": "",
@@ -915,6 +1014,7 @@
       "ianaZone": "Europe/Paris"
     },
     {
+      "id": "GF-America-Cayenne",
       "name": "French Guiana",
       "isoAlpha2": "GF",
       "detail": "",
@@ -923,6 +1023,7 @@
       "ianaZone": "America/Cayenne"
     },
     {
+      "id": "PF-Pacific-Gambier",
       "name": "French Polynesia",
       "isoAlpha2": "PF",
       "detail": "Gambier Islands",
@@ -931,6 +1032,7 @@
       "ianaZone": "Pacific/Gambier"
     },
     {
+      "id": "PF-Pacific-Marquesas",
       "name": "French Polynesia",
       "isoAlpha2": "PF",
       "detail": "Marquesas Islands; Society Islands",
@@ -939,6 +1041,7 @@
       "ianaZone": "Pacific/Marquesas"
     },
     {
+      "id": "TF-Indian-Maldives",
       "name": "French Southern Territories",
       "isoAlpha2": "TF",
       "detail": "Crozet",
@@ -947,6 +1050,7 @@
       "ianaZone": "Indian/Maldives"
     },
     {
+      "id": "TF-Indian-Kerguelen",
       "name": "French Southern Territories",
       "isoAlpha2": "TF",
       "detail": "Kerguelen, St Paul I, Amsterdam I",
@@ -955,6 +1059,7 @@
       "ianaZone": "Indian/Kerguelen"
     },
     {
+      "id": "GA-Africa-Lagos",
       "name": "Gabon",
       "isoAlpha2": "GA",
       "detail": "West Africa Time",
@@ -963,6 +1068,7 @@
       "ianaZone": "Africa/Lagos"
     },
     {
+      "id": "GM-Africa-Abidjan",
       "name": "Gambia",
       "isoAlpha2": "GM",
       "detail": "",
@@ -971,6 +1077,7 @@
       "ianaZone": "Africa/Abidjan"
     },
     {
+      "id": "GE-Asia-Tbilisi",
       "name": "Georgia",
       "isoAlpha2": "GE",
       "detail": "",
@@ -979,6 +1086,7 @@
       "ianaZone": "Asia/Tbilisi"
     },
     {
+      "id": "DE-Europe-Zurich",
       "name": "Germany",
       "isoAlpha2": "DE",
       "detail": "most of Germany; Büsingen",
@@ -987,6 +1095,7 @@
       "ianaZone": "Europe/Zurich"
     },
     {
+      "id": "GH-Africa-Abidjan",
       "name": "Ghana",
       "isoAlpha2": "GH",
       "detail": "",
@@ -995,6 +1104,7 @@
       "ianaZone": "Africa/Abidjan"
     },
     {
+      "id": "GI-Europe-Gibraltar",
       "name": "Gibraltar",
       "isoAlpha2": "GI",
       "detail": "",
@@ -1003,6 +1113,7 @@
       "ianaZone": "Europe/Gibraltar"
     },
     {
+      "id": "GR-Europe-Athens",
       "name": "Greece",
       "isoAlpha2": "GR",
       "detail": "",
@@ -1011,6 +1122,7 @@
       "ianaZone": "Europe/Athens"
     },
     {
+      "id": "GL-America-Scoresbysund",
       "name": "Greenland",
       "isoAlpha2": "GL",
       "detail": "most of Greenland; Scoresbysund/Ittoqqortoormiit",
@@ -1019,6 +1131,7 @@
       "ianaZone": "America/Scoresbysund"
     },
     {
+      "id": "GL-America-Danmarkshavn",
       "name": "Greenland",
       "isoAlpha2": "GL",
       "detail": "National Park (east coast)",
@@ -1027,6 +1140,7 @@
       "ianaZone": "America/Danmarkshavn"
     },
     {
+      "id": "GL-America-Thule",
       "name": "Greenland",
       "isoAlpha2": "GL",
       "detail": "Thule/Pituffik",
@@ -1035,6 +1149,7 @@
       "ianaZone": "America/Thule"
     },
     {
+      "id": "GD-America-Puerto-Rico",
       "name": "Grenada",
       "isoAlpha2": "GD",
       "detail": "AST - QC (Lower North Shore)",
@@ -1043,6 +1158,7 @@
       "ianaZone": "America/Puerto_Rico"
     },
     {
+      "id": "GP-America-Puerto-Rico",
       "name": "Guadeloupe",
       "isoAlpha2": "GP",
       "detail": "AST - QC (Lower North Shore)",
@@ -1051,6 +1167,7 @@
       "ianaZone": "America/Puerto_Rico"
     },
     {
+      "id": "GU-Pacific-Guam",
       "name": "Guam",
       "isoAlpha2": "GU",
       "detail": "",
@@ -1059,6 +1176,7 @@
       "ianaZone": "Pacific/Guam"
     },
     {
+      "id": "GT-America-Guatemala",
       "name": "Guatemala",
       "isoAlpha2": "GT",
       "detail": "",
@@ -1067,6 +1185,7 @@
       "ianaZone": "America/Guatemala"
     },
     {
+      "id": "GG-Europe-London",
       "name": "Guernsey",
       "isoAlpha2": "GG",
       "detail": "",
@@ -1075,6 +1194,7 @@
       "ianaZone": "Europe/London"
     },
     {
+      "id": "GN-Africa-Abidjan",
       "name": "Guinea",
       "isoAlpha2": "GN",
       "detail": "",
@@ -1083,6 +1203,7 @@
       "ianaZone": "Africa/Abidjan"
     },
     {
+      "id": "GW-Africa-Bissau",
       "name": "Guinea-Bissau",
       "isoAlpha2": "GW",
       "detail": "",
@@ -1091,6 +1212,7 @@
       "ianaZone": "Africa/Bissau"
     },
     {
+      "id": "GY-America-Guyana",
       "name": "Guyana",
       "isoAlpha2": "GY",
       "detail": "",
@@ -1099,6 +1221,7 @@
       "ianaZone": "America/Guyana"
     },
     {
+      "id": "HT-America-Port-au-Prince",
       "name": "Haiti",
       "isoAlpha2": "HT",
       "detail": "",
@@ -1107,6 +1230,7 @@
       "ianaZone": "America/Port-au-Prince"
     },
     {
+      "id": "VA-Europe-Rome",
       "name": "Holy See",
       "isoAlpha2": "VA",
       "detail": "",
@@ -1115,6 +1239,7 @@
       "ianaZone": "Europe/Rome"
     },
     {
+      "id": "HN-America-Tegucigalpa",
       "name": "Honduras",
       "isoAlpha2": "HN",
       "detail": "",
@@ -1123,6 +1248,7 @@
       "ianaZone": "America/Tegucigalpa"
     },
     {
+      "id": "HK-Asia-Hong-Kong",
       "name": "Hong Kong",
       "isoAlpha2": "HK",
       "detail": "",
@@ -1131,6 +1257,7 @@
       "ianaZone": "Asia/Hong_Kong"
     },
     {
+      "id": "HU-Europe-Budapest",
       "name": "Hungary",
       "isoAlpha2": "HU",
       "detail": "",
@@ -1139,6 +1266,7 @@
       "ianaZone": "Europe/Budapest"
     },
     {
+      "id": "IS-Africa-Abidjan",
       "name": "Iceland",
       "isoAlpha2": "IS",
       "detail": "",
@@ -1147,6 +1275,7 @@
       "ianaZone": "Africa/Abidjan"
     },
     {
+      "id": "IN-Asia-Kolkata",
       "name": "India",
       "isoAlpha2": "IN",
       "detail": "",
@@ -1155,6 +1284,7 @@
       "ianaZone": "Asia/Kolkata"
     },
     {
+      "id": "ID-Asia-Makassar",
       "name": "Indonesia",
       "isoAlpha2": "ID",
       "detail": "Borneo (east, south), Sulawesi/Celebes, Bali, Nusa Tengarra, Timor (west)",
@@ -1163,6 +1293,7 @@
       "ianaZone": "Asia/Makassar"
     },
     {
+      "id": "ID-Asia-Jakarta",
       "name": "Indonesia",
       "isoAlpha2": "ID",
       "detail": "Java, Sumatra; Borneo (west, central)",
@@ -1171,6 +1302,7 @@
       "ianaZone": "Asia/Jakarta"
     },
     {
+      "id": "ID-Asia-Jayapura",
       "name": "Indonesia",
       "isoAlpha2": "ID",
       "detail": "New Guinea (West Papua / Irian Jaya), Malukus/Moluccas",
@@ -1179,6 +1311,7 @@
       "ianaZone": "Asia/Jayapura"
     },
     {
+      "id": "IR-Asia-Tehran",
       "name": "Iran",
       "isoAlpha2": "IR",
       "detail": "",
@@ -1187,6 +1320,7 @@
       "ianaZone": "Asia/Tehran"
     },
     {
+      "id": "IQ-Asia-Baghdad",
       "name": "Iraq",
       "isoAlpha2": "IQ",
       "detail": "",
@@ -1195,6 +1329,7 @@
       "ianaZone": "Asia/Baghdad"
     },
     {
+      "id": "IE-Europe-Dublin",
       "name": "Ireland",
       "isoAlpha2": "IE",
       "detail": "",
@@ -1203,6 +1338,7 @@
       "ianaZone": "Europe/Dublin"
     },
     {
+      "id": "IM-Europe-London",
       "name": "Isle of Man",
       "isoAlpha2": "IM",
       "detail": "",
@@ -1211,6 +1347,7 @@
       "ianaZone": "Europe/London"
     },
     {
+      "id": "IL-Asia-Jerusalem",
       "name": "Israel",
       "isoAlpha2": "IL",
       "detail": "",
@@ -1219,6 +1356,7 @@
       "ianaZone": "Asia/Jerusalem"
     },
     {
+      "id": "IT-Europe-Rome",
       "name": "Italy",
       "isoAlpha2": "IT",
       "detail": "",
@@ -1227,6 +1365,7 @@
       "ianaZone": "Europe/Rome"
     },
     {
+      "id": "JM-America-Jamaica",
       "name": "Jamaica",
       "isoAlpha2": "JM",
       "detail": "",
@@ -1235,6 +1374,7 @@
       "ianaZone": "America/Jamaica"
     },
     {
+      "id": "JP-Asia-Tokyo",
       "name": "Japan",
       "isoAlpha2": "JP",
       "detail": "Eyre Bird Observatory",
@@ -1243,6 +1383,7 @@
       "ianaZone": "Asia/Tokyo"
     },
     {
+      "id": "JE-Europe-London",
       "name": "Jersey",
       "isoAlpha2": "JE",
       "detail": "",
@@ -1251,6 +1392,7 @@
       "ianaZone": "Europe/London"
     },
     {
+      "id": "JO-Asia-Amman",
       "name": "Jordan",
       "isoAlpha2": "JO",
       "detail": "",
@@ -1259,6 +1401,7 @@
       "ianaZone": "Asia/Amman"
     },
     {
+      "id": "KZ-Asia-Aqtau",
       "name": "Kazakhstan",
       "isoAlpha2": "KZ",
       "detail": "most of Kazakhstan; Mangghystaū/Mankistau; Aqtöbe/Aktobe; Atyraū/Atirau/Gur’yev; West Kazakhstan; Qostanay/Kostanay/Kustanay; Qyzylorda/Kyzylorda/Kzyl-Orda",
@@ -1267,6 +1410,7 @@
       "ianaZone": "Asia/Aqtau"
     },
     {
+      "id": "KE-Africa-Nairobi",
       "name": "Kenya",
       "isoAlpha2": "KE",
       "detail": "",
@@ -1275,6 +1419,7 @@
       "ianaZone": "Africa/Nairobi"
     },
     {
+      "id": "KI-Pacific-Tarawa",
       "name": "Kiribati",
       "isoAlpha2": "KI",
       "detail": "Gilberts, Marshalls, Wake",
@@ -1283,6 +1428,7 @@
       "ianaZone": "Pacific/Tarawa"
     },
     {
+      "id": "KI-Pacific-Kiritimati",
       "name": "Kiribati",
       "isoAlpha2": "KI",
       "detail": "Line Islands",
@@ -1291,6 +1437,7 @@
       "ianaZone": "Pacific/Kiritimati"
     },
     {
+      "id": "KI-Pacific-Kanton",
       "name": "Kiribati",
       "isoAlpha2": "KI",
       "detail": "Phoenix Islands",
@@ -1299,6 +1446,7 @@
       "ianaZone": "Pacific/Kanton"
     },
     {
+      "id": "KW-Asia-Riyadh",
       "name": "Kuwait",
       "isoAlpha2": "KW",
       "detail": "Syowa",
@@ -1307,6 +1455,7 @@
       "ianaZone": "Asia/Riyadh"
     },
     {
+      "id": "KG-Asia-Bishkek",
       "name": "Kyrgyzstan",
       "isoAlpha2": "KG",
       "detail": "",
@@ -1315,6 +1464,7 @@
       "ianaZone": "Asia/Bishkek"
     },
     {
+      "id": "LA-Asia-Bangkok",
       "name": "Laos",
       "isoAlpha2": "LA",
       "detail": "north Vietnam",
@@ -1323,6 +1473,7 @@
       "ianaZone": "Asia/Bangkok"
     },
     {
+      "id": "LV-Europe-Riga",
       "name": "Latvia",
       "isoAlpha2": "LV",
       "detail": "",
@@ -1331,6 +1482,7 @@
       "ianaZone": "Europe/Riga"
     },
     {
+      "id": "LB-Asia-Beirut",
       "name": "Lebanon",
       "isoAlpha2": "LB",
       "detail": "",
@@ -1339,6 +1491,7 @@
       "ianaZone": "Asia/Beirut"
     },
     {
+      "id": "LS-Africa-Johannesburg",
       "name": "Lesotho",
       "isoAlpha2": "LS",
       "detail": "",
@@ -1347,6 +1500,7 @@
       "ianaZone": "Africa/Johannesburg"
     },
     {
+      "id": "LR-Africa-Monrovia",
       "name": "Liberia",
       "isoAlpha2": "LR",
       "detail": "",
@@ -1355,6 +1509,7 @@
       "ianaZone": "Africa/Monrovia"
     },
     {
+      "id": "LY-Africa-Tripoli",
       "name": "Libya",
       "isoAlpha2": "LY",
       "detail": "",
@@ -1363,6 +1518,7 @@
       "ianaZone": "Africa/Tripoli"
     },
     {
+      "id": "LI-Europe-Zurich",
       "name": "Liechtenstein",
       "isoAlpha2": "LI",
       "detail": "Büsingen",
@@ -1371,6 +1527,7 @@
       "ianaZone": "Europe/Zurich"
     },
     {
+      "id": "LT-Europe-Vilnius",
       "name": "Lithuania",
       "isoAlpha2": "LT",
       "detail": "",
@@ -1379,6 +1536,7 @@
       "ianaZone": "Europe/Vilnius"
     },
     {
+      "id": "LU-Europe-Brussels",
       "name": "Luxembourg",
       "isoAlpha2": "LU",
       "detail": "",
@@ -1387,6 +1545,7 @@
       "ianaZone": "Europe/Brussels"
     },
     {
+      "id": "MO-Asia-Macau",
       "name": "Macao",
       "isoAlpha2": "MO",
       "detail": "",
@@ -1395,6 +1554,7 @@
       "ianaZone": "Asia/Macau"
     },
     {
+      "id": "MG-Africa-Nairobi",
       "name": "Madagascar",
       "isoAlpha2": "MG",
       "detail": "",
@@ -1403,6 +1563,7 @@
       "ianaZone": "Africa/Nairobi"
     },
     {
+      "id": "MW-Africa-Maputo",
       "name": "Malawi",
       "isoAlpha2": "MW",
       "detail": "Central Africa Time",
@@ -1411,6 +1572,7 @@
       "ianaZone": "Africa/Maputo"
     },
     {
+      "id": "MY-Asia-Kuching",
       "name": "Malaysia",
       "isoAlpha2": "MY",
       "detail": "Sabah, Sarawak; peninsular Malaysia, Concordia",
@@ -1419,6 +1581,7 @@
       "ianaZone": "Asia/Kuching"
     },
     {
+      "id": "MV-Indian-Maldives",
       "name": "Maldives",
       "isoAlpha2": "MV",
       "detail": "Kerguelen, St Paul I, Amsterdam I",
@@ -1427,6 +1590,7 @@
       "ianaZone": "Indian/Maldives"
     },
     {
+      "id": "ML-Africa-Abidjan",
       "name": "Mali",
       "isoAlpha2": "ML",
       "detail": "",
@@ -1435,6 +1599,7 @@
       "ianaZone": "Africa/Abidjan"
     },
     {
+      "id": "MT-Europe-Malta",
       "name": "Malta",
       "isoAlpha2": "MT",
       "detail": "",
@@ -1443,6 +1608,7 @@
       "ianaZone": "Europe/Malta"
     },
     {
+      "id": "MH-Pacific-Kwajalein",
       "name": "Marshall Islands",
       "isoAlpha2": "MH",
       "detail": "Kwajalein; Gilberts, Marshalls, Wake",
@@ -1451,6 +1617,7 @@
       "ianaZone": "Pacific/Kwajalein"
     },
     {
+      "id": "MQ-America-Martinique",
       "name": "Martinique",
       "isoAlpha2": "MQ",
       "detail": "",
@@ -1459,6 +1626,7 @@
       "ianaZone": "America/Martinique"
     },
     {
+      "id": "MR-Africa-Abidjan",
       "name": "Mauritania",
       "isoAlpha2": "MR",
       "detail": "",
@@ -1467,6 +1635,7 @@
       "ianaZone": "Africa/Abidjan"
     },
     {
+      "id": "MU-Indian-Mauritius",
       "name": "Mauritius",
       "isoAlpha2": "MU",
       "detail": "",
@@ -1475,6 +1644,7 @@
       "ianaZone": "Indian/Mauritius"
     },
     {
+      "id": "YT-Africa-Nairobi",
       "name": "Mayotte",
       "isoAlpha2": "YT",
       "detail": "",
@@ -1483,6 +1653,7 @@
       "ianaZone": "Africa/Nairobi"
     },
     {
+      "id": "MX-America-Chihuahua",
       "name": "Mexico",
       "isoAlpha2": "MX",
       "detail": "Bahía de Banderas; Chihuahua (most areas); Coahuila, Nuevo León, Tamaulipas (US border); Campeche, Yucatán; Central Mexico; Durango; Coahuila, Nuevo León, Tamaulipas (most areas); Chihuahua (US border - east)",
@@ -1491,6 +1662,7 @@
       "ianaZone": "America/Chihuahua"
     },
     {
+      "id": "MX-America-Mexico-City",
       "name": "Mexico",
       "isoAlpha2": "MX",
       "detail": "Baja California",
@@ -1499,6 +1671,7 @@
       "ianaZone": "America/Mexico_City"
     },
     {
+      "id": "MX-America-Hermosillo",
       "name": "Mexico",
       "isoAlpha2": "MX",
       "detail": "Chihuahua (US border - west); Sonora; Baja California Sur, Nayarit (most areas), Sinaloa",
@@ -1507,6 +1680,7 @@
       "ianaZone": "America/Hermosillo"
     },
     {
+      "id": "MX-America-Cancun",
       "name": "Mexico",
       "isoAlpha2": "MX",
       "detail": "Quintana Roo",
@@ -1515,6 +1689,7 @@
       "ianaZone": "America/Cancun"
     },
     {
+      "id": "FM-Pacific-Chuuk",
       "name": "Micronesia",
       "isoAlpha2": "FM",
       "detail": "Papua New Guinea (most areas), Chuuk, Yap, Dumont d’Urville",
@@ -1523,6 +1698,7 @@
       "ianaZone": "Pacific/Chuuk"
     },
     {
+      "id": "FM-Pacific-Kosrae",
       "name": "Micronesia",
       "isoAlpha2": "FM",
       "detail": "Pohnpei; Kosrae",
@@ -1531,6 +1707,7 @@
       "ianaZone": "Pacific/Kosrae"
     },
     {
+      "id": "MD-Europe-Chisinau",
       "name": "Moldova",
       "isoAlpha2": "MD",
       "detail": "",
@@ -1539,6 +1716,7 @@
       "ianaZone": "Europe/Chisinau"
     },
     {
+      "id": "MC-Europe-Paris",
       "name": "Monaco",
       "isoAlpha2": "MC",
       "detail": "",
@@ -1547,6 +1725,7 @@
       "ianaZone": "Europe/Paris"
     },
     {
+      "id": "MN-Asia-Hovd",
       "name": "Mongolia",
       "isoAlpha2": "MN",
       "detail": "Bayan-Ölgii, Hovd, Uvs",
@@ -1555,6 +1734,7 @@
       "ianaZone": "Asia/Hovd"
     },
     {
+      "id": "MN-Asia-Ulaanbaatar",
       "name": "Mongolia",
       "isoAlpha2": "MN",
       "detail": "most of Mongolia",
@@ -1563,6 +1743,7 @@
       "ianaZone": "Asia/Ulaanbaatar"
     },
     {
+      "id": "ME-Europe-Belgrade",
       "name": "Montenegro",
       "isoAlpha2": "ME",
       "detail": "",
@@ -1571,6 +1752,7 @@
       "ianaZone": "Europe/Belgrade"
     },
     {
+      "id": "MS-America-Puerto-Rico",
       "name": "Montserrat",
       "isoAlpha2": "MS",
       "detail": "AST - QC (Lower North Shore)",
@@ -1579,6 +1761,7 @@
       "ianaZone": "America/Puerto_Rico"
     },
     {
+      "id": "MA-Africa-Casablanca",
       "name": "Morocco",
       "isoAlpha2": "MA",
       "detail": "",
@@ -1587,6 +1770,7 @@
       "ianaZone": "Africa/Casablanca"
     },
     {
+      "id": "MZ-Africa-Maputo",
       "name": "Mozambique",
       "isoAlpha2": "MZ",
       "detail": "Central Africa Time",
@@ -1595,6 +1779,7 @@
       "ianaZone": "Africa/Maputo"
     },
     {
+      "id": "MM-Asia-Yangon",
       "name": "Myanmar",
       "isoAlpha2": "MM",
       "detail": "",
@@ -1603,6 +1788,7 @@
       "ianaZone": "Asia/Yangon"
     },
     {
+      "id": "NA-Africa-Windhoek",
       "name": "Namibia",
       "isoAlpha2": "NA",
       "detail": "",
@@ -1611,6 +1797,7 @@
       "ianaZone": "Africa/Windhoek"
     },
     {
+      "id": "NR-Pacific-Nauru",
       "name": "Nauru",
       "isoAlpha2": "NR",
       "detail": "",
@@ -1619,6 +1806,7 @@
       "ianaZone": "Pacific/Nauru"
     },
     {
+      "id": "NP-Asia-Kathmandu",
       "name": "Nepal",
       "isoAlpha2": "NP",
       "detail": "",
@@ -1627,6 +1815,7 @@
       "ianaZone": "Asia/Kathmandu"
     },
     {
+      "id": "NL-Europe-Brussels",
       "name": "Netherlands",
       "isoAlpha2": "NL",
       "detail": "",
@@ -1635,6 +1824,7 @@
       "ianaZone": "Europe/Brussels"
     },
     {
+      "id": "NC-Pacific-Noumea",
       "name": "New Caledonia",
       "isoAlpha2": "NC",
       "detail": "",
@@ -1643,6 +1833,7 @@
       "ianaZone": "Pacific/Noumea"
     },
     {
+      "id": "NZ-Pacific-Chatham",
       "name": "New Zealand",
       "isoAlpha2": "NZ",
       "detail": "Chatham Islands",
@@ -1651,6 +1842,7 @@
       "ianaZone": "Pacific/Chatham"
     },
     {
+      "id": "NZ-Pacific-Auckland",
       "name": "New Zealand",
       "isoAlpha2": "NZ",
       "detail": "New Zealand time",
@@ -1659,6 +1851,7 @@
       "ianaZone": "Pacific/Auckland"
     },
     {
+      "id": "NI-America-Managua",
       "name": "Nicaragua",
       "isoAlpha2": "NI",
       "detail": "",
@@ -1667,6 +1860,7 @@
       "ianaZone": "America/Managua"
     },
     {
+      "id": "NE-Africa-Lagos",
       "name": "Niger",
       "isoAlpha2": "NE",
       "detail": "West Africa Time",
@@ -1675,6 +1869,7 @@
       "ianaZone": "Africa/Lagos"
     },
     {
+      "id": "NG-Africa-Lagos",
       "name": "Nigeria",
       "isoAlpha2": "NG",
       "detail": "West Africa Time",
@@ -1683,6 +1878,7 @@
       "ianaZone": "Africa/Lagos"
     },
     {
+      "id": "NU-Pacific-Niue",
       "name": "Niue",
       "isoAlpha2": "NU",
       "detail": "",
@@ -1691,6 +1887,7 @@
       "ianaZone": "Pacific/Niue"
     },
     {
+      "id": "NF-Pacific-Norfolk",
       "name": "Norfolk Island",
       "isoAlpha2": "NF",
       "detail": "",
@@ -1699,6 +1896,7 @@
       "ianaZone": "Pacific/Norfolk"
     },
     {
+      "id": "KP-Asia-Pyongyang",
       "name": "North Korea",
       "isoAlpha2": "KP",
       "detail": "",
@@ -1707,6 +1905,7 @@
       "ianaZone": "Asia/Pyongyang"
     },
     {
+      "id": "MK-Europe-Belgrade",
       "name": "North Macedonia",
       "isoAlpha2": "MK",
       "detail": "",
@@ -1715,6 +1914,7 @@
       "ianaZone": "Europe/Belgrade"
     },
     {
+      "id": "MP-Pacific-Guam",
       "name": "Northern Mariana Islands",
       "isoAlpha2": "MP",
       "detail": "",
@@ -1723,6 +1923,7 @@
       "ianaZone": "Pacific/Guam"
     },
     {
+      "id": "NO-Europe-Berlin",
       "name": "Norway",
       "isoAlpha2": "NO",
       "detail": "most of Germany",
@@ -1731,6 +1932,7 @@
       "ianaZone": "Europe/Berlin"
     },
     {
+      "id": "OM-Asia-Dubai",
       "name": "Oman",
       "isoAlpha2": "OM",
       "detail": "Crozet",
@@ -1739,6 +1941,7 @@
       "ianaZone": "Asia/Dubai"
     },
     {
+      "id": "PK-Asia-Karachi",
       "name": "Pakistan",
       "isoAlpha2": "PK",
       "detail": "",
@@ -1747,6 +1950,7 @@
       "ianaZone": "Asia/Karachi"
     },
     {
+      "id": "PW-Pacific-Palau",
       "name": "Palau",
       "isoAlpha2": "PW",
       "detail": "",
@@ -1755,6 +1959,7 @@
       "ianaZone": "Pacific/Palau"
     },
     {
+      "id": "PS-Asia-Gaza",
       "name": "Palestine",
       "isoAlpha2": "PS",
       "detail": "Gaza Strip; West Bank",
@@ -1763,6 +1968,7 @@
       "ianaZone": "Asia/Gaza"
     },
     {
+      "id": "PA-America-Panama",
       "name": "Panama",
       "isoAlpha2": "PA",
       "detail": "EST - ON (Atikokan), NU (Coral H)",
@@ -1771,6 +1977,7 @@
       "ianaZone": "America/Panama"
     },
     {
+      "id": "PG-Pacific-Bougainville",
       "name": "Papua New Guinea",
       "isoAlpha2": "PG",
       "detail": "Bougainville",
@@ -1779,6 +1986,7 @@
       "ianaZone": "Pacific/Bougainville"
     },
     {
+      "id": "PG-Pacific-Port-Moresby",
       "name": "Papua New Guinea",
       "isoAlpha2": "PG",
       "detail": "Papua New Guinea (most areas), Chuuk, Yap, Dumont d’Urville",
@@ -1787,6 +1995,7 @@
       "ianaZone": "Pacific/Port_Moresby"
     },
     {
+      "id": "PY-America-Asuncion",
       "name": "Paraguay",
       "isoAlpha2": "PY",
       "detail": "",
@@ -1795,6 +2004,7 @@
       "ianaZone": "America/Asuncion"
     },
     {
+      "id": "PE-America-Lima",
       "name": "Peru",
       "isoAlpha2": "PE",
       "detail": "",
@@ -1803,6 +2013,7 @@
       "ianaZone": "America/Lima"
     },
     {
+      "id": "PH-Asia-Manila",
       "name": "Philippines",
       "isoAlpha2": "PH",
       "detail": "",
@@ -1811,6 +2022,7 @@
       "ianaZone": "Asia/Manila"
     },
     {
+      "id": "PN-Pacific-Pitcairn",
       "name": "Pitcairn",
       "isoAlpha2": "PN",
       "detail": "",
@@ -1819,6 +2031,7 @@
       "ianaZone": "Pacific/Pitcairn"
     },
     {
+      "id": "PL-Europe-Warsaw",
       "name": "Poland",
       "isoAlpha2": "PL",
       "detail": "",
@@ -1827,6 +2040,7 @@
       "ianaZone": "Europe/Warsaw"
     },
     {
+      "id": "PT-Atlantic-Azores",
       "name": "Portugal",
       "isoAlpha2": "PT",
       "detail": "Azores",
@@ -1835,6 +2049,7 @@
       "ianaZone": "Atlantic/Azores"
     },
     {
+      "id": "PT-Atlantic-Madeira",
       "name": "Portugal",
       "isoAlpha2": "PT",
       "detail": "Madeira Islands; Portugal (mainland)",
@@ -1843,6 +2058,7 @@
       "ianaZone": "Atlantic/Madeira"
     },
     {
+      "id": "PR-America-Puerto-Rico",
       "name": "Puerto Rico",
       "isoAlpha2": "PR",
       "detail": "AST - QC (Lower North Shore)",
@@ -1851,6 +2067,7 @@
       "ianaZone": "America/Puerto_Rico"
     },
     {
+      "id": "QA-Asia-Qatar",
       "name": "Qatar",
       "isoAlpha2": "QA",
       "detail": "",
@@ -1859,6 +2076,7 @@
       "ianaZone": "Asia/Qatar"
     },
     {
+      "id": "CG-Africa-Lagos",
       "name": "Republic of the Congo",
       "isoAlpha2": "CG",
       "detail": "West Africa Time",
@@ -1867,6 +2085,7 @@
       "ianaZone": "Africa/Lagos"
     },
     {
+      "id": "RE-Asia-Dubai",
       "name": "Reunion",
       "isoAlpha2": "RE",
       "detail": "Crozet",
@@ -1875,6 +2094,7 @@
       "ianaZone": "Asia/Dubai"
     },
     {
+      "id": "RO-Europe-Bucharest",
       "name": "Romania",
       "isoAlpha2": "RO",
       "detail": "",
@@ -1883,6 +2103,7 @@
       "ianaZone": "Europe/Bucharest"
     },
     {
+      "id": "RU-Europe-Kaliningrad",
       "name": "Russia",
       "isoAlpha2": "RU",
       "detail": "MSK-01 - Kaliningrad",
@@ -1891,6 +2112,7 @@
       "ianaZone": "Europe/Kaliningrad"
     },
     {
+      "id": "RU-Europe-Moscow",
       "name": "Russia",
       "isoAlpha2": "RU",
       "detail": "MSK+00 - Kirov; MSK+00 - Moscow area; Crimea; MSK+00 - Volgograd",
@@ -1899,6 +2121,7 @@
       "ianaZone": "Europe/Moscow"
     },
     {
+      "id": "RU-Europe-Astrakhan",
       "name": "Russia",
       "isoAlpha2": "RU",
       "detail": "MSK+01 - Astrakhan; MSK+01 - Samara, Udmurtia; MSK+01 - Saratov; MSK+01 - Ulyanovsk",
@@ -1907,6 +2130,7 @@
       "ianaZone": "Europe/Astrakhan"
     },
     {
+      "id": "RU-Asia-Yekaterinburg",
       "name": "Russia",
       "isoAlpha2": "RU",
       "detail": "MSK+02 - Urals",
@@ -1915,6 +2139,7 @@
       "ianaZone": "Asia/Yekaterinburg"
     },
     {
+      "id": "RU-Asia-Omsk",
       "name": "Russia",
       "isoAlpha2": "RU",
       "detail": "MSK+03 - Omsk",
@@ -1923,6 +2148,7 @@
       "ianaZone": "Asia/Omsk"
     },
     {
+      "id": "RU-Asia-Krasnoyarsk",
       "name": "Russia",
       "isoAlpha2": "RU",
       "detail": "MSK+04 - Altai; MSK+04 - Krasnoyarsk area; MSK+04 - Kemerovo; MSK+04 - Novosibirsk; MSK+04 - Tomsk",
@@ -1931,6 +2157,7 @@
       "ianaZone": "Asia/Krasnoyarsk"
     },
     {
+      "id": "RU-Asia-Irkutsk",
       "name": "Russia",
       "isoAlpha2": "RU",
       "detail": "MSK+05 - Irkutsk, Buryatia",
@@ -1939,6 +2166,7 @@
       "ianaZone": "Asia/Irkutsk"
     },
     {
+      "id": "RU-Asia-Chita",
       "name": "Russia",
       "isoAlpha2": "RU",
       "detail": "MSK+06 - Zabaykalsky; MSK+06 - Tomponsky, Ust-Maysky; MSK+06 - Lena River",
@@ -1947,6 +2175,7 @@
       "ianaZone": "Asia/Chita"
     },
     {
+      "id": "RU-Asia-Ust-Nera",
       "name": "Russia",
       "isoAlpha2": "RU",
       "detail": "MSK+07 - Oymyakonsky; MSK+07 - Amur River",
@@ -1955,6 +2184,7 @@
       "ianaZone": "Asia/Ust-Nera"
     },
     {
+      "id": "RU-Asia-Magadan",
       "name": "Russia",
       "isoAlpha2": "RU",
       "detail": "MSK+08 - Magadan; MSK+08 - Sakhalin Island; MSK+08 - Sakha (E), N Kuril Is",
@@ -1963,6 +2193,7 @@
       "ianaZone": "Asia/Magadan"
     },
     {
+      "id": "RU-Asia-Anadyr",
       "name": "Russia",
       "isoAlpha2": "RU",
       "detail": "MSK+09 - Bering Sea; MSK+09 - Kamchatka",
@@ -1971,6 +2202,7 @@
       "ianaZone": "Asia/Anadyr"
     },
     {
+      "id": "RW-Africa-Maputo",
       "name": "Rwanda",
       "isoAlpha2": "RW",
       "detail": "Central Africa Time",
@@ -1979,6 +2211,7 @@
       "ianaZone": "Africa/Maputo"
     },
     {
+      "id": "BL-America-Puerto-Rico",
       "name": "Saint Barthelemy",
       "isoAlpha2": "BL",
       "detail": "AST - QC (Lower North Shore)",
@@ -1987,6 +2220,7 @@
       "ianaZone": "America/Puerto_Rico"
     },
     {
+      "id": "SH-Africa-Abidjan",
       "name": "Saint Helena, Ascension and Tristan da Cunha",
       "isoAlpha2": "SH",
       "detail": "",
@@ -1995,6 +2229,7 @@
       "ianaZone": "Africa/Abidjan"
     },
     {
+      "id": "KN-America-Puerto-Rico",
       "name": "Saint Kitts and Nevis",
       "isoAlpha2": "KN",
       "detail": "AST - QC (Lower North Shore)",
@@ -2003,6 +2238,7 @@
       "ianaZone": "America/Puerto_Rico"
     },
     {
+      "id": "LC-America-Puerto-Rico",
       "name": "Saint Lucia",
       "isoAlpha2": "LC",
       "detail": "AST - QC (Lower North Shore)",
@@ -2011,6 +2247,7 @@
       "ianaZone": "America/Puerto_Rico"
     },
     {
+      "id": "MF-America-Puerto-Rico",
       "name": "Saint Martin",
       "isoAlpha2": "MF",
       "detail": "AST - QC (Lower North Shore)",
@@ -2019,6 +2256,7 @@
       "ianaZone": "America/Puerto_Rico"
     },
     {
+      "id": "PM-America-Miquelon",
       "name": "Saint Pierre and Miquelon",
       "isoAlpha2": "PM",
       "detail": "",
@@ -2027,6 +2265,7 @@
       "ianaZone": "America/Miquelon"
     },
     {
+      "id": "VC-America-Puerto-Rico",
       "name": "Saint Vincent and the Grenadines",
       "isoAlpha2": "VC",
       "detail": "AST - QC (Lower North Shore)",
@@ -2035,6 +2274,7 @@
       "ianaZone": "America/Puerto_Rico"
     },
     {
+      "id": "WS-Pacific-Apia",
       "name": "Samoa",
       "isoAlpha2": "WS",
       "detail": "",
@@ -2043,6 +2283,7 @@
       "ianaZone": "Pacific/Apia"
     },
     {
+      "id": "SM-Europe-Rome",
       "name": "San Marino",
       "isoAlpha2": "SM",
       "detail": "",
@@ -2051,6 +2292,7 @@
       "ianaZone": "Europe/Rome"
     },
     {
+      "id": "ST-Africa-Sao-Tome",
       "name": "Sao Tome and Principe",
       "isoAlpha2": "ST",
       "detail": "",
@@ -2059,6 +2301,7 @@
       "ianaZone": "Africa/Sao_Tome"
     },
     {
+      "id": "SA-Asia-Riyadh",
       "name": "Saudi Arabia",
       "isoAlpha2": "SA",
       "detail": "Syowa",
@@ -2067,6 +2310,7 @@
       "ianaZone": "Asia/Riyadh"
     },
     {
+      "id": "SN-Africa-Abidjan",
       "name": "Senegal",
       "isoAlpha2": "SN",
       "detail": "",
@@ -2075,6 +2319,7 @@
       "ianaZone": "Africa/Abidjan"
     },
     {
+      "id": "RS-Europe-Belgrade",
       "name": "Serbia",
       "isoAlpha2": "RS",
       "detail": "",
@@ -2083,6 +2328,7 @@
       "ianaZone": "Europe/Belgrade"
     },
     {
+      "id": "SC-Asia-Dubai",
       "name": "Seychelles",
       "isoAlpha2": "SC",
       "detail": "Crozet",
@@ -2091,6 +2337,7 @@
       "ianaZone": "Asia/Dubai"
     },
     {
+      "id": "SL-Africa-Abidjan",
       "name": "Sierra Leone",
       "isoAlpha2": "SL",
       "detail": "",
@@ -2099,6 +2346,7 @@
       "ianaZone": "Africa/Abidjan"
     },
     {
+      "id": "SG-Asia-Singapore",
       "name": "Singapore",
       "isoAlpha2": "SG",
       "detail": "peninsular Malaysia, Concordia",
@@ -2107,6 +2355,7 @@
       "ianaZone": "Asia/Singapore"
     },
     {
+      "id": "SX-America-Puerto-Rico",
       "name": "Sint Maarten (Dutch part)",
       "isoAlpha2": "SX",
       "detail": "AST - QC (Lower North Shore)",
@@ -2115,6 +2364,7 @@
       "ianaZone": "America/Puerto_Rico"
     },
     {
+      "id": "SK-Europe-Prague",
       "name": "Slovakia",
       "isoAlpha2": "SK",
       "detail": "",
@@ -2123,6 +2373,7 @@
       "ianaZone": "Europe/Prague"
     },
     {
+      "id": "SI-Europe-Belgrade",
       "name": "Slovenia",
       "isoAlpha2": "SI",
       "detail": "",
@@ -2131,6 +2382,7 @@
       "ianaZone": "Europe/Belgrade"
     },
     {
+      "id": "SB-Pacific-Guadalcanal",
       "name": "Solomon Islands",
       "isoAlpha2": "SB",
       "detail": "Pohnpei",
@@ -2139,6 +2391,7 @@
       "ianaZone": "Pacific/Guadalcanal"
     },
     {
+      "id": "SO-Africa-Nairobi",
       "name": "Somalia",
       "isoAlpha2": "SO",
       "detail": "",
@@ -2147,6 +2400,7 @@
       "ianaZone": "Africa/Nairobi"
     },
     {
+      "id": "ZA-Africa-Johannesburg",
       "name": "South Africa",
       "isoAlpha2": "ZA",
       "detail": "",
@@ -2155,6 +2409,7 @@
       "ianaZone": "Africa/Johannesburg"
     },
     {
+      "id": "GS-Atlantic-South-Georgia",
       "name": "South Georgia and the South Sandwich Islands",
       "isoAlpha2": "GS",
       "detail": "",
@@ -2163,6 +2418,7 @@
       "ianaZone": "Atlantic/South_Georgia"
     },
     {
+      "id": "KR-Asia-Seoul",
       "name": "South Korea",
       "isoAlpha2": "KR",
       "detail": "",
@@ -2171,6 +2427,7 @@
       "ianaZone": "Asia/Seoul"
     },
     {
+      "id": "SS-Africa-Juba",
       "name": "South Sudan",
       "isoAlpha2": "SS",
       "detail": "",
@@ -2179,6 +2436,7 @@
       "ianaZone": "Africa/Juba"
     },
     {
+      "id": "ES-Atlantic-Canary",
       "name": "Spain",
       "isoAlpha2": "ES",
       "detail": "Canary Islands",
@@ -2187,6 +2445,7 @@
       "ianaZone": "Atlantic/Canary"
     },
     {
+      "id": "ES-Africa-Ceuta",
       "name": "Spain",
       "isoAlpha2": "ES",
       "detail": "Ceuta, Melilla; Spain (mainland)",
@@ -2195,6 +2454,7 @@
       "ianaZone": "Africa/Ceuta"
     },
     {
+      "id": "LK-Asia-Colombo",
       "name": "Sri Lanka",
       "isoAlpha2": "LK",
       "detail": "",
@@ -2203,6 +2463,7 @@
       "ianaZone": "Asia/Colombo"
     },
     {
+      "id": "SD-Africa-Khartoum",
       "name": "Sudan",
       "isoAlpha2": "SD",
       "detail": "",
@@ -2211,6 +2472,7 @@
       "ianaZone": "Africa/Khartoum"
     },
     {
+      "id": "SR-America-Paramaribo",
       "name": "Suriname",
       "isoAlpha2": "SR",
       "detail": "",
@@ -2219,6 +2481,7 @@
       "ianaZone": "America/Paramaribo"
     },
     {
+      "id": "SJ-Europe-Berlin",
       "name": "Svalbard and Jan Mayen",
       "isoAlpha2": "SJ",
       "detail": "most of Germany",
@@ -2227,6 +2490,7 @@
       "ianaZone": "Europe/Berlin"
     },
     {
+      "id": "SE-Europe-Berlin",
       "name": "Sweden",
       "isoAlpha2": "SE",
       "detail": "most of Germany",
@@ -2235,6 +2499,7 @@
       "ianaZone": "Europe/Berlin"
     },
     {
+      "id": "CH-Europe-Zurich",
       "name": "Switzerland",
       "isoAlpha2": "CH",
       "detail": "Büsingen",
@@ -2243,6 +2508,7 @@
       "ianaZone": "Europe/Zurich"
     },
     {
+      "id": "SY-Asia-Damascus",
       "name": "Syria",
       "isoAlpha2": "SY",
       "detail": "",
@@ -2251,6 +2517,7 @@
       "ianaZone": "Asia/Damascus"
     },
     {
+      "id": "TW-Asia-Taipei",
       "name": "Taiwan",
       "isoAlpha2": "TW",
       "detail": "",
@@ -2259,6 +2526,7 @@
       "ianaZone": "Asia/Taipei"
     },
     {
+      "id": "TJ-Asia-Dushanbe",
       "name": "Tajikistan",
       "isoAlpha2": "TJ",
       "detail": "",
@@ -2267,6 +2535,7 @@
       "ianaZone": "Asia/Dushanbe"
     },
     {
+      "id": "TZ-Africa-Nairobi",
       "name": "Tanzania",
       "isoAlpha2": "TZ",
       "detail": "",
@@ -2275,6 +2544,7 @@
       "ianaZone": "Africa/Nairobi"
     },
     {
+      "id": "TH-Asia-Bangkok",
       "name": "Thailand",
       "isoAlpha2": "TH",
       "detail": "north Vietnam",
@@ -2283,6 +2553,7 @@
       "ianaZone": "Asia/Bangkok"
     },
     {
+      "id": "TL-Asia-Dili",
       "name": "Timor-Leste",
       "isoAlpha2": "TL",
       "detail": "",
@@ -2291,6 +2562,7 @@
       "ianaZone": "Asia/Dili"
     },
     {
+      "id": "TG-Africa-Abidjan",
       "name": "Togo",
       "isoAlpha2": "TG",
       "detail": "",
@@ -2299,6 +2571,7 @@
       "ianaZone": "Africa/Abidjan"
     },
     {
+      "id": "TK-Pacific-Fakaofo",
       "name": "Tokelau",
       "isoAlpha2": "TK",
       "detail": "",
@@ -2307,6 +2580,7 @@
       "ianaZone": "Pacific/Fakaofo"
     },
     {
+      "id": "TO-Pacific-Tongatapu",
       "name": "Tonga",
       "isoAlpha2": "TO",
       "detail": "",
@@ -2315,6 +2589,7 @@
       "ianaZone": "Pacific/Tongatapu"
     },
     {
+      "id": "TT-America-Puerto-Rico",
       "name": "Trinidad and Tobago",
       "isoAlpha2": "TT",
       "detail": "AST - QC (Lower North Shore)",
@@ -2323,6 +2598,7 @@
       "ianaZone": "America/Puerto_Rico"
     },
     {
+      "id": "TN-Africa-Tunis",
       "name": "Tunisia",
       "isoAlpha2": "TN",
       "detail": "",
@@ -2331,6 +2607,7 @@
       "ianaZone": "Africa/Tunis"
     },
     {
+      "id": "TR-Europe-Istanbul",
       "name": "Turkey",
       "isoAlpha2": "TR",
       "detail": "",
@@ -2339,6 +2616,7 @@
       "ianaZone": "Europe/Istanbul"
     },
     {
+      "id": "TM-Asia-Ashgabat",
       "name": "Turkmenistan",
       "isoAlpha2": "TM",
       "detail": "",
@@ -2347,6 +2625,7 @@
       "ianaZone": "Asia/Ashgabat"
     },
     {
+      "id": "TC-America-Grand-Turk",
       "name": "Turks and Caicos Islands",
       "isoAlpha2": "TC",
       "detail": "",
@@ -2355,6 +2634,7 @@
       "ianaZone": "America/Grand_Turk"
     },
     {
+      "id": "TV-Pacific-Tarawa",
       "name": "Tuvalu",
       "isoAlpha2": "TV",
       "detail": "Gilberts, Marshalls, Wake",
@@ -2363,6 +2643,7 @@
       "ianaZone": "Pacific/Tarawa"
     },
     {
+      "id": "VI-America-Puerto-Rico",
       "name": "U.S. Virgin Islands",
       "isoAlpha2": "VI",
       "detail": "AST - QC (Lower North Shore)",
@@ -2371,6 +2652,7 @@
       "ianaZone": "America/Puerto_Rico"
     },
     {
+      "id": "UG-Africa-Nairobi",
       "name": "Uganda",
       "isoAlpha2": "UG",
       "detail": "",
@@ -2379,6 +2661,7 @@
       "ianaZone": "Africa/Nairobi"
     },
     {
+      "id": "UA-Europe-Simferopol",
       "name": "Ukraine",
       "isoAlpha2": "UA",
       "detail": "Crimea",
@@ -2387,6 +2670,7 @@
       "ianaZone": "Europe/Simferopol"
     },
     {
+      "id": "UA-Europe-Kyiv",
       "name": "Ukraine",
       "isoAlpha2": "UA",
       "detail": "most of Ukraine",
@@ -2395,6 +2679,7 @@
       "ianaZone": "Europe/Kyiv"
     },
     {
+      "id": "AE-Asia-Dubai",
       "name": "United Arab Emirates",
       "isoAlpha2": "AE",
       "detail": "Crozet",
@@ -2403,6 +2688,7 @@
       "ianaZone": "Asia/Dubai"
     },
     {
+      "id": "GB-Europe-London",
       "name": "United Kingdom",
       "isoAlpha2": "GB",
       "detail": "",
@@ -2411,6 +2697,7 @@
       "ianaZone": "Europe/London"
     },
     {
+      "id": "US-America-Anchorage",
       "name": "United States",
       "isoAlpha2": "US",
       "detail": "Alaska — most areas, Juneau, Nome, Sitka, Yakutat",
@@ -2419,6 +2706,7 @@
       "ianaZone": "America/Anchorage"
     },
     {
+      "id": "US-America-Chicago",
       "name": "United States",
       "isoAlpha2": "US",
       "detail": "Central — Alabama, Arkansas, Illinois, Iowa, Louisiana, Minnesota, Mississippi, Missouri, Oklahoma, Wisconsin, most Texas; parts of Florida, Indiana, Kansas, Kentucky, Michigan, Nebraska, North Dakota, South Dakota, Tennessee",
@@ -2427,6 +2715,7 @@
       "ianaZone": "America/Chicago"
     },
     {
+      "id": "US-America-New-York",
       "name": "United States",
       "isoAlpha2": "US",
       "detail": "Eastern — CT, DC, DE, GA, ME, MD, MA, NH, NJ, NY, NC, OH, PA, RI, SC, VT, VA, WV; parts of Florida, Indiana, Kentucky, Michigan, Tennessee",
@@ -2435,6 +2724,7 @@
       "ianaZone": "America/New_York"
     },
     {
+      "id": "US-Pacific-Honolulu",
       "name": "United States",
       "isoAlpha2": "US",
       "detail": "Hawaii; Alaska — western Aleutians",
@@ -2443,6 +2733,7 @@
       "ianaZone": "Pacific/Honolulu"
     },
     {
+      "id": "US-America-Denver",
       "name": "United States",
       "isoAlpha2": "US",
       "detail": "Mountain — Arizona, Colorado, Montana, New Mexico, Utah, Wyoming; parts of Idaho, Oregon, North Dakota, Nebraska, Kansas, Texas",
@@ -2451,6 +2742,7 @@
       "ianaZone": "America/Denver"
     },
     {
+      "id": "US-America-Los-Angeles",
       "name": "United States",
       "isoAlpha2": "US",
       "detail": "Pacific — California, Nevada, Washington, Oregon, Idaho panhandle",
@@ -2459,6 +2751,7 @@
       "ianaZone": "America/Los_Angeles"
     },
     {
+      "id": "UM-Pacific-Wake",
       "name": "United States Minor Outlying Islands",
       "isoAlpha2": "UM",
       "detail": "Gilberts, Marshalls, Wake",
@@ -2467,6 +2760,7 @@
       "ianaZone": "Pacific/Wake"
     },
     {
+      "id": "UM-Pacific-Pago-Pago",
       "name": "United States Minor Outlying Islands",
       "isoAlpha2": "UM",
       "detail": "Midway",
@@ -2475,6 +2769,7 @@
       "ianaZone": "Pacific/Pago_Pago"
     },
     {
+      "id": "UY-America-Montevideo",
       "name": "Uruguay",
       "isoAlpha2": "UY",
       "detail": "",
@@ -2483,6 +2778,7 @@
       "ianaZone": "America/Montevideo"
     },
     {
+      "id": "UZ-Asia-Samarkand",
       "name": "Uzbekistan",
       "isoAlpha2": "UZ",
       "detail": "Uzbekistan (west); Uzbekistan (east)",
@@ -2491,6 +2787,7 @@
       "ianaZone": "Asia/Samarkand"
     },
     {
+      "id": "VU-Pacific-Efate",
       "name": "Vanuatu",
       "isoAlpha2": "VU",
       "detail": "",
@@ -2499,6 +2796,7 @@
       "ianaZone": "Pacific/Efate"
     },
     {
+      "id": "VE-America-Caracas",
       "name": "Venezuela",
       "isoAlpha2": "VE",
       "detail": "",
@@ -2507,6 +2805,7 @@
       "ianaZone": "America/Caracas"
     },
     {
+      "id": "VN-Asia-Ho-Chi-Minh",
       "name": "Vietnam",
       "isoAlpha2": "VN",
       "detail": "north Vietnam; south Vietnam",
@@ -2515,6 +2814,7 @@
       "ianaZone": "Asia/Ho_Chi_Minh"
     },
     {
+      "id": "WF-Pacific-Tarawa",
       "name": "Wallis and Futuna",
       "isoAlpha2": "WF",
       "detail": "Gilberts, Marshalls, Wake",
@@ -2523,6 +2823,7 @@
       "ianaZone": "Pacific/Tarawa"
     },
     {
+      "id": "EH-Africa-El-Aaiun",
       "name": "Western Sahara",
       "isoAlpha2": "EH",
       "detail": "",
@@ -2531,6 +2832,7 @@
       "ianaZone": "Africa/El_Aaiun"
     },
     {
+      "id": "YE-Asia-Riyadh",
       "name": "Yemen",
       "isoAlpha2": "YE",
       "detail": "Syowa",
@@ -2539,6 +2841,7 @@
       "ianaZone": "Asia/Riyadh"
     },
     {
+      "id": "ZM-Africa-Maputo",
       "name": "Zambia",
       "isoAlpha2": "ZM",
       "detail": "Central Africa Time",
@@ -2547,6 +2850,7 @@
       "ianaZone": "Africa/Maputo"
     },
     {
+      "id": "ZW-Africa-Maputo",
       "name": "Zimbabwe",
       "isoAlpha2": "ZW",
       "detail": "Central Africa Time",

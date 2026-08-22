@@ -274,7 +274,7 @@ function App() {
                   <summary>Country text</summary>
                   <ul>
                     {zone.countries.map((country) => (
-                      <li key={`${zone.slot}-${country.isoAlpha2}-${country.name}`}>
+                      <li key={country.id}>
                         <span>{country.name}</span>
                         {country.detail ? <small>{country.detail}</small> : null}
                       </li>
