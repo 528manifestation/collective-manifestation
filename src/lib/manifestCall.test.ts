@@ -14,4 +14,11 @@ describe('Manifest Call alert state', () => {
     expect(getManifestCallAlertState(new Date('2026-08-16T21:00:00Z')).minutesUntilNextCall).toBe(28);
     expect(getManifestCallAlertState(new Date('2026-08-16T21:45:00Z')).minutesUntilNextCall).toBe(43);
   });
+
+  it('uses local device minutes rather than timezone offsets', () => {
+    expect(getManifestCallAlertState(new Date(2026, 6, 15, 17, 27, 59)).isActive).toBe(false);
+    expect(getManifestCallAlertState(new Date(2026, 6, 15, 17, 28, 0)).isActive).toBe(true);
+    expect(getManifestCallAlertState(new Date(2026, 6, 15, 17, 37, 59)).isActive).toBe(true);
+    expect(getManifestCallAlertState(new Date(2026, 6, 15, 17, 38, 0)).isActive).toBe(false);
+  });
 });

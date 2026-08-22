@@ -6,9 +6,10 @@ import { MemberAuthPanel } from './components/MemberAuthPanel';
 import { WatchVideoBar } from './components/WatchVideoBar';
 import {
   getCurrentManifestWaveSlot,
+  getManifestWaveHourKey,
+  getManifestWaveZones,
   getSlotCardPath,
   getZoneBySlot,
-  manifestwaveZones,
 } from './lib/manifestwave';
 import { getManifestCallAlertState } from './lib/manifestCall';
 import {
@@ -25,7 +26,9 @@ import { supabase } from './lib/supabase';
 function App() {
   const [currentTime, setCurrentTime] = useState(() => new Date());
   const activeSlot = getCurrentManifestWaveSlot(currentTime);
-  const activeZone = getZoneBySlot(activeSlot);
+  const manifestWaveHourKey = getManifestWaveHourKey(currentTime);
+  const manifestwaveZones = useMemo(() => getManifestWaveZones(currentTime), [manifestWaveHourKey]);
+  const activeZone = useMemo(() => getZoneBySlot(activeSlot, currentTime), [activeSlot, manifestWaveHourKey]);
   const alertState = getManifestCallAlertState(currentTime);
   const [musicLibrary, setMusicLibrary] = useState(songs);
   const [selectedSongId, setSelectedSongId] = useState(songs[0]?.id || '');
@@ -38,10 +41,10 @@ function App() {
   const accountNavItem = navigationItems.find((item) => item.href === '#member-auth');
   const menuNavigationItems = navigationItems.filter((item) => item.href !== '#member-auth');
   const featuredZones = useMemo(
-    () => [activeZone, getZoneBySlot(-5), getZoneBySlot(1), getZoneBySlot(10)].filter(
+    () => [activeZone, getZoneBySlot(-5, currentTime), getZoneBySlot(1, currentTime), getZoneBySlot(10, currentTime)].filter(
       (zone, index, zones) => zones.findIndex((item) => item.slot === zone.slot) === index,
     ),
-    [activeZone],
+    [activeZone, manifestWaveHourKey],
   );
 
   useEffect(() => {

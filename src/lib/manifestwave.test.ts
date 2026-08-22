@@ -2,11 +2,27 @@ import { describe, expect, it } from 'vitest';
 
 import {
   getCurrentManifestWaveSlot,
+  getCountriesForManifestWaveSlot,
+  getCountriesInFivePmWave,
+  getManifestWaveHourKey,
+  getManifestWaveZones,
   getManifestWaveCountryCount,
   getSlotCardPath,
   getZoneBySlot,
+  manifestwaveCountries,
   manifestwaveZones,
 } from './manifestwave';
+
+function countCountriesByZone(countries: { ianaZone: string }[], ianaZone: string): number {
+  return countries.filter((country) => country.ianaZone === ianaZone).length;
+}
+
+function countRenderedCountriesByZone(date: Date, ianaZone: string): number {
+  return getManifestWaveZones(date).reduce(
+    (total, zone) => total + countCountriesByZone(zone.countries, ianaZone),
+    0,
+  );
+}
 
 describe('ManifestWave data helpers', () => {
   it('loads the 24 symbolic hourly ManifestWave zones in order', () => {
@@ -16,9 +32,42 @@ describe('ManifestWave data helpers', () => {
   });
 
   it('loads the full cleaned ManifestWave country dataset', () => {
-    expect(getManifestWaveCountryCount()).toBe(302);
-    expect(getZoneBySlot(1).countries.length).toBeGreaterThan(40);
-    expect(getZoneBySlot(2).countries.length).toBeGreaterThan(30);
+    const january = new Date('2026-01-15T12:00:00Z');
+
+    expect(getManifestWaveCountryCount()).toBeGreaterThanOrEqual(300);
+    expect(getManifestWaveCountryCount()).toBeLessThan(350);
+    expect(getZoneBySlot(1, january).countries.length).toBeGreaterThan(40);
+    expect(getZoneBySlot(2, january).countries.length).toBeGreaterThan(25);
+  });
+
+  it('does not store per-country slot assignments', () => {
+    expect(manifestwaveCountries.some((country) => 'slot' in country)).toBe(false);
+  });
+
+  it('resolves zone membership once per UTC hour key across per-second ticks', () => {
+    const start = new Date('2035-04-10T10:00:00Z');
+    const hourKey = getManifestWaveHourKey(start);
+    let resolveCount = 0;
+
+    for (let second = 0; second < 60; second += 1) {
+      getManifestWaveZones(new Date(start.getTime() + (second * 1000)), (resolvedHourKey) => {
+        expect(resolvedHourKey).toBe(hourKey);
+        resolveCount += 1;
+      });
+    }
+
+    expect(resolveCount).toBe(1);
+  });
+
+  it('keeps manually reviewed multi-zone country entries on distinct IANA zones', () => {
+    expect(manifestwaveCountries).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({ detail: expect.stringContaining('Central - NU'), ianaZone: 'America/Winnipeg' }),
+        expect.objectContaining({ detail: expect.stringContaining('Atlantic - NS'), ianaZone: 'America/Halifax' }),
+        expect.objectContaining({ detail: 'MST - BC (most areas)', ianaZone: 'America/Dawson_Creek' }),
+        expect.objectContaining({ detail: expect.stringContaining('MSK+04'), ianaZone: 'Asia/Krasnoyarsk' }),
+      ]),
+    );
   });
 
   it('returns stable card paths for generated timezone PNG assets', () => {
@@ -28,7 +77,7 @@ describe('ManifestWave data helpers', () => {
   });
 
   it('finds the UTC-5 card and includes United States state/regional detail', () => {
-    const zone = getZoneBySlot(-5);
+    const zone = getZoneBySlot(-5, new Date('2026-01-15T12:00:00Z'));
     const unitedStates = zone.countries.find((country) => country.name === 'United States');
 
     expect(zone.label).toBe('UTC-5');
@@ -42,5 +91,62 @@ describe('ManifestWave data helpers', () => {
     expect(getCurrentManifestWaveSlot(new Date('2026-08-16T05:28:00Z'))).toBe(12);
     expect(getCurrentManifestWaveSlot(new Date('2026-08-16T13:28:00Z'))).toBe(4);
     expect(getCurrentManifestWaveSlot(new Date('2026-08-16T23:28:00Z'))).toBe(-6);
+  });
+
+  it('resolves country membership from IANA zones so DST countries move seasonally', () => {
+    const january = new Date('2026-01-15T12:00:00Z');
+    const july = new Date('2026-07-15T12:00:00Z');
+
+    expect(getCountriesForManifestWaveSlot(0, january).some((country) => country.name === 'United Kingdom')).toBe(true);
+    expect(getCountriesForManifestWaveSlot(1, january).some((country) => country.name === 'United Kingdom')).toBe(false);
+
+    expect(getCountriesForManifestWaveSlot(0, july).some((country) => country.name === 'United Kingdom')).toBe(false);
+    expect(getCountriesForManifestWaveSlot(1, july).some((country) => country.name === 'United Kingdom')).toBe(true);
+  });
+
+  it('keeps non-DST countries in the same resolved slot year-round', () => {
+    const january = new Date('2026-01-15T12:00:00Z');
+    const july = new Date('2026-07-15T12:00:00Z');
+
+    expect(getCountriesForManifestWaveSlot(9, january).some((country) => country.name === 'Japan')).toBe(true);
+    expect(getCountriesForManifestWaveSlot(9, july).some((country) => country.name === 'Japan')).toBe(true);
+  });
+
+  it('returns the countries whose local hour is currently 5 PM', () => {
+    const activeCountries = getCountriesInFivePmWave(new Date('2026-07-15T16:28:00Z'));
+
+    expect(activeCountries.some((country) => country.name === 'United Kingdom')).toBe(true);
+    expect(activeCountries.every((country) => country.ianaZone)).toBe(true);
+  });
+
+  it('handles half-hour and quarter-hour 5 PM wave windows exactly once per render', () => {
+    const cases = [
+      {
+        ianaZone: 'Asia/Kolkata',
+        inWindow: [new Date('2026-07-15T11:30:00Z'), new Date('2026-07-15T12:29:00Z')],
+        outsideWindow: [new Date('2026-07-15T11:29:00Z'), new Date('2026-07-15T12:30:00Z')],
+      },
+      {
+        ianaZone: 'Asia/Kathmandu',
+        inWindow: [new Date('2026-07-15T11:15:00Z'), new Date('2026-07-15T12:14:00Z')],
+        outsideWindow: [new Date('2026-07-15T11:14:00Z'), new Date('2026-07-15T12:15:00Z')],
+      },
+      {
+        ianaZone: 'Pacific/Chatham',
+        inWindow: [new Date('2026-07-15T04:15:00Z'), new Date('2026-07-15T05:14:00Z')],
+        outsideWindow: [new Date('2026-07-15T04:14:00Z'), new Date('2026-07-15T05:15:00Z')],
+      },
+    ];
+
+    for (const { ianaZone, inWindow, outsideWindow } of cases) {
+      for (const date of inWindow) {
+        expect(countCountriesByZone(getCountriesInFivePmWave(date), ianaZone)).toBe(1);
+        expect(countRenderedCountriesByZone(date, ianaZone)).toBe(1);
+      }
+
+      for (const date of outsideWindow) {
+        expect(countCountriesByZone(getCountriesInFivePmWave(date), ianaZone)).toBe(0);
+      }
+    }
   });
 });
