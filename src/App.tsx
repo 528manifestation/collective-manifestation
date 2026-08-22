@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 
 import { BlogSection } from './components/BlogSection';
 import { ContactWaitlistForm } from './components/ContactWaitlistForm';
@@ -32,14 +32,33 @@ function App() {
   const [musicSource, setMusicSource] = useState<'local' | 'supabase'>('local');
   const [selectedSongId, setSelectedSongId] = useState(songs[0]?.id || '');
   const [selectedLyrics, setSelectedLyrics] = useState('Select a song to view lyrics.');
+  const [isNavMenuOpen, setIsNavMenuOpen] = useState(false);
+  const navToggleRef = useRef<HTMLButtonElement | null>(null);
+  const navMenuRef = useRef<HTMLDivElement | null>(null);
+  const navMenuWasOpenRef = useRef(false);
   const totalMusicSizeMb = (getTotalMusicSizeBytes(musicLibrary) / 1024 / 1024).toFixed(1);
   const selectedSong = musicLibrary.find((song) => song.id === selectedSongId) || musicLibrary[0];
+  const accountNavItem = navigationItems.find((item) => item.href === '#member-auth');
+  const menuNavigationItems = navigationItems.filter((item) => item.href !== '#member-auth');
   const featuredZones = useMemo(
     () => [activeZone, getZoneBySlot(-5), getZoneBySlot(1), getZoneBySlot(10)].filter(
       (zone, index, zones) => zones.findIndex((item) => item.slot === zone.slot) === index,
     ),
     [activeZone],
   );
+
+  useEffect(() => {
+    if (isNavMenuOpen) {
+      navMenuWasOpenRef.current = true;
+      window.setTimeout(() => navMenuRef.current?.focus(), 0);
+      return;
+    }
+
+    if (navMenuWasOpenRef.current) {
+      navMenuWasOpenRef.current = false;
+      navToggleRef.current?.focus();
+    }
+  }, [isNavMenuOpen]);
 
   useEffect(() => {
     const intervalId = window.setInterval(() => setCurrentTime(new Date()), 1000);
@@ -114,12 +133,48 @@ function App() {
             />
             <span>Collective Manifestation</span>
           </a>
-          <div className="nav-links">
-            {navigationItems.map((item) => (
-              <a className={item.href === '#member-auth' ? 'nav-account-link' : undefined} key={item.href} href={item.href}>
+          {accountNavItem ? (
+            <a className="nav-account-link mobile-account-link" href={accountNavItem.href}>
+              {accountNavItem.label}
+            </a>
+          ) : null}
+          <button
+            aria-controls="primary-menu"
+            aria-expanded={isNavMenuOpen}
+            className="nav-menu-toggle"
+            onClick={() => setIsNavMenuOpen((isOpen) => !isOpen)}
+            ref={navToggleRef}
+            type="button"
+          >
+            Menu
+          </button>
+          <div
+            className={`nav-links${isNavMenuOpen ? ' is-open' : ''}`}
+            id="primary-menu"
+            onKeyDown={(event) => {
+              if (event.key === 'Escape') {
+                setIsNavMenuOpen(false);
+              }
+            }}
+            ref={navMenuRef}
+            role={isNavMenuOpen ? 'dialog' : undefined}
+            aria-label={isNavMenuOpen ? 'Primary menu' : undefined}
+            aria-modal={isNavMenuOpen ? true : undefined}
+            tabIndex={-1}
+          >
+            <button className="nav-menu-close" onClick={() => setIsNavMenuOpen(false)} type="button">
+              Close menu
+            </button>
+            {menuNavigationItems.map((item) => (
+              <a key={item.href} href={item.href} onClick={() => setIsNavMenuOpen(false)}>
                 {item.label}
               </a>
             ))}
+            {accountNavItem ? (
+              <a className="nav-account-link desktop-account-link" href={accountNavItem.href}>
+                {accountNavItem.label}
+              </a>
+            ) : null}
           </div>
         </nav>
 

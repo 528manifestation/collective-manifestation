@@ -64,6 +64,7 @@ main {
   top: 16px;
   z-index: 10;
   display: flex;
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
   gap: 18px;
@@ -77,11 +78,16 @@ main {
 
 .brand {
   display: inline-flex;
+  flex-shrink: 0;
   align-items: center;
   gap: 10px;
   color: #9116aa;
   font-weight: 800;
   letter-spacing: -0.03em;
+}
+
+.brand span {
+  white-space: nowrap;
 }
 
 .brand img {
@@ -93,12 +99,18 @@ main {
 
 .nav-links {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  align-items: center;
   justify-content: flex-end;
-  gap: 10px 18px;
+  gap: 14px;
   color: #5c5064;
   font-size: 0.92rem;
   font-weight: 700;
+  white-space: nowrap;
+}
+
+.nav-links a {
+  flex-shrink: 0;
 }
 
 .nav-account-link {
@@ -107,6 +119,22 @@ main {
   color: #fff;
   background: linear-gradient(135deg, #9c1bb3, #c735cc);
   box-shadow: 0 10px 24px rgba(145, 22, 170, 0.18);
+}
+
+.mobile-account-link,
+.nav-menu-toggle,
+.nav-menu-close {
+  display: none;
+}
+
+.nav-menu-toggle,
+.nav-menu-close {
+  border: 0;
+  border-radius: 999px;
+  color: #6d1d75;
+  background: #f5e7f9;
+  font-weight: 900;
+  cursor: pointer;
 }
 
 .hero-grid {
@@ -1061,11 +1089,90 @@ h3 {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
-@media (max-width: 900px) {
+@media (max-width: 899px) {
   .nav {
-    align-items: flex-start;
+    position: relative;
+    top: auto;
+    z-index: 20;
+    height: 64px;
+    max-height: 64px;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
+    border-radius: 22px;
+    flex-direction: row;
+    overflow: visible;
+  }
+
+  .brand {
+    flex: 1 1 auto;
+    min-width: 0;
+    gap: 8px;
+  }
+
+  .brand img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .brand span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .mobile-account-link,
+  .nav-menu-toggle {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+  }
+
+  .mobile-account-link {
+    padding: 8px 11px;
+    font-size: 0.85rem;
+  }
+
+  .nav-menu-toggle {
+    padding: 8px 12px;
+  }
+
+  .desktop-account-link {
+    display: none;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links.is-open {
+    position: fixed;
+    top: 76px;
+    right: 16px;
+    left: 16px;
+    z-index: 30;
+    display: grid;
+    gap: 12px;
+    padding: 18px;
+    border: 1px solid rgba(156, 27, 179, 0.16);
     border-radius: 24px;
-    flex-direction: column;
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 24px 80px rgba(48, 20, 65, 0.2);
+    outline: 0;
+    backdrop-filter: blur(18px);
+  }
+
+  .nav-links.is-open a {
+    padding: 10px 12px;
+    border-radius: 14px;
+    background: rgba(245, 231, 249, 0.7);
+  }
+
+  .nav-menu-close {
+    display: inline-flex;
+    justify-self: end;
+    padding: 8px 12px;
   }
 
   .hero-grid,
