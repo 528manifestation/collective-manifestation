@@ -173,11 +173,16 @@ function App() {
       <section className="hero">
         <nav className="nav" aria-label="Primary navigation">
           <a className="brand" href="#top" aria-label="Collective Manifestation home">
-            <img
-              src="/assets/brand/collective-manifestation-logo.png"
-              alt=""
-              aria-hidden="true"
-            />
+            <picture className="brand-mark">
+              <source srcSet="/assets/brand/collective-manifestation-logo-64.webp" type="image/webp" />
+              <img
+                src="/assets/brand/collective-manifestation-logo-64.png"
+                alt=""
+                aria-hidden="true"
+                width="64"
+                height="64"
+              />
+            </picture>
             <span>Collective Manifestation</span>
           </a>
           {accountNavItem ? (

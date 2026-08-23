@@ -47,7 +47,8 @@ describe('music data', () => {
       'Vibe',
     ]);
     expect(songs.every((song) => song.audioPath.startsWith('/assets/music/'))).toBe(true);
-    expect(songs.every((song) => song.artworkPath.startsWith('/assets/artworkformusiv/'))).toBe(true);
+    expect(songs.every((song) => song.artworkPath.startsWith('/assets/artwork/'))).toBe(true);
+    expect(songs.every((song) => song.artworkPath.endsWith('.webp'))).toBe(true);
     expect(songs[0]).toMatchObject({ isThemeSong: true, trackNumber: 1 });
     expect(getTotalMusicSizeBytes()).toBeGreaterThan(32 * 1024 * 1024);
   });
@@ -60,7 +61,7 @@ describe('music data', () => {
         title: 'New Song',
         track_number: 11,
         audio_path: '/assets/music/New%20Song.mp3',
-        artwork_path: '/assets/artworkformusiv/new-song.jpg',
+        artwork_path: '/assets/artwork/new-song.webp',
         is_theme_song: false,
       }),
     ).toEqual({
@@ -68,7 +69,7 @@ describe('music data', () => {
       title: 'New Song',
       trackNumber: 11,
       audioPath: '/assets/music/New%20Song.mp3',
-      artworkPath: '/assets/artworkformusiv/new-song.jpg',
+      artworkPath: '/assets/artwork/new-song.webp',
       sourceFilename: 'New Song.mp3',
       sizeBytes: 0,
       isThemeSong: false,
@@ -108,7 +109,7 @@ describe('music data', () => {
           title: 'DB Theme',
           track_number: 1,
           audio_path: '/assets/music/db-theme.mp3',
-          artwork_path: '/assets/artworkformusiv/db-theme.jpg',
+          artwork_path: '/assets/artwork/db-theme.webp',
           is_theme_song: true,
         },
       ],

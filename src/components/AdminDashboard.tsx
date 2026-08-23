@@ -364,7 +364,7 @@ function AdminSongsPanel() {
           <input
             value={form.artworkPath}
             onChange={(event) => updateField('artworkPath', event.target.value)}
-            placeholder="/assets/artworkformusiv/song.jpg"
+            placeholder="/assets/artwork/song.webp"
           />
         </label>
         <label>

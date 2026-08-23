@@ -234,10 +234,19 @@ strong {
   text-overflow: ellipsis;
 }
 
+.brand-mark,
 .brand img {
   width: 30px;
   height: 30px;
   flex-shrink: 0;
+}
+
+.brand-mark {
+  display: block;
+}
+
+.brand img {
+  display: block;
   border-radius: 50%;
   box-shadow: none;
 }
@@ -1208,6 +1217,7 @@ input[type='checkbox'] {
     font-size: 1.05rem;
   }
 
+  .brand-mark,
   .brand img {
     width: 34px;
     height: 34px;
