@@ -6,11 +6,11 @@ import { MemberAuthPanel } from './components/MemberAuthPanel';
 import { WatchVideoBar } from './components/WatchVideoBar';
 import {
   getCurrentManifestWaveSlot,
+  getCountriesInFivePmWave,
   getLiveWaveCountryPreview,
   getManifestWaveHourKey,
   getZoneBySlot,
   type ManifestWaveCountry,
-  type ManifestWaveZone,
 } from './lib/manifestwave';
 import { getManifestCallAlertState } from './lib/manifestCall';
 import {
@@ -40,20 +40,24 @@ function LiveWaveCountryRows({ countries }: { countries: ManifestWaveCountry[] }
   );
 }
 
-function LiveWaveZonePanel({ zone }: { zone: ManifestWaveZone }) {
-  const countryPreview = getLiveWaveCountryPreview(zone.countries);
+function LiveWaveCountryCount({ count }: { count: number }) {
+  return count === 1 ? (
+    <p className="live-wave-count"><strong>1</strong> country or region is in their 5 PM hour right now</p>
+  ) : (
+    <p className="live-wave-count"><strong>{count}</strong> countries and regions are in their 5 PM hour right now</p>
+  );
+}
+
+function LiveWaveCountryPanel({ countries }: { countries: ManifestWaveCountry[] }) {
+  const countryPreview = getLiveWaveCountryPreview(countries);
 
   return (
-    <section className="live-wave-panel" aria-label={`${zone.label} live wave countries`}>
-      <div className="live-wave-panel-header">
-        <span>Live wave zone</span>
-        <h3>{zone.label}</h3>
-        <p>5:00 PM – 5:59 PM local wave window</p>
-      </div>
+    <section className="live-wave-panel" aria-label="Countries and regions in their 5 PM hour">
+      <LiveWaveCountryCount count={countries.length} />
       <LiveWaveCountryRows countries={countryPreview.visibleCountries} />
       {countryPreview.hiddenCountryCount > 0 ? (
         <details className="live-wave-disclosure">
-          <summary>Show all {zone.countries.length} countries/regions</summary>
+          <summary>Show the rest</summary>
           <LiveWaveCountryRows countries={countryPreview.hiddenCountries} />
         </details>
       ) : null}
@@ -66,6 +70,7 @@ function App() {
   const activeSlot = getCurrentManifestWaveSlot(currentTime);
   const manifestWaveHourKey = getManifestWaveHourKey(currentTime);
   const activeZone = useMemo(() => getZoneBySlot(activeSlot, currentTime), [activeSlot, manifestWaveHourKey]);
+  const activeCountries = useMemo(() => getCountriesInFivePmWave(currentTime), [manifestWaveHourKey]);
   const alertState = getManifestCallAlertState(currentTime);
   const [musicLibrary, setMusicLibrary] = useState(songs);
   const [selectedSongId, setSelectedSongId] = useState(songs[0]?.id || '');
@@ -248,7 +253,7 @@ function App() {
                 ? 'Please start the Intention for Manifestation video now.'
                 : `Next 5:28 call in about ${alertState.minutesUntilNextCall} minutes.`}
             </div>
-            <LiveWaveZonePanel zone={activeZone} />
+            <LiveWaveCountryPanel countries={activeCountries} />
           </aside>
         </div>
       </section>

@@ -35,7 +35,7 @@ type ManifestWaveDataset = {
 };
 
 const manifestwaveDataset = manifestwaveZoneData as ManifestWaveDataset;
-const LIVE_WAVE_COUNTRY_PREVIEW_LIMIT = 12;
+const LIVE_WAVE_COUNTRY_PREVIEW_LIMIT = 6;
 
 export const manifestwaveCountries = manifestwaveDataset.countries;
 

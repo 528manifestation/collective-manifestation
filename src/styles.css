@@ -393,28 +393,20 @@ strong {
   border-top: 1px solid var(--line);
 }
 
-.live-wave-panel-header {
-  display: grid;
-  gap: 4px;
-}
-
-.live-wave-panel-header span {
-  font-family: var(--data);
-  font-size: 0.66rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--gold);
-}
-
-.live-wave-panel-header h3 {
-  font-family: var(--data);
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--paper);
-}
-
-.live-wave-panel-header p {
+.live-wave-count {
+  max-width: 30rem;
   margin-bottom: 0;
+  color: var(--mist);
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.live-wave-count strong {
+  display: inline;
+  color: var(--gold);
+  font-family: var(--data);
+  font-size: 1.28em;
+  font-weight: 600;
 }
 
 .live-wave-country-list {
